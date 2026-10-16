@@ -23,38 +23,105 @@ def estimate_floor(samples):
     return float(np.percentile(stable, 90)) if len(stable) >= 5 else None
 
 
-def classify(sample, floor, config):
+def foot_distance(point, diameter, ankle, knee, config):
+    """Distance from the ball to an estimated foot, not just the ankle point.
+
+    COCO ankles sit at the heel/ankle joint; an extended foot reaches further. Without a
+    toe landmark the toe direction is unknown, so the foot is a horizontal segment on both
+    sides of the ankle, sized from shin length. It only applies when the ball is below the
+    knee and not clearly below the ankle, so a thigh-height ball cannot match a foot.
+    """
+    if not knee:
+        return None
+    if point[1] < knee[1] or point[1] > ankle[1] + diameter * 0.5:
+        return None
+    reach = config.foot_length_shin_ratio * float(np.linalg.norm(np.subtract(ankle, knee)))
+    return distance_to_segment(point, [ankle[0] - reach, ankle[1]], [ankle[0] + reach, ankle[1]])
+
+
+def leg_distances(sample, config):
+    """Every available (distance, body part) option for one observed frame."""
     point, diameter, pose = sample["center"], sample["diameter"], sample["pose"]
+    options = []
+    for side in ("left", "right"):
+        ankle, knee, hip = (pose.get(side + "_" + joint) for joint in ("ankle", "knee", "hip"))
+        if ankle:
+            options.append((float(np.linalg.norm(np.subtract(point, ankle))) / diameter, side + "_foot"))
+            foot = foot_distance(point, diameter, ankle, knee, config)
+            if foot is not None:
+                options.append((foot / diameter, side + "_foot"))
+        if knee:
+            options.append((float(np.linalg.norm(np.subtract(point, knee))) / diameter, side + "_knee"))
+        if knee and hip:
+            options.append((distance_to_segment(point, knee, hip) / diameter, side + "_thigh"))
+    return options
+
+
+def classify(sample, floor, config, neighbors=()):
+    """Floor check on the contact frame, then leg support over contact ±1 observed frame.
+
+    Each neighbor is compared with its own ball position, because single-frame landmarks
+    jitter or vanish on a fast kicking leg. Wrists are deliberately ignored: a nearby
+    projected arm does not establish or block a touch in juggling.
+    """
+    point, diameter = sample["center"], sample["diameter"]
     if floor is None:
         return "review", "floor_unknown", None
     if point[1] + diameter / 2 >= floor - diameter * 0.12:
         return "review", "possible_floor_contact", None
-    for side in ("left", "right"):
-        wrist = pose.get(side + "_wrist")
-        if wrist and np.linalg.norm(np.array(point) - wrist) < diameter * 0.65:
-            return "review", "possible_hand_contact", None
-    nearest = None
-    for side in ("left", "right"):
-        ankle, knee, hip = (pose.get(side + "_" + joint) for joint in ("ankle", "knee", "hip"))
-        options = []
-        if ankle:
-            options.append((float(np.linalg.norm(np.array(point) - ankle)), side + "_foot"))
-        if knee:
-            options.append((float(np.linalg.norm(np.array(point) - knee)), side + "_knee"))
-        if knee and hip:
-            options.append((distance_to_segment(point, knee, hip), side + "_thigh"))
-        for option in options:
-            if nearest is None or option[0] < nearest[0]:
-                nearest = option
-    if nearest is None:
+    options = [o for s in (sample, *neighbors) for o in leg_distances(s, config)]
+    if not options:
         return "review", "missing_leg_landmarks", None
-    if nearest[0] > diameter * config.contact_diameters:
+    nearest = min(options)
+    if nearest[0] > config.contact_diameters:
         return "review", "contact_not_supported", None
     return "counted", "observed_reversal_near_leg", nearest[1]
 
 
+def top_clipped(sample, config):
+    return sample["box"][1] <= max(2.0, config.edge_margin_diameters * sample["diameter"])
+
+
+def top_exit_after(samples, position, after, config):
+    """True when the only outgoing observation is cut off by the top edge and the ball then
+    leaves view (no further observation). Predictions after the exit are not evidence."""
+    if len(after) != 1 or not after[0].get("box") or not top_clipped(after[0], config):
+        return False
+    following = position[after[0]["frame"]] + 1
+    return following >= len(samples) or samples[following]["status"] != "observed"
+
+
+def find_stops(samples, config):
+    """Intervals where the observed ball stays nearly still, e.g. a catch or a ball at rest.
+
+    Purely informational: stops never add or remove counted touches.
+    """
+    stops, run = [], []
+
+    def close(run):
+        if run and run[-1]["time"] - run[0]["time"] >= config.stop_seconds:
+            stops.append({"start": run[0]["time"], "end": run[-1]["time"],
+                          "start_frame": run[0]["frame"], "end_frame": run[-1]["frame"],
+                          "reason": "ball_stationary"})
+
+    for s in samples:
+        if s["status"] != "observed":
+            continue
+        if run and (s["segment"] != run[-1]["segment"] or s["time"] - run[-1]["time"] > config.stop_gap_seconds
+                    or np.linalg.norm(np.subtract(s["center"], run[0]["center"]))
+                    > config.stop_radius_diameters * run[0]["diameter"]):
+            close(run)
+            # Restart from the latest still-compatible anchor so slow drifts are not merged.
+            run = [s]
+        else:
+            run.append(s)
+    close(run)
+    return stops
+
+
 def count_touches(samples, config):
     floor = estimate_floor(samples)
+    position = {s["frame"]: i for i, s in enumerate(samples)}
     observed = [s for s in samples if s["status"] == "observed"]
     candidates = []
     for i, sample in enumerate(observed):
@@ -63,18 +130,25 @@ def count_touches(samples, config):
                   and s["segment"] == sample["segment"]]
         after = [s for s in observed[i + 1:i + 9] if s["time"] - t <= config.velocity_window_seconds + 1e-6
                  and s["segment"] == sample["segment"]]
-        if len(before) < 2 or len(after) < 2:
+        top_exit = top_exit_after(samples, position, after, config)
+        if len(before) < 2 or (len(after) < 2 and not top_exit):
             continue
         # A local bottom of the arc, not the upper flight apex.
         if any(s["center"][1] > y for s in before[-2:] + after[:2]):
             continue
         incoming = np.polyfit([s["time"] - t for s in before] + [0.],
                               [s["center"][1] for s in before] + [y], 1)[0] / diameter
-        outgoing = np.polyfit([0.] + [s["time"] - t for s in after],
-                              [y] + [s["center"][1] for s in after], 1)[0] / diameter
+        if top_exit:
+            # A top-clipped box shrinks from above, dragging its center down; its bottom edge
+            # still follows the ball, so measure the outgoing motion from bottom edges.
+            outgoing = (after[0]["box"][3] - sample["box"][3]) / (after[0]["time"] - t) / diameter
+        else:
+            outgoing = np.polyfit([0.] + [s["time"] - t for s in after],
+                                  [y] + [s["center"][1] for s in after], 1)[0] / diameter
         if incoming < config.min_velocity_diameters or outgoing > -config.min_velocity_diameters:
             continue
-        status, reason, body_part = classify(sample, floor, config)
+        neighbors = [s for s in (before[-1:] + after[:1]) if abs(s["frame"] - sample["frame"]) == 1]
+        status, reason, body_part = classify(sample, floor, config, neighbors)
         evidence = before + [sample] + after
         # A gap surrounding contact means that the reversal is only approximately located.
         if max(b["time"] - a["time"] for a, b in zip(evidence, evidence[1:])) > 0.075:
@@ -84,6 +158,8 @@ def count_touches(samples, config):
                  "evidence_sources": sorted({s.get("source", "detector") for s in evidence}),
                  "incoming_diameters_per_second": float(incoming),
                  "outgoing_diameters_per_second": float(outgoing)}
+        if top_exit:
+            event["evidence"] = ["top_exit"]
         if candidates and t - candidates[-1]["time"] < config.debounce_seconds:
             old = candidates[-1]
             if incoming - outgoing > old["incoming_diameters_per_second"] - old["outgoing_diameters_per_second"]:
@@ -91,4 +167,4 @@ def count_touches(samples, config):
         else:
             candidates.append(event)
     return {"events": candidates, "estimated_count": sum(e["status"] == "counted" for e in candidates),
-            "floor_y": floor}
+            "floor_y": floor, "stops": find_stops(samples, config)}

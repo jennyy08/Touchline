@@ -1,4 +1,8 @@
-import { labels, type Review, type Result } from "./types";
+import { labels, type Review, type Result, type Stop } from "./types";
+
+/** Results saved before stop detection have no `stops` field; treat as none. */
+export const stopsOf = (data: Pick<Result, "stops">): Stop[] =>
+  Array.isArray(data.stops) ? data.stops : [];
 export function seedReview(result: Result): Review {
   return {
     schema_version: 1,

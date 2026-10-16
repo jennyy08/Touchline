@@ -1,7 +1,7 @@
 import layout from "./layout.html?raw";
 import "./style.css";
 import { AnnotatedPlayer } from "./player";
-import { parseReview, seedReview } from "./review";
+import { parseReview, seedReview, stopsOf } from "./review";
 import { labels, type Result, type Review } from "./types";
 
 const $ = <T extends HTMLElement>(id: string) =>
@@ -186,7 +186,38 @@ function showResult(data: Result, id: string) {
     span.title = `Missing observations ${gap.start.toFixed(2)}–${gap.end.toFixed(2)}s`;
     $("timeline").append(span);
   }
+  // Stops (ball held still, e.g. a catch) are shown for context and never counted.
+  const stops = stopsOf(data);
+  for (const stop of stops) {
+    const span = document.createElement("button");
+    span.className = "stop-span";
+    span.style.left = `${(stop.start / data.video.duration) * 100}%`;
+    span.style.width = `${Math.max(0.5, ((stop.end - stop.start) / data.video.duration) * 100)}%`;
+    span.title = `Juggling stopped ${stop.start.toFixed(2)}–${stop.end.toFixed(2)}s`;
+    span.setAttribute("aria-label", span.title);
+    span.onclick = () => player.seek(Math.max(0, stop.start - 0.35));
+    $("timeline").append(span);
+  }
+  const stopRow = (stop: (typeof stops)[number]) => {
+    const button = document.createElement("button");
+    button.className = "event stop";
+    button.append(
+      text("span", "■", "event-number"),
+      text("strong", `${stop.start.toFixed(3)}s`),
+      text(
+        "span",
+        `ball held still ${(stop.end - stop.start).toFixed(1)}s`,
+        "event-reason",
+      ),
+      text("span", "STOPPED", "event-badge"),
+    );
+    button.onclick = () => player.seek(Math.max(0, stop.start - 0.35));
+    return button;
+  };
+  let pendingStops = [...stops].sort((a, b) => a.start - b.start);
   data.events.forEach((e, index) => {
+    while (pendingStops.length && pendingStops[0].start < e.time)
+      $("events").append(stopRow(pendingStops.shift()!));
     const button = document.createElement("button");
     button.className = `event ${e.status}`;
     button.append(
@@ -209,6 +240,7 @@ function showResult(data: Result, id: string) {
     marker.onclick = button.onclick;
     $("timeline").append(marker);
   });
+  for (const stop of pendingStops) $("events").append(stopRow(stop));
   if (!data.events.length)
     $("events").append(
       text(

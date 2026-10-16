@@ -378,6 +378,10 @@ input[type="checkbox"] {
 .blue {
   background: #9ed4ff;
 }
+.legend i.stop {
+  background: #8fb7ff33;
+  outline: 1px solid #8fb7ff;
+}
 .timeline {
   height: 28px;
   margin: 8px 20px;
@@ -410,6 +414,21 @@ input[type="checkbox"] {
 }
 .marker.review {
   background: #ffbd66;
+}
+.stop-span {
+  position: absolute;
+  top: 2px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #8fb7ff;
+  border-radius: 3px;
+  background: #8fb7ff33;
+}
+.stop-span:hover {
+  outline: 2px solid white;
+}
+.event.stop .event-badge {
+  color: #8fb7ff;
 }
 .marker:hover {
   outline: 2px solid white;

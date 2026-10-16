@@ -42,7 +42,7 @@ Ultralytics code and these weights use AGPL-3.0; see [official model documentati
 1. Choose one MOV/MP4 video with one player and one ball. Limit: 250 MB and 3 minutes. A stationary camera with the ball and feet visible works best.
 2. Wait for local model loading, frame processing, and contact analysis. One job runs at a time.
 3. Inspect green detector boxes, teal appearance matches, amber dashed predictions, and blue leg landmarks. “Tracking lost” means no trustworthy current ball observation. Prediction is not contact evidence.
-4. Click a contact or timeline marker for a short lead-in. Use playback speed and frame buttons to inspect it. Shaded timeline spans show missing observations.
+4. Blue outlined timeline spans and “STOPPED” rows mark where the ball was held still for a second or more (e.g. a catch). They never change the count. Click a contact or timeline marker for a short lead-in. Use playback speed and frame buttons to inspect it. Shaded timeline spans show missing observations.
 5. In **Your call**, correct times, select touch/floor/pickup/hand/uncertain, delete events, or add one at the playhead. Only `touch` contributes to this separate count. An initial copy of automatic events is **not** a completed human review.
 6. Export your review JSON to keep it. The export dialog offers a download and copyable JSON text (useful in embedded browsers that block file downloads). Reviews also save in localStorage, keyed by the original video hash. Import rejects another video's annotations or invalid timestamps. Automatic results never change when you edit a review.
 
@@ -96,4 +96,6 @@ Only evaluate against a reference for the **same video**. The evaluator checks t
 
 Additional footage: [three player-counted clips and tracking-loss findings](validation/additional-clips/README.md). These use supplied totals, not event-level reference labels.
 
-Latest tracking revision: [direction-aware edge handling and shoe rejection](validation/tracking-revision/README.md).
+Tracking revision: [direction-aware edge handling and shoe rejection](validation/tracking-revision/README.md).
+
+Latest contact revision: [foot reach, no wrist veto, top exits, stop markers](validation/contact-revision/README.md).

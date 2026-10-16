@@ -31,6 +31,10 @@ def main():
             color = (40,220,80) if sample['source'] == 'detector' else (200,220,40)
             if sample['status'] == 'predicted': color = (0,170,255)
             cv2.rectangle(image, (x1,y1), (x2,y2), color, 4)
+        # Blue leg landmarks (hip/knee/ankle), as in the app overlay. Ankles are not toes.
+        for name, (x, y) in sample.get('pose', {}).items():
+            if 'wrist' not in name:
+                cv2.circle(image, (int(x), int(y)), 14, (255,140,40), -1)
         image = cv2.resize(image, (540,360))
         label = f'{frame.index} | {frame.time:.3f}s | {sample["status"]} {sample["source"] or ""}'
         for color, thickness in [((0,0,0),3), ((255,255,255),1)]:

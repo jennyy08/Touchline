@@ -36,6 +36,15 @@ export interface Result {
   runtime_seconds: number;
   warnings: string[];
   floor_y: number | null;
+  /** Ball held still (e.g. caught). Informational; never counted. Absent in older results. */
+  stops?: Stop[];
+}
+export interface Stop {
+  start: number;
+  end: number;
+  start_frame: number;
+  end_frame: number;
+  reason: string;
 }
 export const labels = [
   "touch",

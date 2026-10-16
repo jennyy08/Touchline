@@ -40,6 +40,19 @@ describe("manual review", () => {
   });
 });
 
+import { stopsOf } from "./review";
+it("treats results without stops as having none", () => {
+  expect(stopsOf({})).toEqual([]);
+  const stop = {
+    start: 1,
+    end: 2.5,
+    start_frame: 30,
+    end_frame: 75,
+    reason: "ball_stationary",
+  };
+  expect(stopsOf({ stops: [stop] })).toEqual([stop]);
+});
+
 import { observationLabel } from "./player";
 import type { Sample } from "./types";
 it("distinguishes appearance evidence from detector hits and predictions", () => {
