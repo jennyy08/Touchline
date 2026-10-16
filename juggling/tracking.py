@@ -37,9 +37,9 @@ class BallTracker:
                 if distance > self.config.association_diameters or not 0.45 < ratio < 2.2:
                     continue
                 cost = distance + abs(np.log(ratio)) - 0.2 * detection["score"]
-            eligible.append((cost, center, size, box))
+            eligible.append((cost, center, size, box, detection.get("source", "detector")))
         if eligible:
-            _, center, size, box = min(eligible, key=lambda item: item[0])
+            _, center, size, box, source = min(eligible, key=lambda item: item[0])
             if self.x is None:
                 self.segment += 1
                 self.x = np.array([*center, 0., 0.])
@@ -53,12 +53,12 @@ class BallTracker:
             self.size = size
             self.last_observed = time
             # Raw observed centers preserve sharp contact reversals; the filter is for association.
-            return {"status": "observed", "box": box.tolist(), "center": center.tolist(),
+            return {"status": "observed", "source": source, "box": box.tolist(), "center": center.tolist(),
                     "diameter": float(np.mean(size)), "segment": self.segment}
         if self.x is not None:
             half = self.size / 2
-            return {"status": "predicted", "box": [*(self.x[:2] - half), *(self.x[:2] + half)],
+            return {"status": "predicted", "source": None, "box": [*(self.x[:2] - half), *(self.x[:2] + half)],
                     "center": self.x[:2].tolist(), "diameter": float(np.mean(self.size)),
                     "segment": self.segment}
-        return {"status": "lost", "box": None, "center": None, "diameter": None,
+        return {"status": "lost", "source": None, "box": None, "center": None, "diameter": None,
                 "segment": self.segment}

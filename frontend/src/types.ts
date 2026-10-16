@@ -3,6 +3,7 @@ export interface Sample {
   frame: number;
   time: number;
   status: "observed" | "predicted" | "lost";
+  source?: "detector" | "appearance" | null;
   box: number[] | null;
   center: Point | null;
   diameter: number | null;

@@ -164,6 +164,8 @@ function renderReview() {
 }
 function showResult(data: Result, id: string) {
   result = data;
+  sessionStorage.setItem("touchline:job", id);
+  history.replaceState(null, "", `?job=${encodeURIComponent(id)}`);
   player.load(data, `/api/jobs/${id}/video`);
   $("workspace").hidden = false;
   $("empty").hidden = true;
@@ -329,7 +331,10 @@ $<HTMLInputElement>("review-file").onchange = async () => {
   }
   input.value = "";
 };
-const previous = sessionStorage.getItem("touchline:job");
+// A local job URL lets a completed analysis reopen without re-uploading.
+const previous =
+  new URLSearchParams(location.search).get("job") ??
+  sessionStorage.getItem("touchline:job");
 if (previous) {
   $("progress-panel").hidden = false;
   $<HTMLButtonElement>("choose").disabled = true;

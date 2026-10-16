@@ -1,0 +1,100 @@
+{
+  "limitation": "Totals only: extra and missed events can cancel. No event-level metrics without timestamp labels.",
+  "comparisons": [
+    {
+      "clip": "clip-1",
+      "variant": "baseline",
+      "reference_total": 16,
+      "automatic_total": 14,
+      "signed_total_difference": -2,
+      "review_candidates": 1,
+      "tracking_summary": {
+        "observed": 267,
+        "predicted": 11,
+        "lost": 51
+      },
+      "runtime_seconds": 34.41775125009008,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-1",
+      "variant": "edge_guard",
+      "reference_total": 16,
+      "automatic_total": 14,
+      "signed_total_difference": -2,
+      "review_candidates": 1,
+      "tracking_summary": {
+        "observed": 259,
+        "predicted": 12,
+        "lost": 58
+      },
+      "runtime_seconds": 34.660654000006616,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-2",
+      "variant": "baseline",
+      "reference_total": 29,
+      "automatic_total": 22,
+      "signed_total_difference": -7,
+      "review_candidates": 6,
+      "tracking_summary": {
+        "observed": 467,
+        "predicted": 7
+      },
+      "runtime_seconds": 53.05032337491866,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-2",
+      "variant": "edge_guard",
+      "reference_total": 29,
+      "automatic_total": 22,
+      "signed_total_difference": -7,
+      "review_candidates": 6,
+      "tracking_summary": {
+        "observed": 454,
+        "predicted": 16,
+        "lost": 4
+      },
+      "runtime_seconds": 43.606859417050146,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-3",
+      "variant": "baseline",
+      "reference_total": 21,
+      "automatic_total": 19,
+      "signed_total_difference": -2,
+      "review_candidates": 3,
+      "tracking_summary": {
+        "observed": 336,
+        "predicted": 5,
+        "lost": 9
+      },
+      "runtime_seconds": 34.2351370829856,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-3",
+      "variant": "edge_guard",
+      "reference_total": 21,
+      "automatic_total": 18,
+      "signed_total_difference": -3,
+      "review_candidates": 3,
+      "tracking_summary": {
+        "observed": 323,
+        "predicted": 10,
+        "lost": 17
+      },
+      "runtime_seconds": 33.67658874997869,
+      "event_precision": null,
+      "event_recall": null
+    }
+  ]
+}

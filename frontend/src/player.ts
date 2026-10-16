@@ -1,4 +1,4 @@
-import type { Result } from "./types";
+import type { Result, Sample } from "./types";
 export function sampleIndex(result: Result, time: number): number {
   let lo = 0,
     hi = result.samples.length - 1;
@@ -9,6 +9,14 @@ export function sampleIndex(result: Result, time: number): number {
   }
   return lo;
 }
+export function observationLabel(sample: Sample): string {
+  if (sample.status === "lost") return "Tracking lost";
+  if (sample.status === "predicted") return "Predicted · not evidence";
+  return sample.source === "appearance"
+    ? "Ball matched by appearance"
+    : "Ball detected";
+}
+
 export class AnnotatedPlayer {
   result: Result | null = null;
   enabled = true;
@@ -66,12 +74,18 @@ export class AnnotatedPlayer {
         this.hasFrameCallbacks ? this.presentedTime : this.video.currentTime,
       ),
       s = r.samples[i];
-    this.status.textContent = `${s.status === "observed" ? "Ball observed" : s.status === "predicted" ? "Predicted · not evidence" : "Tracking lost"} · frame ${s.frame} · ${s.time.toFixed(3)}s`;
+    this.status.textContent = `${observationLabel(s)} · frame ${s.frame} · ${s.time.toFixed(3)}s`;
     this.status.dataset.state = s.status;
+    this.status.dataset.source = s.source ?? "";
     if (!this.enabled) return;
     const scale = c.width / 900;
     ctx.lineWidth = 2.2 * scale;
-    ctx.strokeStyle = s.status === "observed" ? "#b8f96a" : "#ffbd66";
+    ctx.strokeStyle =
+      s.status !== "observed"
+        ? "#ffbd66"
+        : s.source === "appearance"
+          ? "#49ded4"
+          : "#b8f96a";
     ctx.setLineDash(s.status === "predicted" ? [8 * scale, 5 * scale] : []);
     if (s.box) {
       const [x1, y1, x2, y2] = s.box;

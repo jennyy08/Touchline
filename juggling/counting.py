@@ -81,6 +81,7 @@ def count_touches(samples, config):
             status, reason = "review", "gap_near_contact"
         event = {"id": f"event-{sample['frame']}", "frame": sample["frame"], "time": t,
                  "status": status, "reason": reason, "body_part": body_part,
+                 "evidence_sources": sorted({s.get("source", "detector") for s in evidence}),
                  "incoming_diameters_per_second": float(incoming),
                  "outgoing_diameters_per_second": float(outgoing)}
         if candidates and t - candidates[-1]["time"] < config.debounce_seconds:

@@ -16,8 +16,8 @@ a = p.parse_args()
 r, ref = json.loads(a.result.read_text()), json.loads(a.reference.read_text())
 fig, (ax, events) = plt.subplots(2, 1, figsize=(13, 6), sharex=True,
                                 gridspec_kw={'height_ratios': [3, 1.3]})
-for state, color, marker in [('observed', '#237744', '.'), ('predicted', '#bc7618', 'x')]:
-    samples = [s for s in r['samples'] if s['status'] == state]
+for state, color, marker in [('detector', '#237744', '.'), ('appearance', '#189eaa', '.'), ('predicted', '#bc7618', 'x')]:
+    samples = [s for s in r['samples'] if s.get('source') == state or s['status'] == state]
     ax.scatter([s['time'] for s in samples], [s['center'][1] for s in samples],
                s=10, c=color, marker=marker, label=state.title())
 for gap in r['tracking_gaps']:

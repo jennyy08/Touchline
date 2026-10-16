@@ -193,5 +193,7 @@
     }
   ],
   "method": "Independent visual inspection of every third frame across the clip, then consecutive frames around contacts, before detector output. Approximate contact frames, not user-certified ground truth.",
-  "time_mapping": "Initial OpenCV seek images matched to sequential PyAV frames by image difference; timestamps taken from decoded presentation timestamps."
+  "time_mapping": "Initial OpenCV seek images matched to sequential PyAV frames by image difference; timestamps taken from decoded presentation timestamps.",
+  "user_confirmed_total": 26,
+  "reference_notes": "The player independently confirmed exactly 26 touches in the conversation. Individual timestamps remain approximate visual labels."
 }

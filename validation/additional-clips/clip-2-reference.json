@@ -1,0 +1,10 @@
+{
+  "filename": "Movie on 2026-10-16 at 12.28\u202fPM.mov",
+  "video_sha256": "299a37f78c0bfa219a8f479ccdbb7255b54f8cbe4bf055796ba109c5325812ed",
+  "touch_count": 29,
+  "source": "user supplied total",
+  "excludes": [
+    "initial lift/pickup"
+  ],
+  "event_timestamps": null
+}

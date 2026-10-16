@@ -39,3 +39,17 @@ describe("manual review", () => {
     expect(sampleIndex(result, 0.09)).toBe(2);
   });
 });
+
+import { observationLabel } from "./player";
+import type { Sample } from "./types";
+it("distinguishes appearance evidence from detector hits and predictions", () => {
+  expect(
+    observationLabel({ status: "observed", source: "appearance" } as Sample),
+  ).toBe("Ball matched by appearance");
+  expect(
+    observationLabel({ status: "observed", source: "detector" } as Sample),
+  ).toBe("Ball detected");
+  expect(
+    observationLabel({ status: "predicted", source: null } as Sample),
+  ).toBe("Predicted · not evidence");
+});

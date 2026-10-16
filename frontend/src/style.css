@@ -793,3 +793,13 @@ dialog textarea {
   font-size: 11px;
   color: var(--muted);
 }
+
+.teal {
+  background: #49ded4;
+}
+.tracking-status[data-source="appearance"] {
+  color: #49ded4;
+}
+.legend {
+  flex-wrap: wrap;
+}

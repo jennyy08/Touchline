@@ -16,6 +16,9 @@ class Config:
     debounce_seconds: float = 0.22
     velocity_window_seconds: float = 0.14
     min_velocity_diameters: float = 0.7
+    appearance_enabled: bool = True
+    appearance_horizon_seconds: float = 0.25
+    appearance_similarity: float = 0.60
     device: str = "cpu"  # CPU is predictable on macOS; MPS can be selected in CLI.
 
     def to_dict(self):

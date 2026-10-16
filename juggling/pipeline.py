@@ -8,6 +8,7 @@ from .video import decode, metadata, PlaybackWriter
 from .detection import BallDetector
 from .pose import PoseDetector
 from .tracking import BallTracker
+from .appearance import AppearanceBridge
 from .counting import count_touches
 
 
@@ -19,6 +20,7 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
     progress(stage="loading_models", frames=0, total=info["expected_frames"])
     ball, pose = BallDetector(models, config), PoseDetector(models, config)
     tracker = BallTracker(config)
+    appearance = AppearanceBridge(config) if config.appearance_enabled else None
     samples = []
     writer = None
     try:
@@ -29,8 +31,12 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
             if frame.time > 180:
                 raise ValueError("This prototype supports clips up to 3 minutes. Trim the video and retry.")
             detections = ball.detect(frame.image)
+            proposals = appearance.propose(frame.time, frame.image, detections) if appearance else detections
+            tracked = tracker.update(frame.time, proposals)
+            if appearance:
+                appearance.accept(frame.time, tracked)
             sample = {"frame": frame.index, "time": frame.time,
-                      **tracker.update(frame.time, detections), "pose": pose.detect(frame.image)}
+                      **tracked, "pose": pose.detect(frame.image)}
             samples.append(sample)
             writer.write(frame)
             progress(stage="analyzing", frames=frame.index + 1, total=info["expected_frames"])
@@ -57,6 +63,7 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
                   "height": height, "frames": len(samples), "duration": samples[-1]["time"],
                   "nominal_fps": info["nominal_fps"], "container_expected_frames": info["expected_frames"]}, config=config.to_dict(), samples=samples,
                   tracking_gaps=gaps, tracking_summary=dict(Counter(s["status"] for s in samples)),
+                  observation_sources=dict(Counter(s["source"] for s in samples if s["status"] == "observed")),
                   runtime_seconds=time.perf_counter() - started,
                   warnings=["Estimates require review. No accuracy confidence score is assigned.",
                             "Hidden contacts and contacts without a visible downward/upward reversal may be missed."])

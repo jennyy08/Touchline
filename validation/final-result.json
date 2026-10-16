@@ -4,21 +4,29 @@
       "id": "event-32",
       "frame": 32,
       "time": 1.0666666666666667,
-      "status": "review",
-      "reason": "gap_near_contact",
+      "status": "counted",
+      "reason": "observed_reversal_near_leg",
       "body_part": "right_knee",
-      "incoming_diameters_per_second": 6.814744138480251,
-      "outgoing_diameters_per_second": -5.675933944550542
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 6.838822035165034,
+      "outgoing_diameters_per_second": -5.585681244122021
     },
     {
       "id": "event-46",
       "frame": 46,
       "time": 1.5333333333333334,
-      "status": "review",
-      "reason": "gap_near_contact",
+      "status": "counted",
+      "reason": "observed_reversal_near_leg",
       "body_part": "left_foot",
-      "incoming_diameters_per_second": 7.2457171181406315,
-      "outgoing_diameters_per_second": -7.1016436846696545
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 7.16812850572036,
+      "outgoing_diameters_per_second": -7.508222641045509
     },
     {
       "id": "event-61",
@@ -27,8 +35,26 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "right_knee",
-      "incoming_diameters_per_second": 7.710004704217809,
-      "outgoing_diameters_per_second": -7.057203158079767
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 7.738435957855739,
+      "outgoing_diameters_per_second": -7.057203158079764
+    },
+    {
+      "id": "event-77",
+      "frame": 77,
+      "time": 2.566666666666667,
+      "status": "counted",
+      "reason": "observed_reversal_near_leg",
+      "body_part": "left_foot",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 7.309761787528416,
+      "outgoing_diameters_per_second": -7.474984581790764
     },
     {
       "id": "event-90",
@@ -37,8 +63,12 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "right_knee",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
       "incoming_diameters_per_second": 4.969338285240045,
-      "outgoing_diameters_per_second": -7.716443384462771
+      "outgoing_diameters_per_second": -7.7164433844627665
     },
     {
       "id": "event-107",
@@ -47,8 +77,26 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "right_knee",
-      "incoming_diameters_per_second": 6.599201456983731,
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 7.067728420337532,
       "outgoing_diameters_per_second": -7.374649086458723
+    },
+    {
+      "id": "event-122",
+      "frame": 122,
+      "time": 4.066666666666666,
+      "status": "counted",
+      "reason": "observed_reversal_near_leg",
+      "body_part": "right_knee",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 8.373957779974445,
+      "outgoing_diameters_per_second": -9.363690627902608
     },
     {
       "id": "event-140",
@@ -57,8 +105,26 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_thigh",
-      "incoming_diameters_per_second": 6.0576687305470704,
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 5.354982809451766,
       "outgoing_diameters_per_second": -5.491060380592382
+    },
+    {
+      "id": "event-156",
+      "frame": 156,
+      "time": 5.2,
+      "status": "counted",
+      "reason": "observed_reversal_near_leg",
+      "body_part": "right_knee",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 10.10687952065865,
+      "outgoing_diameters_per_second": -4.931082803455978
     },
     {
       "id": "event-170",
@@ -67,18 +133,26 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_foot",
-      "incoming_diameters_per_second": 6.162767828887358,
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 6.375345966901249,
       "outgoing_diameters_per_second": -6.0298243490029435
     },
     {
       "id": "event-182",
       "frame": 182,
       "time": 6.066666666666666,
-      "status": "review",
-      "reason": "gap_near_contact",
+      "status": "counted",
+      "reason": "observed_reversal_near_leg",
       "body_part": "right_foot",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
       "incoming_diameters_per_second": 5.703524243884293,
-      "outgoing_diameters_per_second": -10.20669799226023
+      "outgoing_diameters_per_second": -10.688331344702123
     },
     {
       "id": "event-218",
@@ -87,8 +161,12 @@
       "status": "review",
       "reason": "possible_hand_contact",
       "body_part": null,
-      "incoming_diameters_per_second": 8.905037897722266,
-      "outgoing_diameters_per_second": -5.605890518484807
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 7.745830422580858,
+      "outgoing_diameters_per_second": -5.052654936762126
     },
     {
       "id": "event-236",
@@ -97,6 +175,9 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_foot",
+      "evidence_sources": [
+        "detector"
+      ],
       "incoming_diameters_per_second": 9.247490059513925,
       "outgoing_diameters_per_second": -6.375763447737325
     },
@@ -107,8 +188,12 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_foot",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
       "incoming_diameters_per_second": 7.74355590309214,
-      "outgoing_diameters_per_second": -7.871065005767695
+      "outgoing_diameters_per_second": -7.76570756771104
     },
     {
       "id": "event-266",
@@ -117,6 +202,9 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_foot",
+      "evidence_sources": [
+        "detector"
+      ],
       "incoming_diameters_per_second": 7.074342734767652,
       "outgoing_diameters_per_second": -7.012522412421475
     },
@@ -127,6 +215,9 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_foot",
+      "evidence_sources": [
+        "detector"
+      ],
       "incoming_diameters_per_second": 6.873019775310822,
       "outgoing_diameters_per_second": -7.5920817106784675
     },
@@ -137,8 +228,26 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_foot",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
       "incoming_diameters_per_second": 5.9672203702187785,
-      "outgoing_diameters_per_second": -9.667479793284942
+      "outgoing_diameters_per_second": -9.66747979328495
+    },
+    {
+      "id": "event-315",
+      "frame": 315,
+      "time": 10.5,
+      "status": "counted",
+      "reason": "observed_reversal_near_leg",
+      "body_part": "right_foot",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 10.46888272762303,
+      "outgoing_diameters_per_second": -10.400000000000041
     },
     {
       "id": "event-333",
@@ -147,6 +256,9 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_foot",
+      "evidence_sources": [
+        "detector"
+      ],
       "incoming_diameters_per_second": 10.684312883228086,
       "outgoing_diameters_per_second": -8.65768730712373
     },
@@ -157,6 +269,9 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_knee",
+      "evidence_sources": [
+        "detector"
+      ],
       "incoming_diameters_per_second": 7.96806461924319,
       "outgoing_diameters_per_second": -9.123288710600798
     },
@@ -167,18 +282,26 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "right_thigh",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
       "incoming_diameters_per_second": 6.874978930609352,
-      "outgoing_diameters_per_second": -4.118396006059437
+      "outgoing_diameters_per_second": -4.2331428206406105
     },
     {
-      "id": "event-383",
-      "frame": 383,
-      "time": 12.766666666666667,
-      "status": "review",
-      "reason": "possible_floor_contact",
-      "body_part": null,
-      "incoming_diameters_per_second": 6.745441785551475,
-      "outgoing_diameters_per_second": -7.21205137663534
+      "id": "event-382",
+      "frame": 382,
+      "time": 12.733333333333333,
+      "status": "counted",
+      "reason": "observed_reversal_near_leg",
+      "body_part": "left_knee",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 10.079645768970243,
+      "outgoing_diameters_per_second": -7.837073573464976
     },
     {
       "id": "event-395",
@@ -187,6 +310,9 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_thigh",
+      "evidence_sources": [
+        "detector"
+      ],
       "incoming_diameters_per_second": 2.8806235020613835,
       "outgoing_diameters_per_second": -6.074957147756317
     },
@@ -197,6 +323,9 @@
       "status": "counted",
       "reason": "observed_reversal_near_leg",
       "body_part": "left_foot",
+      "evidence_sources": [
+        "detector"
+      ],
       "incoming_diameters_per_second": 9.954987506765283,
       "outgoing_diameters_per_second": -4.3695093717511995
     },
@@ -204,15 +333,19 @@
       "id": "event-424",
       "frame": 424,
       "time": 14.135,
-      "status": "review",
-      "reason": "possible_floor_contact",
-      "body_part": null,
-      "incoming_diameters_per_second": 4.747321316299553,
-      "outgoing_diameters_per_second": -8.284896151608876
+      "status": "counted",
+      "reason": "observed_reversal_near_leg",
+      "body_part": "left_foot",
+      "evidence_sources": [
+        "appearance",
+        "detector"
+      ],
+      "incoming_diameters_per_second": 4.587826320103259,
+      "outgoing_diameters_per_second": -6.818355832781132
     }
   ],
-  "estimated_count": 15,
-  "floor_y": 992.6608771972657,
+  "estimated_count": 24,
+  "floor_y": 990.3202525634765,
   "schema_version": 1,
   "video": {
     "sha256": "73daba39d2ef14ea593cc59ac5bf8ce8f2a2db7547de6f91c05fc1ec39e2a7a3",
@@ -236,6 +369,9 @@
     "debounce_seconds": 0.22,
     "velocity_window_seconds": 0.14,
     "min_velocity_diameters": 0.7,
+    "appearance_enabled": true,
+    "appearance_horizon_seconds": 0.25,
+    "appearance_similarity": 0.6,
     "device": "cpu"
   },
   "samples": [
@@ -243,6 +379,7 @@
       "frame": 0,
       "time": 0.0,
       "status": "observed",
+      "source": "detector",
       "box": [
         354.49041748046875,
         779.760009765625,
@@ -294,6 +431,7 @@
       "frame": 1,
       "time": 0.03333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         353.95855712890625,
         780.2691650390625,
@@ -345,6 +483,7 @@
       "frame": 2,
       "time": 0.06666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         352.2269592285156,
         779.3212280273438,
@@ -396,6 +535,7 @@
       "frame": 3,
       "time": 0.1,
       "status": "observed",
+      "source": "detector",
       "box": [
         351.3995666503906,
         780.1859741210938,
@@ -447,6 +587,7 @@
       "frame": 4,
       "time": 0.13333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         349.60595703125,
         781.0648803710938,
@@ -498,6 +639,7 @@
       "frame": 5,
       "time": 0.16666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         347.9836730957031,
         781.0846557617188,
@@ -549,6 +691,7 @@
       "frame": 6,
       "time": 0.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         348.9337463378906,
         780.2109985351562,
@@ -600,6 +743,7 @@
       "frame": 7,
       "time": 0.23333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         360.4207763671875,
         781.3590698242188,
@@ -651,6 +795,7 @@
       "frame": 8,
       "time": 0.26666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         381.09161376953125,
         783.8229370117188,
@@ -702,6 +847,7 @@
       "frame": 9,
       "time": 0.3,
       "status": "observed",
+      "source": "detector",
       "box": [
         413.17486572265625,
         779.0919799804688,
@@ -753,6 +899,7 @@
       "frame": 10,
       "time": 0.3333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         453.0647888183594,
         780.2157592773438,
@@ -804,6 +951,7 @@
       "frame": 11,
       "time": 0.36666666666666664,
       "status": "observed",
+      "source": "detector",
       "box": [
         493.8285827636719,
         779.1856079101562,
@@ -855,6 +1003,7 @@
       "frame": 12,
       "time": 0.4,
       "status": "observed",
+      "source": "detector",
       "box": [
         537.8449096679688,
         781.0706176757812,
@@ -906,6 +1055,7 @@
       "frame": 13,
       "time": 0.43333333333333335,
       "status": "observed",
+      "source": "detector",
       "box": [
         571.2880249023438,
         778.3794555664062,
@@ -957,6 +1107,7 @@
       "frame": 14,
       "time": 0.4666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         602.7013549804688,
         774.0217895507812,
@@ -1008,6 +1159,7 @@
       "frame": 15,
       "time": 0.5,
       "status": "observed",
+      "source": "detector",
       "box": [
         631.8496704101562,
         776.5263061523438,
@@ -1058,18 +1210,19 @@
     {
       "frame": 16,
       "time": 0.5333333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        590.2341921402401,
-        779.775171444927,
-        897.9207155777401,
-        1070.181970761333
+        636.0,
+        668.0,
+        944.0,
+        958.0
       ],
       "center": [
-        744.0774538589901,
-        924.9785711031301
+        790.0,
+        813.0
       ],
-      "diameter": 299.0466613769531,
+      "diameter": 299.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -1109,18 +1262,19 @@
     {
       "frame": 17,
       "time": 0.5666666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        602.9257596394444,
-        779.5544122425028,
-        910.6122830769444,
-        1069.961211558909
+        640.0,
+        546.0,
+        948.0,
+        836.0
       ],
       "center": [
-        756.7690213581944,
-        924.757811900706
+        794.0,
+        691.0
       ],
-      "diameter": 299.0466613769531,
+      "diameter": 299.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -1160,18 +1314,19 @@
     {
       "frame": 18,
       "time": 0.6,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        615.6173271386488,
-        779.3336530400787,
-        923.3038505761488,
-        1069.740452356485
+        642.0,
+        432.0,
+        950.0,
+        722.0
       ],
       "center": [
-        769.4605888573988,
-        924.5370526982819
+        796.0,
+        577.0
       ],
-      "diameter": 299.0466613769531,
+      "diameter": 299.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -1212,6 +1367,7 @@
       "frame": 19,
       "time": 0.6333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         650.605224609375,
         395.62298583984375,
@@ -1263,6 +1419,7 @@
       "frame": 20,
       "time": 0.6666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         655.7946166992188,
         321.7159423828125,
@@ -1314,6 +1471,7 @@
       "frame": 21,
       "time": 0.7,
       "status": "observed",
+      "source": "detector",
       "box": [
         660.0371704101562,
         247.02886962890625,
@@ -1365,6 +1523,7 @@
       "frame": 22,
       "time": 0.7333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         663.1469116210938,
         186.24008178710938,
@@ -1416,6 +1575,7 @@
       "frame": 23,
       "time": 0.7666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         665.4054565429688,
         152.16632080078125,
@@ -1467,6 +1627,7 @@
       "frame": 24,
       "time": 0.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         671.0921630859375,
         118.18743133544922,
@@ -1518,6 +1679,7 @@
       "frame": 25,
       "time": 0.8333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         674.7234497070312,
         116.74008178710938,
@@ -1569,6 +1731,7 @@
       "frame": 26,
       "time": 0.8666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         676.7404174804688,
         119.09877014160156,
@@ -1620,6 +1783,7 @@
       "frame": 27,
       "time": 0.9,
       "status": "observed",
+      "source": "detector",
       "box": [
         681.5035400390625,
         129.6550750732422,
@@ -1671,6 +1835,7 @@
       "frame": 28,
       "time": 0.9333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         686.537109375,
         132.80426025390625,
@@ -1722,6 +1887,7 @@
       "frame": 29,
       "time": 0.9666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         688.8367309570312,
         169.03689575195312,
@@ -1773,6 +1939,7 @@
       "frame": 30,
       "time": 1.0,
       "status": "observed",
+      "source": "detector",
       "box": [
         692.9723510742188,
         260.35552978515625,
@@ -1823,18 +1990,19 @@
     {
       "frame": 31,
       "time": 1.0333333333333334,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        725.6356415726721,
-        51.46015102390896,
-        1038.6211762406408,
-        390.46527797703396
+        694.0,
+        344.0,
+        1008.0,
+        684.0
       ],
       "center": [
-        882.1284089066564,
-        220.96271450047146
+        851.0,
+        514.0
       ],
-      "diameter": 325.9953308105469,
+      "diameter": 327.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -1875,6 +2043,7 @@
       "frame": 32,
       "time": 1.0666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         695.1262817382812,
         427.9114990234375,
@@ -1925,18 +2094,19 @@
     {
       "frame": 33,
       "time": 1.1,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        732.6013568201232,
-        97.37279645029048,
-        1053.990700081842,
-        426.4562925440405
+        702.0,
+        354.0,
+        1022.0,
+        682.0
       ],
       "center": [
-        893.2960284509826,
-        261.9145444971655
+        862.0,
+        518.0
       ],
-      "diameter": 325.2364196777344,
+      "diameter": 324.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -1976,18 +2146,19 @@
     {
       "frame": 34,
       "time": 1.1333333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        741.9145462594772,
-        76.80089584940387,
-        1063.303889521196,
-        405.8843919431539
+        712.0,
+        296.0,
+        1000.0,
+        592.0
       ],
       "center": [
-        902.6092178903366,
-        241.34264389627887
+        856.0,
+        444.0
       ],
-      "diameter": 325.2364196777344,
+      "diameter": 292.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -2028,6 +2199,7 @@
       "frame": 35,
       "time": 1.1666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         717.2456665039062,
         232.77940368652344,
@@ -2079,6 +2251,7 @@
       "frame": 36,
       "time": 1.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         724.0116577148438,
         200.44374084472656,
@@ -2130,6 +2303,7 @@
       "frame": 37,
       "time": 1.2333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         734.906494140625,
         171.89971923828125,
@@ -2181,6 +2355,7 @@
       "frame": 38,
       "time": 1.2666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         735.1847534179688,
         162.08258056640625,
@@ -2232,6 +2407,7 @@
       "frame": 39,
       "time": 1.3,
       "status": "observed",
+      "source": "detector",
       "box": [
         737.1239624023438,
         167.8758544921875,
@@ -2283,6 +2459,7 @@
       "frame": 40,
       "time": 1.3333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         747.1480712890625,
         186.88674926757812,
@@ -2334,6 +2511,7 @@
       "frame": 41,
       "time": 1.3666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         752.774169921875,
         222.06460571289062,
@@ -2385,6 +2563,7 @@
       "frame": 42,
       "time": 1.4,
       "status": "observed",
+      "source": "detector",
       "box": [
         757.6493530273438,
         266.1144104003906,
@@ -2435,18 +2614,19 @@
     {
       "frame": 43,
       "time": 1.4333333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        775.6596620877382,
-        160.17243686461808,
-        1057.0546205838318,
-        440.5289126946962
+        764.0,
+        324.0,
+        1046.0,
+        604.0
       ],
       "center": [
-        916.3571413357851,
-        300.35067477965714
+        905.0,
+        464.0
       ],
-      "diameter": 280.87571716308594,
+      "diameter": 281.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -2486,18 +2666,19 @@
     {
       "frame": 44,
       "time": 1.4666666666666666,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        781.4873688451902,
-        151.96807276480365,
-        1062.882327341284,
-        432.3245485948818
+        770.0,
+        396.0,
+        1052.0,
+        676.0
       ],
       "center": [
-        922.1848480932371,
-        292.1463106798427
+        911.0,
+        536.0
       ],
-      "diameter": 280.87571716308594,
+      "diameter": 281.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -2538,17 +2719,18 @@
       "frame": 45,
       "time": 1.5,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        776.1614990234375,
-        465.6813659667969,
-        1054.072509765625,
-        954.1629028320312
+        776.0,
+        484.0,
+        1058.0,
+        764.0
       ],
       "center": [
-        915.1170043945312,
-        709.9221343994141
+        917.0,
+        624.0
       ],
-      "diameter": 383.19627380371094,
+      "diameter": 281.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -2589,17 +2771,18 @@
       "frame": 46,
       "time": 1.5333333333333334,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        770.7495727539062,
-        517.8952026367188,
-        1056.2030029296875,
-        938.3351440429688
+        776.0,
+        522.0,
+        1058.0,
+        802.0
       ],
       "center": [
-        913.4762878417969,
-        728.1151733398438
+        917.0,
+        662.0
       ],
-      "diameter": 352.9466857910156,
+      "diameter": 281.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -2640,6 +2823,7 @@
       "frame": 47,
       "time": 1.5666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         757.2756958007812,
         413.354248046875,
@@ -2691,6 +2875,7 @@
       "frame": 48,
       "time": 1.6,
       "status": "observed",
+      "source": "detector",
       "box": [
         740.9490966796875,
         346.21124267578125,
@@ -2742,6 +2927,7 @@
       "frame": 49,
       "time": 1.6333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         727.505615234375,
         293.3127136230469,
@@ -2793,6 +2979,7 @@
       "frame": 50,
       "time": 1.6666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         714.3642578125,
         242.30035400390625,
@@ -2844,6 +3031,7 @@
       "frame": 51,
       "time": 1.7,
       "status": "observed",
+      "source": "detector",
       "box": [
         697.1804809570312,
         199.33203125,
@@ -2895,6 +3083,7 @@
       "frame": 52,
       "time": 1.7333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         683.627685546875,
         177.39732360839844,
@@ -2946,6 +3135,7 @@
       "frame": 53,
       "time": 1.7666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         671.4788208007812,
         166.6654815673828,
@@ -2997,6 +3187,7 @@
       "frame": 54,
       "time": 1.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         656.4708251953125,
         165.88563537597656,
@@ -3048,6 +3239,7 @@
       "frame": 55,
       "time": 1.8333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         642.2373046875,
         179.257080078125,
@@ -3099,6 +3291,7 @@
       "frame": 56,
       "time": 1.8666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         625.6741333007812,
         209.87063598632812,
@@ -3150,6 +3343,7 @@
       "frame": 57,
       "time": 1.9,
       "status": "observed",
+      "source": "detector",
       "box": [
         610.4718627929688,
         242.01397705078125,
@@ -3201,6 +3395,7 @@
       "frame": 58,
       "time": 1.9333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         596.9400024414062,
         294.0487060546875,
@@ -3252,6 +3447,7 @@
       "frame": 59,
       "time": 1.9666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         577.2705078125,
         353.3087463378906,
@@ -3302,18 +3498,19 @@
     {
       "frame": 60,
       "time": 2.0,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        616.4999143991764,
-        240.57289160841134,
-        888.1421263132389,
-        537.8808444892707
+        562.0,
+        436.0,
+        832.0,
+        732.0
       ],
       "center": [
-        752.3210203562077,
-        389.226868048841
+        697.0,
+        584.0
       ],
-      "diameter": 284.47508239746094,
+      "diameter": 283.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -3354,6 +3551,7 @@
       "frame": 61,
       "time": 2.033333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         543.7930908203125,
         522.2648315429688,
@@ -3405,6 +3603,7 @@
       "frame": 62,
       "time": 2.066666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         544.999267578125,
         476.0726013183594,
@@ -3455,18 +3654,19 @@
     {
       "frame": 63,
       "time": 2.1,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        564.7951999156745,
-        368.7716128551692,
-        844.2671847789558,
-        640.6891238414973
+        554.0,
+        394.0,
+        834.0,
+        666.0
       ],
       "center": [
-        704.5311923473151,
-        504.7303683483333
+        694.0,
+        530.0
       ],
-      "diameter": 275.6947479248047,
+      "diameter": 276.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -3507,6 +3707,7 @@
       "frame": 64,
       "time": 2.1333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         565.1176147460938,
         326.4377746582031,
@@ -3558,6 +3759,7 @@
       "frame": 65,
       "time": 2.1666666666666665,
       "status": "observed",
+      "source": "detector",
       "box": [
         572.7547607421875,
         281.9488220214844,
@@ -3609,6 +3811,7 @@
       "frame": 66,
       "time": 2.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         579.2142333984375,
         243.30345153808594,
@@ -3660,6 +3863,7 @@
       "frame": 67,
       "time": 2.2333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         590.1346435546875,
         223.8010711669922,
@@ -3711,6 +3915,7 @@
       "frame": 68,
       "time": 2.2666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         595.048583984375,
         210.27847290039062,
@@ -3762,6 +3967,7 @@
       "frame": 69,
       "time": 2.3,
       "status": "observed",
+      "source": "detector",
       "box": [
         601.5914306640625,
         210.25906372070312,
@@ -3813,6 +4019,7 @@
       "frame": 70,
       "time": 2.3333333333333335,
       "status": "observed",
+      "source": "detector",
       "box": [
         608.789306640625,
         217.6586456298828,
@@ -3864,6 +4071,7 @@
       "frame": 71,
       "time": 2.3666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         614.5924072265625,
         244.0309600830078,
@@ -3915,6 +4123,7 @@
       "frame": 72,
       "time": 2.4,
       "status": "observed",
+      "source": "detector",
       "box": [
         616.4567260742188,
         279.0391845703125,
@@ -3966,6 +4175,7 @@
       "frame": 73,
       "time": 2.433333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         628.6171264648438,
         321.0145263671875,
@@ -4017,6 +4227,7 @@
       "frame": 74,
       "time": 2.466666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         634.81005859375,
         385.7444763183594,
@@ -4068,6 +4279,7 @@
       "frame": 75,
       "time": 2.5,
       "status": "observed",
+      "source": "detector",
       "box": [
         639.5440673828125,
         461.2756652832031,
@@ -4118,18 +4330,19 @@
     {
       "frame": 76,
       "time": 2.533333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        606.725663569588,
-        325.7108570716537,
-        855.517411616463,
-        613.9354969642318
+        646.0,
+        556.0,
+        894.0,
+        844.0
       ],
       "center": [
-        731.1215375930256,
-        469.8231770179428
+        770.0,
+        700.0
       ],
-      "diameter": 268.50819396972656,
+      "diameter": 268.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -4169,18 +4382,19 @@
     {
       "frame": 77,
       "time": 2.566666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        605.3143469584486,
-        329.62771813695053,
-        854.1060950053236,
-        617.8523580295287
+        634.0,
+        558.0,
+        882.0,
+        846.0
       ],
       "center": [
-        729.7102209818861,
-        473.7400380832396
+        758.0,
+        702.0
       ],
-      "diameter": 268.50819396972656,
+      "diameter": 268.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -4220,18 +4434,19 @@
     {
       "frame": 78,
       "time": 2.6,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        603.9030303473093,
-        333.5445792022473,
-        852.6947783941843,
-        621.7692190948254
+        618.0,
+        470.0,
+        866.0,
+        758.0
       ],
       "center": [
-        728.2989043707468,
-        477.65689914853635
+        742.0,
+        614.0
       ],
-      "diameter": 268.50819396972656,
+      "diameter": 268.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -4272,6 +4487,7 @@
       "frame": 79,
       "time": 2.6333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         603.1473388671875,
         402.5450744628906,
@@ -4323,6 +4539,7 @@
       "frame": 80,
       "time": 2.6666666666666665,
       "status": "observed",
+      "source": "detector",
       "box": [
         588.2745971679688,
         348.150390625,
@@ -4374,6 +4591,7 @@
       "frame": 81,
       "time": 2.7,
       "status": "observed",
+      "source": "detector",
       "box": [
         572.8997192382812,
         304.4482421875,
@@ -4425,6 +4643,7 @@
       "frame": 82,
       "time": 2.7333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         558.1213989257812,
         262.5151672363281,
@@ -4476,6 +4695,7 @@
       "frame": 83,
       "time": 2.7666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         542.6444091796875,
         240.44235229492188,
@@ -4527,6 +4747,7 @@
       "frame": 84,
       "time": 2.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         528.6607055664062,
         225.8428192138672,
@@ -4578,6 +4799,7 @@
       "frame": 85,
       "time": 2.8333333333333335,
       "status": "observed",
+      "source": "detector",
       "box": [
         511.420654296875,
         225.33912658691406,
@@ -4629,6 +4851,7 @@
       "frame": 86,
       "time": 2.8666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         497.4541931152344,
         239.83709716796875,
@@ -4680,6 +4903,7 @@
       "frame": 87,
       "time": 2.9,
       "status": "observed",
+      "source": "detector",
       "box": [
         480.4599609375,
         265.81494140625,
@@ -4731,6 +4955,7 @@
       "frame": 88,
       "time": 2.933333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         461.560302734375,
         299.6618347167969,
@@ -4782,6 +5007,7 @@
       "frame": 89,
       "time": 2.966666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         443.34454345703125,
         353.3764953613281,
@@ -4833,6 +5059,7 @@
       "frame": 90,
       "time": 3.0,
       "status": "observed",
+      "source": "detector",
       "box": [
         423.20294189453125,
         428.99945068359375,
@@ -4884,6 +5111,7 @@
       "frame": 91,
       "time": 3.033333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         405.3407287597656,
         399.92730712890625,
@@ -4934,18 +5162,19 @@
     {
       "frame": 92,
       "time": 3.066666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        435.6530345936708,
-        323.4313233214828,
-        737.2926525135927,
-        634.603259356639
+        418.0,
+        304.0,
+        688.0,
+        584.0
       ],
       "center": [
-        586.4728435536317,
-        479.01729133906093
+        553.0,
+        444.0
       ],
-      "diameter": 306.40577697753906,
+      "diameter": 275.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -4986,6 +5215,7 @@
       "frame": 93,
       "time": 3.1,
       "status": "observed",
+      "source": "detector",
       "box": [
         431.1104736328125,
         223.4362335205078,
@@ -5037,6 +5267,7 @@
       "frame": 94,
       "time": 3.1333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         442.3041076660156,
         148.67965698242188,
@@ -5088,6 +5319,7 @@
       "frame": 95,
       "time": 3.1666666666666665,
       "status": "observed",
+      "source": "detector",
       "box": [
         451.26422119140625,
         89.5467529296875,
@@ -5139,6 +5371,7 @@
       "frame": 96,
       "time": 3.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         461.08917236328125,
         43.496551513671875,
@@ -5190,6 +5423,7 @@
       "frame": 97,
       "time": 3.2333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         470.2766418457031,
         11.81977367401123,
@@ -5241,6 +5475,7 @@
       "frame": 98,
       "time": 3.2666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         479.095458984375,
         0.0,
@@ -5292,6 +5527,7 @@
       "frame": 99,
       "time": 3.3,
       "status": "observed",
+      "source": "detector",
       "box": [
         487.74786376953125,
         0.0,
@@ -5343,6 +5579,7 @@
       "frame": 100,
       "time": 3.3333333333333335,
       "status": "observed",
+      "source": "detector",
       "box": [
         496.1895751953125,
         0.0,
@@ -5394,6 +5631,7 @@
       "frame": 101,
       "time": 3.3666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         502.65045166015625,
         9.98486328125,
@@ -5445,6 +5683,7 @@
       "frame": 102,
       "time": 3.4,
       "status": "observed",
+      "source": "detector",
       "box": [
         514.2388305664062,
         41.2326545715332,
@@ -5496,6 +5735,7 @@
       "frame": 103,
       "time": 3.433333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         508.9728698730469,
         90.48438262939453,
@@ -5547,6 +5787,7 @@
       "frame": 104,
       "time": 3.466666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         527.531494140625,
         160.6759796142578,
@@ -5598,6 +5839,7 @@
       "frame": 105,
       "time": 3.5,
       "status": "observed",
+      "source": "detector",
       "box": [
         531.7141723632812,
         253.03131103515625,
@@ -5648,18 +5890,19 @@
     {
       "frame": 106,
       "time": 3.533333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        490.9624079706307,
-        62.60296845884099,
-        801.4827326776619,
-        381.11267304868477
+        542.0,
+        364.0,
+        852.0,
+        682.0
       ],
       "center": [
-        646.2225703241463,
-        221.85782075376287
+        697.0,
+        523.0
       ],
-      "diameter": 314.5150146484375,
+      "diameter": 314.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -5700,6 +5943,7 @@
       "frame": 107,
       "time": 3.566666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         534.3865356445312,
         382.4344177246094,
@@ -5751,6 +5995,7 @@
       "frame": 108,
       "time": 3.6,
       "status": "observed",
+      "source": "detector",
       "box": [
         555.7030029296875,
         270.6714172363281,
@@ -5802,6 +6047,7 @@
       "frame": 109,
       "time": 3.6333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         578.275390625,
         183.84825134277344,
@@ -5853,6 +6099,7 @@
       "frame": 110,
       "time": 3.6666666666666665,
       "status": "observed",
+      "source": "detector",
       "box": [
         596.9342041015625,
         109.02714538574219,
@@ -5904,6 +6151,7 @@
       "frame": 111,
       "time": 3.7,
       "status": "observed",
+      "source": "detector",
       "box": [
         616.6580200195312,
         61.140716552734375,
@@ -5955,6 +6203,7 @@
       "frame": 112,
       "time": 3.7333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         635.3190307617188,
         26.5849609375,
@@ -6006,6 +6255,7 @@
       "frame": 113,
       "time": 3.7666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         653.934326171875,
         6.855919361114502,
@@ -6057,6 +6307,7 @@
       "frame": 114,
       "time": 3.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         672.7056274414062,
         2.53549861907959,
@@ -6108,6 +6359,7 @@
       "frame": 115,
       "time": 3.8333333333333335,
       "status": "observed",
+      "source": "detector",
       "box": [
         690.606201171875,
         7.797606468200684,
@@ -6159,6 +6411,7 @@
       "frame": 116,
       "time": 3.8666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         705.8336181640625,
         26.01869773864746,
@@ -6210,6 +6463,7 @@
       "frame": 117,
       "time": 3.9,
       "status": "observed",
+      "source": "detector",
       "box": [
         716.1929321289062,
         58.94569778442383,
@@ -6261,6 +6515,7 @@
       "frame": 118,
       "time": 3.933333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         735.1471557617188,
         106.99278259277344,
@@ -6311,18 +6566,19 @@
     {
       "frame": 119,
       "time": 3.966666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        711.2521987765261,
-        42.422105601007644,
-        1008.4299941866824,
-        359.5015275980779
+        754.0,
+        158.0,
+        1050.0,
+        476.0
       ],
       "center": [
-        859.8410964816043,
-        200.9618165995428
+        902.0,
+        317.0
       ],
-      "diameter": 307.1286087036133,
+      "diameter": 307.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -6362,18 +6618,19 @@
     {
       "frame": 120,
       "time": 4.0,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        721.6361710142545,
-        37.267532009029594,
-        1018.8139664244108,
-        354.3469540060999
+        776.0,
+        236.0,
+        1072.0,
+        554.0
       ],
       "center": [
-        870.2250687193326,
-        195.80724300756475
+        924.0,
+        395.0
       ],
-      "diameter": 307.1286087036133,
+      "diameter": 307.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -6413,18 +6670,19 @@
     {
       "frame": 121,
       "time": 4.033333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        732.0201432519829,
-        32.112958417051544,
-        1029.1979386621392,
-        349.1923804141219
+        794.0,
+        332.0,
+        1090.0,
+        650.0
       ],
       "center": [
-        880.609040957061,
-        190.6526694155867
+        942.0,
+        491.0
       ],
-      "diameter": 307.1286087036133,
+      "diameter": 307.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -6464,18 +6722,19 @@
     {
       "frame": 122,
       "time": 4.066666666666666,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        742.4041154897112,
-        26.958384825073495,
-        1039.5819108998676,
-        344.0378068221438
+        814.0,
+        448.0,
+        1110.0,
+        766.0
       ],
       "center": [
-        890.9930131947893,
-        185.49809582360865
+        962.0,
+        607.0
       ],
-      "diameter": 307.1286087036133,
+      "diameter": 307.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -6515,10 +6774,19 @@
     {
       "frame": 123,
       "time": 4.1,
-      "status": "lost",
-      "box": null,
-      "center": null,
-      "diameter": null,
+      "status": "observed",
+      "source": "appearance",
+      "box": [
+        832.0,
+        408.0,
+        1128.0,
+        726.0
+      ],
+      "center": [
+        980.0,
+        567.0
+      ],
+      "diameter": 307.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -6558,10 +6826,19 @@
     {
       "frame": 124,
       "time": 4.133333333333334,
-      "status": "lost",
-      "box": null,
-      "center": null,
-      "diameter": null,
+      "status": "observed",
+      "source": "appearance",
+      "box": [
+        856.0,
+        292.0,
+        1122.0,
+        578.0
+      ],
+      "center": [
+        989.0,
+        435.0
+      ],
+      "diameter": 276.0,
       "segment": 0,
       "pose": {
         "left_wrist": [
@@ -6602,6 +6879,7 @@
       "frame": 125,
       "time": 4.166666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         869.73388671875,
         187.4438934326172,
@@ -6613,7 +6891,7 @@
         342.7823257446289
       ],
       "diameter": 275.7688522338867,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1213.5999755859375,
@@ -6653,18 +6931,19 @@
       "frame": 126,
       "time": 4.2,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        832.91455078125,
-        90.596435546875,
-        1101.65625,
-        415.1729736328125
+        896.0,
+        100.0,
+        1112.0,
+        380.0
       ],
       "center": [
-        967.285400390625,
-        252.88470458984375
+        1004.0,
+        240.0
       ],
-      "diameter": 296.65911865234375,
-      "segment": 1,
+      "diameter": 248.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1145.7001953125,
@@ -6704,18 +6983,19 @@
       "frame": 127,
       "time": 4.233333333333333,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        828.991455078125,
-        14.541864395141602,
-        1130.6038818359375,
-        340.5052795410156
+        902.0,
+        16.0,
+        1118.0,
+        296.0
       ],
       "center": [
-        979.7976684570312,
-        177.5235719680786
+        1010.0,
+        156.0
       ],
-      "diameter": 313.78792095184326,
-      "segment": 1,
+      "diameter": 248.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1204.155517578125,
@@ -6754,19 +7034,20 @@
     {
       "frame": 128,
       "time": 4.266666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        832.2399101295144,
-        117.07930502978542,
-        1133.852336887327,
-        443.04272017565944
+        1264.0,
+        0.0,
+        1458.0,
+        252.0
       ],
       "center": [
-        983.0461235084207,
-        280.0610126027224
+        1361.0,
+        126.0
       ],
-      "diameter": 313.78792095184326,
-      "segment": 1,
+      "diameter": 223.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1193.3594970703125,
@@ -6805,19 +7086,20 @@
     {
       "frame": 129,
       "time": 4.3,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        830.8870588170124,
-        103.78410472401788,
-        1132.499485574825,
-        429.7475198698919
+        1264.0,
+        0.0,
+        1458.0,
+        252.0
       ],
       "center": [
-        981.6932721959187,
-        266.7658122969549
+        1361.0,
+        126.0
       ],
-      "diameter": 313.78792095184326,
-      "segment": 1,
+      "diameter": 223.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1190.2125244140625,
@@ -6857,6 +7139,7 @@
       "frame": 130,
       "time": 4.333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         840.4221801757812,
         0.0,
@@ -6868,7 +7151,7 @@
         98.27801513671875
       ],
       "diameter": 263.4866638183594,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1181.2342529296875,
@@ -6908,18 +7191,19 @@
       "frame": 131,
       "time": 4.366666666666666,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        845.5664672851562,
-        0.0,
-        1174.3453369140625,
-        176.29281616210938
+        858.0,
+        2.0,
+        1154.0,
+        178.0
       ],
       "center": [
-        1009.9559020996094,
-        88.14640808105469
+        1006.0,
+        90.0
       ],
-      "diameter": 252.5358428955078,
-      "segment": 1,
+      "diameter": 236.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1172.4500732421875,
@@ -6959,18 +7243,19 @@
       "frame": 132,
       "time": 4.4,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        851.3442993164062,
-        0.0,
-        1183.96044921875,
-        169.06365966796875
+        874.0,
+        12.0,
+        1140.0,
+        170.0
       ],
       "center": [
-        1017.6523742675781,
-        84.53182983398438
+        1007.0,
+        91.0
       ],
-      "diameter": 250.83990478515625,
-      "segment": 1,
+      "diameter": 212.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1153.05078125,
@@ -7010,18 +7295,19 @@
       "frame": 133,
       "time": 4.433333333333334,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        856.5322875976562,
+        866.0,
         0.0,
-        1192.9774169921875,
-        177.90084838867188
+        1158.0,
+        174.0
       ],
       "center": [
-        1024.7548522949219,
-        88.95042419433594
+        1012.0,
+        87.0
       ],
-      "diameter": 257.17298889160156,
-      "segment": 1,
+      "diameter": 233.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1137.937744140625,
@@ -7060,19 +7346,20 @@
     {
       "frame": 134,
       "time": 4.466666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        852.7209157680376,
-        -57.55830334531578,
-        1189.166045162569,
-        120.3425450433561
+        862.0,
+        0.0,
+        1184.0,
+        192.0
       ],
       "center": [
-        1020.9434804653032,
-        31.392120849020156
+        1023.0,
+        96.0
       ],
-      "diameter": 257.17298889160156,
-      "segment": 1,
+      "diameter": 257.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1134.9339599609375,
@@ -7112,18 +7399,19 @@
       "frame": 135,
       "time": 4.5,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        868.1009521484375,
-        0.0,
-        1206.74658203125,
-        234.98223876953125
+        910.0,
+        30.0,
+        1200.0,
+        202.0
       ],
       "center": [
-        1037.4237670898438,
-        117.49111938476562
+        1055.0,
+        116.0
       ],
-      "diameter": 286.8139343261719,
-      "segment": 1,
+      "diameter": 231.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1119.1708984375,
@@ -7163,18 +7451,19 @@
       "frame": 136,
       "time": 4.533333333333333,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        876.0233764648438,
-        0.0,
-        1219.16748046875,
-        291.7957458496094
+        926.0,
+        78.0,
+        1216.0,
+        250.0
       ],
       "center": [
-        1047.5954284667969,
-        145.8978729248047
+        1071.0,
+        164.0
       ],
-      "diameter": 317.4699249267578,
-      "segment": 1,
+      "diameter": 231.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1019.907470703125,
@@ -7214,18 +7503,19 @@
       "frame": 137,
       "time": 4.566666666666666,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        879.5097045898438,
-        3.73190975189209,
-        1236.0465087890625,
-        358.0860595703125
+        942.0,
+        148.0,
+        1232.0,
+        320.0
       ],
       "center": [
-        1057.7781066894531,
-        180.9089846611023
+        1087.0,
+        234.0
       ],
-      "diameter": 355.4454770088196,
-      "segment": 1,
+      "diameter": 231.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1075.2149658203125,
@@ -7265,6 +7555,7 @@
       "frame": 138,
       "time": 4.6,
       "status": "observed",
+      "source": "detector",
       "box": [
         889.8564453125,
         75.4236831665039,
@@ -7276,7 +7567,7 @@
         267.6138343811035
       ],
       "diameter": 372.25710678100586,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1044.651123046875,
@@ -7316,6 +7607,7 @@
       "frame": 139,
       "time": 4.633333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         900.6785278320312,
         191.7505340576172,
@@ -7327,7 +7619,7 @@
         411.0001449584961
       ],
       "diameter": 402.9424514770508,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           983.8792114257812,
@@ -7367,6 +7659,7 @@
       "frame": 140,
       "time": 4.666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         902.4253540039062,
         223.62545776367188,
@@ -7378,7 +7671,7 @@
         415.74769592285156
       ],
       "diameter": 381.23121643066406,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1001.7142944335938,
@@ -7418,6 +7711,7 @@
       "frame": 141,
       "time": 4.7,
       "status": "observed",
+      "source": "detector",
       "box": [
         898.0437622070312,
         111.62833404541016,
@@ -7429,7 +7723,7 @@
         302.5416450500488
       ],
       "diameter": 373.3752555847168,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1037.398193359375,
@@ -7469,6 +7763,7 @@
       "frame": 142,
       "time": 4.733333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         890.844482421875,
         34.8538932800293,
@@ -7480,7 +7775,7 @@
         220.2140407562256
       ],
       "diameter": 362.68625831604004,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1080.046875,
@@ -7520,6 +7815,7 @@
       "frame": 143,
       "time": 4.766666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         882.8493041992188,
         0.0,
@@ -7531,7 +7827,7 @@
         161.49855041503906
       ],
       "diameter": 335.8890838623047,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "right_wrist": [
           672.1386108398438,
@@ -7567,6 +7863,7 @@
       "frame": 144,
       "time": 4.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         877.2611694335938,
         0.0,
@@ -7578,7 +7875,7 @@
         137.37530517578125
       ],
       "diameter": 307.6565856933594,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_hip": [
           980.7137451171875,
@@ -7610,6 +7907,7 @@
       "frame": 145,
       "time": 4.833333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         871.7789306640625,
         0.0,
@@ -7621,7 +7919,7 @@
         120.17073822021484
       ],
       "diameter": 286.3192367553711,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_hip": [
           987.8817749023438,
@@ -7653,6 +7951,7 @@
       "frame": 146,
       "time": 4.866666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         866.9685668945312,
         0.0,
@@ -7664,7 +7963,7 @@
         111.70946502685547
       ],
       "diameter": 275.77413177490234,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "right_wrist": [
           798.2592163085938,
@@ -7700,6 +7999,7 @@
       "frame": 147,
       "time": 4.9,
       "status": "observed",
+      "source": "detector",
       "box": [
         862.1909790039062,
         0.0,
@@ -7711,7 +8011,7 @@
         109.09416961669922
       ],
       "diameter": 269.2479476928711,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1012.0440063476562,
@@ -7751,6 +8051,7 @@
       "frame": 148,
       "time": 4.933333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         857.2498779296875,
         0.0,
@@ -7762,7 +8063,7 @@
         114.9040756225586
       ],
       "diameter": 272.6540756225586,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           997.5864868164062,
@@ -7802,6 +8103,7 @@
       "frame": 149,
       "time": 4.966666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         851.8541259765625,
         0.0,
@@ -7813,7 +8115,7 @@
         124.66937255859375
       ],
       "diameter": 284.1279296875,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           931.7821044921875,
@@ -7853,6 +8155,7 @@
       "frame": 150,
       "time": 5.0,
       "status": "observed",
+      "source": "detector",
       "box": [
         850.0542602539062,
         0.0,
@@ -7864,7 +8167,7 @@
         144.13670349121094
       ],
       "diameter": 301.00965881347656,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1097.5853271484375,
@@ -7904,6 +8207,7 @@
       "frame": 151,
       "time": 5.033333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         851.1427001953125,
         14.990402221679688,
@@ -7915,7 +8219,7 @@
         180.63135528564453
       ],
       "diameter": 318.31685638427734,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1145.1800537109375,
@@ -7955,6 +8259,7 @@
       "frame": 152,
       "time": 5.066666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         850.6829223632812,
         79.33036804199219,
@@ -7966,7 +8271,7 @@
         239.95145416259766
       ],
       "diameter": 306.78670501708984,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1161.4923095703125,
@@ -8005,19 +8310,20 @@
     {
       "frame": 153,
       "time": 5.1,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        876.1428698592692,
-        -22.716622333190372,
-        1168.474107652238,
-        298.5255499080206
+        856.0,
+        160.0,
+        1120.0,
+        448.0
       ],
       "center": [
-        1022.3084887557536,
-        137.9044637874151
+        988.0,
+        304.0
       ],
-      "diameter": 306.78670501708984,
-      "segment": 1,
+      "diameter": 276.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1184.8739013671875,
@@ -8056,19 +8362,20 @@
     {
       "frame": 154,
       "time": 5.133333333333334,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        875.6191402118424,
-        -26.046543164583937,
-        1167.9503780048112,
-        295.19562907662703
+        854.0,
+        250.0,
+        1118.0,
+        538.0
       ],
       "center": [
-        1021.7847591083267,
-        134.57454295602153
+        986.0,
+        394.0
       ],
-      "diameter": 306.78670501708984,
-      "segment": 1,
+      "diameter": 276.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1186.362548828125,
@@ -8107,19 +8414,20 @@
     {
       "frame": 155,
       "time": 5.166666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        875.0954105644155,
-        -29.376463995977417,
-        1167.4266483573842,
-        291.8657082452335
+        850.0,
+        360.0,
+        1114.0,
+        648.0
       ],
       "center": [
-        1021.2610294608999,
-        131.24462212462805
+        982.0,
+        504.0
       ],
-      "diameter": 306.78670501708984,
-      "segment": 1,
+      "diameter": 276.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1189.5234375,
@@ -8159,6 +8467,7 @@
       "frame": 156,
       "time": 5.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         834.4618530273438,
         481.6058044433594,
@@ -8170,7 +8479,7 @@
         626.6654205322266
       ],
       "diameter": 288.94020080566406,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1193.985107421875,
@@ -8209,19 +8518,20 @@
     {
       "frame": 157,
       "time": 5.233333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        861.4264128604518,
-        154.892259279247,
-        1149.1875822940456,
-        445.0114914569814
+        826.0,
+        446.0,
+        1114.0,
+        736.0
       ],
       "center": [
-        1005.3069975772487,
-        299.9518753681142
+        970.0,
+        591.0
       ],
-      "diameter": 288.94020080566406,
-      "segment": 1,
+      "diameter": 289.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1197.0177001953125,
@@ -8260,19 +8570,20 @@
     {
       "frame": 158,
       "time": 5.266666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        859.9471058256677,
-        162.80414667578287,
-        1147.7082752592614,
-        452.92337885351725
+        814.0,
+        374.0,
+        1102.0,
+        664.0
       ],
       "center": [
-        1003.8276905424646,
-        307.86376276465006
+        958.0,
+        519.0
       ],
-      "diameter": 288.94020080566406,
-      "segment": 1,
+      "diameter": 289.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1195.6959228515625,
@@ -8311,19 +8622,20 @@
     {
       "frame": 159,
       "time": 5.3,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        858.4677987908835,
-        170.71603407231873,
-        1146.2289682244773,
-        460.8352662500531
+        818.0,
+        322.0,
+        1078.0,
+        582.0
       ],
       "center": [
-        1002.3483835076804,
-        315.7756501611859
+        948.0,
+        452.0
       ],
-      "diameter": 288.94020080566406,
-      "segment": 1,
+      "diameter": 260.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1198.964599609375,
@@ -8363,6 +8675,7 @@
       "frame": 160,
       "time": 5.333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         798.2758178710938,
         309.08447265625,
@@ -8374,7 +8687,7 @@
         458.70074462890625
       ],
       "diameter": 290.1408386230469,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1194.5128173828125,
@@ -8414,6 +8727,7 @@
       "frame": 161,
       "time": 5.366666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         785.1508178710938,
         281.09820556640625,
@@ -8425,7 +8739,7 @@
         428.5583190917969
       ],
       "diameter": 287.2220458984375,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1186.0924072265625,
@@ -8465,6 +8779,7 @@
       "frame": 162,
       "time": 5.4,
       "status": "observed",
+      "source": "detector",
       "box": [
         776.171875,
         272.3302917480469,
@@ -8476,7 +8791,7 @@
         412.5045928955078
       ],
       "diameter": 279.7308807373047,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1176.904052734375,
@@ -8516,6 +8831,7 @@
       "frame": 163,
       "time": 5.433333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         764.6878662109375,
         270.8002624511719,
@@ -8527,7 +8843,7 @@
         410.7503204345703
       ],
       "diameter": 276.91673278808594,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1164.0247802734375,
@@ -8567,6 +8883,7 @@
       "frame": 164,
       "time": 5.466666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         755.6666259765625,
         284.5588684082031,
@@ -8578,7 +8895,7 @@
         424.3614044189453
       ],
       "diameter": 275.57530212402344,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1151.7781982421875,
@@ -8618,6 +8935,7 @@
       "frame": 165,
       "time": 5.5,
       "status": "observed",
+      "source": "detector",
       "box": [
         746.6753540039062,
         309.10821533203125,
@@ -8629,7 +8947,7 @@
         449.2230224609375
       ],
       "diameter": 276.6570739746094,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1124.5111083984375,
@@ -8669,6 +8987,7 @@
       "frame": 166,
       "time": 5.533333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         737.7654418945312,
         345.4916687011719,
@@ -8680,7 +8999,7 @@
         486.7986602783203
       ],
       "diameter": 275.41859436035156,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1117.1285400390625,
@@ -8720,6 +9039,7 @@
       "frame": 167,
       "time": 5.566666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         728.74755859375,
         399.24365234375,
@@ -8731,7 +9051,7 @@
         543.1135559082031
       ],
       "diameter": 268.4272155761719,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1098.8306884765625,
@@ -8771,6 +9091,7 @@
       "frame": 168,
       "time": 5.6,
       "status": "observed",
+      "source": "detector",
       "box": [
         715.5887451171875,
         456.8546142578125,
@@ -8782,7 +9103,7 @@
         595.4097595214844
       ],
       "diameter": 259.96368408203125,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1039.1859130859375,
@@ -8821,19 +9142,20 @@
     {
       "frame": 169,
       "time": 5.633333333333334,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        733.5166130974899,
-        401.85339391732884,
-        976.3336907342086,
-        678.9636844446726
+        710.0,
+        536.0,
+        952.0,
+        814.0
       ],
       "center": [
-        854.9251519158493,
-        540.4085391810007
+        831.0,
+        675.0
       ],
-      "diameter": 259.96368408203125,
-      "segment": 1,
+      "diameter": 260.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1004.414306640625,
@@ -8873,6 +9195,7 @@
       "frame": 170,
       "time": 5.666666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         691.4415893554688,
         573.9476318359375,
@@ -8884,7 +9207,7 @@
         713.6022338867188
       ],
       "diameter": 275.5114440917969,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1063.060302734375,
@@ -8924,6 +9247,7 @@
       "frame": 171,
       "time": 5.7,
       "status": "observed",
+      "source": "detector",
       "box": [
         667.9745483398438,
         502.32135009765625,
@@ -8935,7 +9259,7 @@
         645.470458984375
       ],
       "diameter": 279.5242004394531,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1069.4576416015625,
@@ -8975,6 +9299,7 @@
       "frame": 172,
       "time": 5.733333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         640.2916870117188,
         441.1250915527344,
@@ -8986,7 +9311,7 @@
         582.5833892822266
       ],
       "diameter": 277.66004943847656,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1071.5279541015625,
@@ -9026,6 +9351,7 @@
       "frame": 173,
       "time": 5.766666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         619.65087890625,
         390.35137939453125,
@@ -9037,7 +9363,7 @@
         530.8205261230469
       ],
       "diameter": 277.6256103515625,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1077.45166015625,
@@ -9077,6 +9403,7 @@
       "frame": 174,
       "time": 5.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         601.4087524414062,
         356.61578369140625,
@@ -9088,7 +9415,7 @@
         494.0462646484375
       ],
       "diameter": 272.5631103515625,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1073.4595947265625,
@@ -9128,6 +9455,7 @@
       "frame": 175,
       "time": 5.833333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         578.0086059570312,
         331.7679443359375,
@@ -9139,7 +9467,7 @@
         465.46356201171875
       ],
       "diameter": 273.9494934082031,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1073.0242919921875,
@@ -9179,6 +9507,7 @@
       "frame": 176,
       "time": 5.866666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         555.0338134765625,
         318.6302185058594,
@@ -9190,7 +9519,7 @@
         451.8692169189453
       ],
       "diameter": 273.54722595214844,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1055.382080078125,
@@ -9230,6 +9559,7 @@
       "frame": 177,
       "time": 5.9,
       "status": "observed",
+      "source": "detector",
       "box": [
         533.8546752929688,
         319.1217346191406,
@@ -9241,7 +9571,7 @@
         451.84535217285156
       ],
       "diameter": 266.2903594970703,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           921.2402954101562,
@@ -9281,6 +9611,7 @@
       "frame": 178,
       "time": 5.933333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         511.94097900390625,
         331.9016418457031,
@@ -9292,7 +9623,7 @@
         464.16200256347656
       ],
       "diameter": 266.19505310058594,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1009.78564453125,
@@ -9332,6 +9663,7 @@
       "frame": 179,
       "time": 5.966666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         488.8489685058594,
         349.77813720703125,
@@ -9343,7 +9675,7 @@
         485.9397277832031
       ],
       "diameter": 269.2342987060547,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1077.5028076171875,
@@ -9383,6 +9715,7 @@
       "frame": 180,
       "time": 6.0,
       "status": "observed",
+      "source": "detector",
       "box": [
         464.14154052734375,
         392.32659912109375,
@@ -9394,7 +9727,7 @@
         527.5442199707031
       ],
       "diameter": 264.7068176269531,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1070.695556640625,
@@ -9434,6 +9767,7 @@
       "frame": 181,
       "time": 6.033333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         438.33953857421875,
         450.1339416503906,
@@ -9445,7 +9779,7 @@
         580.0192108154297
       ],
       "diameter": 263.0571746826172,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1099.2061767578125,
@@ -9485,6 +9819,7 @@
       "frame": 182,
       "time": 6.066666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         412.8363037109375,
         539.4555053710938,
@@ -9496,7 +9831,7 @@
         663.9224243164062
       ],
       "diameter": 259.6291198730469,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1098.606201171875,
@@ -9535,19 +9870,20 @@
     {
       "frame": 183,
       "time": 6.1,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        429.9182510426864,
-        457.59353191439186,
-        700.2426528981551,
-        706.5273698050169
+        392.0,
+        494.0,
+        664.0,
+        742.0
       ],
       "center": [
-        565.0804519704208,
-        582.0604508597044
+        528.0,
+        618.0
       ],
-      "diameter": 259.6291198730469,
-      "segment": 1,
+      "diameter": 260.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1114.8486328125,
@@ -9586,19 +9922,20 @@
     {
       "frame": 184,
       "time": 6.133333333333334,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        413.1288483393,
-        464.5882314387528,
-        683.4532501947688,
-        713.5220693293778
+        406.0,
+        374.0,
+        678.0,
+        622.0
       ],
       "center": [
-        548.2910492670344,
-        589.0551503840653
+        542.0,
+        498.0
       ],
-      "diameter": 259.6291198730469,
-      "segment": 1,
+      "diameter": 260.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1132.780517578125,
@@ -9638,6 +9975,7 @@
       "frame": 185,
       "time": 6.166666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         421.2674865722656,
         264.28076171875,
@@ -9649,7 +9987,7 @@
         402.56396484375
       ],
       "diameter": 282.2578582763672,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1141.4129638671875,
@@ -9689,6 +10027,7 @@
       "frame": 186,
       "time": 6.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         434.21405029296875,
         162.3709259033203,
@@ -9700,7 +10039,7 @@
         309.14009857177734
       ],
       "diameter": 290.0307388305664,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1141.07958984375,
@@ -9740,6 +10079,7 @@
       "frame": 187,
       "time": 6.233333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         444.9974365234375,
         94.1495132446289,
@@ -9751,7 +10091,7 @@
         241.09149551391602
       ],
       "diameter": 291.1910057067871,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1125.6275634765625,
@@ -9791,6 +10131,7 @@
       "frame": 188,
       "time": 6.266666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         457.4898986816406,
         32.37150192260742,
@@ -9802,7 +10143,7 @@
         181.71742820739746
       ],
       "diameter": 299.2210636138916,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1114.170166015625,
@@ -9842,6 +10183,7 @@
       "frame": 189,
       "time": 6.3,
       "status": "observed",
+      "source": "detector",
       "box": [
         467.4102783203125,
         0.0,
@@ -9853,7 +10195,7 @@
         144.41505432128906
       ],
       "diameter": 298.58094787597656,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1106.7003173828125,
@@ -9893,6 +10235,7 @@
       "frame": 190,
       "time": 6.333333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         482.785400390625,
         0.0,
@@ -9904,7 +10247,7 @@
         128.03662109375
       ],
       "diameter": 284.07379150390625,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1099.5972900390625,
@@ -9944,6 +10287,7 @@
       "frame": 191,
       "time": 6.366666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         494.2387390136719,
         0.0,
@@ -9955,7 +10299,7 @@
         116.62522888183594
       ],
       "diameter": 276.6106262207031,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1092.6094970703125,
@@ -9995,18 +10339,19 @@
       "frame": 192,
       "time": 6.4,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        506.3147277832031,
-        0.0,
-        835.3308715820312,
-        226.80728149414062
+        510.0,
+        8.0,
+        798.0,
+        218.0
       ],
       "center": [
-        670.8227996826172,
-        113.40364074707031
+        654.0,
+        113.0
       ],
-      "diameter": 277.9117126464844,
-      "segment": 1,
+      "diameter": 249.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1082.130126953125,
@@ -10046,18 +10391,19 @@
       "frame": 193,
       "time": 6.433333333333334,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        518.0580444335938,
-        0.0,
-        857.2145385742188,
-        230.3184814453125
+        518.0,
+        16.0,
+        778.0,
+        204.0
       ],
       "center": [
-        687.6362915039062,
-        115.15924072265625
+        648.0,
+        110.0
       ],
-      "diameter": 284.73748779296875,
-      "segment": 1,
+      "diameter": 224.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1073.9669189453125,
@@ -10097,18 +10443,19 @@
       "frame": 194,
       "time": 6.466666666666667,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        530.9578247070312,
-        0.0,
-        879.0836181640625,
-        252.42666625976562
+        522.0,
+        22.0,
+        756.0,
+        192.0
       ],
       "center": [
-        705.0207214355469,
-        126.21333312988281
+        639.0,
+        107.0
       ],
-      "diameter": 300.27622985839844,
-      "segment": 1,
+      "diameter": 202.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1058.239990234375,
@@ -10148,18 +10495,19 @@
       "frame": 195,
       "time": 6.5,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        539.8121948242188,
-        0.0,
-        902.7737426757812,
-        289.1831359863281
+        508.0,
+        10.0,
+        742.0,
+        180.0
       ],
       "center": [
-        721.29296875,
-        144.59156799316406
+        625.0,
+        95.0
       ],
-      "diameter": 326.0723419189453,
-      "segment": 1,
+      "diameter": 202.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1060.15380859375,
@@ -10199,18 +10547,19 @@
       "frame": 196,
       "time": 6.533333333333333,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        558.06201171875,
-        0.0,
-        927.3289184570312,
-        348.0987854003906
+        562.0,
+        72.0,
+        772.0,
+        224.0
       ],
       "center": [
-        742.6954650878906,
-        174.0493927001953
+        667.0,
+        148.0
       ],
-      "diameter": 358.68284606933594,
-      "segment": 1,
+      "diameter": 181.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1034.0146484375,
@@ -10249,19 +10598,20 @@
     {
       "frame": 197,
       "time": 6.566666666666666,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        462.7093770000487,
-        -80.50508554628502,
-        831.9762837383299,
-        267.5936998541056
+        574.0,
+        132.0,
+        806.0,
+        300.0
       ],
       "center": [
-        647.3428303691893,
-        93.5443071539103
+        690.0,
+        216.0
       ],
-      "diameter": 358.68284606933594,
-      "segment": 1,
+      "diameter": 200.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           542.1522827148438,
@@ -10300,19 +10650,20 @@
     {
       "frame": 198,
       "time": 6.6,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        461.8051031127844,
-        -98.74229009258002,
-        831.0720098510657,
-        249.3564953078106
+        584.0,
+        166.0,
+        840.0,
+        350.0
       ],
       "center": [
-        646.438556481925,
-        75.30710260761529
+        712.0,
+        258.0
       ],
-      "diameter": 358.68284606933594,
-      "segment": 1,
+      "diameter": 220.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           978.247802734375,
@@ -10352,18 +10703,19 @@
       "frame": 199,
       "time": 6.633333333333334,
       "status": "predicted",
+      "source": null,
       "box": [
-        460.90082922552017,
-        -116.97949463887551,
-        830.1677359638014,
-        231.11929076151512
+        529.2123345116205,
+        27.441900234729374,
+        785.2123345116205,
+        211.44190023472936
       ],
       "center": [
-        645.5342825946608,
-        57.069898061319805
+        657.2123345116205,
+        119.44190023472937
       ],
-      "diameter": 358.68284606933594,
-      "segment": 1,
+      "diameter": 220.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           966.6873779296875,
@@ -10403,18 +10755,19 @@
       "frame": 200,
       "time": 6.666666666666667,
       "status": "predicted",
+      "source": null,
       "box": [
-        459.9965553382559,
-        -135.2166991851705,
-        829.2634620765372,
-        212.8820862152201
+        530.1809324998881,
+        12.864549088216762,
+        786.1809324998881,
+        196.86454908821676
       ],
       "center": [
-        644.6300087073965,
-        38.8326935150248
+        658.1809324998881,
+        104.86454908821676
       ],
-      "diameter": 358.68284606933594,
-      "segment": 1,
+      "diameter": 220.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1036.931884765625,
@@ -10453,11 +10806,20 @@
     {
       "frame": 201,
       "time": 6.7,
-      "status": "lost",
-      "box": null,
-      "center": null,
-      "diameter": null,
-      "segment": 1,
+      "status": "predicted",
+      "source": null,
+      "box": [
+        531.1495304881556,
+        -1.7128020582958499,
+        787.1495304881556,
+        182.28719794170416
+      ],
+      "center": [
+        659.1495304881556,
+        90.28719794170415
+      ],
+      "diameter": 220.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1056.649169921875,
@@ -10496,11 +10858,20 @@
     {
       "frame": 202,
       "time": 6.733333333333333,
-      "status": "lost",
-      "box": null,
-      "center": null,
-      "diameter": null,
-      "segment": 1,
+      "status": "predicted",
+      "source": null,
+      "box": [
+        532.1181284764232,
+        -16.290153204808462,
+        788.1181284764232,
+        167.70984679519154
+      ],
+      "center": [
+        660.1181284764232,
+        75.70984679519154
+      ],
+      "diameter": 220.0,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           955.4883422851562,
@@ -10540,10 +10911,11 @@
       "frame": 203,
       "time": 6.766666666666667,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1042.314453125,
@@ -10583,10 +10955,11 @@
       "frame": 204,
       "time": 6.8,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1062.7421875,
@@ -10626,10 +10999,11 @@
       "frame": 205,
       "time": 6.833333333333333,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1073.3211669921875,
@@ -10669,10 +11043,11 @@
       "frame": 206,
       "time": 6.866666666666666,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1070.6640625,
@@ -10712,10 +11087,11 @@
       "frame": 207,
       "time": 6.9,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1085.0621337890625,
@@ -10755,10 +11131,11 @@
       "frame": 208,
       "time": 6.933333333333334,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1143.8009033203125,
@@ -10798,10 +11175,11 @@
       "frame": 209,
       "time": 6.966666666666667,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1142.856201171875,
@@ -10841,10 +11219,11 @@
       "frame": 210,
       "time": 7.0,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1148.904296875,
@@ -10884,10 +11263,11 @@
       "frame": 211,
       "time": 7.033333333333333,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1103.0897216796875,
@@ -10927,10 +11307,11 @@
       "frame": 212,
       "time": 7.066666666666666,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1136.6632080078125,
@@ -10970,10 +11351,11 @@
       "frame": 213,
       "time": 7.1,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           885.1314086914062,
@@ -11013,10 +11395,11 @@
       "frame": 214,
       "time": 7.133333333333334,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1145.691162109375,
@@ -11056,10 +11439,11 @@
       "frame": 215,
       "time": 7.166666666666667,
       "status": "lost",
+      "source": null,
       "box": null,
       "center": null,
       "diameter": null,
-      "segment": 1,
+      "segment": 0,
       "pose": {
         "left_wrist": [
           1180.2015380859375,
@@ -11099,6 +11483,7 @@
       "frame": 216,
       "time": 7.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         1001.329833984375,
         0.0,
@@ -11110,7 +11495,7 @@
         176.37896728515625
       ],
       "diameter": 370.75439453125,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           887.5855712890625,
@@ -11142,6 +11527,7 @@
       "frame": 217,
       "time": 7.233333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         1046.2247314453125,
         113.91727447509766,
@@ -11153,7 +11539,7 @@
         329.12150955200195
       ],
       "diameter": 404.04377365112305,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1167.5758056640625,
@@ -11193,18 +11579,19 @@
       "frame": 218,
       "time": 7.266666666666667,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        1052.9891357421875,
-        224.19613647460938,
-        1464.640625,
-        590.2783203125
+        1080.0,
+        170.0,
+        1458.0,
+        600.0
       ],
       "center": [
-        1258.8148803710938,
-        407.2372283935547
+        1269.0,
+        385.0
       ],
-      "diameter": 388.86683654785156,
-      "segment": 2,
+      "diameter": 404.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1141.4361572265625,
@@ -11244,6 +11631,7 @@
       "frame": 219,
       "time": 7.3,
       "status": "observed",
+      "source": "detector",
       "box": [
         1148.1378173828125,
         94.99637603759766,
@@ -11255,7 +11643,7 @@
         272.1833381652832
       ],
       "diameter": 323.04267501831055,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1142.303466796875,
@@ -11295,18 +11683,19 @@
       "frame": 220,
       "time": 7.333333333333333,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        1035.84423828125,
-        0.0,
-        1422.0390625,
-        354.23736572265625
+        1156.0,
+        6.0,
+        1418.0,
+        326.0
       ],
       "center": [
-        1228.941650390625,
-        177.11868286132812
+        1287.0,
+        166.0
       ],
-      "diameter": 370.2160949707031,
-      "segment": 2,
+      "diameter": 291.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1182.1387939453125,
@@ -11342,18 +11731,19 @@
       "frame": 221,
       "time": 7.366666666666666,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        1029.9761962890625,
+        1088.0,
         0.0,
-        1404.7952880859375,
-        284.5007019042969
+        1324.0,
+        288.0
       ],
       "center": [
-        1217.3857421875,
-        142.25035095214844
+        1206.0,
+        144.0
       ],
-      "diameter": 329.65989685058594,
-      "segment": 2,
+      "diameter": 262.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1089.754150390625,
@@ -11393,6 +11783,7 @@
       "frame": 222,
       "time": 7.4,
       "status": "observed",
+      "source": "detector",
       "box": [
         1022.7590942382812,
         0.0,
@@ -11404,7 +11795,7 @@
         108.87957000732422
       ],
       "diameter": 287.82894134521484,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1161.8955078125,
@@ -11443,19 +11834,20 @@
     {
       "frame": 223,
       "time": 7.433333333333334,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1052.9944431142587,
-        62.697969573604155,
-        1410.89318579004,
-        280.4571095882526
+        1022.0,
+        0.0,
+        1344.0,
+        196.0
       ],
       "center": [
-        1231.9438144521494,
-        171.57753958092837
+        1183.0,
+        98.0
       ],
-      "diameter": 287.82894134521484,
-      "segment": 2,
+      "diameter": 259.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1133.695556640625,
@@ -11495,18 +11887,19 @@
       "frame": 224,
       "time": 7.466666666666667,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        1026.32373046875,
+        1024.0,
         0.0,
-        1347.6138916015625,
-        144.2532501220703
+        1314.0,
+        176.0
       ],
       "center": [
-        1186.9688110351562,
-        72.12662506103516
+        1169.0,
+        88.0
       ],
-      "diameter": 232.7717056274414,
-      "segment": 2,
+      "diameter": 233.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1134.53173828125,
@@ -11545,19 +11938,20 @@
     {
       "frame": 225,
       "time": 7.5,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1049.2346498460863,
-        34.55638773942991,
-        1370.5248109788988,
-        178.80963786150022
+        1022.0,
+        6.0,
+        1282.0,
+        164.0
       ],
       "center": [
-        1209.8797304124926,
-        106.68301280046506
+        1152.0,
+        85.0
       ],
-      "diameter": 232.7717056274414,
-      "segment": 2,
+      "diameter": 209.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1132.1624755859375,
@@ -11596,19 +11990,20 @@
     {
       "frame": 226,
       "time": 7.533333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1049.6198204439008,
-        24.64678457732485,
-        1370.9099815767133,
-        168.90003469939518
+        1012.0,
+        8.0,
+        1272.0,
+        166.0
       ],
       "center": [
-        1210.264901010307,
-        96.77340963836001
+        1142.0,
+        87.0
       ],
-      "diameter": 232.7717056274414,
-      "segment": 2,
+      "diameter": 209.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1108.8603515625,
@@ -11648,18 +12043,19 @@
       "frame": 227,
       "time": 7.566666666666666,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        1000.8919677734375,
-        0.0,
-        1328.0693359375,
-        145.90257263183594
+        996.0,
+        6.0,
+        1282.0,
+        180.0
       ],
       "center": [
-        1164.4806518554688,
-        72.95128631591797
+        1139.0,
+        93.0
       ],
-      "diameter": 236.53997039794922,
-      "segment": 2,
+      "diameter": 230.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1103.468505859375,
@@ -11699,6 +12095,7 @@
       "frame": 228,
       "time": 7.6,
       "status": "observed",
+      "source": "detector",
       "box": [
         1002.8822021484375,
         0.0,
@@ -11710,7 +12107,7 @@
         87.1524658203125
       ],
       "diameter": 246.50653076171875,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1092.441650390625,
@@ -11749,19 +12146,20 @@
     {
       "frame": 229,
       "time": 7.633333333333334,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1013.3170588472622,
-        -21.284392942987395,
-        1332.0251887300747,
-        153.02053869763762
+        1000.0,
+        38.0,
+        1320.0,
+        212.0
       ],
       "center": [
-        1172.6711237886684,
-        65.8680728773251
+        1160.0,
+        125.0
       ],
-      "diameter": 246.50653076171875,
-      "segment": 2,
+      "diameter": 247.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1083.263916015625,
@@ -11801,18 +12199,19 @@
       "frame": 230,
       "time": 7.666666666666667,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        989.0010986328125,
-        0.0,
-        1311.6893310546875,
-        294.1631774902344
+        996.0,
+        92.0,
+        1316.0,
+        266.0
       ],
       "center": [
-        1150.34521484375,
-        147.0815887451172
+        1156.0,
+        179.0
       ],
-      "diameter": 308.4257049560547,
-      "segment": 2,
+      "diameter": 247.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           930.993896484375,
@@ -11852,6 +12251,7 @@
       "frame": 231,
       "time": 7.7,
       "status": "observed",
+      "source": "detector",
       "box": [
         988.49560546875,
         25.82248878479004,
@@ -11863,7 +12263,7 @@
         182.60348987579346
       ],
       "diameter": 316.1761426925659,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           970.5038452148438,
@@ -11903,6 +12303,7 @@
       "frame": 232,
       "time": 7.733333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         995.8736572265625,
         113.06117248535156,
@@ -11914,7 +12315,7 @@
         263.8397445678711
       ],
       "diameter": 305.0928421020508,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           949.5260620117188,
@@ -11954,6 +12355,7 @@
       "frame": 233,
       "time": 7.766666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         989.199462890625,
         200.6989288330078,
@@ -11965,7 +12367,7 @@
         357.98697662353516
       ],
       "diameter": 313.42635345458984,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           980.6134033203125,
@@ -12005,6 +12407,7 @@
       "frame": 234,
       "time": 7.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         1008.4777221679688,
         296.7403869628906,
@@ -12016,7 +12419,7 @@
         462.4048614501953
       ],
       "diameter": 311.8626251220703,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           980.1939697265625,
@@ -12056,6 +12459,7 @@
       "frame": 235,
       "time": 7.833333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         989.1979370117188,
         432.3489685058594,
@@ -12067,7 +12471,7 @@
         607.6145782470703
       ],
       "diameter": 330.1320343017578,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "right_wrist": [
           611.1261596679688,
@@ -12103,6 +12507,7 @@
       "frame": 236,
       "time": 7.866666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         992.8817138671875,
         462.95068359375,
@@ -12114,7 +12519,7 @@
         622.0473327636719
       ],
       "diameter": 313.3962097167969,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "right_wrist": [
           606.1689453125,
@@ -12150,6 +12555,7 @@
       "frame": 237,
       "time": 7.9,
       "status": "observed",
+      "source": "detector",
       "box": [
         979.2169189453125,
         378.5487060546875,
@@ -12161,7 +12567,7 @@
         533.3143920898438
       ],
       "diameter": 305.14300537109375,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_hip": [
           879.1495971679688,
@@ -12193,6 +12599,7 @@
       "frame": 238,
       "time": 7.933333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         956.27392578125,
         309.4510192871094,
@@ -12204,7 +12611,7 @@
         457.16978454589844
       ],
       "diameter": 297.2732696533203,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_hip": [
           861.4259033203125,
@@ -12236,6 +12643,7 @@
       "frame": 239,
       "time": 7.966666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         939.292724609375,
         252.37513732910156,
@@ -12247,7 +12655,7 @@
         398.4840774536133
       ],
       "diameter": 293.5508346557617,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "right_wrist": [
           613.9508056640625,
@@ -12283,6 +12691,7 @@
       "frame": 240,
       "time": 8.0,
       "status": "observed",
+      "source": "detector",
       "box": [
         929.2285766601562,
         212.4022979736328,
@@ -12294,7 +12703,7 @@
         356.4391403198242
       ],
       "diameter": 287.5080032348633,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "right_wrist": [
           610.223876953125,
@@ -12330,6 +12739,7 @@
       "frame": 241,
       "time": 8.033333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         916.9738159179688,
         184.9545135498047,
@@ -12341,7 +12751,7 @@
         326.3429183959961
       ],
       "diameter": 280.86414337158203,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           865.6467895507812,
@@ -12381,6 +12791,7 @@
       "frame": 242,
       "time": 8.066666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         899.9650268554688,
         167.36756896972656,
@@ -12392,7 +12803,7 @@
         308.2616500854492
       ],
       "diameter": 280.38513946533203,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           880.1721801757812,
@@ -12432,6 +12843,7 @@
       "frame": 243,
       "time": 8.1,
       "status": "observed",
+      "source": "detector",
       "box": [
         879.9688720703125,
         159.2137908935547,
@@ -12443,7 +12855,7 @@
         301.97399139404297
       ],
       "diameter": 283.12451934814453,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           780.1333618164062,
@@ -12483,6 +12895,7 @@
       "frame": 244,
       "time": 8.133333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         865.6165161132812,
         167.3502655029297,
@@ -12494,7 +12907,7 @@
         310.2507095336914
       ],
       "diameter": 282.12422943115234,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           798.1295166015625,
@@ -12534,6 +12947,7 @@
       "frame": 245,
       "time": 8.166666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         847.4127197265625,
         183.98861694335938,
@@ -12545,7 +12959,7 @@
         329.0072326660156
       ],
       "diameter": 284.78082275390625,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           919.2377319335938,
@@ -12585,6 +12999,7 @@
       "frame": 246,
       "time": 8.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         835.3203735351562,
         218.2213134765625,
@@ -12596,7 +13011,7 @@
         367.0704040527344
       ],
       "diameter": 287.24298095703125,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           773.9027709960938,
@@ -12636,6 +13051,7 @@
       "frame": 247,
       "time": 8.233333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         824.4595336914062,
         267.2881774902344,
@@ -12647,7 +13063,7 @@
         414.3971710205078
       ],
       "diameter": 284.2041778564453,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1025.0286865234375,
@@ -12687,6 +13103,7 @@
       "frame": 248,
       "time": 8.266666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         809.9281005859375,
         324.1638488769531,
@@ -12698,7 +13115,7 @@
         471.45130920410156
       ],
       "diameter": 283.3442840576172,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1039.9365234375,
@@ -12738,6 +13155,7 @@
       "frame": 249,
       "time": 8.3,
       "status": "observed",
+      "source": "detector",
       "box": [
         787.369140625,
         397.64910888671875,
@@ -12749,7 +13167,7 @@
         549.323974609375
       ],
       "diameter": 291.08612060546875,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1056.449951171875,
@@ -12789,6 +13207,7 @@
       "frame": 250,
       "time": 8.333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         770.7664184570312,
         481.021240234375,
@@ -12800,7 +13219,7 @@
         641.0554504394531
       ],
       "diameter": 300.60693359375,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1062.076416015625,
@@ -12840,6 +13259,7 @@
       "frame": 251,
       "time": 8.366666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         769.5338134765625,
         555.9097290039062,
@@ -12851,7 +13271,7 @@
         699.5996398925781
       ],
       "diameter": 286.6935119628906,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1073.8094482421875,
@@ -12890,19 +13310,20 @@
     {
       "frame": 252,
       "time": 8.4,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        769.2044226107843,
-        415.7420242845592,
-        1055.2116247592216,
-        703.1218460619029
+        786.0,
+        466.0,
+        1072.0,
+        754.0
       ],
       "center": [
-        912.208023685003,
-        559.4319351732311
+        929.0,
+        610.0
       ],
-      "diameter": 286.6935119628906,
-      "segment": 2,
+      "diameter": 287.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1075.6990966796875,
@@ -12942,6 +13363,7 @@
       "frame": 253,
       "time": 8.433333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         802.8242797851562,
         378.8466491699219,
@@ -12953,7 +13375,7 @@
         541.8006134033203
       ],
       "diameter": 298.8119659423828,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1088.3140869140625,
@@ -12993,6 +13415,7 @@
       "frame": 254,
       "time": 8.466666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         812.827880859375,
         312.6615295410156,
@@ -13004,7 +13427,7 @@
         458.47923278808594
       ],
       "diameter": 282.7390899658203,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1087.25048828125,
@@ -13044,6 +13467,7 @@
       "frame": 255,
       "time": 8.5,
       "status": "observed",
+      "source": "detector",
       "box": [
         825.7393798828125,
         261.463623046875,
@@ -13055,7 +13479,7 @@
         404.2970275878906
       ],
       "diameter": 281.5397033691406,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1091.952392578125,
@@ -13095,6 +13519,7 @@
       "frame": 256,
       "time": 8.533333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         838.3009033203125,
         223.2628631591797,
@@ -13106,7 +13531,7 @@
         364.02794647216797
       ],
       "diameter": 276.3865432739258,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1089.286865234375,
@@ -13146,6 +13571,7 @@
       "frame": 257,
       "time": 8.566666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         848.39404296875,
         198.5082244873047,
@@ -13157,7 +13583,7 @@
         334.5133590698242
       ],
       "diameter": 273.5641555786133,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1078.057861328125,
@@ -13197,6 +13623,7 @@
       "frame": 258,
       "time": 8.6,
       "status": "observed",
+      "source": "detector",
       "box": [
         861.5647583007812,
         181.03179931640625,
@@ -13208,7 +13635,7 @@
         320.41334533691406
       ],
       "diameter": 276.9745330810547,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1083.0615234375,
@@ -13248,6 +13675,7 @@
       "frame": 259,
       "time": 8.633333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         870.1931762695312,
         178.72250366210938,
@@ -13259,7 +13687,7 @@
         316.26171875
       ],
       "diameter": 276.0274658203125,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1067.691162109375,
@@ -13299,6 +13727,7 @@
       "frame": 260,
       "time": 8.666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         886.8018188476562,
         187.51373291015625,
@@ -13310,7 +13739,7 @@
         324.9753723144531
       ],
       "diameter": 275.07177734375,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1060.9456787109375,
@@ -13350,6 +13779,7 @@
       "frame": 261,
       "time": 8.7,
       "status": "observed",
+      "source": "detector",
       "box": [
         901.254150390625,
         209.39797973632812,
@@ -13361,7 +13791,7 @@
         347.5152130126953
       ],
       "diameter": 275.2234344482422,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1062.25048828125,
@@ -13401,6 +13831,7 @@
       "frame": 262,
       "time": 8.733333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         917.0690307617188,
         243.98316955566406,
@@ -13412,7 +13843,7 @@
         381.31189727783203
       ],
       "diameter": 273.85384368896484,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1054.1826171875,
@@ -13452,6 +13883,7 @@
       "frame": 263,
       "time": 8.766666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         934.3910522460938,
         286.0380859375,
@@ -13463,7 +13895,7 @@
         428.1546936035156
       ],
       "diameter": 278.0169677734375,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1031.906494140625,
@@ -13503,6 +13935,7 @@
       "frame": 264,
       "time": 8.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         947.1618041992188,
         346.0823059082031,
@@ -13514,7 +13947,7 @@
         485.7473907470703
       ],
       "diameter": 278.0167999267578,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1026.6151123046875,
@@ -13554,6 +13987,7 @@
       "frame": 265,
       "time": 8.833333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         962.8152465820312,
         418.7483825683594,
@@ -13565,7 +13999,7 @@
         561.3524627685547
       ],
       "diameter": 281.03135681152344,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1017.2418212890625,
@@ -13605,6 +14039,7 @@
       "frame": 266,
       "time": 8.866666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         977.8377685546875,
         508.1332092285156,
@@ -13616,7 +14051,7 @@
         653.8136444091797
       ],
       "diameter": 287.6032257080078,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1007.0410766601562,
@@ -13656,6 +14091,7 @@
       "frame": 267,
       "time": 8.9,
       "status": "observed",
+      "source": "detector",
       "box": [
         982.8558959960938,
         459.04644775390625,
@@ -13667,7 +14103,7 @@
         606.772705078125
       ],
       "diameter": 289.1312561035156,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1001.7954711914062,
@@ -13707,6 +14143,7 @@
       "frame": 268,
       "time": 8.933333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         978.4284057617188,
         377.3699951171875,
@@ -13718,7 +14155,7 @@
         522.9513854980469
       ],
       "diameter": 283.35821533203125,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1015.4066162109375,
@@ -13758,6 +14195,7 @@
       "frame": 269,
       "time": 8.966666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         968.6780395507812,
         302.74114990234375,
@@ -13769,7 +14207,7 @@
         451.9897155761719
       ],
       "diameter": 286.01495361328125,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1015.4387817382812,
@@ -13809,6 +14247,7 @@
       "frame": 270,
       "time": 9.0,
       "status": "observed",
+      "source": "detector",
       "box": [
         960.1002197265625,
         255.53402709960938,
@@ -13820,7 +14259,7 @@
         395.0677947998047
       ],
       "diameter": 274.8341827392578,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1020.069091796875,
@@ -13860,6 +14299,7 @@
       "frame": 271,
       "time": 9.033333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         957.1303100585938,
         218.5635986328125,
@@ -13871,7 +14311,7 @@
         354.40264892578125
       ],
       "diameter": 266.7444152832031,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1018.1134033203125,
@@ -13911,6 +14351,7 @@
       "frame": 272,
       "time": 9.066666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         945.6505126953125,
         190.9139404296875,
@@ -13922,7 +14363,7 @@
         324.91241455078125
       ],
       "diameter": 267.97662353515625,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1001.3812255859375,
@@ -13962,6 +14403,7 @@
       "frame": 273,
       "time": 9.1,
       "status": "observed",
+      "source": "detector",
       "box": [
         937.8359985351562,
         176.7543487548828,
@@ -13973,7 +14415,7 @@
         311.7431106567383
       ],
       "diameter": 269.0904769897461,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           943.2835693359375,
@@ -14013,6 +14455,7 @@
       "frame": 274,
       "time": 9.133333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         931.896728515625,
         170.14463806152344,
@@ -14024,7 +14467,7 @@
         306.5028762817383
       ],
       "diameter": 270.59590911865234,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           969.5831298828125,
@@ -14064,6 +14507,7 @@
       "frame": 275,
       "time": 9.166666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         923.7614135742188,
         177.10267639160156,
@@ -14075,7 +14519,7 @@
         314.9768600463867
       ],
       "diameter": 272.73291778564453,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           862.3178100585938,
@@ -14115,6 +14559,7 @@
       "frame": 276,
       "time": 9.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         916.7722778320312,
         196.626708984375,
@@ -14126,7 +14571,7 @@
         336.4508819580078
       ],
       "diameter": 274.79368591308594,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           944.5581665039062,
@@ -14166,6 +14611,7 @@
       "frame": 277,
       "time": 9.233333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         907.5250854492188,
         227.59425354003906,
@@ -14177,7 +14623,7 @@
         366.8192672729492
       ],
       "diameter": 275.29517364501953,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           923.4971313476562,
@@ -14217,6 +14663,7 @@
       "frame": 278,
       "time": 9.266666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         905.0621337890625,
         273.433349609375,
@@ -14228,7 +14675,7 @@
         414.08294677734375
       ],
       "diameter": 275.48748779296875,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1068.3890380859375,
@@ -14268,6 +14715,7 @@
       "frame": 279,
       "time": 9.3,
       "status": "observed",
+      "source": "detector",
       "box": [
         899.294677734375,
         329.34063720703125,
@@ -14279,7 +14727,7 @@
         474.5467224121094
       ],
       "diameter": 280.9033508300781,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1086.3787841796875,
@@ -14319,6 +14767,7 @@
       "frame": 280,
       "time": 9.333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         892.8794555664062,
         399.5735168457031,
@@ -14330,7 +14779,7 @@
         548.9458160400391
       ],
       "diameter": 287.09840393066406,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1099.064208984375,
@@ -14370,6 +14819,7 @@
       "frame": 281,
       "time": 9.366666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         888.8131103515625,
         483.1532287597656,
@@ -14381,7 +14831,7 @@
         632.0101776123047
       ],
       "diameter": 287.4040069580078,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1113.3875732421875,
@@ -14421,6 +14871,7 @@
       "frame": 282,
       "time": 9.4,
       "status": "observed",
+      "source": "detector",
       "box": [
         894.44970703125,
         521.7185668945312,
@@ -14432,7 +14883,7 @@
         667.5909423828125
       ],
       "diameter": 290.0382080078125,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1117.6700439453125,
@@ -14472,6 +14923,7 @@
       "frame": 283,
       "time": 9.433333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         925.565673828125,
         433.2603454589844,
@@ -14483,7 +14935,7 @@
         584.4416351318359
       ],
       "diameter": 291.05775451660156,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1135.403076171875,
@@ -14523,6 +14975,7 @@
       "frame": 284,
       "time": 9.466666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         950.2119750976562,
         355.31951904296875,
@@ -14534,7 +14987,7 @@
         497.5108337402344
       ],
       "diameter": 285.3138427734375,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1139.3343505859375,
@@ -14574,6 +15027,7 @@
       "frame": 285,
       "time": 9.5,
       "status": "observed",
+      "source": "detector",
       "box": [
         979.9129028320312,
         290.4140625,
@@ -14585,7 +15039,7 @@
         429.60235595703125
       ],
       "diameter": 281.3080139160156,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1138.8524169921875,
@@ -14625,6 +15079,7 @@
       "frame": 286,
       "time": 9.533333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         1009.4811401367188,
         238.35911560058594,
@@ -14636,7 +15091,7 @@
         378.0116195678711
       ],
       "diameter": 279.76428985595703,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1142.6783447265625,
@@ -14676,6 +15131,7 @@
       "frame": 287,
       "time": 9.566666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         1031.9158935546875,
         196.70782470703125,
@@ -14687,7 +15143,7 @@
         338.9053497314453
       ],
       "diameter": 286.99464416503906,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1146.9378662109375,
@@ -14727,6 +15183,7 @@
       "frame": 288,
       "time": 9.6,
       "status": "observed",
+      "source": "detector",
       "box": [
         1063.251220703125,
         171.23475646972656,
@@ -14738,7 +15195,7 @@
         312.72330474853516
       ],
       "diameter": 284.7914047241211,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1114.93310546875,
@@ -14778,6 +15235,7 @@
       "frame": 289,
       "time": 9.633333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         1096.2259521484375,
         156.0618133544922,
@@ -14789,7 +15247,7 @@
         297.7765121459961
       ],
       "diameter": 284.00308990478516,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1125.292236328125,
@@ -14829,6 +15287,7 @@
       "frame": 290,
       "time": 9.666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         1117.4410400390625,
         155.16717529296875,
@@ -14840,7 +15299,7 @@
         296.40672302246094
       ],
       "diameter": 288.5469207763672,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1107.337158203125,
@@ -14880,6 +15339,7 @@
       "frame": 291,
       "time": 9.7,
       "status": "observed",
+      "source": "detector",
       "box": [
         1141.3001708984375,
         163.6831512451172,
@@ -14891,7 +15351,7 @@
         307.08438873291016
       ],
       "diameter": 294.5907516479492,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1096.9136962890625,
@@ -14931,6 +15391,7 @@
       "frame": 292,
       "time": 9.733333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         1179.9774169921875,
         183.3041534423828,
@@ -14942,7 +15403,7 @@
         329.5473403930664
       ],
       "diameter": 295.96700286865234,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1090.392822265625,
@@ -14982,6 +15443,7 @@
       "frame": 293,
       "time": 9.766666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         1209.7105712890625,
         223.6300048828125,
@@ -14993,7 +15455,7 @@
         368.95733642578125
       ],
       "diameter": 297.28826904296875,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1084.6134033203125,
@@ -15033,6 +15495,7 @@
       "frame": 294,
       "time": 9.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         1244.19482421875,
         262.5036315917969,
@@ -15044,7 +15507,7 @@
         415.55784606933594
       ],
       "diameter": 306.81349182128906,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           903.6224975585938,
@@ -15084,6 +15547,7 @@
       "frame": 295,
       "time": 9.833333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         1275.565185546875,
         334.5663146972656,
@@ -15095,7 +15559,7 @@
         486.35414123535156
       ],
       "diameter": 311.3486785888672,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           896.6961059570312,
@@ -15135,6 +15599,7 @@
       "frame": 296,
       "time": 9.866666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         1312.1495361328125,
         422.9072265625,
@@ -15146,7 +15611,7 @@
         569.4313659667969
       ],
       "diameter": 300.2226257324219,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "right_wrist": [
           569.4627685546875,
@@ -15182,6 +15647,7 @@
       "frame": 297,
       "time": 9.9,
       "status": "observed",
+      "source": "detector",
       "box": [
         1338.165771484375,
         332.3703308105469,
@@ -15193,7 +15659,7 @@
         474.8089141845703
       ],
       "diameter": 282.90196228027344,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_hip": [
           963.5344848632812,
@@ -15224,19 +15690,20 @@
     {
       "frame": 298,
       "time": 9.933333333333334,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1294.1106900618374,
-        285.79527419895453,
-        1575.0374478743374,
-        570.6724409470014
+        1330.0,
+        212.0,
+        1612.0,
+        498.0
       ],
       "center": [
-        1434.5740689680874,
-        428.23385757297797
+        1471.0,
+        355.0
       ],
-      "diameter": 282.90196228027344,
-      "segment": 2,
+      "diameter": 284.0,
+      "segment": 1,
       "pose": {
         "right_wrist": [
           579.6447143554688,
@@ -15272,6 +15739,7 @@
       "frame": 299,
       "time": 9.966666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         1324.3968505859375,
         127.00418853759766,
@@ -15283,7 +15751,7 @@
         272.0645637512207
       ],
       "diameter": 292.5699577331543,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_hip": [
           984.4911499023438,
@@ -15315,6 +15783,7 @@
       "frame": 300,
       "time": 10.0,
       "status": "observed",
+      "source": "detector",
       "box": [
         1319.333740234375,
         43.415130615234375,
@@ -15326,7 +15795,7 @@
         187.0708465576172
       ],
       "diameter": 293.6177520751953,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_hip": [
           983.3749389648438,
@@ -15358,6 +15827,7 @@
       "frame": 301,
       "time": 10.033333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         1312.6920166015625,
         0.0,
@@ -15369,7 +15839,7 @@
         130.6043701171875
       ],
       "diameter": 283.4130859375,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "right_wrist": [
           720.8560180664062,
@@ -15405,6 +15875,7 @@
       "frame": 302,
       "time": 10.066666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         1310.7861328125,
         0.0,
@@ -15416,7 +15887,7 @@
         104.10845947265625
       ],
       "diameter": 257.6890869140625,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           842.4673461914062,
@@ -15456,6 +15927,7 @@
       "frame": 303,
       "time": 10.1,
       "status": "observed",
+      "source": "detector",
       "box": [
         1306.794921875,
         0.0,
@@ -15467,7 +15939,7 @@
         83.63827514648438
       ],
       "diameter": 237.94515991210938,
-      "segment": 2,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           813.0681762695312,
@@ -15506,19 +15978,20 @@
     {
       "frame": 304,
       "time": 10.133333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1360.06489268697,
-        86.76410146898453,
-        1668.67866221822,
-        254.04065176195328
+        1316.0,
+        0.0,
+        1596.0,
+        152.0
       ],
       "center": [
-        1514.371777452595,
-        170.4023766154689
+        1456.0,
+        76.0
       ],
-      "diameter": 237.94515991210938,
-      "segment": 2,
+      "diameter": 216.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           869.296630859375,
@@ -15557,19 +16030,20 @@
     {
       "frame": 305,
       "time": 10.166666666666666,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1376.522673515701,
-        72.33380697246326,
-        1685.136443046951,
-        239.61035726543201
+        1328.0,
+        0.0,
+        1580.0,
+        136.0
       ],
       "center": [
-        1530.829558281326,
-        155.97208211894764
+        1454.0,
+        68.0
       ],
-      "diameter": 237.94515991210938,
-      "segment": 2,
+      "diameter": 194.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           910.4058227539062,
@@ -15608,19 +16082,20 @@
     {
       "frame": 306,
       "time": 10.2,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1392.9804543444318,
-        57.903512475941994,
-        1701.5942238756818,
-        225.18006276891074
+        1340.0,
+        10.0,
+        1566.0,
+        132.0
       ],
       "center": [
-        1547.2873391100568,
-        141.54178762242637
+        1453.0,
+        71.0
       ],
-      "diameter": 237.94515991210938,
-      "segment": 2,
+      "diameter": 174.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1059.278564453125,
@@ -15659,19 +16134,20 @@
     {
       "frame": 307,
       "time": 10.233333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1409.4382351731626,
-        43.473217979420724,
-        1718.0520047044126,
-        210.74976827238947
+        1340.0,
+        18.0,
+        1566.0,
+        140.0
       ],
       "center": [
-        1563.7451199387876,
-        127.1114931259051
+        1453.0,
+        79.0
       ],
-      "diameter": 237.94515991210938,
-      "segment": 2,
+      "diameter": 174.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1035.43212890625,
@@ -15710,11 +16186,20 @@
     {
       "frame": 308,
       "time": 10.266666666666667,
-      "status": "lost",
-      "box": null,
-      "center": null,
-      "diameter": null,
-      "segment": 2,
+      "status": "observed",
+      "source": "appearance",
+      "box": [
+        1342.0,
+        40.0,
+        1568.0,
+        162.0
+      ],
+      "center": [
+        1455.0,
+        101.0
+      ],
+      "diameter": 174.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           736.16064453125,
@@ -15754,18 +16239,19 @@
       "frame": 309,
       "time": 10.3,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        1307.1666259765625,
-        0.0,
-        1617.9359130859375,
-        180.97377014160156
+        1346.0,
+        74.0,
+        1572.0,
+        196.0
       ],
       "center": [
-        1462.55126953125,
-        90.48688507080078
+        1459.0,
+        135.0
       ],
-      "diameter": 245.87152862548828,
-      "segment": 3,
+      "diameter": 174.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1004.40869140625,
@@ -15804,19 +16290,20 @@
     {
       "frame": 310,
       "time": 10.333333333333334,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1307.1666259765625,
-        0.0,
-        1617.9359130859375,
-        180.97377014160156
+        1350.0,
+        122.0,
+        1576.0,
+        244.0
       ],
       "center": [
-        1462.55126953125,
-        90.48688507080078
+        1463.0,
+        183.0
       ],
-      "diameter": 245.87152862548828,
-      "segment": 3,
+      "diameter": 174.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           669.9176635742188,
@@ -15856,6 +16343,7 @@
       "frame": 311,
       "time": 10.366666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         1313.89111328125,
         0.8230154514312744,
@@ -15867,7 +16355,7 @@
         145.94971573352814
       ],
       "diameter": 297.59837996959686,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           549.2832641601562,
@@ -15907,6 +16395,7 @@
       "frame": 312,
       "time": 10.4,
       "status": "observed",
+      "source": "detector",
       "box": [
         1320.5882568359375,
         59.043792724609375,
@@ -15918,7 +16407,7 @@
         213.901123046875
       ],
       "diameter": 304.5632019042969,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           564.6680297851562,
@@ -15958,6 +16447,7 @@
       "frame": 313,
       "time": 10.433333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         1326.5517578125,
         154.15774536132812,
@@ -15969,7 +16459,7 @@
         307.53424072265625
       ],
       "diameter": 299.6485290527344,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           631.9938354492188,
@@ -16008,19 +16498,20 @@
     {
       "frame": 314,
       "time": 10.466666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1323.746456933451,
-        77.50109045949415,
-        1616.2905243162636,
-        384.2540811821504
+        1352.0,
+        298.0,
+        1616.0,
+        574.0
       ],
       "center": [
-        1470.0184906248573,
-        230.87758582082228
+        1484.0,
+        436.0
       ],
-      "diameter": 299.6485290527344,
-      "segment": 3,
+      "diameter": 270.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           607.2645263671875,
@@ -16059,19 +16550,20 @@
     {
       "frame": 315,
       "time": 10.5,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1324.9952923627454,
-        101.22884454626563,
-        1617.539359745558,
-        407.9818352689219
+        1356.0,
+        368.0,
+        1620.0,
+        644.0
       ],
       "center": [
-        1471.2673260541517,
-        254.60533990759376
+        1488.0,
+        506.0
       ],
-      "diameter": 299.6485290527344,
-      "segment": 3,
+      "diameter": 270.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           598.8452758789062,
@@ -16110,19 +16602,20 @@
     {
       "frame": 316,
       "time": 10.533333333333333,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        1326.2441277920398,
-        124.95659863303712,
-        1618.7881951748523,
-        431.70958935569337
+        1354.0,
+        268.0,
+        1592.0,
+        516.0
       ],
       "center": [
-        1472.516161483446,
-        278.33309399436524
+        1473.0,
+        392.0
       ],
-      "diameter": 299.6485290527344,
-      "segment": 3,
+      "diameter": 243.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           592.59912109375,
@@ -16158,18 +16651,19 @@
       "frame": 317,
       "time": 10.566666666666666,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        1299.1640625,
-        141.95693969726562,
-        1619.1829833984375,
-        428.76605224609375
+        1320.0,
+        166.0,
+        1558.0,
+        414.0
       ],
       "center": [
-        1459.1735229492188,
-        285.3614959716797
+        1439.0,
+        290.0
       ],
-      "diameter": 303.4140167236328,
-      "segment": 3,
+      "diameter": 243.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           624.535888671875,
@@ -16209,18 +16703,19 @@
       "frame": 318,
       "time": 10.6,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        1269.555908203125,
-        55.80723190307617,
-        1592.9803466796875,
-        365.1221923828125
+        1288.0,
+        80.0,
+        1526.0,
+        328.0
       ],
       "center": [
-        1431.2681274414062,
-        210.46471214294434
+        1407.0,
+        204.0
       ],
-      "diameter": 316.3696994781494,
-      "segment": 3,
+      "diameter": 243.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           681.6538696289062,
@@ -16260,18 +16755,19 @@
       "frame": 319,
       "time": 10.633333333333333,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        1241.220947265625,
-        0.0,
-        1558.6387939453125,
-        286.2237243652344
+        1258.0,
+        8.0,
+        1496.0,
+        256.0
       ],
       "center": [
-        1399.9298706054688,
-        143.1118621826172
+        1377.0,
+        132.0
       ],
-      "diameter": 301.82078552246094,
-      "segment": 3,
+      "diameter": 243.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           842.6340942382812,
@@ -16307,18 +16803,19 @@
       "frame": 320,
       "time": 10.666666666666666,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        1212.369873046875,
+        1232.0,
         0.0,
-        1524.056884765625,
-        237.1460418701172
+        1446.0,
+        224.0
       ],
       "center": [
-        1368.21337890625,
-        118.5730209350586
+        1339.0,
+        112.0
       ],
-      "diameter": 274.4165267944336,
-      "segment": 3,
+      "diameter": 219.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1067.3021240234375,
@@ -16354,18 +16851,19 @@
       "frame": 321,
       "time": 10.7,
       "status": "predicted",
+      "source": null,
       "box": [
-        1245.1690076862615,
-        89.73679351283926,
-        1556.8560194050115,
-        326.88283538295644
+        1316.1172721190244,
+        96.6384654463863,
+        1530.1172721190244,
+        320.6384654463863
       ],
       "center": [
-        1401.0125135456365,
-        208.30981444789785
+        1423.1172721190244,
+        208.6384654463863
       ],
-      "diameter": 274.4165267944336,
-      "segment": 3,
+      "diameter": 219.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1084.351806640625,
@@ -16405,18 +16903,19 @@
       "frame": 322,
       "time": 10.733333333333333,
       "status": "predicted",
+      "source": null,
       "box": [
-        1239.6905127686503,
-        97.12687557656162,
-        1551.3775244874003,
-        334.2729174466788
+        1315.035890389114,
+        95.79835515143816,
+        1529.035890389114,
+        319.79835515143816
       ],
       "center": [
-        1395.5340186280253,
-        215.6998965116202
+        1422.035890389114,
+        207.79835515143816
       ],
-      "diameter": 274.4165267944336,
-      "segment": 3,
+      "diameter": 219.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           951.5653686523438,
@@ -16456,6 +16955,7 @@
       "frame": 323,
       "time": 10.766666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         1136.739013671875,
         0.0,
@@ -16467,7 +16967,7 @@
         81.57317352294922
       ],
       "diameter": 230.20604705810547,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           987.6697387695312,
@@ -16507,6 +17007,7 @@
       "frame": 324,
       "time": 10.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         1112.044189453125,
         0.0,
@@ -16518,7 +17019,7 @@
         82.07633209228516
       ],
       "diameter": 231.26358795166016,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           905.4727172851562,
@@ -16558,6 +17059,7 @@
       "frame": 325,
       "time": 10.833333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         1087.91015625,
         0.0,
@@ -16569,7 +17071,7 @@
         89.59727478027344
       ],
       "diameter": 236.6269989013672,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           901.7118530273438,
@@ -16609,6 +17111,7 @@
       "frame": 326,
       "time": 10.866666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         1063.6217041015625,
         0.0,
@@ -16620,7 +17123,7 @@
         102.2453384399414
       ],
       "diameter": 249.9526138305664,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           815.9901123046875,
@@ -16660,6 +17163,7 @@
       "frame": 327,
       "time": 10.9,
       "status": "observed",
+      "source": "detector",
       "box": [
         1039.7943115234375,
         0.0,
@@ -16671,7 +17175,7 @@
         122.02651977539062
       ],
       "diameter": 270.2724304199219,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           809.951416015625,
@@ -16711,6 +17215,7 @@
       "frame": 328,
       "time": 10.933333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         1017.4343872070312,
         9.914229393005371,
@@ -16722,7 +17227,7 @@
         155.72701215744019
       ],
       "diameter": 292.73188066482544,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           782.0922241210938,
@@ -16762,6 +17267,7 @@
       "frame": 329,
       "time": 10.966666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         997.8331298828125,
         60.78498458862305,
@@ -16773,7 +17279,7 @@
         208.89188194274902
       ],
       "diameter": 294.6343021392822,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           792.6066284179688,
@@ -16813,6 +17319,7 @@
       "frame": 330,
       "time": 11.0,
       "status": "observed",
+      "source": "detector",
       "box": [
         976.3284912109375,
         143.09735107421875,
@@ -16824,7 +17331,7 @@
         290.3966979980469
       ],
       "diameter": 294.0942077636719,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "right_wrist": [
           734.434814453125,
@@ -16860,6 +17367,7 @@
       "frame": 331,
       "time": 11.033333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         951.4685668945312,
         235.6082305908203,
@@ -16871,7 +17379,7 @@
         387.57108306884766
       ],
       "diameter": 300.6421432495117,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           902.8523559570312,
@@ -16911,6 +17419,7 @@
       "frame": 332,
       "time": 11.066666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         930.9977416992188,
         336.7510986328125,
@@ -16922,7 +17431,7 @@
         508.4101867675781
       ],
       "diameter": 318.87310791015625,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "right_wrist": [
           706.1146240234375,
@@ -16958,6 +17467,7 @@
       "frame": 333,
       "time": 11.1,
       "status": "observed",
+      "source": "detector",
       "box": [
         905.987548828125,
         487.31298828125,
@@ -16969,7 +17479,7 @@
         638.0308837890625
       ],
       "diameter": 302.20703125,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           856.0238037109375,
@@ -17001,6 +17511,7 @@
       "frame": 334,
       "time": 11.133333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         907.7611083984375,
         412.4266662597656,
@@ -17012,7 +17523,7 @@
         577.6346282958984
       ],
       "diameter": 317.7003936767578,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           840.2062377929688,
@@ -17044,6 +17555,7 @@
       "frame": 335,
       "time": 11.166666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         905.861328125,
         310.9700927734375,
@@ -17055,7 +17567,7 @@
         461.8800354003906
       ],
       "diameter": 298.9313659667969,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           842.4918212890625,
@@ -17087,6 +17599,7 @@
       "frame": 336,
       "time": 11.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         897.739990234375,
         225.81455993652344,
@@ -17098,7 +17611,7 @@
         376.9955368041992
       ],
       "diameter": 298.6449661254883,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           824.8544921875,
@@ -17130,6 +17643,7 @@
       "frame": 337,
       "time": 11.233333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         891.2913208007812,
         157.72671508789062,
@@ -17141,7 +17655,7 @@
         302.28143310546875
       ],
       "diameter": 291.014892578125,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           890.1918334960938,
@@ -17181,6 +17695,7 @@
       "frame": 338,
       "time": 11.266666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         885.8110961914062,
         98.06708526611328,
@@ -17192,7 +17707,7 @@
         243.37646865844727
       ],
       "diameter": 291.55276107788086,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           866.3455810546875,
@@ -17232,6 +17747,7 @@
       "frame": 339,
       "time": 11.3,
       "status": "observed",
+      "source": "detector",
       "box": [
         875.172119140625,
         48.70546340942383,
@@ -17243,7 +17759,7 @@
         197.2481632232666
       ],
       "diameter": 296.428014755249,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           923.4070434570312,
@@ -17283,6 +17799,7 @@
       "frame": 340,
       "time": 11.333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         869.057373046875,
         12.806622505187988,
@@ -17294,7 +17811,7 @@
         160.7309021949768
       ],
       "diameter": 296.57973623275757,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           943.6927490234375,
@@ -17334,6 +17851,7 @@
       "frame": 341,
       "time": 11.366666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         863.9502563476562,
         0.0,
@@ -17345,7 +17863,7 @@
         145.3694305419922
       ],
       "diameter": 289.3919219970703,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           810.0669555664062,
@@ -17385,6 +17903,7 @@
       "frame": 342,
       "time": 11.4,
       "status": "observed",
+      "source": "detector",
       "box": [
         859.6641845703125,
         0.0,
@@ -17396,7 +17915,7 @@
         142.08547973632812
       ],
       "diameter": 286.3242492675781,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           712.7589721679688,
@@ -17436,6 +17955,7 @@
       "frame": 343,
       "time": 11.433333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         854.96923828125,
         0.0,
@@ -17447,7 +17967,7 @@
         145.0250244140625
       ],
       "diameter": 292.96795654296875,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           840.501220703125,
@@ -17487,6 +18007,7 @@
       "frame": 344,
       "time": 11.466666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         850.7639770507812,
         1.5139374732971191,
@@ -17498,7 +18019,7 @@
         152.9569809436798
       ],
       "diameter": 299.7671706676483,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           900.0574951171875,
@@ -17538,6 +18059,7 @@
       "frame": 345,
       "time": 11.5,
       "status": "observed",
+      "source": "detector",
       "box": [
         844.0286254882812,
         28.331144332885742,
@@ -17549,7 +18071,7 @@
         188.92191982269287
       ],
       "diameter": 311.208664894104,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1011.5054321289062,
@@ -17589,6 +18111,7 @@
       "frame": 346,
       "time": 11.533333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         837.8399047851562,
         67.85662841796875,
@@ -17600,7 +18123,7 @@
         228.08811950683594
       ],
       "diameter": 312.30580139160156,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           824.267578125,
@@ -17640,6 +18163,7 @@
       "frame": 347,
       "time": 11.566666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         842.71435546875,
         128.0806427001953,
@@ -17651,7 +18175,7 @@
         290.0949020385742
       ],
       "diameter": 310.06974029541016,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           978.6458129882812,
@@ -17691,6 +18215,7 @@
       "frame": 348,
       "time": 11.6,
       "status": "observed",
+      "source": "detector",
       "box": [
         837.315673828125,
         207.42335510253906,
@@ -17702,7 +18227,7 @@
         374.94434356689453
       ],
       "diameter": 317.54271697998047,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1025.86083984375,
@@ -17742,6 +18267,7 @@
       "frame": 349,
       "time": 11.633333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         830.1568603515625,
         297.4868469238281,
@@ -17753,7 +18279,7 @@
         460.6468048095703
       ],
       "diameter": 317.00035095214844,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1039.698486328125,
@@ -17793,6 +18319,7 @@
       "frame": 350,
       "time": 11.666666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         822.535400390625,
         408.1700134277344,
@@ -17804,7 +18331,7 @@
         575.4698944091797
       ],
       "diameter": 325.79383850097656,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1040.5479736328125,
@@ -17844,6 +18371,7 @@
       "frame": 351,
       "time": 11.7,
       "status": "observed",
+      "source": "detector",
       "box": [
         823.6588134765625,
         339.23052978515625,
@@ -17855,7 +18383,7 @@
         516.412841796875
       ],
       "diameter": 331.74224853515625,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1024.7388916015625,
@@ -17895,6 +18423,7 @@
       "frame": 352,
       "time": 11.733333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         801.4576416015625,
         228.2675018310547,
@@ -17906,7 +18435,7 @@
         385.6001205444336
       ],
       "diameter": 308.45121002197266,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1028.1026611328125,
@@ -17946,6 +18475,7 @@
       "frame": 353,
       "time": 11.766666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         767.5048217773438,
         120.29817962646484,
@@ -17957,7 +18487,7 @@
         284.5796318054199
       ],
       "diameter": 317.22270584106445,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1020.5867309570312,
@@ -17997,6 +18527,7 @@
       "frame": 354,
       "time": 11.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         729.4244995117188,
         33.64021682739258,
@@ -18008,7 +18539,7 @@
         196.0012912750244
       ],
       "diameter": 329.2390956878662,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1007.3174438476562,
@@ -18048,6 +18579,7 @@
       "frame": 355,
       "time": 11.833333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         701.583740234375,
         0.5042048692703247,
@@ -18059,7 +18591,7 @@
         146.3034024834633
       ],
       "diameter": 307.67590659856796,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1015.1004638671875,
@@ -18099,18 +18631,19 @@
       "frame": 356,
       "time": 11.866666666666667,
       "status": "predicted",
+      "source": null,
       "box": [
-        724.342897975289,
-        168.4938632316875,
-        1048.096315944039,
-        460.0922584600734
+        724.0517459339101,
+        165.20857130268462,
+        1047.80516390266,
+        456.80696653107054
       ],
       "center": [
-        886.219606959664,
-        314.29306084588046
+        885.9284549182851,
+        311.0077689168776
       ],
       "diameter": 307.67590659856796,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           993.9603271484375,
@@ -18150,18 +18683,19 @@
       "frame": 357,
       "time": 11.9,
       "status": "predicted",
+      "source": null,
       "box": [
-        714.530492868292,
-        170.33365257268144,
-        1038.283910837042,
-        461.93204780106737
+        714.116733546318,
+        166.78422907040806,
+        1037.8701515150678,
+        458.382624298794
       ],
       "center": [
-        876.407201852667,
-        316.1328501868744
+        875.993442530693,
+        312.583426684601
       ],
       "diameter": 307.67590659856796,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           986.5643920898438,
@@ -18201,6 +18735,7 @@
       "frame": 358,
       "time": 11.933333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         618.0203247070312,
         0.0,
@@ -18212,7 +18747,7 @@
         86.20388793945312
       ],
       "diameter": 248.62576293945312,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           956.2174072265625,
@@ -18251,19 +18786,20 @@
     {
       "frame": 359,
       "time": 11.966666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        660.6466470550505,
-        142.9110839379926,
-        985.4903970550505,
-        315.31885981689885
+        598.0,
+        0.0,
+        922.0,
+        172.0
       ],
       "center": [
-        823.0685220550505,
-        229.11497187744573
+        760.0,
+        86.0
       ],
-      "diameter": 248.62576293945312,
-      "segment": 3,
+      "diameter": 248.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           947.1488037109375,
@@ -18303,18 +18839,19 @@
       "frame": 360,
       "time": 12.0,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        560.7659301757812,
+        576.0,
         0.0,
-        884.8377685546875,
-        149.23605346679688
+        900.0,
+        172.0
       ],
       "center": [
-        722.8018493652344,
-        74.61802673339844
+        738.0,
+        86.0
       ],
-      "diameter": 236.65394592285156,
-      "segment": 3,
+      "diameter": 248.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           935.8966674804688,
@@ -18354,6 +18891,7 @@
       "frame": 361,
       "time": 12.033333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         529.6765747070312,
         0.0,
@@ -18365,7 +18903,7 @@
         82.0567626953125
       ],
       "diameter": 247.95513916015625,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           914.2816772460938,
@@ -18405,18 +18943,19 @@
       "frame": 362,
       "time": 12.066666666666666,
       "status": "predicted",
+      "source": null,
       "box": [
-        562.254808750017,
-        46.33215294814187,
-        894.0515616797045,
-        210.44567833876687
+        562.6392961261569,
+        34.54782308146574,
+        894.4360490558444,
+        198.66134847209074
       ],
       "center": [
-        728.1531852148607,
-        128.38891564345437
+        728.5376725910006,
+        116.60458577677824
       ],
       "diameter": 247.95513916015625,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           873.4893188476562,
@@ -18456,18 +18995,19 @@
       "frame": 363,
       "time": 12.1,
       "status": "predicted",
+      "source": null,
       "box": [
-        546.6739966546298,
-        36.953791280070746,
-        878.4707495843173,
-        201.06731667069573
+        547.0455977924055,
+        24.60021944126555,
+        878.842350722093,
+        188.71374483189055
       ],
       "center": [
-        712.5723731194736,
-        119.01055397538325
+        712.9439742572492,
+        106.65698213657805
       ],
       "diameter": 247.95513916015625,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           835.8659057617188,
@@ -18507,6 +19047,7 @@
       "frame": 364,
       "time": 12.133333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         443.87664794921875,
         0.0,
@@ -18518,7 +19059,7 @@
         138.20814514160156
       ],
       "diameter": 302.64784240722656,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           729.761962890625,
@@ -18558,6 +19099,7 @@
       "frame": 365,
       "time": 12.166666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         404.64117431640625,
         3.86044979095459,
@@ -18569,7 +19111,7 @@
         173.39583158493042
       ],
       "diameter": 328.2363705635071,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           722.1297607421875,
@@ -18609,6 +19151,7 @@
       "frame": 366,
       "time": 12.2,
       "status": "observed",
+      "source": "detector",
       "box": [
         363.18084716796875,
         81.70588684082031,
@@ -18620,7 +19163,7 @@
         261.4009780883789
       ],
       "diameter": 339.5981674194336,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           701.1160888671875,
@@ -18660,6 +19203,7 @@
       "frame": 367,
       "time": 12.233333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         317.8067932128906,
         195.1870574951172,
@@ -18671,7 +19215,7 @@
         384.2204818725586
       ],
       "diameter": 360.4558639526367,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           703.46533203125,
@@ -18710,19 +19254,20 @@
     {
       "frame": 368,
       "time": 12.266666666666667,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        370.91989110658653,
-        -10.945205742683328,
-        713.7647702569772,
-        367.12164301219946
+        356.0,
+        178.0,
+        664.0,
+        518.0
       ],
       "center": [
-        542.3423306817818,
-        178.08821863475808
+        510.0,
+        348.0
       ],
-      "diameter": 360.4558639526367,
-      "segment": 3,
+      "diameter": 324.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           733.229248046875,
@@ -18762,6 +19307,7 @@
       "frame": 369,
       "time": 12.3,
       "status": "observed",
+      "source": "detector",
       "box": [
         367.2555847167969,
         99.21109008789062,
@@ -18773,7 +19319,7 @@
         286.3406066894531
       ],
       "diameter": 363.1261749267578,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           720.1503295898438,
@@ -18813,6 +19359,7 @@
       "frame": 370,
       "time": 12.333333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         412.0282897949219,
         52.21653366088867,
@@ -18824,7 +19371,7 @@
         229.92748069763184
       ],
       "diameter": 336.196985244751,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           759.8557739257812,
@@ -18864,6 +19411,7 @@
       "frame": 371,
       "time": 12.366666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         453.4804382324219,
         19.313875198364258,
@@ -18875,7 +19423,7 @@
         188.94654941558838
       ],
       "diameter": 324.2045888900757,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           777.38232421875,
@@ -18915,6 +19463,7 @@
       "frame": 372,
       "time": 12.4,
       "status": "observed",
+      "source": "detector",
       "box": [
         479.2619934082031,
         4.469972133636475,
@@ -18926,7 +19475,7 @@
         166.683655500412
       ],
       "diameter": 331.3919823169708,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           656.0601806640625,
@@ -18954,6 +19503,7 @@
       "frame": 373,
       "time": 12.433333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         521.6152954101562,
         4.244756698608398,
@@ -18965,7 +19515,7 @@
         158.27128887176514
       ],
       "diameter": 324.15253925323486,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_knee": [
           707.0086059570312,
@@ -18989,6 +19539,7 @@
       "frame": 374,
       "time": 12.466666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         549.4418334960938,
         12.784172058105469,
@@ -19000,7 +19551,7 @@
         154.31171798706055
       ],
       "diameter": 303.07439041137695,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           836.0435791015625,
@@ -19040,6 +19591,7 @@
       "frame": 375,
       "time": 12.5,
       "status": "observed",
+      "source": "detector",
       "box": [
         583.2147827148438,
         35.079341888427734,
@@ -19051,7 +19603,7 @@
         194.41280937194824
       ],
       "diameter": 313.874361038208,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           873.2818603515625,
@@ -19091,6 +19643,7 @@
       "frame": 376,
       "time": 12.533333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         614.5755004882812,
         69.44081115722656,
@@ -19102,7 +19655,7 @@
         223.51439666748047
       ],
       "diameter": 304.09070587158203,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           900.0701293945312,
@@ -19142,6 +19695,7 @@
       "frame": 377,
       "time": 12.566666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         644.1986694335938,
         120.84774780273438,
@@ -19153,7 +19707,7 @@
         276.1394958496094
       ],
       "diameter": 304.4334716796875,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           885.7312622070312,
@@ -19192,19 +19746,20 @@
     {
       "frame": 378,
       "time": 12.6,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        507.1495599888443,
-        47.64797304180914,
-        805.4330072544693,
-        358.2314691355591
+        672.0,
+        180.0,
+        970.0,
+        492.0
       ],
       "center": [
-        656.2912836216568,
-        202.93972108868414
+        821.0,
+        336.0
       ],
-      "diameter": 304.4334716796875,
-      "segment": 3,
+      "diameter": 305.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           931.239990234375,
@@ -19244,6 +19799,7 @@
       "frame": 379,
       "time": 12.633333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         700.5916137695312,
         279.7332763671875,
@@ -19255,7 +19811,7 @@
         422.7237854003906
       ],
       "diameter": 286.05133056640625,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           990.8950805664062,
@@ -19294,19 +19850,20 @@
     {
       "frame": 380,
       "time": 12.666666666666666,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        559.3753947300157,
-        121.43643294915313,
-        845.497037796422,
-        407.4174510155594
+        732.0,
+        370.0,
+        1018.0,
+        656.0
       ],
       "center": [
-        702.4362162632189,
-        264.42694198235625
+        875.0,
+        513.0
       ],
-      "diameter": 286.05133056640625,
-      "segment": 3,
+      "diameter": 286.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1037.102783203125,
@@ -19346,18 +19903,19 @@
       "frame": 381,
       "time": 12.7,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        754.79443359375,
-        458.22564697265625,
-        1042.1356201171875,
-        833.6091918945312
+        764.0,
+        476.0,
+        1050.0,
+        762.0
       ],
       "center": [
-        898.4650268554688,
-        645.9174194335938
+        907.0,
+        619.0
       ],
-      "diameter": 331.36236572265625,
-      "segment": 3,
+      "diameter": 286.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1055.8590087890625,
@@ -19397,6 +19955,7 @@
       "frame": 382,
       "time": 12.733333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         775.0428466796875,
         577.192138671875,
@@ -19408,7 +19967,7 @@
         712.1177673339844
       ],
       "diameter": 282.3050842285156,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1075.967041015625,
@@ -19448,18 +20007,19 @@
       "frame": 383,
       "time": 12.766666666666667,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        805.2468872070312,
-        530.2400512695312,
-        1108.34619140625,
-        1001.572265625
+        802.0,
+        540.0,
+        1096.0,
+        810.0
       ],
       "center": [
-        956.7965393066406,
-        765.9061584472656
+        949.0,
+        675.0
       ],
-      "diameter": 387.21575927734375,
-      "segment": 3,
+      "diameter": 282.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1085.6163330078125,
@@ -19499,6 +20059,7 @@
       "frame": 384,
       "time": 12.8,
       "status": "observed",
+      "source": "detector",
       "box": [
         836.912109375,
         436.4912109375,
@@ -19510,7 +20071,7 @@
         582.61865234375
       ],
       "diameter": 289.397216796875,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1065.008544921875,
@@ -19550,6 +20111,7 @@
       "frame": 385,
       "time": 12.835,
       "status": "observed",
+      "source": "detector",
       "box": [
         845.4833984375,
         347.5572814941406,
@@ -19561,7 +20123,7 @@
         497.67103576660156
       ],
       "diameter": 296.57896423339844,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1086.3389892578125,
@@ -19601,6 +20163,7 @@
       "frame": 386,
       "time": 12.868333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         858.575927734375,
         279.6808166503906,
@@ -19612,7 +20175,7 @@
         426.7002410888672
       ],
       "diameter": 294.2033233642578,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1095.7689208984375,
@@ -19652,6 +20215,7 @@
       "frame": 387,
       "time": 12.901666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         868.0817260742188,
         222.98544311523438,
@@ -19663,7 +20227,7 @@
         371.5941925048828
       ],
       "diameter": 299.4013214111328,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1086.6893310546875,
@@ -19703,6 +20267,7 @@
       "frame": 388,
       "time": 12.935,
       "status": "observed",
+      "source": "detector",
       "box": [
         881.9269409179688,
         177.7190399169922,
@@ -19714,7 +20279,7 @@
         328.4829788208008
       ],
       "diameter": 304.1434860229492,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1063.1639404296875,
@@ -19754,6 +20319,7 @@
       "frame": 389,
       "time": 12.968333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         895.3806762695312,
         138.76593017578125,
@@ -19765,7 +20331,7 @@
         292.9836883544922
       ],
       "diameter": 310.64759826660156,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1030.860107421875,
@@ -19805,6 +20371,7 @@
       "frame": 390,
       "time": 13.001666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         911.2124633789062,
         115.3411636352539,
@@ -19816,7 +20383,7 @@
         275.7617988586426
       ],
       "diameter": 319.9460563659668,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           975.0608520507812,
@@ -19856,6 +20423,7 @@
       "frame": 391,
       "time": 13.035,
       "status": "observed",
+      "source": "detector",
       "box": [
         927.8653564453125,
         105.0320816040039,
@@ -19867,7 +20435,7 @@
         268.9425239562988
       ],
       "diameter": 326.9424858093262,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           893.806884765625,
@@ -19907,6 +20475,7 @@
       "frame": 392,
       "time": 13.068333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         943.1773681640625,
         103.30733489990234,
@@ -19918,7 +20487,7 @@
         275.3957328796387
       ],
       "diameter": 340.3454780578613,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           910.1915283203125,
@@ -19958,6 +20527,7 @@
       "frame": 393,
       "time": 13.101666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         963.4188842773438,
         131.9915313720703,
@@ -19969,7 +20539,7 @@
         304.14376068115234
       ],
       "diameter": 344.13980865478516,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           844.7764282226562,
@@ -20009,6 +20579,7 @@
       "frame": 394,
       "time": 13.135,
       "status": "observed",
+      "source": "detector",
       "box": [
         992.5714721679688,
         169.55914306640625,
@@ -20020,7 +20591,7 @@
         344.9918518066406
       ],
       "diameter": 346.44482421875,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           753.9456176757812,
@@ -20060,6 +20631,7 @@
       "frame": 395,
       "time": 13.168333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         997.7886352539062,
         224.59861755371094,
@@ -20071,7 +20643,7 @@
         413.42281341552734
       ],
       "diameter": 373.4157180786133,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           870.5067138671875,
@@ -20103,6 +20675,7 @@
       "frame": 396,
       "time": 13.201666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         1038.8304443359375,
         126.08873748779297,
@@ -20114,7 +20687,7 @@
         323.7340660095215
       ],
       "diameter": 360.3816566467285,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           826.0389404296875,
@@ -20146,6 +20719,7 @@
       "frame": 397,
       "time": 13.235,
       "status": "observed",
+      "source": "detector",
       "box": [
         992.6271362304688,
         36.90570831298828,
@@ -20157,7 +20731,7 @@
         213.63129043579102
       ],
       "diameter": 350.11880111694336,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           833.9713134765625,
@@ -20189,6 +20763,7 @@
       "frame": 398,
       "time": 13.268333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         966.1400146484375,
         0.0,
@@ -20200,7 +20775,7 @@
         150.00881958007812
       ],
       "diameter": 326.5184020996094,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           860.7529907226562,
@@ -20232,6 +20807,7 @@
       "frame": 399,
       "time": 13.301666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         960.4497680664062,
         0.0,
@@ -20243,7 +20819,7 @@
         122.2046890258789
       ],
       "diameter": 292.1862258911133,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           869.7710571289062,
@@ -20275,18 +20851,19 @@
       "frame": 400,
       "time": 13.335,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        938.0575561523438,
+        956.0,
         0.0,
-        1283.473388671875,
-        203.51097106933594
+        1262.0,
+        220.0
       ],
       "center": [
-        1110.7654724121094,
-        101.75548553466797
+        1109.0,
+        110.0
       ],
-      "diameter": 274.4634017944336,
-      "segment": 3,
+      "diameter": 263.0,
+      "segment": 1,
       "pose": {
         "left_hip": [
           873.4434814453125,
@@ -20318,18 +20895,19 @@
       "frame": 401,
       "time": 13.368333333333334,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        928.9649658203125,
+        954.0,
         0.0,
-        1265.5367431640625,
-        178.46957397460938
+        1230.0,
+        198.0
       ],
       "center": [
-        1097.2508544921875,
-        89.23478698730469
+        1092.0,
+        99.0
       ],
-      "diameter": 257.5206756591797,
-      "segment": 3,
+      "diameter": 237.0,
+      "segment": 1,
       "pose": {
         "left_hip": [
           895.8104248046875,
@@ -20361,18 +20939,19 @@
       "frame": 402,
       "time": 13.401666666666667,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        916.1801147460938,
-        0.0,
-        1251.5013427734375,
-        162.05050659179688
+        956.0,
+        6.0,
+        1204.0,
+        184.0
       ],
       "center": [
-        1083.8407287597656,
-        81.02525329589844
+        1080.0,
+        95.0
       ],
-      "diameter": 248.6858673095703,
-      "segment": 3,
+      "diameter": 213.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1085.87060546875,
@@ -20408,18 +20987,19 @@
       "frame": 403,
       "time": 13.435,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        902.8806762695312,
-        0.0,
-        1233.545166015625,
-        157.3520050048828
+        944.0,
+        6.0,
+        1192.0,
+        184.0
       ],
       "center": [
-        1068.2129211425781,
-        78.6760025024414
+        1068.0,
+        95.0
       ],
-      "diameter": 244.00824737548828,
-      "segment": 3,
+      "diameter": 213.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1063.410400390625,
@@ -20459,18 +21039,19 @@
       "frame": 404,
       "time": 13.468333333333334,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        895.9593505859375,
-        0.0,
-        1223.2861328125,
-        178.8935546875
+        932.0,
+        20.0,
+        1180.0,
+        198.0
       ],
       "center": [
-        1059.6227416992188,
-        89.44677734375
+        1056.0,
+        109.0
       ],
-      "diameter": 253.11016845703125,
-      "segment": 3,
+      "diameter": 213.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1031.6658935546875,
@@ -20510,18 +21091,19 @@
       "frame": 405,
       "time": 13.501666666666667,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        884.63525390625,
-        0.0,
-        1210.9761962890625,
-        204.9484405517578
+        924.0,
+        46.0,
+        1172.0,
+        224.0
       ],
       "center": [
-        1047.8057250976562,
-        102.4742202758789
+        1048.0,
+        135.0
       ],
-      "diameter": 265.64469146728516,
-      "segment": 3,
+      "diameter": 213.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1055.37939453125,
@@ -20560,19 +21142,20 @@
     {
       "frame": 406,
       "time": 13.535,
-      "status": "predicted",
+      "status": "observed",
+      "source": "appearance",
       "box": [
-        961.7555541317338,
-        -29.87531809669946,
-        1288.0964965145463,
-        175.07312245505835
+        926.0,
+        78.0,
+        1174.0,
+        256.0
       ],
       "center": [
-        1124.92602532314,
-        72.59890217917945
+        1050.0,
+        167.0
       ],
-      "diameter": 265.64469146728516,
-      "segment": 3,
+      "diameter": 213.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1121.019287109375,
@@ -20612,6 +21195,7 @@
       "frame": 407,
       "time": 13.568333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         864.6216430664062,
         0.0,
@@ -20623,7 +21207,7 @@
         154.1897430419922
       ],
       "diameter": 317.45411682128906,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           866.9488525390625,
@@ -20655,6 +21239,7 @@
       "frame": 408,
       "time": 13.601666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         861.0848999023438,
         33.928428649902344,
@@ -20666,7 +21251,7 @@
         205.24285507202148
       ],
       "diameter": 331.153995513916,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1141.20458984375,
@@ -20706,6 +21291,7 @@
       "frame": 409,
       "time": 13.635,
       "status": "observed",
+      "source": "detector",
       "box": [
         846.85498046875,
         85.87332153320312,
@@ -20717,7 +21303,7 @@
         283.79998779296875
       ],
       "diameter": 372.9950866699219,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1164.593505859375,
@@ -20757,6 +21343,7 @@
       "frame": 410,
       "time": 13.668333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         839.3732299804688,
         235.3660430908203,
@@ -20768,7 +21355,7 @@
         414.44730377197266
       ],
       "diameter": 340.68016815185547,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1182.171142578125,
@@ -20808,6 +21395,7 @@
       "frame": 411,
       "time": 13.701666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         836.135009765625,
         353.8096923828125,
@@ -20819,7 +21407,7 @@
         537.1581115722656
       ],
       "diameter": 343.7951965332031,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1170.250732421875,
@@ -20859,6 +21447,7 @@
       "frame": 412,
       "time": 13.735,
       "status": "observed",
+      "source": "detector",
       "box": [
         830.6107177734375,
         463.3009338378906,
@@ -20870,7 +21459,7 @@
         629.9288482666016
       ],
       "diameter": 332.3148651123047,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1179.31201171875,
@@ -20910,6 +21499,7 @@
       "frame": 413,
       "time": 13.768333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         845.4463500976562,
         397.4613342285156,
@@ -20921,7 +21511,7 @@
         563.3578948974609
       ],
       "diameter": 330.62596130371094,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1182.328857421875,
@@ -20961,6 +21551,7 @@
       "frame": 414,
       "time": 13.801666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         860.0968017578125,
         341.8739318847656,
@@ -20972,7 +21563,7 @@
         508.8829803466797
       ],
       "diameter": 330.44154357910156,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1183.0518798828125,
@@ -21012,6 +21603,7 @@
       "frame": 415,
       "time": 13.835,
       "status": "observed",
+      "source": "detector",
       "box": [
         879.5425415039062,
         300.1048278808594,
@@ -21023,7 +21615,7 @@
         462.79881286621094
       ],
       "diameter": 322.87120056152344,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1177.672119140625,
@@ -21063,6 +21655,7 @@
       "frame": 416,
       "time": 13.868333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         885.2025756835938,
         276.5196228027344,
@@ -21074,7 +21667,7 @@
         438.19956970214844
       ],
       "diameter": 325.90635681152344,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1156.2513427734375,
@@ -21114,6 +21707,7 @@
       "frame": 417,
       "time": 13.901666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         904.2981567382812,
         264.2082214355469,
@@ -21125,7 +21719,7 @@
         424.87831115722656
       ],
       "diameter": 321.84315490722656,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1129.9127197265625,
@@ -21165,6 +21759,7 @@
       "frame": 418,
       "time": 13.935,
       "status": "observed",
+      "source": "detector",
       "box": [
         915.8218383789062,
         272.5949401855469,
@@ -21176,7 +21771,7 @@
         429.9902801513672
       ],
       "diameter": 319.5290985107422,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1094.7984619140625,
@@ -21216,6 +21811,7 @@
       "frame": 419,
       "time": 13.968333333333334,
       "status": "observed",
+      "source": "detector",
       "box": [
         932.2406616210938,
         283.2896423339844,
@@ -21227,7 +21823,7 @@
         443.7289276123047
       ],
       "diameter": 321.90501403808594,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1070.3104248046875,
@@ -21267,6 +21863,7 @@
       "frame": 420,
       "time": 14.001666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         945.6751098632812,
         311.748046875,
@@ -21278,7 +21875,7 @@
         474.697509765625
       ],
       "diameter": 325.1412048339844,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1046.2713623046875,
@@ -21318,6 +21915,7 @@
       "frame": 421,
       "time": 14.035,
       "status": "observed",
+      "source": "detector",
       "box": [
         958.5201416015625,
         354.3858947753906,
@@ -21329,7 +21927,7 @@
         517.5496978759766
       ],
       "diameter": 327.5738983154297,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1030.305908203125,
@@ -21369,6 +21967,7 @@
       "frame": 422,
       "time": 14.068333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
         975.174560546875,
         414.05303955078125,
@@ -21380,7 +21979,7 @@
         582.0595397949219
       ],
       "diameter": 333.5780944824219,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           1001.53564453125,
@@ -21420,6 +22019,7 @@
       "frame": 423,
       "time": 14.101666666666667,
       "status": "observed",
+      "source": "detector",
       "box": [
         988.3636474609375,
         489.9701843261719,
@@ -21431,7 +22031,7 @@
         658.7812652587891
       ],
       "diameter": 335.5181121826172,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           981.2988891601562,
@@ -21471,18 +22071,19 @@
       "frame": 424,
       "time": 14.135,
       "status": "observed",
+      "source": "appearance",
       "box": [
-        985.9180297851562,
-        494.900146484375,
-        1349.6622314453125,
-        1003.402099609375
+        1014.0,
+        492.0,
+        1348.0,
+        830.0
       ],
       "center": [
-        1167.7901306152344,
-        749.151123046875
+        1181.0,
+        661.0
       ],
-      "diameter": 436.1230773925781,
-      "segment": 3,
+      "diameter": 336.0,
+      "segment": 1,
       "pose": {
         "left_wrist": [
           968.8218994140625,
@@ -21522,18 +22123,19 @@
       "frame": 425,
       "time": 14.168333333333333,
       "status": "observed",
+      "source": "detector",
       "box": [
-        1017.959228515625,
-        404.90521240234375,
-        1351.66552734375,
-        984.2960205078125
+        1024.54248046875,
+        408.0115661621094,
+        1349.4180908203125,
+        746.0875244140625
       ],
       "center": [
-        1184.8123779296875,
-        694.6006164550781
+        1186.9802856445312,
+        577.0495452880859
       ],
-      "diameter": 456.5485534667969,
-      "segment": 3,
+      "diameter": 331.4757843017578,
+      "segment": 1,
       "pose": {
         "right_wrist": [
           572.8872680664062,
@@ -21569,6 +22171,7 @@
       "frame": 426,
       "time": 14.201666666666666,
       "status": "observed",
+      "source": "detector",
       "box": [
         1019.0523071289062,
         346.21826171875,
@@ -21580,7 +22183,7 @@
         508.2688293457031
       ],
       "diameter": 327.94134521484375,
-      "segment": 3,
+      "segment": 1,
       "pose": {
         "left_hip": [
           862.90771484375,
@@ -21611,154 +22214,10 @@
   ],
   "tracking_gaps": [
     {
-      "start": 0.5333333333333333,
-      "end": 0.6,
-      "start_frame": 16,
-      "end_frame": 18
-    },
-    {
-      "start": 1.0333333333333334,
-      "end": 1.0333333333333334,
-      "start_frame": 31,
-      "end_frame": 31
-    },
-    {
-      "start": 1.1,
-      "end": 1.1333333333333333,
-      "start_frame": 33,
-      "end_frame": 34
-    },
-    {
-      "start": 1.4333333333333333,
-      "end": 1.4666666666666666,
-      "start_frame": 43,
-      "end_frame": 44
-    },
-    {
-      "start": 2.0,
-      "end": 2.0,
-      "start_frame": 60,
-      "end_frame": 60
-    },
-    {
-      "start": 2.1,
-      "end": 2.1,
-      "start_frame": 63,
-      "end_frame": 63
-    },
-    {
-      "start": 2.533333333333333,
-      "end": 2.6,
-      "start_frame": 76,
-      "end_frame": 78
-    },
-    {
-      "start": 3.066666666666667,
-      "end": 3.066666666666667,
-      "start_frame": 92,
-      "end_frame": 92
-    },
-    {
-      "start": 3.533333333333333,
-      "end": 3.533333333333333,
-      "start_frame": 106,
-      "end_frame": 106
-    },
-    {
-      "start": 3.966666666666667,
-      "end": 4.133333333333334,
-      "start_frame": 119,
-      "end_frame": 124
-    },
-    {
-      "start": 4.266666666666667,
-      "end": 4.3,
-      "start_frame": 128,
-      "end_frame": 129
-    },
-    {
-      "start": 4.466666666666667,
-      "end": 4.466666666666667,
-      "start_frame": 134,
-      "end_frame": 134
-    },
-    {
-      "start": 5.1,
-      "end": 5.166666666666667,
-      "start_frame": 153,
-      "end_frame": 155
-    },
-    {
-      "start": 5.233333333333333,
-      "end": 5.3,
-      "start_frame": 157,
-      "end_frame": 159
-    },
-    {
-      "start": 5.633333333333334,
-      "end": 5.633333333333334,
-      "start_frame": 169,
-      "end_frame": 169
-    },
-    {
-      "start": 6.1,
-      "end": 6.133333333333334,
-      "start_frame": 183,
-      "end_frame": 184
-    },
-    {
-      "start": 6.566666666666666,
+      "start": 6.633333333333334,
       "end": 7.166666666666667,
-      "start_frame": 197,
+      "start_frame": 199,
       "end_frame": 215
-    },
-    {
-      "start": 7.433333333333334,
-      "end": 7.433333333333334,
-      "start_frame": 223,
-      "end_frame": 223
-    },
-    {
-      "start": 7.5,
-      "end": 7.533333333333333,
-      "start_frame": 225,
-      "end_frame": 226
-    },
-    {
-      "start": 7.633333333333334,
-      "end": 7.633333333333334,
-      "start_frame": 229,
-      "end_frame": 229
-    },
-    {
-      "start": 8.4,
-      "end": 8.4,
-      "start_frame": 252,
-      "end_frame": 252
-    },
-    {
-      "start": 9.933333333333334,
-      "end": 9.933333333333334,
-      "start_frame": 298,
-      "end_frame": 298
-    },
-    {
-      "start": 10.133333333333333,
-      "end": 10.266666666666667,
-      "start_frame": 304,
-      "end_frame": 308
-    },
-    {
-      "start": 10.333333333333334,
-      "end": 10.333333333333334,
-      "start_frame": 310,
-      "end_frame": 310
-    },
-    {
-      "start": 10.466666666666667,
-      "end": 10.533333333333333,
-      "start_frame": 314,
-      "end_frame": 316
     },
     {
       "start": 10.7,
@@ -21773,48 +22232,22 @@
       "end_frame": 357
     },
     {
-      "start": 11.966666666666667,
-      "end": 11.966666666666667,
-      "start_frame": 359,
-      "end_frame": 359
-    },
-    {
       "start": 12.066666666666666,
       "end": 12.1,
       "start_frame": 362,
       "end_frame": 363
-    },
-    {
-      "start": 12.266666666666667,
-      "end": 12.266666666666667,
-      "start_frame": 368,
-      "end_frame": 368
-    },
-    {
-      "start": 12.6,
-      "end": 12.6,
-      "start_frame": 378,
-      "end_frame": 378
-    },
-    {
-      "start": 12.666666666666666,
-      "end": 12.666666666666666,
-      "start_frame": 380,
-      "end_frame": 380
-    },
-    {
-      "start": 13.535,
-      "end": 13.535,
-      "start_frame": 406,
-      "end_frame": 406
     }
   ],
   "tracking_summary": {
-    "observed": 349,
-    "predicted": 60,
-    "lost": 18
+    "observed": 404,
+    "predicted": 10,
+    "lost": 13
   },
-  "runtime_seconds": 45.45791724999435,
+  "observation_sources": {
+    "detector": 313,
+    "appearance": 91
+  },
+  "runtime_seconds": 43.40540849999525,
   "warnings": [
     "Estimates require review. No accuracy confidence score is assigned.",
     "Hidden contacts and contacts without a visible downward/upward reversal may be missed.",
