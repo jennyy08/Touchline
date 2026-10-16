@@ -1,0 +1,86 @@
+[
+  {
+    "clip": 0,
+    "reference_total": 26,
+    "before": 23,
+    "after": 24,
+    "review_candidates": [
+      {
+        "time": 7.266666666666667,
+        "reason": "possible_hand_contact"
+      }
+    ],
+    "runtime_seconds": 48.30526995891705,
+    "video_sha256": "73daba39d2ef14ea593cc59ac5bf8ce8f2a2db7547de6f91c05fc1ec39e2a7a3",
+    "event_metrics_available": true
+  },
+  {
+    "clip": 1,
+    "reference_total": 16,
+    "before": 14,
+    "after": 15,
+    "review_candidates": [
+      {
+        "time": 7.935,
+        "reason": "contact_not_supported"
+      }
+    ],
+    "runtime_seconds": 31.05255908309482,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "event_metrics_available": false
+  },
+  {
+    "clip": 2,
+    "reference_total": 29,
+    "before": 22,
+    "after": 24,
+    "review_candidates": [
+      {
+        "time": 8.968333333333334,
+        "reason": "possible_hand_contact"
+      },
+      {
+        "time": 9.601666666666667,
+        "reason": "possible_hand_contact"
+      },
+      {
+        "time": 10.168333333333333,
+        "reason": "possible_hand_contact"
+      },
+      {
+        "time": 14.135,
+        "reason": "possible_hand_contact"
+      },
+      {
+        "time": 15.601666666666667,
+        "reason": "contact_not_supported"
+      }
+    ],
+    "runtime_seconds": 49.55716054094955,
+    "video_sha256": "299a37f78c0bfa219a8f479ccdbb7255b54f8cbe4bf055796ba109c5325812ed",
+    "event_metrics_available": false
+  },
+  {
+    "clip": 3,
+    "reference_total": 21,
+    "before": 18,
+    "after": 18,
+    "review_candidates": [
+      {
+        "time": 3.368333333333333,
+        "reason": "contact_not_supported"
+      },
+      {
+        "time": 3.835,
+        "reason": "contact_not_supported"
+      },
+      {
+        "time": 10.201666666666666,
+        "reason": "possible_hand_contact"
+      }
+    ],
+    "runtime_seconds": 40.32039266591892,
+    "video_sha256": "8cc913b5f60b21dd3c657e7539b9388f911bec77e558a07d51d4291b4fb7819f",
+    "event_metrics_available": false
+  }
+]

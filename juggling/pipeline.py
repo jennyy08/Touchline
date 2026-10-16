@@ -30,7 +30,7 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
                 writer = PlaybackWriter(output / "playback.mp4", width, height)
             if frame.time > 180:
                 raise ValueError("This prototype supports clips up to 3 minutes. Trim the video and retry.")
-            detections = ball.detect(frame.image)
+            detections = tracker.filter_detections(frame.time, ball.detect(frame.image))
             proposals = appearance.propose(frame.time, frame.image, detections) if appearance else detections
             tracked = tracker.update(frame.time, proposals)
             if appearance:

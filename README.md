@@ -95,3 +95,5 @@ Only evaluate against a reference for the **same video**. The evaluator checks t
 [Architecture and learning guide](ARCHITECTURE.md) · [Validation results](validation/RESULTS.md)
 
 Additional footage: [three player-counted clips and tracking-loss findings](validation/additional-clips/README.md). These use supplied totals, not event-level reference labels.
+
+Latest tracking revision: [direction-aware edge handling and shoe rejection](validation/tracking-revision/README.md).

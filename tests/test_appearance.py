@@ -85,3 +85,30 @@ def test_appearance_at_top_edge_cannot_seed_another_match():
     bridge.propose(.033, scene(60,0), [])
     bridge.accept(.033, {'status': 'observed', 'source': 'appearance', 'box': [60,0,100,40]})
     assert bridge.propose(.066, scene(60,10), []) == []
+
+
+def test_parallel_motion_along_edge_preserves_image_evidence():
+    bridge = AppearanceBridge(Config())
+    bridge.propose(0, scene(177,60), [])
+    bridge.accept(0, {'status':'observed','source':'detector','box':[177,60,217,100]})
+    bridge.propose(.033, scene(178,70), [])
+    bridge.accept(.033, {'status':'observed','source':'detector','box':[178,70,218,110]})
+    proposal = bridge.propose(.066, scene(178,80), [])
+    assert proposal and proposal[0]['source'] == 'appearance'
+    assert np.allclose(proposal[0]['box'], [178,80,218,120], atol=2)
+
+
+def test_diagonal_exit_does_not_reseed_background_template():
+    bridge = AppearanceBridge(Config())
+    bridge.propose(0, scene(8,60), [])
+    bridge.accept(0, {'status':'observed','source':'detector','box':[8,60,48,100]})
+    bridge.propose(.033, scene(0,90), [])
+    bridge.accept(.033, {'status':'observed','source':'detector','box':[0,90,40,130]})
+    assert bridge.propose(.066, scene(5,100), []) == []
+
+
+def test_low_texture_hit_clears_old_template_instead_of_misaligning_it():
+    bridge = seeded()
+    bridge.propose(.033, scene(visible=False), [])
+    bridge.accept(.033, {'status':'observed','source':'detector','box':[70,60,110,100]})
+    assert bridge.propose(.066, scene(70,60), []) == []

@@ -67,19 +67,37 @@ class AppearanceBridge:
         box = np.asarray(sample['box'])
         height, width = self.gray.shape
         x1, y1, x2, y2 = np.rint(box * self.scale).astype(int)
-        # A clipped ball patch contains mostly background/body as it exits.
-        # Clear the old template too: retaining it would allow fallback drift
-        # after the next detector miss. A new interior detector hit re-anchors.
-        margin = max(2, float(np.mean(box[2:] - box[:2])) * self.scale * 0.05)
-        if min(x1, y1, width - x2, height - y2) <= margin:
+        diameter = max(float(np.mean(box[2:] - box[:2])), 1)
+        margin = max(2, diameter * self.scale * self.config.edge_margin_diameters)
+        near = np.array([x1, y1, width-x2, height-y2]) <= margin
+        # Track motion normal to the boundary. Movement along an edge can
+        # remain useful; outward movement must not seed clothing/background.
+        exiting = False
+        if near.any():
+            if (self.box is None or self.last_time is None
+                    or time - self.last_time > self.config.prediction_seconds):
+                exiting = True  # No motion history to support an edge template.
+            else:
+                dt = max(time - self.last_time, .001)
+                velocity = ((box[:2]+box[2:]) - (self.box[:2]+self.box[2:])) / (2*dt*diameter)
+                outward = np.array([-velocity[0], -velocity[1], velocity[0], velocity[1]])
+                threshold = max(self.config.edge_outward_diameters_per_second,
+                                float(np.linalg.norm(velocity)) * self.config.edge_outward_fraction)
+                exiting = bool(np.any(near & (outward > threshold)))
+        self.box = box
+        self.last_time = time
+        if exiting:
             self.template = None
             self.anchor_time = None
-            self.last_time = None
             return
         if x1 < 0 or y1 < 0 or x2 > width or y2 > height or min(x2-x1, y2-y1) < 8:
+            self.template = None
+            self.anchor_time = None
             return
         patch = self.gray[y1:y2, x1:x2]
         if patch.std() < 10:
+            self.template = None
+            self.anchor_time = None
             return
         self.template = patch.copy()
         self.box = box

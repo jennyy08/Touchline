@@ -11,6 +11,10 @@ class Config:
     detection_threshold: float = 0.05
     landmark_threshold: float = 0.35
     prediction_seconds: float = 0.15
+    minimum_size_ratio: float = 0.75  # Abrupt shrinkage often indicates a shoe switch.
+    edge_outward_fraction: float = 0.2  # Normal component relative to total motion.
+    edge_margin_diameters: float = 0.05
+    edge_outward_diameters_per_second: float = 0.5
     association_diameters: float = 3.0
     contact_diameters: float = 1.15
     debounce_seconds: float = 0.22

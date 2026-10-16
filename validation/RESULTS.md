@@ -1,6 +1,6 @@
 # Results on the supplied juggling clip
 
-**Current update after testing three more clips:** the boundary safeguard reduces this original clip to **23 matched automatic touches out of 26**, with zero unmatched counted events and three misses. It removes a confirmed false count in a new clip but loses the real 10.50 s edge contact here. See [additional-clip results and tradeoff](additional-clips/README.md). The 24-count results and `final-*` files below are preserved as the **pre-safeguard baseline**; current original-clip output is `additional-clips/clip-0-edge-guard-result.json`.
+**Latest tracking revision:** direction-aware edge handling restores this original clip to **24 matched automatic touches out of 26**, with zero unmatched counted events and two misses. It preserves rejection of the inspected clothing-based exit event in the new footage. See [current tracking results](tracking-revision/README.md). The 24-count results and `final-*` files below describe the earlier appearance baseline; the current output is `tracking-revision/clip-0-result.json`.
 
 ## Previous appearance-matching baseline
 

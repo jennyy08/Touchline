@@ -1,0 +1,230 @@
+{
+  "tolerance_seconds": 0.1,
+  "estimated_count": 24,
+  "reference_visible_count": 26,
+  "matched": 24,
+  "false_positives": [],
+  "unverifiable_predictions": [],
+  "misses": [
+    {
+      "id": "manual-12",
+      "time": 6.6,
+      "frame": 198,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-13",
+      "time": 7.233333333333333,
+      "frame": 217,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    }
+  ],
+  "matches": [
+    {
+      "predicted_time": 1.0666666666666667,
+      "reference_time": 1.0666666666666667,
+      "predicted_frame": 32,
+      "reference_frame": 32,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 1.5333333333333334,
+      "reference_time": 1.5333333333333334,
+      "predicted_frame": 46,
+      "reference_frame": 46,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 2.033333333333333,
+      "reference_time": 2.033333333333333,
+      "predicted_frame": 61,
+      "reference_frame": 61,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 2.566666666666667,
+      "reference_time": 2.566666666666667,
+      "predicted_frame": 77,
+      "reference_frame": 77,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 3.0,
+      "reference_time": 3.0,
+      "predicted_frame": 90,
+      "reference_frame": 90,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 3.566666666666667,
+      "reference_time": 3.566666666666667,
+      "predicted_frame": 107,
+      "reference_frame": 107,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 4.066666666666666,
+      "reference_time": 4.066666666666666,
+      "predicted_frame": 122,
+      "reference_frame": 122,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 4.666666666666667,
+      "reference_time": 4.633333333333334,
+      "predicted_frame": 140,
+      "reference_frame": 139,
+      "error_seconds": 0.033333333333333215
+    },
+    {
+      "predicted_time": 5.2,
+      "reference_time": 5.2,
+      "predicted_frame": 156,
+      "reference_frame": 156,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 5.666666666666667,
+      "reference_time": 5.666666666666667,
+      "predicted_frame": 170,
+      "reference_frame": 170,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 6.066666666666666,
+      "reference_time": 6.066666666666666,
+      "predicted_frame": 182,
+      "reference_frame": 182,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 7.866666666666666,
+      "reference_time": 7.866666666666666,
+      "predicted_frame": 236,
+      "reference_frame": 236,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 8.366666666666667,
+      "reference_time": 8.366666666666667,
+      "predicted_frame": 251,
+      "reference_frame": 251,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 8.866666666666667,
+      "reference_time": 8.866666666666667,
+      "predicted_frame": 266,
+      "reference_frame": 266,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 9.4,
+      "reference_time": 9.366666666666667,
+      "predicted_frame": 282,
+      "reference_frame": 281,
+      "error_seconds": 0.033333333333333215
+    },
+    {
+      "predicted_time": 9.866666666666667,
+      "reference_time": 9.866666666666667,
+      "predicted_frame": 296,
+      "reference_frame": 296,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 10.5,
+      "reference_time": 10.5,
+      "predicted_frame": 315,
+      "reference_frame": 315,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 11.1,
+      "reference_time": 11.1,
+      "predicted_frame": 333,
+      "reference_frame": 333,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 11.666666666666666,
+      "reference_time": 11.666666666666666,
+      "predicted_frame": 350,
+      "reference_frame": 350,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 12.233333333333333,
+      "reference_time": 12.266666666666667,
+      "predicted_frame": 367,
+      "reference_frame": 368,
+      "error_seconds": -0.03333333333333499
+    },
+    {
+      "predicted_time": 12.733333333333333,
+      "reference_time": 12.733333333333333,
+      "predicted_frame": 382,
+      "reference_frame": 382,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 13.168333333333333,
+      "reference_time": 13.168333333333333,
+      "predicted_frame": 395,
+      "reference_frame": 395,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 13.735,
+      "reference_time": 13.735,
+      "predicted_frame": 412,
+      "reference_frame": 412,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 14.135,
+      "reference_time": 14.101666666666667,
+      "predicted_frame": 424,
+      "reference_frame": 423,
+      "error_seconds": 0.033333333333333215
+    }
+  ],
+  "mean_absolute_timing_error": 0.0055555555555556095,
+  "tracking_summary": {
+    "observed": 394,
+    "predicted": 20,
+    "lost": 13
+  },
+  "runtime_seconds": 48.30526995891705,
+  "config": {
+    "detector": "yolo11s.pt",
+    "pose_model": "yolo11n-pose.pt",
+    "image_size": 640,
+    "pose_size": 640,
+    "detection_threshold": 0.05,
+    "landmark_threshold": 0.35,
+    "prediction_seconds": 0.15,
+    "minimum_size_ratio": 0.75,
+    "edge_outward_fraction": 0.2,
+    "edge_margin_diameters": 0.05,
+    "edge_outward_diameters_per_second": 0.5,
+    "association_diameters": 3.0,
+    "contact_diameters": 1.15,
+    "debounce_seconds": 0.22,
+    "velocity_window_seconds": 0.14,
+    "min_velocity_diameters": 0.7,
+    "appearance_enabled": true,
+    "appearance_horizon_seconds": 0.25,
+    "appearance_similarity": 0.6,
+    "device": "cpu"
+  },
+  "uncertain_intervals": [
+    {
+      "start": 6.7,
+      "end": 7.133333333333334,
+      "note": "Ball above the image; hidden contacts cannot be verified."
+    }
+  ]
+}

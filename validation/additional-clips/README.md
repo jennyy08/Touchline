@@ -1,5 +1,7 @@
 # Three additional clips — user totals and targeted diagnostics
 
+**Historical baseline:** the latest revision returns 15/24/18 on these clips and restores the original edge touch. See [current tracking revision](../tracking-revision/README.md). Results below preserve the earlier experiments.
+
 The player supplied totals of **16, 29, and 21**, in filename order 12.26 PM, 12.28 PM, 12.29 PM, excluding the opening lift/pickup. These totals are accepted as the reference. No full manual recount was performed and no reference event times were invented. SHA-256 hashes bind each total to its file in `clip-N-reference.json`.
 
 ## Unchanged baseline

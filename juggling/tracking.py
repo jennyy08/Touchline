@@ -12,6 +12,14 @@ class BallTracker:
         self.last_observed = None
         self.segment = -1
 
+    def filter_detections(self, time, detections):
+        """Reject abrupt size collapse before appearance fallback is attempted."""
+        if self.size is None or self.last_observed is None or time - self.last_observed > self.config.prediction_seconds:
+            return detections
+        diameter = max(float(np.mean(self.size)), 1)
+        return [d for d in detections if
+                np.mean(np.asarray(d["box"][2:]) - d["box"][:2]) / diameter >= self.config.minimum_size_ratio]
+
     def update(self, time, detections):
         if self.last_observed is not None and time - self.last_observed > self.config.prediction_seconds:
             self.x = None
@@ -34,7 +42,7 @@ class BallTracker:
                 diameter = max(float(np.mean(self.size)), 1)
                 distance = float(np.linalg.norm(center - self.x[:2])) / diameter
                 ratio = float(np.mean(size)) / diameter
-                if distance > self.config.association_diameters or not 0.45 < ratio < 2.2:
+                if distance > self.config.association_diameters or not self.config.minimum_size_ratio <= ratio < 2.2:
                     continue
                 cost = distance + abs(np.log(ratio)) - 0.2 * detection["score"]
             eligible.append((cost, center, size, box, detection.get("source", "detector")))

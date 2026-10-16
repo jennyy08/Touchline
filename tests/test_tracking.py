@@ -28,3 +28,22 @@ def test_plausible_motion_keeps_identity():
     b = tracker.update(.03, ball(55))
     assert b["segment"] == a["segment"]
     assert b["center"] == [55, 50]
+
+
+def test_sudden_small_shoe_proposal_is_rejected_before_fallback():
+    tracker = BallTracker(Config())
+    tracker.update(0, ball())
+    shoe = [{'box':[45,45,55,55],'score':.99}]
+    assert tracker.filter_detections(.033, shoe) == []
+    assert tracker.update(.033, shoe)['status'] == 'predicted'
+    # After a true loss, size history must not block legitimate reacquisition.
+    assert tracker.filter_detections(.2, shoe) == shoe
+    assert tracker.update(.2, shoe)['status'] == 'observed'
+
+
+def test_moderate_size_change_survives_association():
+    tracker = BallTracker(Config())
+    tracker.update(0, ball())
+    smaller = [{'box':[42,42,58,58],'score':.7}]
+    assert tracker.filter_detections(.033, smaller) == smaller
+    assert tracker.update(.033, smaller)['status'] == 'observed'
