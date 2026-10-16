@@ -53,8 +53,33 @@ it("treats results without stops as having none", () => {
   expect(stopsOf({ stops: [stop] })).toEqual([stop]);
 });
 
+import { countSplit } from "./review";
+it("splits counted touches into seen and heard", () => {
+  const touch = (reason: string, status = "counted") =>
+    ({
+      id: reason,
+      time: 0,
+      frame: 0,
+      status,
+      reason,
+      body_part: null,
+    }) as Touch;
+  expect(
+    countSplit({
+      events: [
+        touch("observed_reversal_near_leg"),
+        touch("heard_ball_out_of_view"),
+        touch("possible_floor_contact", "review"),
+      ],
+    }),
+  ).toEqual({ seen: 1, heard: 1 });
+  expect(countSplit({ events: [touch("observed_reversal_near_leg")] })).toEqual(
+    { seen: 1, heard: 0 },
+  );
+});
+
 import { observationLabel } from "./player";
-import type { Sample } from "./types";
+import type { Sample, Touch } from "./types";
 it("distinguishes appearance evidence from detector hits and predictions", () => {
   expect(
     observationLabel({ status: "observed", source: "appearance" } as Sample),

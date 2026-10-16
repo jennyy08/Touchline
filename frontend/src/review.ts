@@ -1,4 +1,21 @@
-import { labels, type Review, type Result, type Stop } from "./types";
+import {
+  labels,
+  type Review,
+  type Result,
+  type Stop,
+  type Touch,
+} from "./types";
+
+/** A touch supported only by sound (ball out of view), not by a visible contact. */
+export const isHeard = (touch: Touch) =>
+  touch.reason === "heard_ball_out_of_view";
+
+/** Seen/heard split; older results have no audio fields, so everything counted was seen. */
+export function countSplit(data: Pick<Result, "events">) {
+  const counted = data.events.filter((e) => e.status === "counted");
+  const heard = counted.filter(isHeard).length;
+  return { seen: counted.length - heard, heard };
+}
 
 /** Results saved before stop detection have no `stops` field; treat as none. */
 export const stopsOf = (data: Pick<Result, "stops">): Stop[] =>

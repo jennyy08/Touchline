@@ -14,13 +14,14 @@ def main():
     p.add_argument("--device", default="cpu")
     p.add_argument("--detection-threshold", type=float, default=Config().detection_threshold)
     p.add_argument("--no-appearance", action="store_true", help="Run the detector-only baseline")
+    p.add_argument("--no-audio", action="store_true", help="Ignore the audio track (video evidence only)")
     a = p.parse_args()
     def progress(**state):
         if state["frames"] % 30 == 0:
             print(state, flush=True)
     result = analyze(a.video, a.output, a.models,
-                     Config(detector=a.detector, image_size=a.image_size, device=a.device, detection_threshold=a.detection_threshold, appearance_enabled=not a.no_appearance), progress)
-    print({k: result[k] for k in ("estimated_count", "tracking_summary", "runtime_seconds")})
+                     Config(detector=a.detector, image_size=a.image_size, device=a.device, detection_threshold=a.detection_threshold, appearance_enabled=not a.no_appearance, audio_enabled=not a.no_audio), progress)
+    print({k: result[k] for k in ("estimated_count", "seen_count", "heard_count", "tracking_summary", "runtime_seconds")})
 
 
 if __name__ == "__main__":

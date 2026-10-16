@@ -9,7 +9,8 @@ from .detection import BallDetector
 from .pose import PoseDetector
 from .tracking import BallTracker
 from .appearance import AppearanceBridge
-from .counting import count_touches
+from .counting import count_touches, add_audio_evidence
+from .audio import onsets
 
 
 def analyze(source: Path, output: Path, models: Path, config=None, progress=lambda **kw: None):
@@ -46,7 +47,15 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
     if len(samples) < 5:
         raise ValueError("The clip contains fewer than 5 readable frames. Try a longer video.")
     progress(stage="counting", frames=len(samples), total=len(samples))
-    result = count_touches(samples, config)
+    heard, audio_warning = [], None
+    if config.audio_enabled:
+        try:
+            heard = onsets(source)
+            if not heard:
+                audio_warning = "No audio track found; touches are counted from video only."
+        except Exception as error:  # Audio is supplementary; never fail the video analysis.
+            audio_warning = f"Audio could not be read ({error}); touches are counted from video only."
+    result = add_audio_evidence(count_touches(samples, config), samples, heard, config)
     gaps = []
     for sample in samples:
         if sample["status"] != "observed":
@@ -71,6 +80,11 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
         result["warnings"].append(f"Container reports {info['expected_frames']} frames; {len(samples)} frames decoded. Results cover decoded footage only.")
     if gaps:
         result["warnings"].append("Ball observations are missing in some intervals; inspect the tracking gaps.")
+    if audio_warning:
+        result["warnings"].append(audio_warning)
+    if result["heard_count"]:
+        result["warnings"].append(f"{result['heard_count']} touch(es) were heard but not seen: the ball was out of view. "
+                                  "A thump in rhythm is weaker evidence than a visible contact.")
     if not result["estimated_count"]:
         result["warnings"].append("No supported touches found. This does not mean no touches occurred.")
     (output / "result.json").write_text(json.dumps(result, indent=2))

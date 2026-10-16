@@ -1,7 +1,13 @@
 import layout from "./layout.html?raw";
 import "./style.css";
 import { AnnotatedPlayer } from "./player";
-import { parseReview, seedReview, stopsOf } from "./review";
+import {
+  countSplit,
+  isHeard,
+  parseReview,
+  seedReview,
+  stopsOf,
+} from "./review";
 import { labels, type Result, type Review } from "./types";
 
 const $ = <T extends HTMLElement>(id: string) =>
@@ -170,6 +176,10 @@ function showResult(data: Result, id: string) {
   $("workspace").hidden = false;
   $("empty").hidden = true;
   $("count").textContent = String(data.estimated_count);
+  const split = countSplit(data);
+  $("count-split").textContent = split.heard
+    ? `${split.seen} seen + ${split.heard} heard (ball out of view)`
+    : "";
   $("runtime").textContent =
     `${data.video.frames} frames · ${data.runtime_seconds.toFixed(1)}s processing`;
   $("candidate-count").textContent =
@@ -218,22 +228,23 @@ function showResult(data: Result, id: string) {
   data.events.forEach((e, index) => {
     while (pendingStops.length && pendingStops[0].start < e.time)
       $("events").append(stopRow(pendingStops.shift()!));
+    const heard = isHeard(e);
     const button = document.createElement("button");
-    button.className = `event ${e.status}`;
+    button.className = `event ${e.status}${heard ? " heard" : ""}`;
     button.append(
       text("span", String(index + 1).padStart(2, "0"), "event-number"),
       text("strong", `${e.time.toFixed(3)}s`),
       text("span", e.reason.replaceAll("_", " "), "event-reason"),
       text(
         "span",
-        e.status === "counted" ? "ESTIMATED" : "REVIEW",
+        heard ? "HEARD" : e.status === "counted" ? "ESTIMATED" : "REVIEW",
         "event-badge",
       ),
     );
     button.onclick = () => player.seek(e.time - 0.35);
     $("events").append(button);
     const marker = document.createElement("button");
-    marker.className = `marker ${e.status}`;
+    marker.className = `marker ${e.status}${heard ? " heard" : ""}`;
     marker.style.left = `${(e.time / data.video.duration) * 100}%`;
     marker.title = `${e.time.toFixed(3)}s · ${e.reason.replaceAll("_", " ")}`;
     marker.setAttribute("aria-label", marker.title);

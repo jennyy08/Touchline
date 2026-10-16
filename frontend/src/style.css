@@ -378,6 +378,21 @@ input[type="checkbox"] {
 .blue {
   background: #9ed4ff;
 }
+.legend i.heard {
+  background: #e7a3ff;
+}
+.marker.heard {
+  background: #e7a3ff;
+  height: 10px;
+  top: 9px;
+}
+.event.heard .event-badge {
+  color: #e7a3ff;
+}
+.count-split {
+  font-weight: 600;
+  margin: -4px 0 8px;
+}
 .legend i.stop {
   background: #8fb7ff33;
   outline: 1px solid #8fb7ff;

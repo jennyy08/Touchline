@@ -1,0 +1,101 @@
+{
+  "limitation": "Totals only: extra and missed events can cancel. No event-level metrics without timestamp labels.",
+  "comparisons": [
+    {
+      "clip": "clip-1",
+      "variant": "baseline",
+      "reference_total": 16,
+      "automatic_total": 16,
+      "signed_total_difference": 0,
+      "review_candidates": 0,
+      "tracking_summary": {
+        "observed": 265,
+        "predicted": 6,
+        "lost": 58
+      },
+      "runtime_seconds": 54.81303758290596,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-2",
+      "variant": "baseline",
+      "reference_total": 29,
+      "automatic_total": 29,
+      "signed_total_difference": 0,
+      "review_candidates": 0,
+      "tracking_summary": {
+        "observed": 463,
+        "predicted": 7,
+        "lost": 4
+      },
+      "runtime_seconds": 81.54140958294738,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-3",
+      "variant": "baseline",
+      "reference_total": 21,
+      "automatic_total": 21,
+      "signed_total_difference": 0,
+      "review_candidates": 0,
+      "tracking_summary": {
+        "observed": 325,
+        "predicted": 8,
+        "lost": 17
+      },
+      "runtime_seconds": 62.24891275004484,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-4",
+      "variant": "baseline",
+      "reference_total": 13,
+      "automatic_total": 13,
+      "signed_total_difference": 0,
+      "review_candidates": 1,
+      "tracking_summary": {
+        "observed": 223,
+        "predicted": 5,
+        "lost": 24
+      },
+      "runtime_seconds": 44.58206720801536,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-5",
+      "variant": "baseline",
+      "reference_total": 25,
+      "automatic_total": 25,
+      "signed_total_difference": 0,
+      "review_candidates": 0,
+      "tracking_summary": {
+        "observed": 350,
+        "predicted": 30,
+        "lost": 63
+      },
+      "runtime_seconds": 76.76648195891175,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-6",
+      "variant": "baseline",
+      "reference_total": 23,
+      "automatic_total": 23,
+      "signed_total_difference": 0,
+      "review_candidates": 0,
+      "tracking_summary": {
+        "observed": 363,
+        "predicted": 13,
+        "lost": 42
+      },
+      "runtime_seconds": 74.69402945798356,
+      "event_precision": null,
+      "event_recall": null
+    }
+  ]
+}

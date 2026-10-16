@@ -103,4 +103,6 @@ Contact revision: [foot reach, no wrist veto, top exits, stop markers](validatio
 
 Foot revision: [detected heel/toe landmarks](validation/foot-revision/README.md).
 
-Latest floor revision: [floor line from planted soles, three new clips](validation/floor-revision/README.md).
+Floor revision: [floor line from planted soles, three new clips](validation/floor-revision/README.md).
+
+Latest audio revision: [impact sounds as separate "heard, not seen" evidence](validation/audio-revision/README.md). Add `--no-audio` to the CLI for video-only analysis.

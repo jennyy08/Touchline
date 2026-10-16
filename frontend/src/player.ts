@@ -139,7 +139,11 @@ export class AnnotatedPlayer {
       ctx.fillStyle = event.status === "counted" ? "#b8f96a" : "#ffbd66";
       ctx.font = `bold ${20 * scale}px sans-serif`;
       ctx.fillText(
-        event.status === "counted" ? "ESTIMATED TOUCH" : "REVIEW CONTACT",
+        event.reason === "heard_ball_out_of_view"
+          ? "HEARD TOUCH · BALL OUT OF VIEW"
+          : event.status === "counted"
+            ? "ESTIMATED TOUCH"
+            : "REVIEW CONTACT",
         20 * scale,
         35 * scale,
       );

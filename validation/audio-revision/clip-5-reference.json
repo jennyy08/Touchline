@@ -1,0 +1,14 @@
+{
+  "filename": "Movie on 2026-10-16 at 3.01\u202fPM.mov",
+  "video_sha256": "5a83c0608486137af6044f2779a0f4f15cbe74bf23b67b1c3eb1cce9649b7372",
+  "touch_count": 25,
+  "source": "user supplied total",
+  "excludes": [
+    "initial lift/pickup",
+    "floor bounces"
+  ],
+  "notes": [
+    "4 touches near the end happen while the ball is mostly out of frame (2 of them partly visible)."
+  ],
+  "event_timestamps": null
+}

@@ -17,6 +17,7 @@ export interface Touch {
   status: "counted" | "review";
   reason: string;
   body_part: string | null;
+  evidence_sources?: string[];
 }
 export interface Result {
   schema_version: 1;
@@ -38,6 +39,9 @@ export interface Result {
   floor_y: number | null;
   /** Ball held still (e.g. caught). Informational; never counted. Absent in older results. */
   stops?: Stop[];
+  /** Absent in results saved before audio evidence existed. */
+  seen_count?: number;
+  heard_count?: number;
 }
 export interface Stop {
   start: number;

@@ -27,6 +27,15 @@ class Config:
     stop_seconds: float = 1.0
     stop_radius_diameters: float = 0.5
     stop_gap_seconds: float = 0.2
+    # Impact sounds (thumps). Strength is clip-normalised spectral flux (see audio.py).
+    # The strength gate was chosen on the seven development clips: heard touches there were
+    # >= 8.8, rejected non-touch thumps <= 6.6. It is a thin, footage-specific margin.
+    audio_enabled: bool = True
+    audio_min_strength: float = 8.0
+    audio_match_seconds: float = 0.12
+    rhythm_min_beats: float = 0.6   # heard touch spacing, in multiples of the median touch interval
+    rhythm_max_beats: float = 1.6
+    audio_return_seconds: float = 1.0
     debounce_seconds: float = 0.22
     velocity_window_seconds: float = 0.14
     min_velocity_diameters: float = 0.7

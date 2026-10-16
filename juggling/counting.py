@@ -192,8 +192,73 @@ def count_touches(samples, config):
                 candidates[-1] = event
         else:
             candidates.append(event)
+    # Debug view for audio rules: the underlying leg evidence behind a gap flag.
+    for event in candidates:
+        if event["reason"] == "gap_near_contact":
+            i = position[event["frame"]]
+            near = [samples[j] for j in (i - 1, i + 1) if 0 <= j < len(samples) and samples[j]["status"] == "observed"]
+            event["leg_supported"] = classify(samples[i], floor, config, near)[0] == "counted"
     # A ball resting before the first touch (before the pickup) is not a stop in juggling.
     first_touch = next((e["time"] for e in candidates if e["status"] == "counted"), None)
     stops = [s for s in find_stops(samples, config) if first_touch is not None and s["end"] > first_touch]
     return {"events": candidates, "estimated_count": sum(e["status"] == "counted" for e in candidates),
             "floor_y": floor, "stops": stops}
+
+
+def add_audio_evidence(result, samples, heard, config):
+    """Combine video candidates with audio onsets [(time, strength)]. Returns a new result.
+
+    Thumps cannot tell a foot from the floor, so audio never overrides a floor flag. It can:
+      1. confirm a `gap_near_contact` candidate whose leg evidence was otherwise fine, and
+      2. add a "heard, not seen" touch when the ball is out of view, but only if the thump is
+         strong, fits the clip's own juggling rhythm, is not at a visibly floor-level ball,
+         and the ball comes back into view afterwards (the run continues).
+    Heard touches are kept apart from seen ones via `seen_count` / `heard_count`.
+    """
+    events = [dict(e) for e in result["events"]]
+    floor = result["floor_y"]
+    counted = [e for e in events if e["status"] == "counted"]
+    # Sound arrives a little after the video reversal frame; measure that lag on this clip.
+    lags = [t - e["time"] for e in counted for t, _ in heard if abs(t - e["time"]) <= config.audio_match_seconds]
+    lag = float(np.median(lags)) if len(lags) >= 3 else 0.0
+    shifted = [(t - lag, s) for t, s in heard]
+
+    def matched(time):
+        return [s for t, s in shifted if abs(t - time) <= config.audio_match_seconds]
+
+    for e in events:
+        if e["status"] == "review" and e["reason"] == "gap_near_contact" and e.get("leg_supported") and matched(e["time"]):
+            e.update(status="counted", reason="gap_confirmed_by_sound",
+                     evidence_sources=sorted(set(e["evidence_sources"]) | {"audio"}))
+    intervals = np.diff(sorted(e["time"] for e in events if e["status"] == "counted"))
+    beat = float(np.median(intervals)) if len(intervals) >= 3 else None
+    observed = [s for s in samples if s["status"] == "observed"]
+    heard_events = []
+    if beat:
+        for t, strength in shifted:
+            if strength < config.audio_min_strength or any(abs(t - e["time"]) <= config.audio_match_seconds
+                                                           for e in events):
+                continue
+            touches = sorted([e["time"] for e in events if e["status"] == "counted"] + [e["time"] for e in heard_events])
+            before = [x for x in touches if x < t]
+            after = [x for x in touches if x > t]
+            if not before or not (config.rhythm_min_beats * beat <= t - before[-1] <= config.rhythm_max_beats * beat):
+                continue
+            if after and after[0] - t < config.rhythm_min_beats * beat:
+                continue
+            near = [s for s in observed if abs(s["time"] - t) <= config.audio_match_seconds]
+            if floor is not None and any(s["box"][3] >= floor - s["diameter"] * 0.12 for s in near):
+                continue  # a thump while the ball is visibly at the floor is a bounce
+            if not any(t < s["time"] <= t + config.audio_return_seconds for s in observed):
+                continue  # the ball never comes back: likely the end of the run
+            frame = min(samples, key=lambda s: abs(s["time"] - t))
+            heard_events.append({"id": f"heard-{frame['frame']}", "frame": frame["frame"], "time": t,
+                                 "status": "counted", "reason": "heard_ball_out_of_view", "body_part": None,
+                                 "evidence_sources": ["audio"], "audio_strength": strength})
+    events = sorted(events + heard_events, key=lambda e: e["time"])
+    total = sum(e["status"] == "counted" for e in events)
+    # A sound-confirmed gap flag was still seen; only out-of-view touches are "heard".
+    heard_count = sum(e["reason"] == "heard_ball_out_of_view" for e in events)
+    return {**result, "events": events, "estimated_count": total, "seen_count": total - heard_count,
+            "heard_count": heard_count,
+            "audio": {"onsets": [{"time": t, "strength": s} for t, s in heard], "lag_seconds": lag}}
