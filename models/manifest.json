@@ -13,5 +13,11 @@
     "url": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s.pt",
     "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
     "license": "AGPL-3.0"
+  },
+  "rtmpose-x-halpe26.onnx": {
+    "url": "https://download.openmmlab.com/mmpose/v1/projects/rtmposev1/onnx_sdk/rtmpose-x_simcc-body7_pt-body7-halpe26_700e-384x288-7fb6e239_20230606.zip",
+    "zip_sha256": "0c33d9ba030e7011686e6a7f48fd85df383378216f2f5765ae389c1828685e68",
+    "sha256": "21bdaefd1a9b7934160987e754d8eca191bc44cccbfa3ba2ef71142c6dd05a9a",
+    "license": "Apache-2.0 (MMPose release; trained on public pose datasets with their own terms)"
   }
 }

@@ -39,15 +39,26 @@ def foot_distance(point, diameter, ankle, knee, config):
     return distance_to_segment(point, [ankle[0] - reach, ankle[1]], [ankle[0] + reach, ankle[1]])
 
 
+def detected_foot_distance(point, pose, side):
+    """Distance to the detected foot outline (heel, big toe, small toe), or None if absent."""
+    heel, big, small = (pose.get(f"{side}_{name}") for name in ("heel", "big_toe", "small_toe"))
+    edges = [(a, b) for a, b in ((heel, big), (heel, small), (big, small)) if a and b]
+    return min(distance_to_segment(point, a, b) for a, b in edges) if edges else None
+
+
 def leg_distances(sample, config):
     """Every available (distance, body part) option for one observed frame."""
     point, diameter, pose = sample["center"], sample["diameter"], sample["pose"]
     options = []
     for side in ("left", "right"):
         ankle, knee, hip = (pose.get(side + "_" + joint) for joint in ("ankle", "knee", "hip"))
+        detected = detected_foot_distance(point, pose, side)
+        if detected is not None:
+            options.append((detected / diameter, side + "_foot"))
         if ankle:
             options.append((float(np.linalg.norm(np.subtract(point, ankle))) / diameter, side + "_foot"))
-            foot = foot_distance(point, diameter, ankle, knee, config)
+            # The ankle-based estimate is only a fallback when heel/toe points are missing.
+            foot = foot_distance(point, diameter, ankle, knee, config) if detected is None else None
             if foot is not None:
                 options.append((foot / diameter, side + "_foot"))
         if knee:
@@ -75,7 +86,10 @@ def classify(sample, floor, config, neighbors=()):
     nearest = min(options)
     if nearest[0] > config.contact_diameters:
         return "review", "contact_not_supported", None
-    return "counted", "observed_reversal_near_leg", nearest[1]
+    # In a front view a ball on a raised foot also overlaps the knee in 2D, so a supporting
+    # foot wins the label. A genuine knee/thigh touch leaves the foot hanging well below.
+    feet = [o for o in options if o[1].endswith("_foot") and o[0] <= config.contact_diameters]
+    return "counted", "observed_reversal_near_leg", (min(feet) if feet else nearest)[1]
 
 
 def top_clipped(sample, config):

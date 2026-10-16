@@ -1,0 +1,16 @@
+{
+  "tolerance_seconds": 0.1,
+  "estimated_count": 26,
+  "reference_visible_count": 26,
+  "matched": 26,
+  "false_positives": 0,
+  "unverifiable_predictions": 0,
+  "misses": 0,
+  "mean_absolute_timing_error": 0.006410256410256456,
+  "tracking_summary": {
+    "observed": 394,
+    "predicted": 20,
+    "lost": 13
+  },
+  "runtime_seconds": 69.89204895799048
+}

@@ -6,6 +6,9 @@ class Config:
     # All time thresholds are seconds; distances are relative to ball diameter.
     detector: str = "yolo11s.pt"
     pose_model: str = "yolo11n-pose.pt"
+    # Heel/toe landmarks (RTMPose-x Halpe-26). Empty string disables them; the
+    # ankle-based foot estimate below is then the only foot evidence.
+    foot_model: str = "rtmpose-x-halpe26.onnx"
     image_size: int = 640
     pose_size: int = 640
     detection_threshold: float = 0.05
@@ -17,8 +20,8 @@ class Config:
     edge_outward_diameters_per_second: float = 0.5
     association_diameters: float = 3.0
     contact_diameters: float = 1.15
-    # Estimated foot half-length beside each ankle, relative to knee-ankle length.
-    # Roughly anatomical (foot ~0.6 of shin); not fitted to the clip totals.
+    # Fallback when heel/toe points are missing: estimated foot half-length beside each
+    # ankle, relative to knee-ankle length. Roughly anatomical; not fitted to clip totals.
     foot_length_shin_ratio: float = 0.6
     # Stop/catch markers: observed ball stays within this radius for at least stop_seconds.
     stop_seconds: float = 1.0

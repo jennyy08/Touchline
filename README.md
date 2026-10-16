@@ -29,11 +29,12 @@ Setup downloads packages and model weights. Afterwards, the UI uses only local a
 
 ### Models and licenses
 
-The explicit download script fetches official Ultralytics assets from its GitHub v8.3.0 release. Sources and downloaded SHA-256 hashes are recorded in `models/manifest.json`. Weights are not committed.
+The explicit download script fetches official Ultralytics assets from its GitHub v8.3.0 release, plus the MMPose RTMPose foot model (zip SHA-256 checked before extraction). Sources and downloaded SHA-256 hashes are recorded in `models/manifest.json`. Weights are not committed.
 
 - `yolo11n.pt`: initial ball-detector baseline.
 - `yolo11s.pt`: larger ball detector used in the final comparison/configuration.
-- `yolo11n-pose.pt`: lower-body landmark evidence.
+- `yolo11n-pose.pt`: person box plus hip/knee/ankle landmarks.
+- `rtmpose-x-halpe26.onnx` (~200 MB): heel, big-toe and small-toe landmarks, from the official [MMPose RTMPose](https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose) ONNX release (Apache-2.0; trained on public pose datasets with their own terms). It runs locally via `onnxruntime` and adds roughly 50–85 ms per frame on CPU. Disable it with `Config(foot_model="")`.
 
 Ultralytics code and these weights use AGPL-3.0; see [official model documentation](https://docs.ultralytics.com/models/yolo11/) and [license information](https://www.ultralytics.com/license). Keep the license implications in mind if you later distribute or commercialize a derivative app. No commercial license or API is needed for this local experiment. This repository's original source is provided under AGPL-3.0 as described in `LICENSE`.
 
@@ -98,4 +99,6 @@ Additional footage: [three player-counted clips and tracking-loss findings](vali
 
 Tracking revision: [direction-aware edge handling and shoe rejection](validation/tracking-revision/README.md).
 
-Latest contact revision: [foot reach, no wrist veto, top exits, stop markers](validation/contact-revision/README.md).
+Contact revision: [foot reach, no wrist veto, top exits, stop markers](validation/contact-revision/README.md).
+
+Latest foot revision: [detected heel/toe landmarks](validation/foot-revision/README.md).

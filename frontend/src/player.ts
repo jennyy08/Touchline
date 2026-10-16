@@ -1,4 +1,4 @@
-import type { Result, Sample } from "./types";
+import type { Point, Result, Sample } from "./types";
 export function sampleIndex(result: Result, time: number): number {
   let lo = 0,
     hi = result.samples.length - 1;
@@ -121,6 +121,17 @@ export class AnnotatedPlayer {
           ctx.arc(...p, 3 * scale, 0, Math.PI * 2);
           ctx.fill();
         }
+      }
+      // Detected foot outline (heel → big toe → small toe → heel), when available.
+      const foot = ["heel", "big_toe", "small_toe"]
+        .map((k) => s.pose[`${side}_${k}`])
+        .filter((p): p is Point => Boolean(p));
+      if (foot.length >= 2) {
+        ctx.beginPath();
+        ctx.moveTo(...foot[0]);
+        for (const p of foot.slice(1)) ctx.lineTo(...p);
+        if (foot.length === 3) ctx.closePath();
+        ctx.stroke();
       }
     }
     const event = r.events.find((e) => Math.abs(e.time - s.time) < 0.09);
