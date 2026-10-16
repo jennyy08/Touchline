@@ -23,7 +23,8 @@ def foot_trajectory(heel, toe):
     """Ball bottoms out at (50, 100); only heel/toe (plus a far standing ankle) are known."""
     samples = trajectory()
     for s in samples:
-        s["pose"] = {"right_ankle": [150., 180.], "left_heel": heel, "left_big_toe": toe}
+        s["pose"] = {"right_ankle": [150., 180.], "right_heel": [140., 185.], "right_big_toe": [165., 185.],
+                     "left_heel": heel, "left_big_toe": toe}  # right foot planted on the floor
     return samples
 
 

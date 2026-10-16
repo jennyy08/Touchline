@@ -1,0 +1,53 @@
+{
+  "limitation": "Totals only: extra and missed events can cancel. No event-level metrics without timestamp labels.",
+  "comparisons": [
+    {
+      "clip": "clip-4",
+      "variant": "baseline",
+      "reference_total": 13,
+      "automatic_total": 12,
+      "signed_total_difference": -1,
+      "review_candidates": 1,
+      "tracking_summary": {
+        "observed": 223,
+        "predicted": 5,
+        "lost": 24
+      },
+      "runtime_seconds": 44.01379370794166,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-5",
+      "variant": "baseline",
+      "reference_total": 25,
+      "automatic_total": 21,
+      "signed_total_difference": -4,
+      "review_candidates": 0,
+      "tracking_summary": {
+        "observed": 350,
+        "predicted": 30,
+        "lost": 63
+      },
+      "runtime_seconds": 73.63804262503982,
+      "event_precision": null,
+      "event_recall": null
+    },
+    {
+      "clip": "clip-6",
+      "variant": "baseline",
+      "reference_total": 23,
+      "automatic_total": 20,
+      "signed_total_difference": -3,
+      "review_candidates": 1,
+      "tracking_summary": {
+        "observed": 363,
+        "predicted": 13,
+        "lost": 42
+      },
+      "runtime_seconds": 70.15116458397824,
+      "event_precision": null,
+      "event_recall": null
+    }
+  ]
+}

@@ -154,18 +154,57 @@ def test_single_outgoing_sample_without_top_clip_does_not_count():
 
 
 def held(seconds):
-    """Falling ball that is then held still (e.g. caught) for `seconds`."""
-    times = np.arange(int((.3 + seconds) * 30)) / 30
-    return trajectory(times, [min(40 + 200 * t, 100) for t in times])
+    """One touch at 0.5 s, the ball falls back, then is held still (e.g. caught) for `seconds`."""
+    times = np.arange(int((1.3 + seconds) * 30)) / 30
+    return trajectory(times, [100 - abs(t - .5) * 100 if t < 1. else min(50 + 200 * (t - 1.), 100)
+                              for t in times])
 
 
 def test_held_ball_marks_one_stop_without_counting():
     result = count_touches(held(1.5), Config())
     assert len(result["stops"]) == 1
     assert result["stops"][0]["end"] - result["stops"][0]["start"] >= 1.0
-    assert result["estimated_count"] == 0
+    assert result["estimated_count"] == 1  # the touch before the catch; the hold adds nothing
 
 
 def test_short_pause_and_ordinary_juggle_have_no_stop():
     assert count_touches(held(.4), Config())["stops"] == []
     assert count_touches(trajectory(), Config())["stops"] == []
+
+
+def with_planted_sole(samples, sole_y):
+    """Standing foot with heel/toes resting on the floor at sole_y (no ankle landmarks)."""
+    for s in samples:
+        s["pose"] = {"left_heel": [130., sole_y], "left_big_toe": [150., sole_y],
+                     "left_small_toe": [145., sole_y], "right_heel": [40., 112.],
+                     "right_big_toe": [60., 110.], "left_knee": [130., sole_y - 60]}
+    return samples
+
+
+def test_floor_comes_from_planted_heel_and_toes():
+    samples = with_planted_sole(trajectory(), 140.)
+    assert count_touches(samples, Config())["floor_y"] == 140.
+
+
+def test_low_touch_above_planted_toes_counts():
+    # Ball bottom 125 is 0.75 diameters above the soles at 140; an ankle-based line would be higher.
+    samples = with_planted_sole(trajectory(ys=[115 - abs(t - .5) * 100 for t in np.arange(31) / 30]), 140.)
+    result = count_touches(samples, Config())
+    assert result["estimated_count"] == 1
+
+
+def test_ball_reaching_planted_toe_level_is_floor_contact():
+    samples = with_planted_sole(trajectory(ys=[130 - abs(t - .5) * 100 for t in np.arange(31) / 30]), 140.)
+    for s in samples:
+        s["pose"]["right_heel"], s["pose"]["right_big_toe"] = [40., 142.], [60., 140.]
+    result = count_touches(samples, Config())
+    assert result["estimated_count"] == 0
+    assert result["events"][0]["reason"] == "possible_floor_contact"
+
+
+def test_stop_before_first_touch_is_hidden():
+    times = np.arange(61) / 30
+    ys = [100 if t < 1.2 else 100 - abs(t - 1.6) * 100 for t in times]
+    result = count_touches(trajectory(times, ys), Config())
+    assert result["estimated_count"] == 1
+    assert result["stops"] == []

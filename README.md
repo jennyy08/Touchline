@@ -101,4 +101,6 @@ Tracking revision: [direction-aware edge handling and shoe rejection](validation
 
 Contact revision: [foot reach, no wrist veto, top exits, stop markers](validation/contact-revision/README.md).
 
-Latest foot revision: [detected heel/toe landmarks](validation/foot-revision/README.md).
+Foot revision: [detected heel/toe landmarks](validation/foot-revision/README.md).
+
+Latest floor revision: [floor line from planted soles, three new clips](validation/floor-revision/README.md).

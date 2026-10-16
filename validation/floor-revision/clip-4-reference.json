@@ -1,0 +1,15 @@
+{
+  "filename": "Movie on 2026-10-16 at 2.59\u202fPM.mov",
+  "video_sha256": "572d098d6839caf309a0cdd5855084b3c464338199a5d4a6af67b5577cc5c447",
+  "touch_count": 13,
+  "source": "user supplied total",
+  "excludes": [
+    "initial lift/pickup",
+    "floor bounces"
+  ],
+  "notes": [
+    "The 8th touch (~4.5 s) sends the ball above the frame; tracking is lost there.",
+    "The final floor bounce after the 13th touch (~7.37 s) is not a touch."
+  ],
+  "event_timestamps": null
+}

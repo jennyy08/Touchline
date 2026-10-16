@@ -9,17 +9,29 @@ def distance_to_segment(point, a, b):
     return float(np.linalg.norm(p - (a + t * ab)))
 
 
-def estimate_floor(samples):
-    """Use ankles that stay nearly stationary; perspective makes this approximate."""
+def stable_heights(samples, names, offset_diameters):
+    """Image heights of landmarks that stay nearly still between frames (a planted foot)."""
     stable = []
     for a, b in zip(samples, samples[1:]):
         dt = b["time"] - a["time"]
-        for side in ("left", "right"):
-            key = side + "_ankle"
+        for key in names:
             if key in a["pose"] and key in b["pose"] and b["diameter"]:
                 diameter = b["diameter"]
                 if np.linalg.norm(np.array(b["pose"][key]) - a["pose"][key]) < diameter * dt * 0.8:
-                    stable.append(b["pose"][key][1] + diameter * 0.18)
+                    stable.append(b["pose"][key][1] + diameter * offset_diameters)
+    return stable
+
+
+def estimate_floor(samples):
+    """Floor height in the image from planted feet; perspective makes this approximate.
+
+    Planted heels and toes sit on the floor, so they give the floor line directly. Ankles sit
+    above the sole, so the ankle fallback adds an estimated ankle height.
+    """
+    sole = [f"{side}_{part}" for side in ("left", "right") for part in ("heel", "big_toe", "small_toe")]
+    stable = stable_heights(samples, sole, 0.0)
+    if len(stable) < 5:
+        stable = stable_heights(samples, ("left_ankle", "right_ankle"), 0.18)
     return float(np.percentile(stable, 90)) if len(stable) >= 5 else None
 
 
@@ -180,5 +192,8 @@ def count_touches(samples, config):
                 candidates[-1] = event
         else:
             candidates.append(event)
+    # A ball resting before the first touch (before the pickup) is not a stop in juggling.
+    first_touch = next((e["time"] for e in candidates if e["status"] == "counted"), None)
+    stops = [s for s in find_stops(samples, config) if first_touch is not None and s["end"] > first_touch]
     return {"events": candidates, "estimated_count": sum(e["status"] == "counted" for e in candidates),
-            "floor_y": floor, "stops": find_stops(samples, config)}
+            "floor_y": floor, "stops": stops}
