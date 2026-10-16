@@ -1,0 +1,120 @@
+"""Local single-job HTTP adapter. Analysis itself does not know about HTTP."""
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+import json
+import atexit
+import shutil
+import logging
+import tempfile
+import threading
+import uuid
+from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+from .pipeline import analyze
+from .config import Config
+
+ROOT = Path(__file__).resolve().parents[1]
+JOB_ROOT = Path(tempfile.mkdtemp(prefix="juggle-lab-"))
+app = FastAPI(title="Touchline · local juggling lab")
+executor = ThreadPoolExecutor(max_workers=1)
+lock = threading.Lock()
+jobs = {}
+busy = False
+MAX_BYTES = 250 * 1024 * 1024
+
+
+def cleanup(folder=JOB_ROOT):
+    executor.shutdown(wait=True)
+    shutil.rmtree(folder, ignore_errors=True)
+
+
+atexit.register(cleanup)
+
+
+def run_job(job_id, source):
+    global busy
+    def progress(**state):
+        with lock:
+            jobs[job_id].update(state)
+    try:
+        analyze(source, JOB_ROOT / job_id, ROOT / "models", progress=progress)
+        progress(stage="complete")
+    except Exception as exc:
+        logging.exception("Analysis failed")
+        progress(stage="error", error=str(exc) if isinstance(exc, ValueError) else
+                 "Analysis failed unexpectedly. Check the server terminal for details; try a shorter MP4.")
+    finally:
+        with lock:
+            busy = False
+
+
+@app.post("/api/jobs", status_code=202)
+async def create_job(file: UploadFile = File(...)):
+    global busy
+    with lock:
+        if busy:
+            raise HTTPException(409, "An analysis is already running. Wait for it to finish.")
+        busy = True
+    job_id = uuid.uuid4().hex
+    folder = JOB_ROOT / job_id
+    folder.mkdir()
+    source = folder / "source.video"
+    size = 0
+    try:
+        with source.open("wb") as target:
+            while chunk := await file.read(1024 * 1024):
+                size += len(chunk)
+                if size > MAX_BYTES:
+                    raise HTTPException(413, "Video exceeds 250 MB. Trim or compress it and retry.")
+                target.write(chunk)
+        if not size:
+            raise HTTPException(400, "The uploaded file is empty.")
+        with lock:
+            jobs[job_id] = {"id": job_id, "name": file.filename or "Video", "stage": "queued", "frames": 0, "total": 0}
+        executor.submit(run_job, job_id, source)
+    except BaseException:
+        source.unlink(missing_ok=True)
+        with lock:
+            busy = False
+        raise
+    finally:
+        await file.close()
+    return {"id": job_id}
+
+
+def get_job(job_id):
+    with lock:
+        job = jobs.get(job_id)
+        if job is None:
+            raise HTTPException(404, "Job not found. Jobs are temporary; upload again after a server restart.")
+        return dict(job)
+
+
+@app.get("/api/jobs/{job_id}")
+def status(job_id: str):
+    return get_job(job_id)
+
+
+@app.get("/api/jobs/{job_id}/result")
+def result(job_id: str):
+    if get_job(job_id)["stage"] != "complete":
+        raise HTTPException(409, "The analysis is not complete.")
+    return json.loads((JOB_ROOT / job_id / "result.json").read_text())
+
+
+@app.get("/api/jobs/{job_id}/video")
+def video(job_id: str):
+    if get_job(job_id)["stage"] != "complete":
+        raise HTTPException(409, "Playback is available after analysis completes.")
+    return FileResponse(JOB_ROOT / job_id / "playback.mp4", media_type="video/mp4")
+
+
+@app.get("/api/health")
+def health():
+    return {"ok": True, "models_ready": all((ROOT / "models" / name).exists()
+             for name in (Config().detector, Config().pose_model))}
+
+
+if (ROOT / "frontend/dist").exists():
+    app.mount("/", StaticFiles(directory=ROOT / "frontend/dist", html=True), name="frontend")

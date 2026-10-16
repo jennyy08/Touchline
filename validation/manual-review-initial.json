@@ -1,0 +1,51 @@
+{
+  "method": "Independent visual inspection of every third frame across the clip, then consecutive frames around contacts, before detector output. Approximate contact frames, not user-certified ground truth.",
+  "contact_frames": [
+    32,
+    46,
+    61,
+    77,
+    90,
+    106,
+    121,
+    138,
+    155,
+    169,
+    181,
+    197,
+    216,
+    235,
+    249,
+    264,
+    279,
+    294,
+    313,
+    331,
+    348,
+    366,
+    380,
+    392,
+    409,
+    420
+  ],
+  "uncertain_frame_intervals": [
+    [
+      199,
+      213
+    ],
+    [
+      426,
+      431
+    ]
+  ],
+  "excluded": [
+    {
+      "frame_interval": [
+        0,
+        19
+      ],
+      "label": "initial_ground_pickup"
+    }
+  ],
+  "notes": "26 visibly supported foot contacts. Exact contact timing can differ by 1-2 frames due to motion blur. Out-of-frame interval is not a verified absence of touches. Tail frames require sequential decoder verification."
+}

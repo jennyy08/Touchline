@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "video_sha256": "73daba39d2ef14ea593cc59ac5bf8ce8f2a2db7547de6f91c05fc1ec39e2a7a3",
+  "events": [
+    {
+      "id": "manual-1",
+      "time": 1.0666666666666667,
+      "frame": 32,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-2",
+      "time": 1.5333333333333334,
+      "frame": 46,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-3",
+      "time": 2.033333333333333,
+      "frame": 61,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-4",
+      "time": 2.566666666666667,
+      "frame": 77,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-5",
+      "time": 3.0,
+      "frame": 90,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-6",
+      "time": 3.566666666666667,
+      "frame": 107,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-7",
+      "time": 4.066666666666666,
+      "frame": 122,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-8",
+      "time": 4.633333333333334,
+      "frame": 139,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-9",
+      "time": 5.2,
+      "frame": 156,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-10",
+      "time": 5.666666666666667,
+      "frame": 170,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-11",
+      "time": 6.066666666666666,
+      "frame": 182,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-12",
+      "time": 6.6,
+      "frame": 198,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-13",
+      "time": 7.233333333333333,
+      "frame": 217,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-14",
+      "time": 7.866666666666666,
+      "frame": 236,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-15",
+      "time": 8.366666666666667,
+      "frame": 251,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-16",
+      "time": 8.866666666666667,
+      "frame": 266,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-17",
+      "time": 9.366666666666667,
+      "frame": 281,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-18",
+      "time": 9.866666666666667,
+      "frame": 296,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-19",
+      "time": 10.5,
+      "frame": 315,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-20",
+      "time": 11.1,
+      "frame": 333,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-21",
+      "time": 11.666666666666666,
+      "frame": 350,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-22",
+      "time": 12.266666666666667,
+      "frame": 368,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-23",
+      "time": 12.733333333333333,
+      "frame": 382,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-24",
+      "time": 13.168333333333333,
+      "frame": 395,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-25",
+      "time": 13.735,
+      "frame": 412,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    },
+    {
+      "id": "manual-26",
+      "time": 14.101666666666667,
+      "frame": 423,
+      "label": "touch",
+      "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+    }
+  ],
+  "uncertain_intervals": [
+    {
+      "start": 6.7,
+      "end": 7.133333333333334,
+      "note": "Ball above the image; hidden contacts cannot be verified."
+    }
+  ],
+  "method": "Independent visual inspection of every third frame across the clip, then consecutive frames around contacts, before detector output. Approximate contact frames, not user-certified ground truth.",
+  "time_mapping": "Initial OpenCV seek images matched to sequential PyAV frames by image difference; timestamps taken from decoded presentation timestamps."
+}

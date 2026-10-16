@@ -1,0 +1,192 @@
+<header>
+  <a class="brand" href="/" aria-label="Touchline home"
+    ><span class="brand-mark">⌁</span> TOUCHLINE<span class="brand-detail"
+      >JUGGLING LAB</span
+    ></a
+  ><span class="local"><i></i> LOCAL SESSION</span>
+</header>
+<main>
+  <section class="intro">
+    <div>
+      <p class="eyebrow">YOUR PRACTICE. A CLOSER LOOK.</p>
+      <h1>Every touch tells<br />a <em>story.</em></h1>
+      <p class="lede">
+        Turn a juggling clip into a practice replay.<br />Track the ball.
+        Inspect the touches. Make your own call.
+      </p>
+    </div>
+    <div class="pitch-art" aria-hidden="true">
+      <div class="pitch-line"></div>
+      <span class="art-ball">✳</span
+      ><span class="art-caption">OBSERVE / REVIEW / REPEAT</span>
+    </div>
+  </section>
+  <section class="upload-panel">
+    <div>
+      <span class="step">01 / INPUT</span>
+      <h2>Bring your practice.</h2>
+      <p>One player, one ball. MOV or MP4 · up to 3 minutes / 250 MB.</p>
+    </div>
+    <div class="upload-actions">
+      <input id="upload" type="file" accept="video/*,.mov,.mp4" hidden /><button
+        id="choose"
+        class="primary"
+      >
+        Choose a video <span>↗</span>
+      </button>
+      <p id="filename">Your video stays on this computer.</p>
+    </div>
+  </section>
+  <div id="progress-panel" hidden role="status" aria-live="polite">
+    <div class="progress-copy">
+      <strong id="progress-label">Starting…</strong
+      ><span id="progress-detail"></span>
+    </div>
+    <progress id="progress" max="100"></progress>
+    <p>
+      Local CPU analysis may take a few minutes. You can leave this tab open.
+    </p>
+  </div>
+  <div id="error" role="alert" hidden></div>
+  <section id="empty" class="empty">
+    <span class="empty-icon">⌁</span>
+    <div>
+      <h3>A count you can question.</h3>
+      <p>
+        Your replay will show observed ball positions, estimated contacts, and
+        gaps where tracking is uncertain. Estimates are a starting point, not a
+        score of your ability.
+      </p>
+    </div>
+    <span class="tag">PROTOTYPE / 01</span>
+  </section>
+  <section id="workspace" hidden>
+    <div class="section-title">
+      <div>
+        <span class="step">02 / ANALYSIS</span>
+        <h2>Watch the evidence.</h2>
+      </div>
+      <span id="runtime" class="muted"></span>
+    </div>
+    <div class="analysis-grid">
+      <div class="replay-panel">
+        <div class="video-stage">
+          <video id="video" controls playsinline preload="auto"></video
+          ><canvas id="overlay"></canvas>
+        </div>
+        <div class="player-controls">
+          <div>
+            <button id="previous" aria-label="Previous frame">← Frame</button
+            ><button id="next" aria-label="Next frame">Frame →</button>
+          </div>
+          <label
+            >Speed
+            <select id="speed">
+              <option value="0.25">0.25×</option>
+              <option value="0.5">0.5×</option>
+              <option value="1" selected>1×</option>
+            </select></label
+          ><label
+            ><input id="show-overlay" type="checkbox" checked /> Evidence</label
+          >
+        </div>
+        <div id="tracking-status" class="tracking-status"></div>
+        <div class="legend">
+          <span><i class="green"></i>Observed ball</span
+          ><span><i class="amber"></i>Prediction / review</span
+          ><span><i class="blue"></i>Leg landmarks</span>
+        </div>
+        <div
+          id="timeline"
+          class="timeline"
+          aria-label="Estimated touch timeline"
+        ></div>
+        <p class="timeline-help">
+          Select a marker to replay a contact. Shaded spans have missing ball
+          observations.
+        </p>
+      </div>
+      <aside>
+        <div class="count-card">
+          <span class="step">ESTIMATED TOUCHES</span>
+          <div id="count" class="count">—</div>
+          <p>Feet, knees & thighs · ground pickup excluded</p>
+          <span id="candidate-count" class="pill"></span>
+        </div>
+        <div class="note-card">
+          <h3>Evidence, not certainty.</h3>
+          <ul id="warnings"></ul>
+          <button id="download-result" class="text-button">
+            Download analysis JSON ↗
+          </button>
+        </div>
+      </aside>
+    </div>
+    <div class="review-grid">
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <span class="step">AUTOMATIC / UNCHANGED</span>
+            <h3>Estimated contacts</h3>
+          </div>
+          <span id="event-total" class="muted"></span>
+        </div>
+        <div id="events" class="event-list"></div>
+      </section>
+      <section class="panel">
+        <div class="panel-heading">
+          <div>
+            <span class="step">03 / YOUR REVIEW</span>
+            <h3>
+              Your call <span id="review-count" class="review-count">0</span>
+            </h3>
+          </div>
+          <button id="add-event" class="small-primary">+ At playhead</button>
+        </div>
+        <p class="review-hint">
+          Starts as a copy of the estimates. Edit seconds, label a contact, or
+          remove it. This count is only reviewed once you check it.
+        </p>
+        <div class="review-toolbar">
+          <button id="export-review">Export review</button
+          ><button id="import-review">Import review</button
+          ><input
+            id="review-file"
+            type="file"
+            accept="application/json,.json"
+            hidden
+          /><span id="save-status" class="muted"></span>
+        </div>
+        <div id="uncertain-intervals"></div>
+        <div id="review-events" class="review-events"></div>
+      </section>
+    </div>
+  </section>
+  <footer>
+    <span>TOUCHLINE / LOCAL PRACTICE LAB</span
+    ><span>No accounts. No cloud analysis. Just your footage.</span>
+  </footer>
+</main>
+<dialog id="export-dialog">
+  <form method="dialog">
+    <div class="panel-heading">
+      <h3 id="export-title">Export JSON</h3>
+      <button aria-label="Close export">×</button>
+    </div>
+  </form>
+  <p>
+    Download the JSON file, or select and copy the text below if your browser
+    does not support downloads.
+  </p>
+  <textarea
+    id="export-text"
+    readonly
+    aria-label="Exported JSON"
+    spellcheck="false"
+  ></textarea>
+  <div class="export-actions">
+    <button id="save-json" class="primary">Download JSON</button
+    ><button id="copy-json">Copy JSON</button
+    ><span id="export-status" role="status"></span>
+  </div>
+</dialog>
