@@ -22,7 +22,13 @@ for clip in range(7):
     onsets = [(o['time'], o['strength']) for o in baseline['audio']['onsets']]
     enriched = add_audio_evidence(batch, samples, onsets, config)
     old_visual = sum(e['status']=='counted' and e['reason']=='observed_reversal_near_leg' for e in baseline['events'])
-    rows.append({'clip':clip, 'old_visual_count':old_visual,
+    old_decisions = [(e['time'], 'review' if e['reason']=='gap_confirmed_by_sound' else e['status'],
+                      'gap_near_contact' if e['reason']=='gap_confirmed_by_sound' else e['reason'])
+                     for e in baseline['events'] if e['reason']!='heard_ball_out_of_view']
+    new_decisions = [(e['time'],e['status'],e['reason']) for e in batch['events']]
+    changes = {'removed':sorted(set(old_decisions)-set(new_decisions)),
+               'added':sorted(set(new_decisions)-set(old_decisions))}
+    rows.append({'visual_decision_changes_from_previous':changes,'clip':clip, 'old_visual_count':old_visual,
                  'streaming_visual_count':batch['estimated_count'],
                  'old_with_audio':baseline['estimated_count'],
                  'causal_visual_with_offline_audio':enriched['estimated_count'],

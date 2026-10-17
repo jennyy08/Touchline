@@ -1,5 +1,9 @@
 # Live-readiness benchmark
 
+Historical benchmark milestone. The live page and streaming counter are now
+implemented; see [current live results and setup](LIVE.md). Numbers below retain
+the original benchmark method for comparison.
+
 This milestone measures candidate settings before implementing the streaming counter or webcam endpoints. The upload app's defaults remain unchanged. No new endpoint, camera/microphone capture, or recording is introduced here.
 
 ## Decision: provisional speed-first settings

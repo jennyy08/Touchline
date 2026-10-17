@@ -1,0 +1,13 @@
+<header><a class="brand" href="/">⌁ TOUCHLINE <span class="brand-detail">LIVE PRACTICE</span></a><a href="/">Upload a video ↗</a></header>
+<main class="live-main">
+  <div class="live-heading"><div><p class="eyebrow">YOUR NEXT TOUCH.</p><h1>Keep it <em>going.</em></h1><p class="muted">Experimental visual count. Keep the ball and both feet in view.</p></div><span class="local"><i></i> ON THIS COMPUTER</span></div>
+  <section class="live-stage">
+    <video id="camera" autoplay muted playsinline></video><canvas id="live-overlay" hidden></canvas>
+    <div id="camera-placeholder">Start your camera when you’re ready.<small>No video or audio is recorded.</small></div>
+    <div class="live-score"><span>ESTIMATED TOUCHES</span><strong id="live-count">0</strong><small>Visual evidence only</small></div>
+    <div class="live-status"><span id="live-state" role="status">Ready to start</span><span id="view-label">Live preview</span></div>
+  </section>
+  <div class="live-controls"><button id="live-start" class="primary">Start camera ↗</button><button id="live-stop" disabled>Stop session</button><label><input id="live-show-overlay" type="checkbox" checked/> Show tracking</label><span id="live-metrics">FPS and round-trip delay appear during practice.</span></div>
+  <p id="live-error" role="alert" hidden></p>
+  <div class="live-notes"><section><h2>Recent contacts</h2><ol id="live-events"><li class="muted">Estimated and uncertain contacts will appear here.</li></ol></section><section><h2>Know what you’re seeing.</h2><p>Green: observed ball. Dashed amber: brief prediction, never touch evidence. Missing observations and ambiguous contacts can cause misses.</p><p>Tracking view shows the last analyzed frame so its markings stay aligned. Turn it off for the direct camera preview. Sound-assisted counting and recording are not included yet.</p></section></div>
+</main>

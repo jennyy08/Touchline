@@ -1,5 +1,9 @@
 [
   {
+    "visual_decision_changes_from_previous": {
+      "removed": [],
+      "added": []
+    },
     "clip": 0,
     "old_visual_count": 26,
     "streaming_visual_count": 26,
@@ -424,6 +428,10 @@
     ]
   },
   {
+    "visual_decision_changes_from_previous": {
+      "removed": [],
+      "added": []
+    },
     "clip": 1,
     "old_visual_count": 16,
     "streaming_visual_count": 16,
@@ -685,6 +693,22 @@
     ]
   },
   {
+    "visual_decision_changes_from_previous": {
+      "removed": [
+        [
+          15.101666666666667,
+          "counted",
+          "observed_reversal_near_leg"
+        ]
+      ],
+      "added": [
+        [
+          15.068333333333333,
+          "counted",
+          "observed_reversal_near_leg"
+        ]
+      ]
+    },
     "clip": 2,
     "old_visual_count": 29,
     "streaming_visual_count": 29,
@@ -1149,6 +1173,10 @@
     ]
   },
   {
+    "visual_decision_changes_from_previous": {
+      "removed": [],
+      "added": []
+    },
     "clip": 3,
     "old_visual_count": 21,
     "streaming_visual_count": 21,
@@ -1488,6 +1516,10 @@
     ]
   },
   {
+    "visual_decision_changes_from_previous": {
+      "removed": [],
+      "added": []
+    },
     "clip": 4,
     "old_visual_count": 12,
     "streaming_visual_count": 12,
@@ -1704,6 +1736,10 @@
     ]
   },
   {
+    "visual_decision_changes_from_previous": {
+      "removed": [],
+      "added": []
+    },
     "clip": 5,
     "old_visual_count": 21,
     "streaming_visual_count": 21,
@@ -2047,6 +2083,10 @@
     ]
   },
   {
+    "visual_decision_changes_from_previous": {
+      "removed": [],
+      "added": []
+    },
     "clip": 6,
     "old_visual_count": 20,
     "streaming_visual_count": 20,

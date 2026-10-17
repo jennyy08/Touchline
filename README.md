@@ -1,6 +1,6 @@
 # Touchline — local juggling lab
 
-A small, study-friendly soccer juggling prototype: upload a clip, watch the tracked ball, inspect estimated contact timestamps, and make a separate manual review. All video analysis runs on your computer. No accounts, paid APIs, database, or language-model video service.
+A small, study-friendly soccer juggling prototype with uploaded clips and experimental live webcam counting. Upload a clip, watch the tracked ball, inspect estimated contact timestamps, and make a separate manual review. All video analysis runs on your computer. No accounts, paid APIs, database, or language-model video service.
 
 **This is an inspection tool, not a validated coaching product.** See [the validation report](validation/RESULTS.md) for measured results and failures on the supplied clip.
 
@@ -16,7 +16,7 @@ python3.11 -m venv .venv
 .venv/bin/python scripts/download_models.py --include-small
 npm ci --prefix frontend
 npm run build --prefix frontend
-.venv/bin/python -m uvicorn juggling.api:app --host 127.0.0.1 --port 8000
+.venv/bin/python -m uvicorn juggling.api:app --host 127.0.0.1 --port 8000 --ws-max-size 1048576 --ws-max-queue 1
 ```
 
 Open **http://127.0.0.1:8000**. Stop with Ctrl-C. If `python3.11` is not available but `python3 --version` says 3.11, use `python3` for the first command.
@@ -38,7 +38,36 @@ The explicit download script fetches official Ultralytics assets from its GitHub
 
 Ultralytics code and these weights use AGPL-3.0; see [official model documentation](https://docs.ultralytics.com/models/yolo11/) and [license information](https://www.ultralytics.com/license). Keep the license implications in mind if you later distribute or commercialize a derivative app. No commercial license or API is needed for this local experiment. This repository's original source is provided under AGPL-3.0 as described in `LICENSE`.
 
-## Using the app
+## Live webcam (experimental)
+
+Open **http://127.0.0.1:8000/live.html**, or choose **Live practice** from the
+upload page. For the currently running development server, use
+**http://127.0.0.1:8001/live.html** (port 8000 was already in use).
+
+1. Click **Start camera** and allow camera access for this localhost page.
+2. Keep the ball and both feet in view. The counter needs observed motion and a
+   floor estimate; hidden contacts may be missed.
+3. Toggle **Show tracking** to switch between the exact last analyzed frame and
+   the direct camera preview. This preference is remembered in your browser.
+4. **Stop session** releases the camera and closes the last contact window. A
+   last supported touch may appear when stopping.
+
+No microphone or session recording is used yet. Frames stay in memory on this
+computer and are not saved by the live endpoint. Use a current Chrome or Safari
+on localhost if your embedded browser does not support camera access. The
+physical-camera permission flow has not been exercised in this development run.
+
+The server is **localhost-only, with no authentication**. It accepts one live
+session or upload job at a time. Live uses CPU, 320 ball/body inputs and no
+detailed foot model; uploads retain 640 inputs and detailed feet. Both use the
+same causal visual counter. The offline audio pass remains separate.
+
+Read [live validation and limitations](validation/live-revision/LIVE.md),
+[streaming-counter regression](validation/live-revision/STREAMING.md), and the
+[earlier speed benchmark](validation/live-revision/README.md). Live replay counts
+are lower than the offline audio-assisted counts; do not treat them as equivalent.
+
+## Using the upload app
 
 1. Choose one MOV/MP4 video with one player and one ball. Limit: 250 MB and 3 minutes. A stationary camera with the ball and feet visible works best.
 2. Wait for local model loading, frame processing, and contact analysis. One job runs at a time.
@@ -107,4 +136,4 @@ Floor revision: [floor line from planted soles, three new clips](validation/floo
 
 Latest audio revision: [impact sounds as separate "heard, not seen" evidence](validation/audio-revision/README.md). Add `--no-audio` to the CLI for video-only analysis.
 
-Live preparation: [CPU/MPS speed and sampling benchmark](validation/live-revision/README.md). This measures candidate settings on local recordings; webcam capture and a streaming counter are not implemented yet. Upload defaults are unchanged.
+Live implementation: [webcam setup and measured replay results](validation/live-revision/LIVE.md). The earlier [CPU/MPS benchmark](validation/live-revision/README.md) remains a historical comparison.

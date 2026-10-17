@@ -1,0 +1,24 @@
+.live-main { max-width: 1100px; }
+.live-heading { display:flex; align-items:center; justify-content:space-between; gap:24px; margin:30px 0; }
+.live-heading h1 { font-size:clamp(32px,5vw,54px); margin:8px 0; }
+.live-stage { position:relative; background:#111917; height:min(52vh,560px); min-height:260px; overflow:hidden; border-radius:20px; border:1px solid #34423b; }
+.live-stage video,.live-stage canvas { width:100%; height:100%; object-fit:contain; }
+.live-stage [hidden] { display:none; }
+#camera-placeholder { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#aebbb2; gap:12px; }
+#camera-placeholder[hidden] { display:none; }
+.live-score { position:absolute; right:20px; top:20px; display:flex; flex-direction:column; text-align:center; background:#102018df; padding:18px 24px; border-radius:16px; }
+.live-score span { font-size:10px; letter-spacing:.12em; color:#b4c4b9; }
+.live-score strong { font-size:76px; line-height:1.1; color:#b9f96b; font-variant-numeric:tabular-nums; }
+.live-score small { font-size:10px; color:#b4c4b9; }
+.live-status { position:absolute; bottom:0; left:0; right:0; padding:16px 20px; background:#101b17d9; display:flex; justify-content:space-between; gap:16px; font-size:12px; }
+.live-controls { display:flex; flex-wrap:wrap; align-items:center; gap:16px; padding:22px 0; }
+.live-controls label { display:flex; align-items:center; gap:8px; }
+#live-metrics { font-size:12px; color:#aebbb2; margin-left:auto; font-variant-numeric:tabular-nums; }
+#live-error { padding:16px; border:1px solid #df9a73; color:#ffd3b9; border-radius:10px; }
+.live-notes { display:grid; grid-template-columns:1fr 1fr; gap:32px; padding-top:10px; }
+.live-notes h2 { font-size:18px; }
+.live-notes p, .live-notes li { font-size:13px; line-height:1.7; color:#b4c4b9; }
+.live-notes ol { padding-left:20px; }
+.live-notes li.live-review { color:#efc175; }
+@media(max-width:650px) { .live-heading>.local { display:none; } .live-notes { grid-template-columns:1fr; gap:12px; } .live-score { padding:8px 12px; right:8px; top:8px; } .live-score strong { font-size:42px; } .live-score span { font-size:8px; } #view-label { display:none; } }
+.live-controls .primary { width:auto; }

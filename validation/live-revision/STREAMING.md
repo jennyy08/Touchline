@@ -38,7 +38,12 @@ Incremental and offline-wrapper events are identical on all seven saved sample
 sets. This validates counter equivalence on identical evidence, not detector
 accuracy or real-time frame dropping. Audio remains an offline enrichment using
 future clip information; these audio-assisted counts are not live counts.
-Full causal event records are in `streaming-regression.json`.
+Full causal event records are in `streaming-regression.json`. Compared with previous
+visual decisions (before audio enrichment), six clips have identical event times,
+statuses and reasons. Clip 2 has one touch 0.033 seconds earlier (15.068 instead
+of 15.102 seconds) because causal debouncing keeps the first candidate. No other
+visual decision changes were found; this comparison is against prior predictions,
+not new ground-truth labels.
 
 Six new tests cover confirmation timing, immutable decisions, nonconsecutive
 source IDs, unavailable/future floor evidence, unfinished tails, explicit EOF,
