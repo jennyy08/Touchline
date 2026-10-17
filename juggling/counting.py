@@ -81,7 +81,7 @@ def leg_distances(sample, config):
 
 
 def classify(sample, floor, config, neighbors=()):
-    """Floor check on the contact frame, then leg support over contact ±1 observed frame.
+    """Floor check on the contact frame, then leg support over contact ±0.075 seconds of observed frames.
 
     Each neighbor is compared with its own ball position, because single-frame landmarks
     jitter or vanish on a fast kicking leg. Wrists are deliberately ignored: a nearby
@@ -145,8 +145,7 @@ def find_stops(samples, config):
     return stops
 
 
-def count_touches(samples, config):
-    floor = estimate_floor(samples)
+def contact_candidates(samples, config, floor):
     position = {s["frame"]: i for i, s in enumerate(samples)}
     observed = [s for s in samples if s["status"] == "observed"]
     candidates = []
@@ -173,7 +172,7 @@ def count_touches(samples, config):
                                   [y] + [s["center"][1] for s in after], 1)[0] / diameter
         if incoming < config.min_velocity_diameters or outgoing > -config.min_velocity_diameters:
             continue
-        neighbors = [s for s in (before[-1:] + after[:1]) if abs(s["frame"] - sample["frame"]) == 1]
+        neighbors = [s for s in (before[-1:] + after[:1]) if abs(s["time"] - t) <= 0.075 + 1e-6]
         status, reason, body_part = classify(sample, floor, config, neighbors)
         evidence = before + [sample] + after
         # A gap surrounding contact means that the reversal is only approximately located.
@@ -186,23 +185,29 @@ def count_touches(samples, config):
                  "outgoing_diameters_per_second": float(outgoing)}
         if top_exit:
             event["evidence"] = ["top_exit"]
-        if candidates and t - candidates[-1]["time"] < config.debounce_seconds:
-            old = candidates[-1]
-            if incoming - outgoing > old["incoming_diameters_per_second"] - old["outgoing_diameters_per_second"]:
-                candidates[-1] = event
-        else:
-            candidates.append(event)
+        candidates.append(event)
     # Debug view for audio rules: the underlying leg evidence behind a gap flag.
     for event in candidates:
         if event["reason"] == "gap_near_contact":
             i = position[event["frame"]]
             near = [samples[j] for j in (i - 1, i + 1) if 0 <= j < len(samples) and samples[j]["status"] == "observed"]
             event["leg_supported"] = classify(samples[i], floor, config, near)[0] == "counted"
-    # A ball resting before the first touch (before the pickup) is not a stop in juggling.
-    first_touch = next((e["time"] for e in candidates if e["status"] == "counted"), None)
-    stops = [s for s in find_stops(samples, config) if first_touch is not None and s["end"] > first_touch]
-    return {"events": candidates, "estimated_count": sum(e["status"] == "counted" for e in candidates),
-            "floor_y": floor, "stops": stops}
+    return candidates
+
+def count_touches(samples, config):
+    """Offline adapter to the same causal counter used by the webcam.
+
+    End-of-file closes the outgoing window using actual observations only. Audio enrichment remains an independent offline pass.
+    """
+    from .streaming import StreamingCounter
+    counter = StreamingCounter(config)
+    for sample in samples:
+        counter.update(sample)
+    counter.finish()
+    result = counter.result()
+    first = next((e["time"] for e in result["events"] if e["status"] == "counted"), None)
+    result["stops"] = [s for s in find_stops(samples, config) if first is not None and s["end"] > first]
+    return result
 
 
 def add_audio_evidence(result, samples, heard, config):
