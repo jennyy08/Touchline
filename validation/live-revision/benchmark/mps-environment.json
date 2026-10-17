@@ -1,0 +1,10 @@
+{
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "torch": "2.7.1",
+  "cpu_threads": 8,
+  "mps_available": true,
+  "load_seconds": 0.23421070794574916,
+  "warmup_seconds": 9.874692042008974,
+  "foot_provider": "CPUExecutionProvider",
+  "method": "Sequential original-frame inference; cached causal scheduling; no browser/streaming latency measured"
+}

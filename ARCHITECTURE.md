@@ -54,3 +54,24 @@ Reviews use `schema_version: 1`, `video_sha256`, and events with unique `id`, se
 No live camera adapter, custom training pipeline, multi-player identity logic, or biomechanical coaching is implemented. Head/torso touches and contacts that do not form a clear observed vertical reversal remain outside this baseline's reliable behavior.
 
 Tracking experiment: `scripts/inspect_frames.py` creates timestamp-checked evidence sheets from a video and result JSON. Current before/after results are in `validation/tracking-revision/README.md`. The three new clips have user-supplied totals, not complete reference timestamps.
+
+## Live preparation benchmarks
+
+`juggling/live_settings.py` contains two small experimental components: `FrameGate`
+selects frames using presentation time, and `FootSchedule` decides whether to run
+the detailed heel/toe model using current/past observed descent near the legs plus
+periodic floor samples. Neither reads touch labels or future frames. Missing foot
+landmarks stay missing rather than being copied from an older frame.
+
+`PoseDetector.detect_body()` returns body landmarks and the chosen person box
+without running RTMPose. Existing upload callers still use `detect()`, which
+combines both models as before. This boundary lets a later live adapter schedule
+feet independently without changing detector coordinates or counting rules.
+
+`scripts/benchmark_live.py` caches measured inference outputs, then replays the
+same tracking/counting logic for each sampling and foot schedule. Its service-time
+estimates are followed by `scripts/validate_live_profile.py`, which runs one
+selected profile directly in a fresh process. The [benchmark report](validation/live-revision/README.md)
+keeps video-only counts separate from offline audio-assisted results. These
+scripts do not implement streaming: the existing floor/audio decisions still
+use future information, and browser latency/backpressure remain unmeasured.

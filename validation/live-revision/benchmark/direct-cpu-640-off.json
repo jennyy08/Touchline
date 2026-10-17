@@ -1,0 +1,905 @@
+{
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "torch": "2.7.1",
+  "cpu_threads": 8,
+  "startup_warmup_seconds": 1.263838625047356,
+  "clips": [
+    {
+      "video_sha256": "73daba39d2ef14ea593cc59ac5bf8ce8f2a2db7547de6f91c05fc1ec39e2a7a3",
+      "clip": 0,
+      "settings": {
+        "device": "cpu",
+        "image_size": 640,
+        "fps": 30,
+        "feet": "off",
+        "floor_refresh_seconds": 0.5,
+        "near_leg_diameters": 3.0
+      },
+      "pose_input": 640,
+      "reference_total": 26,
+      "decoded_frames": 427,
+      "sampled_frames": 427,
+      "feet_runs": 0,
+      "stage_timing": {
+        "decode": {
+          "mean_ms": 7.280338987156278,
+          "p50_ms": 7.195125101134181,
+          "p95_ms": 9.514803730417043
+        },
+        "ball": {
+          "mean_ms": 51.51042155376189,
+          "p50_ms": 49.96137507259846,
+          "p95_ms": 56.551987666171044
+        },
+        "pose": {
+          "mean_ms": 29.903143064164723,
+          "p50_ms": 29.274916974827647,
+          "p95_ms": 33.461653732229024
+        },
+        "feet": {
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "tracking": {
+          "mean_ms": 8.020093372807047,
+          "p50_ms": 8.994959061965346,
+          "p95_ms": 13.024883077014238
+        },
+        "service": {
+          "mean_ms": 96.71399697788993,
+          "p50_ms": 95.74441716540605,
+          "p95_ms": 107.66649568686262
+        }
+      },
+      "processing_seconds_excluding_counter_audio": 41.301523291971534,
+      "video_only_count": 26,
+      "estimated_count": 26,
+      "seen_count": 26,
+      "heard_count": 0,
+      "events": [
+        {
+          "id": "event-32",
+          "frame": 32,
+          "time": 1.0666666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.838822035165034,
+          "outgoing_diameters_per_second": -5.585681244122021
+        },
+        {
+          "id": "event-46",
+          "frame": 46,
+          "time": 1.5333333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.16812850572036,
+          "outgoing_diameters_per_second": -7.508222641045509
+        },
+        {
+          "id": "event-61",
+          "frame": 61,
+          "time": 2.033333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.738435957855739,
+          "outgoing_diameters_per_second": -7.057203158079764
+        },
+        {
+          "id": "event-77",
+          "frame": 77,
+          "time": 2.566666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.309761787528416,
+          "outgoing_diameters_per_second": -7.474984581790764
+        },
+        {
+          "id": "event-90",
+          "frame": 90,
+          "time": 3.0,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.969338285240045,
+          "outgoing_diameters_per_second": -7.7164433844627665
+        },
+        {
+          "id": "event-107",
+          "frame": 107,
+          "time": 3.566666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.067728420337532,
+          "outgoing_diameters_per_second": -7.374649086458723
+        },
+        {
+          "id": "event-122",
+          "frame": 122,
+          "time": 4.066666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.373957779974445,
+          "outgoing_diameters_per_second": -9.363690627902608
+        },
+        {
+          "id": "event-140",
+          "frame": 140,
+          "time": 4.666666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_thigh",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 11.365384615384588,
+          "outgoing_diameters_per_second": -11.629218523318993
+        },
+        {
+          "id": "event-156",
+          "frame": 156,
+          "time": 5.2,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 10.10687952065865,
+          "outgoing_diameters_per_second": -4.931082803455978
+        },
+        {
+          "id": "event-170",
+          "frame": 170,
+          "time": 5.666666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.375345966901249,
+          "outgoing_diameters_per_second": -6.0298243490029435
+        },
+        {
+          "id": "event-182",
+          "frame": 182,
+          "time": 6.066666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.703524243884293,
+          "outgoing_diameters_per_second": -10.688331344702123
+        },
+        {
+          "id": "event-198",
+          "frame": 198,
+          "time": 6.6,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_thigh",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 3.407834101382501,
+          "outgoing_diameters_per_second": -8.294930875575846,
+          "evidence": [
+            "top_exit"
+          ]
+        },
+        {
+          "id": "event-218",
+          "frame": 218,
+          "time": 7.266666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_thigh",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.745830422580858,
+          "outgoing_diameters_per_second": -5.065647380186767
+        },
+        {
+          "id": "event-236",
+          "frame": 236,
+          "time": 7.866666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.247490059513925,
+          "outgoing_diameters_per_second": -6.375763447737325
+        },
+        {
+          "id": "event-251",
+          "frame": 251,
+          "time": 8.366666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.74355590309214,
+          "outgoing_diameters_per_second": -7.76570756771104
+        },
+        {
+          "id": "event-266",
+          "frame": 266,
+          "time": 8.866666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.074342734767652,
+          "outgoing_diameters_per_second": -7.012522412421475
+        },
+        {
+          "id": "event-282",
+          "frame": 282,
+          "time": 9.4,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.873019775310822,
+          "outgoing_diameters_per_second": -7.5920817106784675
+        },
+        {
+          "id": "event-296",
+          "frame": 296,
+          "time": 9.866666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.9672203702187785,
+          "outgoing_diameters_per_second": -9.66747979328495
+        },
+        {
+          "id": "event-315",
+          "frame": 315,
+          "time": 10.5,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 10.46888272762303,
+          "outgoing_diameters_per_second": -10.400000000000041
+        },
+        {
+          "id": "event-333",
+          "frame": 333,
+          "time": 11.1,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 10.684312883228086,
+          "outgoing_diameters_per_second": -8.65768730712373
+        },
+        {
+          "id": "event-350",
+          "frame": 350,
+          "time": 11.666666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.96806461924319,
+          "outgoing_diameters_per_second": -9.123288710600798
+        },
+        {
+          "id": "event-367",
+          "frame": 367,
+          "time": 12.233333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_thigh",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.874978930609352,
+          "outgoing_diameters_per_second": -4.2331428206406105
+        },
+        {
+          "id": "event-382",
+          "frame": 382,
+          "time": 12.733333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 10.079645768970243,
+          "outgoing_diameters_per_second": -7.837073573464976
+        },
+        {
+          "id": "event-395",
+          "frame": 395,
+          "time": 13.168333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 2.8806235020613835,
+          "outgoing_diameters_per_second": -6.074957147756317
+        },
+        {
+          "id": "event-412",
+          "frame": 412,
+          "time": 13.735,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.204153878302605,
+          "outgoing_diameters_per_second": -4.3695093717511995
+        },
+        {
+          "id": "event-424",
+          "frame": 424,
+          "time": 14.135,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.587826320103259,
+          "outgoing_diameters_per_second": -6.818355832781132
+        }
+      ],
+      "video_event_comparison": {
+        "tolerance_seconds": 0.1,
+        "estimated_count": 26,
+        "reference_visible_count": 26,
+        "matched": 26,
+        "false_positives": [],
+        "unverifiable_predictions": [],
+        "misses": [],
+        "matches": [
+          {
+            "predicted_time": 1.0666666666666667,
+            "reference_time": 1.0666666666666667,
+            "predicted_frame": 32,
+            "reference_frame": 32,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 1.5333333333333334,
+            "reference_time": 1.5333333333333334,
+            "predicted_frame": 46,
+            "reference_frame": 46,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 2.033333333333333,
+            "reference_time": 2.033333333333333,
+            "predicted_frame": 61,
+            "reference_frame": 61,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 2.566666666666667,
+            "reference_time": 2.566666666666667,
+            "predicted_frame": 77,
+            "reference_frame": 77,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 3.0,
+            "reference_time": 3.0,
+            "predicted_frame": 90,
+            "reference_frame": 90,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 3.566666666666667,
+            "reference_time": 3.566666666666667,
+            "predicted_frame": 107,
+            "reference_frame": 107,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 4.066666666666666,
+            "reference_time": 4.066666666666666,
+            "predicted_frame": 122,
+            "reference_frame": 122,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 4.666666666666667,
+            "reference_time": 4.633333333333334,
+            "predicted_frame": 140,
+            "reference_frame": 139,
+            "error_seconds": 0.033333333333333215
+          },
+          {
+            "predicted_time": 5.2,
+            "reference_time": 5.2,
+            "predicted_frame": 156,
+            "reference_frame": 156,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 5.666666666666667,
+            "reference_time": 5.666666666666667,
+            "predicted_frame": 170,
+            "reference_frame": 170,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 6.066666666666666,
+            "reference_time": 6.066666666666666,
+            "predicted_frame": 182,
+            "reference_frame": 182,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 6.6,
+            "reference_time": 6.6,
+            "predicted_frame": 198,
+            "reference_frame": 198,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 7.266666666666667,
+            "reference_time": 7.233333333333333,
+            "predicted_frame": 218,
+            "reference_frame": 217,
+            "error_seconds": 0.033333333333333215
+          },
+          {
+            "predicted_time": 7.866666666666666,
+            "reference_time": 7.866666666666666,
+            "predicted_frame": 236,
+            "reference_frame": 236,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 8.366666666666667,
+            "reference_time": 8.366666666666667,
+            "predicted_frame": 251,
+            "reference_frame": 251,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 8.866666666666667,
+            "reference_time": 8.866666666666667,
+            "predicted_frame": 266,
+            "reference_frame": 266,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 9.4,
+            "reference_time": 9.366666666666667,
+            "predicted_frame": 282,
+            "reference_frame": 281,
+            "error_seconds": 0.033333333333333215
+          },
+          {
+            "predicted_time": 9.866666666666667,
+            "reference_time": 9.866666666666667,
+            "predicted_frame": 296,
+            "reference_frame": 296,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 10.5,
+            "reference_time": 10.5,
+            "predicted_frame": 315,
+            "reference_frame": 315,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 11.1,
+            "reference_time": 11.1,
+            "predicted_frame": 333,
+            "reference_frame": 333,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 11.666666666666666,
+            "reference_time": 11.666666666666666,
+            "predicted_frame": 350,
+            "reference_frame": 350,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 12.233333333333333,
+            "reference_time": 12.266666666666667,
+            "predicted_frame": 367,
+            "reference_frame": 368,
+            "error_seconds": -0.03333333333333499
+          },
+          {
+            "predicted_time": 12.733333333333333,
+            "reference_time": 12.733333333333333,
+            "predicted_frame": 382,
+            "reference_frame": 382,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 13.168333333333333,
+            "reference_time": 13.168333333333333,
+            "predicted_frame": 395,
+            "reference_frame": 395,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 13.735,
+            "reference_time": 13.735,
+            "predicted_frame": 412,
+            "reference_frame": 412,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 14.135,
+            "reference_time": 14.101666666666667,
+            "predicted_frame": 424,
+            "reference_frame": 423,
+            "error_seconds": 0.033333333333333215
+          }
+        ],
+        "mean_absolute_timing_error": 0.006410256410256456,
+        "tracking_summary": {
+          "observed": 394,
+          "predicted": 20,
+          "lost": 13
+        },
+        "runtime_seconds": 41.301523291971534,
+        "config": {
+          "detector": "yolo11s.pt",
+          "pose_model": "yolo11n-pose.pt",
+          "foot_model": "",
+          "image_size": 640,
+          "pose_size": 640,
+          "detection_threshold": 0.05,
+          "landmark_threshold": 0.35,
+          "prediction_seconds": 0.15,
+          "minimum_size_ratio": 0.75,
+          "edge_outward_fraction": 0.2,
+          "edge_margin_diameters": 0.05,
+          "edge_outward_diameters_per_second": 0.5,
+          "association_diameters": 3.0,
+          "contact_diameters": 1.15,
+          "foot_length_shin_ratio": 0.6,
+          "stop_seconds": 1.0,
+          "stop_radius_diameters": 0.5,
+          "stop_gap_seconds": 0.2,
+          "audio_enabled": true,
+          "audio_min_strength": 8.0,
+          "audio_match_seconds": 0.12,
+          "rhythm_min_beats": 0.6,
+          "rhythm_max_beats": 1.6,
+          "audio_return_seconds": 1.0,
+          "debounce_seconds": 0.22,
+          "velocity_window_seconds": 0.14,
+          "min_velocity_diameters": 0.7,
+          "appearance_enabled": true,
+          "appearance_horizon_seconds": 0.25,
+          "appearance_similarity": 0.6,
+          "device": "cpu"
+        },
+        "uncertain_intervals": [
+          {
+            "start": 6.7,
+            "end": 7.133333333333334,
+            "note": "Ball above the image; hidden contacts cannot be verified."
+          }
+        ]
+      },
+      "with_offline_audio_event_comparison": {
+        "tolerance_seconds": 0.1,
+        "estimated_count": 26,
+        "reference_visible_count": 26,
+        "matched": 26,
+        "false_positives": [],
+        "unverifiable_predictions": [],
+        "misses": [],
+        "matches": [
+          {
+            "predicted_time": 1.0666666666666667,
+            "reference_time": 1.0666666666666667,
+            "predicted_frame": 32,
+            "reference_frame": 32,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 1.5333333333333334,
+            "reference_time": 1.5333333333333334,
+            "predicted_frame": 46,
+            "reference_frame": 46,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 2.033333333333333,
+            "reference_time": 2.033333333333333,
+            "predicted_frame": 61,
+            "reference_frame": 61,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 2.566666666666667,
+            "reference_time": 2.566666666666667,
+            "predicted_frame": 77,
+            "reference_frame": 77,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 3.0,
+            "reference_time": 3.0,
+            "predicted_frame": 90,
+            "reference_frame": 90,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 3.566666666666667,
+            "reference_time": 3.566666666666667,
+            "predicted_frame": 107,
+            "reference_frame": 107,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 4.066666666666666,
+            "reference_time": 4.066666666666666,
+            "predicted_frame": 122,
+            "reference_frame": 122,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 4.666666666666667,
+            "reference_time": 4.633333333333334,
+            "predicted_frame": 140,
+            "reference_frame": 139,
+            "error_seconds": 0.033333333333333215
+          },
+          {
+            "predicted_time": 5.2,
+            "reference_time": 5.2,
+            "predicted_frame": 156,
+            "reference_frame": 156,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 5.666666666666667,
+            "reference_time": 5.666666666666667,
+            "predicted_frame": 170,
+            "reference_frame": 170,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 6.066666666666666,
+            "reference_time": 6.066666666666666,
+            "predicted_frame": 182,
+            "reference_frame": 182,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 6.6,
+            "reference_time": 6.6,
+            "predicted_frame": 198,
+            "reference_frame": 198,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 7.266666666666667,
+            "reference_time": 7.233333333333333,
+            "predicted_frame": 218,
+            "reference_frame": 217,
+            "error_seconds": 0.033333333333333215
+          },
+          {
+            "predicted_time": 7.866666666666666,
+            "reference_time": 7.866666666666666,
+            "predicted_frame": 236,
+            "reference_frame": 236,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 8.366666666666667,
+            "reference_time": 8.366666666666667,
+            "predicted_frame": 251,
+            "reference_frame": 251,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 8.866666666666667,
+            "reference_time": 8.866666666666667,
+            "predicted_frame": 266,
+            "reference_frame": 266,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 9.4,
+            "reference_time": 9.366666666666667,
+            "predicted_frame": 282,
+            "reference_frame": 281,
+            "error_seconds": 0.033333333333333215
+          },
+          {
+            "predicted_time": 9.866666666666667,
+            "reference_time": 9.866666666666667,
+            "predicted_frame": 296,
+            "reference_frame": 296,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 10.5,
+            "reference_time": 10.5,
+            "predicted_frame": 315,
+            "reference_frame": 315,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 11.1,
+            "reference_time": 11.1,
+            "predicted_frame": 333,
+            "reference_frame": 333,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 11.666666666666666,
+            "reference_time": 11.666666666666666,
+            "predicted_frame": 350,
+            "reference_frame": 350,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 12.233333333333333,
+            "reference_time": 12.266666666666667,
+            "predicted_frame": 367,
+            "reference_frame": 368,
+            "error_seconds": -0.03333333333333499
+          },
+          {
+            "predicted_time": 12.733333333333333,
+            "reference_time": 12.733333333333333,
+            "predicted_frame": 382,
+            "reference_frame": 382,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 13.168333333333333,
+            "reference_time": 13.168333333333333,
+            "predicted_frame": 395,
+            "reference_frame": 395,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 13.735,
+            "reference_time": 13.735,
+            "predicted_frame": 412,
+            "reference_frame": 412,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 14.135,
+            "reference_time": 14.101666666666667,
+            "predicted_frame": 424,
+            "reference_frame": 423,
+            "error_seconds": 0.033333333333333215
+          }
+        ],
+        "mean_absolute_timing_error": 0.006410256410256456,
+        "tracking_summary": {
+          "observed": 394,
+          "predicted": 20,
+          "lost": 13
+        },
+        "runtime_seconds": 41.301523291971534,
+        "config": {
+          "detector": "yolo11s.pt",
+          "pose_model": "yolo11n-pose.pt",
+          "foot_model": "",
+          "image_size": 640,
+          "pose_size": 640,
+          "detection_threshold": 0.05,
+          "landmark_threshold": 0.35,
+          "prediction_seconds": 0.15,
+          "minimum_size_ratio": 0.75,
+          "edge_outward_fraction": 0.2,
+          "edge_margin_diameters": 0.05,
+          "edge_outward_diameters_per_second": 0.5,
+          "association_diameters": 3.0,
+          "contact_diameters": 1.15,
+          "foot_length_shin_ratio": 0.6,
+          "stop_seconds": 1.0,
+          "stop_radius_diameters": 0.5,
+          "stop_gap_seconds": 0.2,
+          "audio_enabled": true,
+          "audio_min_strength": 8.0,
+          "audio_match_seconds": 0.12,
+          "rhythm_min_beats": 0.6,
+          "rhythm_max_beats": 1.6,
+          "audio_return_seconds": 1.0,
+          "debounce_seconds": 0.22,
+          "velocity_window_seconds": 0.14,
+          "min_velocity_diameters": 0.7,
+          "appearance_enabled": true,
+          "appearance_horizon_seconds": 0.25,
+          "appearance_similarity": 0.6,
+          "device": "cpu"
+        },
+        "uncertain_intervals": [
+          {
+            "start": 6.7,
+            "end": 7.133333333333334,
+            "note": "Ball above the image; hidden contacts cannot be verified."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "machine": "MacBook Air (Mac16,12)",
+  "chip": "Apple M4",
+  "cpu_cores": 10,
+  "performance_cores": 4,
+  "efficiency_cores": 6,
+  "memory_gb": 16,
+  "macos": "15.7.4",
+  "measurement_date": "2026-10-17",
+  "notes": "Single sequential passes on the user's Mac; no controlled thermal/background-load experiment. No serial or device identifiers retained."
+}

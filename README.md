@@ -106,3 +106,5 @@ Foot revision: [detected heel/toe landmarks](validation/foot-revision/README.md)
 Floor revision: [floor line from planted soles, three new clips](validation/floor-revision/README.md).
 
 Latest audio revision: [impact sounds as separate "heard, not seen" evidence](validation/audio-revision/README.md). Add `--no-audio` to the CLI for video-only analysis.
+
+Live preparation: [CPU/MPS speed and sampling benchmark](validation/live-revision/README.md). This measures candidate settings on local recordings; webcam capture and a streaming counter are not implemented yet. Upload defaults are unchanged.

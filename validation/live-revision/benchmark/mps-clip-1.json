@@ -1,0 +1,1100 @@
+[
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 640,
+      "fps": 30,
+      "feet": "off",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 329,
+    "decoded_frames": 329,
+    "feet_runs": 0,
+    "foot_fraction": 0.0,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 265,
+      "predicted": 6,
+      "lost": 58
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.373228341776957,
+        "p50_ms": 6.092125084251165,
+        "p95_ms": 8.613125397823751
+      },
+      "ball": {
+        "mean_ms": 52.9173556106635,
+        "p50_ms": 49.91045803762972,
+        "p95_ms": 66.29949996713549
+      },
+      "pose": {
+        "mean_ms": 36.702209474634955,
+        "p50_ms": 34.12270895205438,
+        "p95_ms": 50.30923339072612
+      },
+      "feet": {
+        "mean_ms": 0.0,
+        "p50_ms": 0.0,
+        "p95_ms": 0.0
+      },
+      "tracking": {
+        "mean_ms": 6.971512795185336,
+        "p50_ms": 8.072291035205126,
+        "p95_ms": 10.959650389850138
+      },
+      "service": {
+        "mean_ms": 102.96430622226075,
+        "p50_ms": 98.80329214502126,
+        "p95_ms": 124.97009204234924
+      }
+    },
+    "counter_audio_merge_ms": 3.9542909944429994,
+    "estimated_service_fps": 9.712103511302068
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 640,
+      "fps": 30,
+      "feet": "all",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 329,
+    "decoded_frames": 329,
+    "feet_runs": 325,
+    "foot_fraction": 0.9878419452887538,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 265,
+      "predicted": 6,
+      "lost": 58
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.373228341776957,
+        "p50_ms": 6.092125084251165,
+        "p95_ms": 8.613125397823751
+      },
+      "ball": {
+        "mean_ms": 52.9173556106635,
+        "p50_ms": 49.91045803762972,
+        "p95_ms": 66.29949996713549
+      },
+      "pose": {
+        "mean_ms": 36.702209474634955,
+        "p50_ms": 34.12270895205438,
+        "p95_ms": 50.30923339072612
+      },
+      "feet": {
+        "mean_ms": 66.18851306954382,
+        "p50_ms": 65.0294590741396,
+        "p95_ms": 80.64778337720782
+      },
+      "tracking": {
+        "mean_ms": 6.974359696849864,
+        "p50_ms": 8.07324901688844,
+        "p95_ms": 10.964575433172284
+      },
+      "service": {
+        "mean_ms": 169.1556661934691,
+        "p50_ms": 162.9756250185892,
+        "p95_ms": 202.59763305075464
+      }
+    },
+    "counter_audio_merge_ms": 5.473958095535636,
+    "estimated_service_fps": 5.911714472846957
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 640,
+      "fps": 30,
+      "feet": "near",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 329,
+    "decoded_frames": 329,
+    "feet_runs": 127,
+    "foot_fraction": 0.3860182370820669,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 265,
+      "predicted": 6,
+      "lost": 58
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.373228341776957,
+        "p50_ms": 6.092125084251165,
+        "p95_ms": 8.613125397823751
+      },
+      "ball": {
+        "mean_ms": 52.9173556106635,
+        "p50_ms": 49.91045803762972,
+        "p95_ms": 66.29949996713549
+      },
+      "pose": {
+        "mean_ms": 36.702209474634955,
+        "p50_ms": 34.12270895205438,
+        "p95_ms": 50.30923339072612
+      },
+      "feet": {
+        "mean_ms": 26.338884389696016,
+        "p50_ms": 0.0,
+        "p95_ms": 73.60930840950458
+      },
+      "tracking": {
+        "mean_ms": 6.972646418220072,
+        "p50_ms": 8.072874043136835,
+        "p95_ms": 10.96007458399981
+      },
+      "service": {
+        "mean_ms": 129.3043242349915,
+        "p50_ms": 109.24579214770347,
+        "p95_ms": 187.63240128755567
+      }
+    },
+    "counter_audio_merge_ms": 4.202499985694885,
+    "estimated_service_fps": 7.733693408293506
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 640,
+      "fps": 15,
+      "feet": "off",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 165,
+    "decoded_frames": 329,
+    "feet_runs": 0,
+    "foot_fraction": 0.0,
+    "video_only_count": 15,
+    "estimated_count": 15,
+    "seen_count": 15,
+    "heard_count": 0,
+    "signed_difference": -1,
+    "tracking_summary": {
+      "observed": 134,
+      "predicted": 2,
+      "lost": 29
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.34009951485716,
+        "p50_ms": 6.055833073332906,
+        "p95_ms": 8.437699754722416
+      },
+      "ball": {
+        "mean_ms": 54.55135050173284,
+        "p50_ms": 50.08537508547306,
+        "p95_ms": 66.51026725303382
+      },
+      "pose": {
+        "mean_ms": 36.5432911361991,
+        "p50_ms": 33.992124954238534,
+        "p95_ms": 48.778724367730305
+      },
+      "feet": {
+        "mean_ms": 0.0,
+        "p50_ms": 0.0,
+        "p95_ms": 0.0
+      },
+      "tracking": {
+        "mean_ms": 6.727694039882133,
+        "p50_ms": 7.71454197820276,
+        "p95_ms": 10.855957842431962
+      },
+      "service": {
+        "mean_ms": 104.16243519267124,
+        "p50_ms": 98.41129195410758,
+        "p95_ms": 128.8580671418458
+      }
+    },
+    "counter_audio_merge_ms": 1.9815840059891343,
+    "estimated_service_fps": 9.60038998848559
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 640,
+      "fps": 15,
+      "feet": "all",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 165,
+    "decoded_frames": 329,
+    "feet_runs": 161,
+    "foot_fraction": 0.9757575757575757,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 134,
+      "predicted": 2,
+      "lost": 29
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.34009951485716,
+        "p50_ms": 6.055833073332906,
+        "p95_ms": 8.437699754722416
+      },
+      "ball": {
+        "mean_ms": 54.55135050173284,
+        "p50_ms": 50.08537508547306,
+        "p95_ms": 66.51026725303382
+      },
+      "pose": {
+        "mean_ms": 36.5432911361991,
+        "p50_ms": 33.992124954238534,
+        "p95_ms": 48.778724367730305
+      },
+      "feet": {
+        "mean_ms": 66.23292729103316,
+        "p50_ms": 65.11300010606647,
+        "p95_ms": 81.51548355817795
+      },
+      "tracking": {
+        "mean_ms": 6.729938655696584,
+        "p50_ms": 7.715584011748433,
+        "p95_ms": 10.857808217406273
+      },
+      "service": {
+        "mean_ms": 170.39760709951886,
+        "p50_ms": 163.44083414878696,
+        "p95_ms": 203.2500418834388
+      }
+    },
+    "counter_audio_merge_ms": 2.810792066156864,
+    "estimated_service_fps": 5.868627013147907
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 640,
+      "fps": 15,
+      "feet": "near",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 165,
+    "decoded_frames": 329,
+    "feet_runs": 68,
+    "foot_fraction": 0.4121212121212121,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 134,
+      "predicted": 2,
+      "lost": 29
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.34009951485716,
+        "p50_ms": 6.055833073332906,
+        "p95_ms": 8.437699754722416
+      },
+      "ball": {
+        "mean_ms": 54.55135050173284,
+        "p50_ms": 50.08537508547306,
+        "p95_ms": 66.51026725303382
+      },
+      "pose": {
+        "mean_ms": 36.5432911361991,
+        "p50_ms": 33.992124954238534,
+        "p95_ms": 48.778724367730305
+      },
+      "feet": {
+        "mean_ms": 28.462246211358543,
+        "p50_ms": 0.0,
+        "p95_ms": 73.3649831963703
+      },
+      "tracking": {
+        "mean_ms": 6.728941199341507,
+        "p50_ms": 7.71508296020329,
+        "p95_ms": 10.856925183907151
+      },
+      "service": {
+        "mean_ms": 132.62592856348917,
+        "p50_ms": 112.67245805356652,
+        "p95_ms": 185.05882639437908
+      }
+    },
+    "counter_audio_merge_ms": 2.275250037200749,
+    "estimated_service_fps": 7.540003759681814
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 480,
+      "fps": 30,
+      "feet": "off",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 329,
+    "decoded_frames": 329,
+    "feet_runs": 0,
+    "foot_fraction": 0.0,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 267,
+      "predicted": 6,
+      "lost": 56
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.373228341776957,
+        "p50_ms": 6.092125084251165,
+        "p95_ms": 8.613125397823751
+      },
+      "ball": {
+        "mean_ms": 37.29623997135309,
+        "p50_ms": 36.01533290930092,
+        "p95_ms": 48.387149977497735
+      },
+      "pose": {
+        "mean_ms": 36.702209474634955,
+        "p50_ms": 34.12270895205438,
+        "p95_ms": 50.30923339072612
+      },
+      "feet": {
+        "mean_ms": 0.0,
+        "p50_ms": 0.0,
+        "p95_ms": 0.0
+      },
+      "tracking": {
+        "mean_ms": 6.6764121015321205,
+        "p50_ms": 7.735833176411688,
+        "p95_ms": 10.910716629587112
+      },
+      "service": {
+        "mean_ms": 87.04808988929712,
+        "p50_ms": 83.13820918556303,
+        "p95_ms": 108.88335863128299
+      }
+    },
+    "counter_audio_merge_ms": 3.410042030736804,
+    "estimated_service_fps": 11.487902850846515
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 480,
+      "fps": 30,
+      "feet": "all",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 329,
+    "decoded_frames": 329,
+    "feet_runs": 325,
+    "foot_fraction": 0.9878419452887538,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 267,
+      "predicted": 6,
+      "lost": 56
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.373228341776957,
+        "p50_ms": 6.092125084251165,
+        "p95_ms": 8.613125397823751
+      },
+      "ball": {
+        "mean_ms": 37.29623997135309,
+        "p50_ms": 36.01533290930092,
+        "p95_ms": 48.387149977497735
+      },
+      "pose": {
+        "mean_ms": 36.702209474634955,
+        "p50_ms": 34.12270895205438,
+        "p95_ms": 50.30923339072612
+      },
+      "feet": {
+        "mean_ms": 66.18851306954382,
+        "p50_ms": 65.0294590741396,
+        "p95_ms": 80.64778337720782
+      },
+      "tracking": {
+        "mean_ms": 6.678483248645819,
+        "p50_ms": 7.741000037640333,
+        "p95_ms": 10.913108685053883
+      },
+      "service": {
+        "mean_ms": 153.23867410595463,
+        "p50_ms": 147.77628984302282,
+        "p95_ms": 183.44601711723945
+      }
+    },
+    "counter_audio_merge_ms": 5.535917007364333,
+    "estimated_service_fps": 6.525767766096466
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 480,
+      "fps": 30,
+      "feet": "near",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 329,
+    "decoded_frames": 329,
+    "feet_runs": 130,
+    "foot_fraction": 0.3951367781155015,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 267,
+      "predicted": 6,
+      "lost": 56
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.373228341776957,
+        "p50_ms": 6.092125084251165,
+        "p95_ms": 8.613125397823751
+      },
+      "ball": {
+        "mean_ms": 37.29623997135309,
+        "p50_ms": 36.01533290930092,
+        "p95_ms": 48.387149977497735
+      },
+      "pose": {
+        "mean_ms": 36.702209474634955,
+        "p50_ms": 34.12270895205438,
+        "p95_ms": 50.30923339072612
+      },
+      "feet": {
+        "mean_ms": 26.959227602560876,
+        "p50_ms": 0.0,
+        "p95_ms": 74.163158563897
+      },
+      "tracking": {
+        "mean_ms": 6.677598854892047,
+        "p50_ms": 7.738250074908137,
+        "p95_ms": 10.911824833601711
+      },
+      "service": {
+        "mean_ms": 114.00850424521792,
+        "p50_ms": 91.91641700454056,
+        "p95_ms": 174.58518412895498
+      }
+    },
+    "counter_audio_merge_ms": 4.101458005607128,
+    "estimated_service_fps": 8.771275499318245
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 480,
+      "fps": 15,
+      "feet": "off",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 165,
+    "decoded_frames": 329,
+    "feet_runs": 0,
+    "foot_fraction": 0.0,
+    "video_only_count": 14,
+    "estimated_count": 14,
+    "seen_count": 14,
+    "heard_count": 0,
+    "signed_difference": -2,
+    "tracking_summary": {
+      "observed": 134,
+      "predicted": 3,
+      "lost": 28
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.34009951485716,
+        "p50_ms": 6.055833073332906,
+        "p95_ms": 8.437699754722416
+      },
+      "ball": {
+        "mean_ms": 37.96034390812345,
+        "p50_ms": 36.05499991681427,
+        "p95_ms": 50.83731638733295
+      },
+      "pose": {
+        "mean_ms": 36.5432911361991,
+        "p50_ms": 33.992124954238534,
+        "p95_ms": 48.778724367730305
+      },
+      "feet": {
+        "mean_ms": 0.0,
+        "p50_ms": 0.0,
+        "p95_ms": 0.0
+      },
+      "tracking": {
+        "mean_ms": 6.676234840415418,
+        "p50_ms": 7.695333915762603,
+        "p95_ms": 10.812716558575628
+      },
+      "service": {
+        "mean_ms": 87.51996939959513,
+        "p50_ms": 83.79195909947157,
+        "p95_ms": 108.44295877031976
+      }
+    },
+    "counter_audio_merge_ms": 1.9790000515058637,
+    "estimated_service_fps": 11.425963775584068
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 480,
+      "fps": 15,
+      "feet": "all",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 165,
+    "decoded_frames": 329,
+    "feet_runs": 161,
+    "foot_fraction": 0.9757575757575757,
+    "video_only_count": 15,
+    "estimated_count": 15,
+    "seen_count": 15,
+    "heard_count": 0,
+    "signed_difference": -1,
+    "tracking_summary": {
+      "observed": 134,
+      "predicted": 3,
+      "lost": 28
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.34009951485716,
+        "p50_ms": 6.055833073332906,
+        "p95_ms": 8.437699754722416
+      },
+      "ball": {
+        "mean_ms": 37.96034390812345,
+        "p50_ms": 36.05499991681427,
+        "p95_ms": 50.83731638733295
+      },
+      "pose": {
+        "mean_ms": 36.5432911361991,
+        "p50_ms": 33.992124954238534,
+        "p95_ms": 48.778724367730305
+      },
+      "feet": {
+        "mean_ms": 66.23292729103316,
+        "p50_ms": 65.11300010606647,
+        "p95_ms": 81.51548355817795
+      },
+      "tracking": {
+        "mean_ms": 6.67844877056213,
+        "p50_ms": 7.6995419804006815,
+        "p95_ms": 10.814649751409886
+      },
+      "service": {
+        "mean_ms": 153.755110620775,
+        "p50_ms": 147.84516498912126,
+        "p95_ms": 184.69408322125662
+      }
+    },
+    "counter_audio_merge_ms": 2.8903749771416187,
+    "estimated_service_fps": 6.50384885395076
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 480,
+      "fps": 15,
+      "feet": "near",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 165,
+    "decoded_frames": 329,
+    "feet_runs": 68,
+    "foot_fraction": 0.4121212121212121,
+    "video_only_count": 15,
+    "estimated_count": 15,
+    "seen_count": 15,
+    "heard_count": 0,
+    "signed_difference": -1,
+    "tracking_summary": {
+      "observed": 134,
+      "predicted": 3,
+      "lost": 28
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.34009951485716,
+        "p50_ms": 6.055833073332906,
+        "p95_ms": 8.437699754722416
+      },
+      "ball": {
+        "mean_ms": 37.96034390812345,
+        "p50_ms": 36.05499991681427,
+        "p95_ms": 50.83731638733295
+      },
+      "pose": {
+        "mean_ms": 36.5432911361991,
+        "p50_ms": 33.992124954238534,
+        "p95_ms": 48.778724367730305
+      },
+      "feet": {
+        "mean_ms": 28.377763634180706,
+        "p50_ms": 0.0,
+        "p95_ms": 73.3649831963703
+      },
+      "tracking": {
+        "mean_ms": 6.677417148073966,
+        "p50_ms": 7.697916938923299,
+        "p95_ms": 10.813449625857173
+      },
+      "service": {
+        "mean_ms": 115.89891534143437,
+        "p50_ms": 92.9652500199154,
+        "p95_ms": 172.93891687877476
+      }
+    },
+    "counter_audio_merge_ms": 2.3040419910103083,
+    "estimated_service_fps": 8.628208444005132
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 320,
+      "fps": 30,
+      "feet": "off",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 329,
+    "decoded_frames": 329,
+    "feet_runs": 0,
+    "foot_fraction": 0.0,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 264,
+      "predicted": 13,
+      "lost": 52
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.373228341776957,
+        "p50_ms": 6.092125084251165,
+        "p95_ms": 8.613125397823751
+      },
+      "ball": {
+        "mean_ms": 34.31220505051145,
+        "p50_ms": 32.96241594944149,
+        "p95_ms": 44.324466562829905
+      },
+      "pose": {
+        "mean_ms": 36.702209474634955,
+        "p50_ms": 34.12270895205438,
+        "p95_ms": 50.30923339072612
+      },
+      "feet": {
+        "mean_ms": 0.0,
+        "p50_ms": 0.0,
+        "p95_ms": 0.0
+      },
+      "tracking": {
+        "mean_ms": 6.577089315317118,
+        "p50_ms": 7.666791905649006,
+        "p95_ms": 10.933117405511437
+      },
+      "service": {
+        "mean_ms": 83.96473218224048,
+        "p50_ms": 81.1248739482835,
+        "p95_ms": 103.77708224114029
+      }
+    },
+    "counter_audio_merge_ms": 3.4279159735888243,
+    "estimated_service_fps": 11.90976227768534
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 320,
+      "fps": 30,
+      "feet": "all",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 329,
+    "decoded_frames": 329,
+    "feet_runs": 325,
+    "foot_fraction": 0.9878419452887538,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 264,
+      "predicted": 13,
+      "lost": 52
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.373228341776957,
+        "p50_ms": 6.092125084251165,
+        "p95_ms": 8.613125397823751
+      },
+      "ball": {
+        "mean_ms": 34.31220505051145,
+        "p50_ms": 32.96241594944149,
+        "p95_ms": 44.324466562829905
+      },
+      "pose": {
+        "mean_ms": 36.702209474634955,
+        "p50_ms": 34.12270895205438,
+        "p95_ms": 50.30923339072612
+      },
+      "feet": {
+        "mean_ms": 66.18851306954382,
+        "p50_ms": 65.0294590741396,
+        "p95_ms": 80.64778337720782
+      },
+      "tracking": {
+        "mean_ms": 6.579049146383163,
+        "p50_ms": 7.668582955375314,
+        "p95_ms": 10.93830799218267
+      },
+      "service": {
+        "mean_ms": 150.15520508285033,
+        "p50_ms": 145.43987484648824,
+        "p95_ms": 179.03080019168547
+      }
+    },
+    "counter_audio_merge_ms": 5.471208016388118,
+    "estimated_service_fps": 6.659775792975244
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 320,
+      "fps": 30,
+      "feet": "near",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 329,
+    "decoded_frames": 329,
+    "feet_runs": 124,
+    "foot_fraction": 0.3768996960486322,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 264,
+      "predicted": 13,
+      "lost": 52
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.373228341776957,
+        "p50_ms": 6.092125084251165,
+        "p95_ms": 8.613125397823751
+      },
+      "ball": {
+        "mean_ms": 34.31220505051145,
+        "p50_ms": 32.96241594944149,
+        "p95_ms": 44.324466562829905
+      },
+      "pose": {
+        "mean_ms": 36.702209474634955,
+        "p50_ms": 34.12270895205438,
+        "p95_ms": 50.30923339072612
+      },
+      "feet": {
+        "mean_ms": 25.776883754256467,
+        "p50_ms": 0.0,
+        "p95_ms": 73.60930840950458
+      },
+      "tracking": {
+        "mean_ms": 6.5780947392517675,
+        "p50_ms": 7.668082951568067,
+        "p95_ms": 10.935408156365154
+      },
+      "service": {
+        "mean_ms": 109.7426213604316,
+        "p50_ms": 86.64933312684298,
+        "p95_ms": 170.66451737191522
+      }
+    },
+    "counter_audio_merge_ms": 4.0058750892058015,
+    "estimated_service_fps": 9.112229939502397
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 320,
+      "fps": 15,
+      "feet": "off",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 165,
+    "decoded_frames": 329,
+    "feet_runs": 0,
+    "foot_fraction": 0.0,
+    "video_only_count": 15,
+    "estimated_count": 15,
+    "seen_count": 15,
+    "heard_count": 0,
+    "signed_difference": -1,
+    "tracking_summary": {
+      "observed": 131,
+      "predicted": 4,
+      "lost": 30
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.34009951485716,
+        "p50_ms": 6.055833073332906,
+        "p95_ms": 8.437699754722416
+      },
+      "ball": {
+        "mean_ms": 34.459338356938325,
+        "p50_ms": 33.22812507394701,
+        "p95_ms": 44.35639977455139
+      },
+      "pose": {
+        "mean_ms": 36.5432911361991,
+        "p50_ms": 33.992124954238534,
+        "p95_ms": 48.778724367730305
+      },
+      "feet": {
+        "mean_ms": 0.0,
+        "p50_ms": 0.0,
+        "p95_ms": 0.0
+      },
+      "tracking": {
+        "mean_ms": 6.530940423324479,
+        "p50_ms": 7.6405409490689635,
+        "p95_ms": 10.894316248595711
+      },
+      "service": {
+        "mean_ms": 83.87366943131906,
+        "p50_ms": 81.18883206043392,
+        "p95_ms": 100.76919891871509
+      }
+    },
+    "counter_audio_merge_ms": 1.936374930664897,
+    "estimated_service_fps": 11.922692863925093
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 320,
+      "fps": 15,
+      "feet": "all",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 165,
+    "decoded_frames": 329,
+    "feet_runs": 161,
+    "foot_fraction": 0.9757575757575757,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 131,
+      "predicted": 4,
+      "lost": 30
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.34009951485716,
+        "p50_ms": 6.055833073332906,
+        "p95_ms": 8.437699754722416
+      },
+      "ball": {
+        "mean_ms": 34.459338356938325,
+        "p50_ms": 33.22812507394701,
+        "p95_ms": 44.35639977455139
+      },
+      "pose": {
+        "mean_ms": 36.5432911361991,
+        "p50_ms": 33.992124954238534,
+        "p95_ms": 48.778724367730305
+      },
+      "feet": {
+        "mean_ms": 66.23292729103316,
+        "p50_ms": 65.11300010606647,
+        "p95_ms": 81.51548355817795
+      },
+      "tracking": {
+        "mean_ms": 6.5329666983223325,
+        "p50_ms": 7.641125004738569,
+        "p95_ms": 10.89596634265035
+      },
+      "service": {
+        "mean_ms": 150.1086229973501,
+        "p50_ms": 145.86150087416172,
+        "p95_ms": 178.381690592505
+      }
+    },
+    "counter_audio_merge_ms": 2.817666041664779,
+    "estimated_service_fps": 6.661842471352584
+  },
+  {
+    "clip": 1,
+    "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+    "reference_total": 16,
+    "settings": {
+      "device": "mps",
+      "image_size": 320,
+      "fps": 15,
+      "feet": "near",
+      "floor_refresh_seconds": 0.5,
+      "near_leg_diameters": 3.0
+    },
+    "sampled_frames": 165,
+    "decoded_frames": 329,
+    "feet_runs": 68,
+    "foot_fraction": 0.4121212121212121,
+    "video_only_count": 16,
+    "estimated_count": 16,
+    "seen_count": 16,
+    "heard_count": 0,
+    "signed_difference": 0,
+    "tracking_summary": {
+      "observed": 131,
+      "predicted": 4,
+      "lost": 30
+    },
+    "stage_timing": {
+      "decode": {
+        "mean_ms": 6.34009951485716,
+        "p50_ms": 6.055833073332906,
+        "p95_ms": 8.437699754722416
+      },
+      "ball": {
+        "mean_ms": 34.459338356938325,
+        "p50_ms": 33.22812507394701,
+        "p95_ms": 44.35639977455139
+      },
+      "pose": {
+        "mean_ms": 36.5432911361991,
+        "p50_ms": 33.992124954238534,
+        "p95_ms": 48.778724367730305
+      },
+      "feet": {
+        "mean_ms": 28.456102773039177,
+        "p50_ms": 0.0,
+        "p95_ms": 74.77139160037038
+      },
+      "tracking": {
+        "mean_ms": 6.531990139575845,
+        "p50_ms": 7.6408329186961055,
+        "p95_ms": 10.895258490927514
+      },
+      "service": {
+        "mean_ms": 112.33082192060961,
+        "p50_ms": 88.44650001265109,
+        "p95_ms": 167.98372417688367
+      }
+    },
+    "counter_audio_merge_ms": 2.298334031365812,
+    "estimated_service_fps": 8.902276177652784
+  }
+]
