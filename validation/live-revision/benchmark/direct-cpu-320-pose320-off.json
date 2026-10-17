@@ -1,0 +1,2970 @@
+{
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "torch": "2.7.1",
+  "cpu_threads": 8,
+  "startup_warmup_seconds": 1.4305696249939501,
+  "clips": [
+    {
+      "video_sha256": "73daba39d2ef14ea593cc59ac5bf8ce8f2a2db7547de6f91c05fc1ec39e2a7a3",
+      "clip": 0,
+      "settings": {
+        "device": "cpu",
+        "image_size": 320,
+        "fps": 30,
+        "feet": "off",
+        "floor_refresh_seconds": 0.5,
+        "near_leg_diameters": 3.0
+      },
+      "pose_input": 320,
+      "reference_total": 26,
+      "decoded_frames": 427,
+      "sampled_frames": 427,
+      "feet_runs": 0,
+      "stage_timing": {
+        "decode": {
+          "mean_ms": 6.8089468412829754,
+          "p50_ms": 6.922167027369142,
+          "p95_ms": 8.783203945495188
+        },
+        "ball": {
+          "mean_ms": 19.40219405906567,
+          "p50_ms": 18.561583012342453,
+          "p95_ms": 21.831479598768055
+        },
+        "pose": {
+          "mean_ms": 11.577323200704587,
+          "p50_ms": 11.217916035093367,
+          "p95_ms": 13.892933120951055
+        },
+        "feet": {
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "tracking": {
+          "mean_ms": 7.799254694355944,
+          "p50_ms": 8.83670907933265,
+          "p95_ms": 12.6325836754404
+        },
+        "service": {
+          "mean_ms": 45.58771879540918,
+          "p50_ms": 45.363458106294274,
+          "p95_ms": 55.277029401622706
+        }
+      },
+      "processing_seconds_excluding_counter_audio": 19.47073675005231,
+      "video_only_count": 24,
+      "estimated_count": 26,
+      "seen_count": 24,
+      "heard_count": 2,
+      "events": [
+        {
+          "id": "event-32",
+          "frame": 32,
+          "time": 1.0666666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.529860041691713,
+          "outgoing_diameters_per_second": -5.516064781775849
+        },
+        {
+          "id": "event-46",
+          "frame": 46,
+          "time": 1.5333333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.653085837801137,
+          "outgoing_diameters_per_second": -8.122916233017147
+        },
+        {
+          "id": "event-61",
+          "frame": 61,
+          "time": 2.033333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.642357740581345,
+          "outgoing_diameters_per_second": -6.993171623836986
+        },
+        {
+          "id": "event-77",
+          "frame": 77,
+          "time": 2.566666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.2099456787109295,
+          "outgoing_diameters_per_second": -7.414606379366475
+        },
+        {
+          "id": "event-90",
+          "frame": 90,
+          "time": 3.0,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.977898351021351,
+          "outgoing_diameters_per_second": -7.578965794959715
+        },
+        {
+          "id": "event-107",
+          "frame": 107,
+          "time": 3.566666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.097740319590208,
+          "outgoing_diameters_per_second": -7.164398790548409
+        },
+        {
+          "id": "event-122",
+          "frame": 122,
+          "time": 4.066666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.347065580784323,
+          "outgoing_diameters_per_second": -8.972518299612206
+        },
+        {
+          "id": "event-139",
+          "frame": 139,
+          "time": 4.633333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 10.51982378854625,
+          "outgoing_diameters_per_second": -9.930931196863995
+        },
+        {
+          "id": "event-156",
+          "frame": 156,
+          "time": 5.2,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 10.492251363772166,
+          "outgoing_diameters_per_second": -6.35337930770787
+        },
+        {
+          "id": "event-170",
+          "frame": 170,
+          "time": 5.666666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.555995088449959,
+          "outgoing_diameters_per_second": -6.0207036755116885
+        },
+        {
+          "id": "event-182",
+          "frame": 182,
+          "time": 6.066666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.7982912050481135,
+          "outgoing_diameters_per_second": -10.818874926726341
+        },
+        {
+          "id": "heard-198",
+          "frame": 198,
+          "time": 6.593333333333334,
+          "status": "counted",
+          "reason": "heard_ball_out_of_view",
+          "body_part": null,
+          "evidence_sources": [
+            "audio"
+          ],
+          "audio_strength": 21.402899627462972
+        },
+        {
+          "id": "event-218",
+          "frame": 218,
+          "time": 7.266666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.576816549354809,
+          "outgoing_diameters_per_second": -4.591115398022446
+        },
+        {
+          "id": "event-236",
+          "frame": 236,
+          "time": 7.866666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.10721453256169,
+          "outgoing_diameters_per_second": -6.321903114639737
+        },
+        {
+          "id": "event-251",
+          "frame": 251,
+          "time": 8.366666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.638161267421921,
+          "outgoing_diameters_per_second": -7.843146072124674
+        },
+        {
+          "id": "event-266",
+          "frame": 266,
+          "time": 8.866666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.157275948688063,
+          "outgoing_diameters_per_second": -7.123373792921178
+        },
+        {
+          "id": "event-282",
+          "frame": 282,
+          "time": 9.4,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.945662427706805,
+          "outgoing_diameters_per_second": -7.54556705757926
+        },
+        {
+          "id": "event-296",
+          "frame": 296,
+          "time": 9.866666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.812923644146478,
+          "outgoing_diameters_per_second": -9.491584400654693
+        },
+        {
+          "id": "heard-315",
+          "frame": 315,
+          "time": 10.493333333333332,
+          "status": "counted",
+          "reason": "heard_ball_out_of_view",
+          "body_part": null,
+          "evidence_sources": [
+            "audio"
+          ],
+          "audio_strength": 10.935458971610688
+        },
+        {
+          "id": "event-333",
+          "frame": 333,
+          "time": 11.1,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 10.399764210179795,
+          "outgoing_diameters_per_second": -8.521402949430502
+        },
+        {
+          "id": "event-350",
+          "frame": 350,
+          "time": 11.666666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.92395562631687,
+          "outgoing_diameters_per_second": -9.00927464985131
+        },
+        {
+          "id": "event-367",
+          "frame": 367,
+          "time": 12.233333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_knee",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.081176565069357,
+          "outgoing_diameters_per_second": -4.605022602054324
+        },
+        {
+          "id": "event-382",
+          "frame": 382,
+          "time": 12.733333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.680757158225186,
+          "outgoing_diameters_per_second": -7.6532929288607
+        },
+        {
+          "id": "event-395",
+          "frame": 395,
+          "time": 13.168333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 2.8071389746814903,
+          "outgoing_diameters_per_second": -5.806410414153061
+        },
+        {
+          "id": "event-412",
+          "frame": 412,
+          "time": 13.735,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.304321211985801,
+          "outgoing_diameters_per_second": -4.434397167888648
+        },
+        {
+          "id": "event-424",
+          "frame": 424,
+          "time": 14.135,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.66384875668135,
+          "outgoing_diameters_per_second": -6.803460899874859
+        }
+      ],
+      "video_event_comparison": {
+        "tolerance_seconds": 0.1,
+        "estimated_count": 24,
+        "reference_visible_count": 26,
+        "matched": 24,
+        "false_positives": [],
+        "unverifiable_predictions": [],
+        "misses": [
+          {
+            "id": "manual-12",
+            "time": 6.6,
+            "frame": 198,
+            "label": "touch",
+            "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+          },
+          {
+            "id": "manual-19",
+            "time": 10.5,
+            "frame": 315,
+            "label": "touch",
+            "note": "Independent visual review; contact timing approximate within 1\u20132 frames."
+          }
+        ],
+        "matches": [
+          {
+            "predicted_time": 1.0666666666666667,
+            "reference_time": 1.0666666666666667,
+            "predicted_frame": 32,
+            "reference_frame": 32,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 1.5333333333333334,
+            "reference_time": 1.5333333333333334,
+            "predicted_frame": 46,
+            "reference_frame": 46,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 2.033333333333333,
+            "reference_time": 2.033333333333333,
+            "predicted_frame": 61,
+            "reference_frame": 61,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 2.566666666666667,
+            "reference_time": 2.566666666666667,
+            "predicted_frame": 77,
+            "reference_frame": 77,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 3.0,
+            "reference_time": 3.0,
+            "predicted_frame": 90,
+            "reference_frame": 90,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 3.566666666666667,
+            "reference_time": 3.566666666666667,
+            "predicted_frame": 107,
+            "reference_frame": 107,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 4.066666666666666,
+            "reference_time": 4.066666666666666,
+            "predicted_frame": 122,
+            "reference_frame": 122,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 4.633333333333334,
+            "reference_time": 4.633333333333334,
+            "predicted_frame": 139,
+            "reference_frame": 139,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 5.2,
+            "reference_time": 5.2,
+            "predicted_frame": 156,
+            "reference_frame": 156,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 5.666666666666667,
+            "reference_time": 5.666666666666667,
+            "predicted_frame": 170,
+            "reference_frame": 170,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 6.066666666666666,
+            "reference_time": 6.066666666666666,
+            "predicted_frame": 182,
+            "reference_frame": 182,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 7.266666666666667,
+            "reference_time": 7.233333333333333,
+            "predicted_frame": 218,
+            "reference_frame": 217,
+            "error_seconds": 0.033333333333333215
+          },
+          {
+            "predicted_time": 7.866666666666666,
+            "reference_time": 7.866666666666666,
+            "predicted_frame": 236,
+            "reference_frame": 236,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 8.366666666666667,
+            "reference_time": 8.366666666666667,
+            "predicted_frame": 251,
+            "reference_frame": 251,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 8.866666666666667,
+            "reference_time": 8.866666666666667,
+            "predicted_frame": 266,
+            "reference_frame": 266,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 9.4,
+            "reference_time": 9.366666666666667,
+            "predicted_frame": 282,
+            "reference_frame": 281,
+            "error_seconds": 0.033333333333333215
+          },
+          {
+            "predicted_time": 9.866666666666667,
+            "reference_time": 9.866666666666667,
+            "predicted_frame": 296,
+            "reference_frame": 296,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 11.1,
+            "reference_time": 11.1,
+            "predicted_frame": 333,
+            "reference_frame": 333,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 11.666666666666666,
+            "reference_time": 11.666666666666666,
+            "predicted_frame": 350,
+            "reference_frame": 350,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 12.233333333333333,
+            "reference_time": 12.266666666666667,
+            "predicted_frame": 367,
+            "reference_frame": 368,
+            "error_seconds": -0.03333333333333499
+          },
+          {
+            "predicted_time": 12.733333333333333,
+            "reference_time": 12.733333333333333,
+            "predicted_frame": 382,
+            "reference_frame": 382,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 13.168333333333333,
+            "reference_time": 13.168333333333333,
+            "predicted_frame": 395,
+            "reference_frame": 395,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 13.735,
+            "reference_time": 13.735,
+            "predicted_frame": 412,
+            "reference_frame": 412,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 14.135,
+            "reference_time": 14.101666666666667,
+            "predicted_frame": 424,
+            "reference_frame": 423,
+            "error_seconds": 0.033333333333333215
+          }
+        ],
+        "mean_absolute_timing_error": 0.0055555555555556095,
+        "tracking_summary": {
+          "observed": 393,
+          "predicted": 18,
+          "lost": 16
+        },
+        "runtime_seconds": 19.47073675005231,
+        "config": {
+          "detector": "yolo11s.pt",
+          "pose_model": "yolo11n-pose.pt",
+          "foot_model": "",
+          "image_size": 320,
+          "pose_size": 320,
+          "detection_threshold": 0.05,
+          "landmark_threshold": 0.35,
+          "prediction_seconds": 0.15,
+          "minimum_size_ratio": 0.75,
+          "edge_outward_fraction": 0.2,
+          "edge_margin_diameters": 0.05,
+          "edge_outward_diameters_per_second": 0.5,
+          "association_diameters": 3.0,
+          "contact_diameters": 1.15,
+          "foot_length_shin_ratio": 0.6,
+          "stop_seconds": 1.0,
+          "stop_radius_diameters": 0.5,
+          "stop_gap_seconds": 0.2,
+          "audio_enabled": true,
+          "audio_min_strength": 8.0,
+          "audio_match_seconds": 0.12,
+          "rhythm_min_beats": 0.6,
+          "rhythm_max_beats": 1.6,
+          "audio_return_seconds": 1.0,
+          "debounce_seconds": 0.22,
+          "velocity_window_seconds": 0.14,
+          "min_velocity_diameters": 0.7,
+          "appearance_enabled": true,
+          "appearance_horizon_seconds": 0.25,
+          "appearance_similarity": 0.6,
+          "device": "cpu"
+        },
+        "uncertain_intervals": [
+          {
+            "start": 6.7,
+            "end": 7.133333333333334,
+            "note": "Ball above the image; hidden contacts cannot be verified."
+          }
+        ]
+      },
+      "with_offline_audio_event_comparison": {
+        "tolerance_seconds": 0.1,
+        "estimated_count": 26,
+        "reference_visible_count": 26,
+        "matched": 26,
+        "false_positives": [],
+        "unverifiable_predictions": [],
+        "misses": [],
+        "matches": [
+          {
+            "predicted_time": 1.0666666666666667,
+            "reference_time": 1.0666666666666667,
+            "predicted_frame": 32,
+            "reference_frame": 32,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 1.5333333333333334,
+            "reference_time": 1.5333333333333334,
+            "predicted_frame": 46,
+            "reference_frame": 46,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 2.033333333333333,
+            "reference_time": 2.033333333333333,
+            "predicted_frame": 61,
+            "reference_frame": 61,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 2.566666666666667,
+            "reference_time": 2.566666666666667,
+            "predicted_frame": 77,
+            "reference_frame": 77,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 3.0,
+            "reference_time": 3.0,
+            "predicted_frame": 90,
+            "reference_frame": 90,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 3.566666666666667,
+            "reference_time": 3.566666666666667,
+            "predicted_frame": 107,
+            "reference_frame": 107,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 4.066666666666666,
+            "reference_time": 4.066666666666666,
+            "predicted_frame": 122,
+            "reference_frame": 122,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 4.633333333333334,
+            "reference_time": 4.633333333333334,
+            "predicted_frame": 139,
+            "reference_frame": 139,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 5.2,
+            "reference_time": 5.2,
+            "predicted_frame": 156,
+            "reference_frame": 156,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 5.666666666666667,
+            "reference_time": 5.666666666666667,
+            "predicted_frame": 170,
+            "reference_frame": 170,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 6.066666666666666,
+            "reference_time": 6.066666666666666,
+            "predicted_frame": 182,
+            "reference_frame": 182,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 6.593333333333334,
+            "reference_time": 6.6,
+            "predicted_frame": 198,
+            "reference_frame": 198,
+            "error_seconds": -0.0066666666666659324
+          },
+          {
+            "predicted_time": 7.266666666666667,
+            "reference_time": 7.233333333333333,
+            "predicted_frame": 218,
+            "reference_frame": 217,
+            "error_seconds": 0.033333333333333215
+          },
+          {
+            "predicted_time": 7.866666666666666,
+            "reference_time": 7.866666666666666,
+            "predicted_frame": 236,
+            "reference_frame": 236,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 8.366666666666667,
+            "reference_time": 8.366666666666667,
+            "predicted_frame": 251,
+            "reference_frame": 251,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 8.866666666666667,
+            "reference_time": 8.866666666666667,
+            "predicted_frame": 266,
+            "reference_frame": 266,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 9.4,
+            "reference_time": 9.366666666666667,
+            "predicted_frame": 282,
+            "reference_frame": 281,
+            "error_seconds": 0.033333333333333215
+          },
+          {
+            "predicted_time": 9.866666666666667,
+            "reference_time": 9.866666666666667,
+            "predicted_frame": 296,
+            "reference_frame": 296,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 10.493333333333332,
+            "reference_time": 10.5,
+            "predicted_frame": 315,
+            "reference_frame": 315,
+            "error_seconds": -0.006666666666667709
+          },
+          {
+            "predicted_time": 11.1,
+            "reference_time": 11.1,
+            "predicted_frame": 333,
+            "reference_frame": 333,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 11.666666666666666,
+            "reference_time": 11.666666666666666,
+            "predicted_frame": 350,
+            "reference_frame": 350,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 12.233333333333333,
+            "reference_time": 12.266666666666667,
+            "predicted_frame": 367,
+            "reference_frame": 368,
+            "error_seconds": -0.03333333333333499
+          },
+          {
+            "predicted_time": 12.733333333333333,
+            "reference_time": 12.733333333333333,
+            "predicted_frame": 382,
+            "reference_frame": 382,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 13.168333333333333,
+            "reference_time": 13.168333333333333,
+            "predicted_frame": 395,
+            "reference_frame": 395,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 13.735,
+            "reference_time": 13.735,
+            "predicted_frame": 412,
+            "reference_frame": 412,
+            "error_seconds": 0.0
+          },
+          {
+            "predicted_time": 14.135,
+            "reference_time": 14.101666666666667,
+            "predicted_frame": 424,
+            "reference_frame": 423,
+            "error_seconds": 0.033333333333333215
+          }
+        ],
+        "mean_absolute_timing_error": 0.005641025641025703,
+        "tracking_summary": {
+          "observed": 393,
+          "predicted": 18,
+          "lost": 16
+        },
+        "runtime_seconds": 19.47073675005231,
+        "config": {
+          "detector": "yolo11s.pt",
+          "pose_model": "yolo11n-pose.pt",
+          "foot_model": "",
+          "image_size": 320,
+          "pose_size": 320,
+          "detection_threshold": 0.05,
+          "landmark_threshold": 0.35,
+          "prediction_seconds": 0.15,
+          "minimum_size_ratio": 0.75,
+          "edge_outward_fraction": 0.2,
+          "edge_margin_diameters": 0.05,
+          "edge_outward_diameters_per_second": 0.5,
+          "association_diameters": 3.0,
+          "contact_diameters": 1.15,
+          "foot_length_shin_ratio": 0.6,
+          "stop_seconds": 1.0,
+          "stop_radius_diameters": 0.5,
+          "stop_gap_seconds": 0.2,
+          "audio_enabled": true,
+          "audio_min_strength": 8.0,
+          "audio_match_seconds": 0.12,
+          "rhythm_min_beats": 0.6,
+          "rhythm_max_beats": 1.6,
+          "audio_return_seconds": 1.0,
+          "debounce_seconds": 0.22,
+          "velocity_window_seconds": 0.14,
+          "min_velocity_diameters": 0.7,
+          "appearance_enabled": true,
+          "appearance_horizon_seconds": 0.25,
+          "appearance_similarity": 0.6,
+          "device": "cpu"
+        },
+        "uncertain_intervals": [
+          {
+            "start": 6.7,
+            "end": 7.133333333333334,
+            "note": "Ball above the image; hidden contacts cannot be verified."
+          }
+        ]
+      }
+    },
+    {
+      "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+      "clip": 1,
+      "settings": {
+        "device": "cpu",
+        "image_size": 320,
+        "fps": 30,
+        "feet": "off",
+        "floor_refresh_seconds": 0.5,
+        "near_leg_diameters": 3.0
+      },
+      "pose_input": 320,
+      "reference_total": 16,
+      "decoded_frames": 329,
+      "sampled_frames": 329,
+      "feet_runs": 0,
+      "stage_timing": {
+        "decode": {
+          "mean_ms": 6.013930197748551,
+          "p50_ms": 5.7447090512141585,
+          "p95_ms": 8.26421675737947
+        },
+        "ball": {
+          "mean_ms": 18.627802043442692,
+          "p50_ms": 18.143708002753556,
+          "p95_ms": 19.820149638690054
+        },
+        "pose": {
+          "mean_ms": 11.291528990036472,
+          "p50_ms": 10.991208022460341,
+          "p95_ms": 12.194249988533556
+        },
+        "feet": {
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "tracking": {
+          "mean_ms": 6.820764556798891,
+          "p50_ms": 8.114499971270561,
+          "p95_ms": 10.958249820396302
+        },
+        "service": {
+          "mean_ms": 42.7540257880266,
+          "p50_ms": 42.77800000272691,
+          "p95_ms": 48.307050042785704
+        }
+      },
+      "processing_seconds_excluding_counter_audio": 14.069465750013478,
+      "video_only_count": 16,
+      "estimated_count": 16,
+      "seen_count": 16,
+      "heard_count": 0,
+      "events": [
+        {
+          "id": "event-25",
+          "frame": 25,
+          "time": 0.8333333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.447401501441516,
+          "outgoing_diameters_per_second": -7.325894435912751
+        },
+        {
+          "id": "event-41",
+          "frame": 41,
+          "time": 1.3666666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.2213771478474715,
+          "outgoing_diameters_per_second": -8.106713439197756
+        },
+        {
+          "id": "event-57",
+          "frame": 57,
+          "time": 1.9,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.962148907540861,
+          "outgoing_diameters_per_second": -6.259655130320591
+        },
+        {
+          "id": "event-72",
+          "frame": 72,
+          "time": 2.4,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.287973650625045,
+          "outgoing_diameters_per_second": -7.229193612199338
+        },
+        {
+          "id": "event-87",
+          "frame": 87,
+          "time": 2.9,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.793963299681808,
+          "outgoing_diameters_per_second": -5.83977240758226
+        },
+        {
+          "id": "event-102",
+          "frame": 102,
+          "time": 3.4,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.813311200506943,
+          "outgoing_diameters_per_second": -8.357193208356842
+        },
+        {
+          "id": "event-118",
+          "frame": 118,
+          "time": 3.933333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.117736694822295,
+          "outgoing_diameters_per_second": -8.518420945125758
+        },
+        {
+          "id": "event-134",
+          "frame": 134,
+          "time": 4.466666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.340518514764874,
+          "outgoing_diameters_per_second": -7.809665686626358
+        },
+        {
+          "id": "event-149",
+          "frame": 149,
+          "time": 4.966666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.275445455500902,
+          "outgoing_diameters_per_second": -5.850823203449833
+        },
+        {
+          "id": "event-164",
+          "frame": 164,
+          "time": 5.466666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.502690178170324,
+          "outgoing_diameters_per_second": -6.926019037088057
+        },
+        {
+          "id": "event-181",
+          "frame": 181,
+          "time": 6.033333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.388194911311803,
+          "outgoing_diameters_per_second": -7.116840164015788
+        },
+        {
+          "id": "event-195",
+          "frame": 195,
+          "time": 6.5,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.42889797034625,
+          "outgoing_diameters_per_second": -8.558177644924285
+        },
+        {
+          "id": "event-212",
+          "frame": 212,
+          "time": 7.066666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.204425485231862,
+          "outgoing_diameters_per_second": -5.1830117098474915
+        },
+        {
+          "id": "event-225",
+          "frame": 225,
+          "time": 7.501666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.797025510862827,
+          "outgoing_diameters_per_second": -6.489586166016642
+        },
+        {
+          "id": "event-238",
+          "frame": 238,
+          "time": 7.935,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.724678363791759,
+          "outgoing_diameters_per_second": -9.645539656836378
+        },
+        {
+          "id": "event-255",
+          "frame": 255,
+          "time": 8.501666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.42064138178253,
+          "outgoing_diameters_per_second": -4.215937679949977
+        }
+      ]
+    },
+    {
+      "video_sha256": "299a37f78c0bfa219a8f479ccdbb7255b54f8cbe4bf055796ba109c5325812ed",
+      "clip": 2,
+      "settings": {
+        "device": "cpu",
+        "image_size": 320,
+        "fps": 30,
+        "feet": "off",
+        "floor_refresh_seconds": 0.5,
+        "near_leg_diameters": 3.0
+      },
+      "pose_input": 320,
+      "reference_total": 29,
+      "decoded_frames": 474,
+      "sampled_frames": 474,
+      "feet_runs": 0,
+      "stage_timing": {
+        "decode": {
+          "mean_ms": 6.606916415127866,
+          "p50_ms": 6.419707962777466,
+          "p95_ms": 8.501835702918468
+        },
+        "ball": {
+          "mean_ms": 18.34914050451067,
+          "p50_ms": 18.227500491775572,
+          "p95_ms": 19.46217033546418
+        },
+        "pose": {
+          "mean_ms": 11.191041126035799,
+          "p50_ms": 11.116937501356006,
+          "p95_ms": 12.040975410491226
+        },
+        "feet": {
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "tracking": {
+          "mean_ms": 8.327162362839477,
+          "p50_ms": 8.366812427993864,
+          "p95_ms": 13.161426619626582
+        },
+        "service": {
+          "mean_ms": 44.474260408513814,
+          "p50_ms": 44.49560405919328,
+          "p95_ms": 50.94904591678642
+        }
+      },
+      "processing_seconds_excluding_counter_audio": 21.085268041933887,
+      "video_only_count": 28,
+      "estimated_count": 28,
+      "seen_count": 28,
+      "heard_count": 0,
+      "events": [
+        {
+          "id": "event-33",
+          "frame": 33,
+          "time": 1.1016666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.669710255037419,
+          "outgoing_diameters_per_second": -6.921270245290629
+        },
+        {
+          "id": "event-46",
+          "frame": 46,
+          "time": 1.535,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.636870191449966,
+          "outgoing_diameters_per_second": -6.333385564120188
+        },
+        {
+          "id": "event-62",
+          "frame": 62,
+          "time": 2.0683333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.035934873833558,
+          "outgoing_diameters_per_second": -6.898690840207592
+        },
+        {
+          "id": "event-78",
+          "frame": 78,
+          "time": 2.6016666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.858290269925251,
+          "outgoing_diameters_per_second": -7.8521304560789185
+        },
+        {
+          "id": "event-92",
+          "frame": 92,
+          "time": 3.0683333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.806101630581768,
+          "outgoing_diameters_per_second": -7.6768079511168015
+        },
+        {
+          "id": "event-109",
+          "frame": 109,
+          "time": 3.635,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.542428669176626,
+          "outgoing_diameters_per_second": -9.794678135922073
+        },
+        {
+          "id": "event-126",
+          "frame": 126,
+          "time": 4.201666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.718797272326877,
+          "outgoing_diameters_per_second": -5.778218138451686
+        },
+        {
+          "id": "event-141",
+          "frame": 141,
+          "time": 4.701666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.815787016455799,
+          "outgoing_diameters_per_second": -6.58750243685141
+        },
+        {
+          "id": "event-155",
+          "frame": 155,
+          "time": 5.168333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.186470763324084,
+          "outgoing_diameters_per_second": -9.846770456392454
+        },
+        {
+          "id": "event-173",
+          "frame": 173,
+          "time": 5.7683333333333335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.55927358758302,
+          "outgoing_diameters_per_second": -6.934422848017434
+        },
+        {
+          "id": "event-188",
+          "frame": 188,
+          "time": 6.2683333333333335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.3033300582838345,
+          "outgoing_diameters_per_second": -4.747506014702878
+        },
+        {
+          "id": "event-203",
+          "frame": 203,
+          "time": 6.7683333333333335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.323380547600803,
+          "outgoing_diameters_per_second": -9.145224442353156
+        },
+        {
+          "id": "event-222",
+          "frame": 222,
+          "time": 7.401666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 10.164232969703633,
+          "outgoing_diameters_per_second": -7.863059642503106
+        },
+        {
+          "id": "event-237",
+          "frame": 237,
+          "time": 7.901666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.734032452106506,
+          "outgoing_diameters_per_second": -8.693410277366606
+        },
+        {
+          "id": "event-255",
+          "frame": 255,
+          "time": 8.501666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.167583229758563,
+          "outgoing_diameters_per_second": -8.219925759055432
+        },
+        {
+          "id": "event-269",
+          "frame": 269,
+          "time": 8.968333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.451439773827288,
+          "outgoing_diameters_per_second": -8.735479978092965
+        },
+        {
+          "id": "event-288",
+          "frame": 288,
+          "time": 9.601666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.394405136336325,
+          "outgoing_diameters_per_second": -8.333299370293163
+        },
+        {
+          "id": "event-305",
+          "frame": 305,
+          "time": 10.168333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.160244499048904,
+          "outgoing_diameters_per_second": -5.528780088914597
+        },
+        {
+          "id": "event-321",
+          "frame": 321,
+          "time": 10.701666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.185880857093348,
+          "outgoing_diameters_per_second": -5.904895105094504
+        },
+        {
+          "id": "event-336",
+          "frame": 336,
+          "time": 11.201666666666666,
+          "status": "review",
+          "reason": "missing_leg_landmarks",
+          "body_part": null,
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.228887466487008,
+          "outgoing_diameters_per_second": -5.982313599533652
+        },
+        {
+          "id": "event-350",
+          "frame": 350,
+          "time": 11.668333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.414791279965708,
+          "outgoing_diameters_per_second": -6.265730651553247
+        },
+        {
+          "id": "event-364",
+          "frame": 364,
+          "time": 12.135,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.210049475285631,
+          "outgoing_diameters_per_second": -6.501987571865187
+        },
+        {
+          "id": "event-377",
+          "frame": 377,
+          "time": 12.568333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.5892169535832785,
+          "outgoing_diameters_per_second": -9.010265624381164
+        },
+        {
+          "id": "event-390",
+          "frame": 390,
+          "time": 13.001666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 3.1539522627108925,
+          "outgoing_diameters_per_second": -7.150528676258993
+        },
+        {
+          "id": "event-407",
+          "frame": 407,
+          "time": 13.568333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.768733079492895,
+          "outgoing_diameters_per_second": -9.113172366679812
+        },
+        {
+          "id": "event-424",
+          "frame": 424,
+          "time": 14.135,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.281342309220413,
+          "outgoing_diameters_per_second": -5.9353558174649805
+        },
+        {
+          "id": "event-438",
+          "frame": 438,
+          "time": 14.601666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.554046509462162,
+          "outgoing_diameters_per_second": -5.35597770456557
+        },
+        {
+          "id": "event-453",
+          "frame": 453,
+          "time": 15.101666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.958117645058887,
+          "outgoing_diameters_per_second": -6.910858999162735
+        },
+        {
+          "id": "event-468",
+          "frame": 468,
+          "time": 15.601666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.968491029323546,
+          "outgoing_diameters_per_second": -8.338323528054154
+        }
+      ]
+    },
+    {
+      "video_sha256": "8cc913b5f60b21dd3c657e7539b9388f911bec77e558a07d51d4291b4fb7819f",
+      "clip": 3,
+      "settings": {
+        "device": "cpu",
+        "image_size": 320,
+        "fps": 30,
+        "feet": "off",
+        "floor_refresh_seconds": 0.5,
+        "near_leg_diameters": 3.0
+      },
+      "pose_input": 320,
+      "reference_total": 21,
+      "decoded_frames": 350,
+      "sampled_frames": 350,
+      "feet_runs": 0,
+      "stage_timing": {
+        "decode": {
+          "mean_ms": 7.415645325423351,
+          "p50_ms": 6.577687570825219,
+          "p95_ms": 9.29181247483939
+        },
+        "ball": {
+          "mean_ms": 20.076826672468865,
+          "p50_ms": 18.428208539262414,
+          "p95_ms": 24.775910010794185
+        },
+        "pose": {
+          "mean_ms": 12.16228872670659,
+          "p50_ms": 11.17545849410817,
+          "p95_ms": 15.726867160992697
+        },
+        "feet": {
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "tracking": {
+          "mean_ms": 8.529550367966294,
+          "p50_ms": 8.366834023036063,
+          "p95_ms": 14.099016977706926
+        },
+        "service": {
+          "mean_ms": 48.1843110925651,
+          "p50_ms": 45.01031298423186,
+          "p95_ms": 60.74916243669577
+        }
+      },
+      "processing_seconds_excluding_counter_audio": 16.86834304104559,
+      "video_only_count": 21,
+      "estimated_count": 21,
+      "seen_count": 21,
+      "heard_count": 0,
+      "events": [
+        {
+          "id": "event-26",
+          "frame": 26,
+          "time": 0.8666666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.116854212590754,
+          "outgoing_diameters_per_second": -8.207922971100244
+        },
+        {
+          "id": "event-43",
+          "frame": 43,
+          "time": 1.4333333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.787749419341221,
+          "outgoing_diameters_per_second": -5.073293325063328
+        },
+        {
+          "id": "event-55",
+          "frame": 55,
+          "time": 1.835,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.685971603553871,
+          "outgoing_diameters_per_second": -6.136124902958708
+        },
+        {
+          "id": "event-70",
+          "frame": 70,
+          "time": 2.335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.525153562691727,
+          "outgoing_diameters_per_second": -6.155153277032187
+        },
+        {
+          "id": "event-83",
+          "frame": 83,
+          "time": 2.7683333333333335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.797334442517686,
+          "outgoing_diameters_per_second": -9.761128336340649
+        },
+        {
+          "id": "event-101",
+          "frame": 101,
+          "time": 3.368333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.033982736727578,
+          "outgoing_diameters_per_second": -8.185519908302751
+        },
+        {
+          "id": "event-115",
+          "frame": 115,
+          "time": 3.835,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_knee",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.51588560148362,
+          "outgoing_diameters_per_second": -4.494738639133788
+        },
+        {
+          "id": "event-127",
+          "frame": 127,
+          "time": 4.235,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.448804081141567,
+          "outgoing_diameters_per_second": -8.595641819455283
+        },
+        {
+          "id": "event-143",
+          "frame": 143,
+          "time": 4.7683333333333335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.486196767817039,
+          "outgoing_diameters_per_second": -5.795238362382487
+        },
+        {
+          "id": "event-159",
+          "frame": 159,
+          "time": 5.301666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 10.377372501037486,
+          "outgoing_diameters_per_second": -5.908679464479129
+        },
+        {
+          "id": "event-173",
+          "frame": 173,
+          "time": 5.7683333333333335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.144554635752799,
+          "outgoing_diameters_per_second": -6.650605740754527
+        },
+        {
+          "id": "event-186",
+          "frame": 186,
+          "time": 6.201666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.938545382013418,
+          "outgoing_diameters_per_second": -7.932677180941039
+        },
+        {
+          "id": "event-202",
+          "frame": 202,
+          "time": 6.735,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.609235585007469,
+          "outgoing_diameters_per_second": -8.318834650524074
+        },
+        {
+          "id": "event-220",
+          "frame": 220,
+          "time": 7.335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.132950333552357,
+          "outgoing_diameters_per_second": -5.592262676028256
+        },
+        {
+          "id": "event-233",
+          "frame": 233,
+          "time": 7.7683333333333335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.126766881345584,
+          "outgoing_diameters_per_second": -5.81546236944428
+        },
+        {
+          "id": "event-247",
+          "frame": 247,
+          "time": 8.235,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.133070331807,
+          "outgoing_diameters_per_second": -7.542901094141402
+        },
+        {
+          "id": "event-263",
+          "frame": 263,
+          "time": 8.768333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.7807057143127984,
+          "outgoing_diameters_per_second": -6.951674800361545
+        },
+        {
+          "id": "event-278",
+          "frame": 278,
+          "time": 9.268333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.067772330818634,
+          "outgoing_diameters_per_second": -5.835929283728904
+        },
+        {
+          "id": "event-292",
+          "frame": 292,
+          "time": 9.735,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.873678544798513,
+          "outgoing_diameters_per_second": -8.917361428160856
+        },
+        {
+          "id": "event-306",
+          "frame": 306,
+          "time": 10.201666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_thigh",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.547083432019883,
+          "outgoing_diameters_per_second": -7.4853925030485895
+        },
+        {
+          "id": "event-325",
+          "frame": 325,
+          "time": 10.835,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.178863755953536,
+          "outgoing_diameters_per_second": -11.401317322678041
+        }
+      ]
+    },
+    {
+      "video_sha256": "572d098d6839caf309a0cdd5855084b3c464338199a5d4a6af67b5577cc5c447",
+      "clip": 4,
+      "settings": {
+        "device": "cpu",
+        "image_size": 320,
+        "fps": 30,
+        "feet": "off",
+        "floor_refresh_seconds": 0.5,
+        "near_leg_diameters": 3.0
+      },
+      "pose_input": 320,
+      "reference_total": 13,
+      "decoded_frames": 252,
+      "sampled_frames": 252,
+      "feet_runs": 0,
+      "stage_timing": {
+        "decode": {
+          "mean_ms": 6.201109941771609,
+          "p50_ms": 6.125062995124608,
+          "p95_ms": 8.432792167877778
+        },
+        "ball": {
+          "mean_ms": 18.41640872982449,
+          "p50_ms": 18.35668698186055,
+          "p95_ms": 19.870416674530134
+        },
+        "pose": {
+          "mean_ms": 11.023762575831146,
+          "p50_ms": 10.95510448794812,
+          "p95_ms": 11.991458025295287
+        },
+        "feet": {
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "tracking": {
+          "mean_ms": 6.557416319588406,
+          "p50_ms": 7.056270493194461,
+          "p95_ms": 10.88771250215359
+        },
+        "service": {
+          "mean_ms": 42.19869756701565,
+          "p50_ms": 42.27945802267641,
+          "p95_ms": 48.22586236987263
+        }
+      },
+      "processing_seconds_excluding_counter_audio": 10.636937416042201,
+      "video_only_count": 11,
+      "estimated_count": 11,
+      "seen_count": 11,
+      "heard_count": 0,
+      "events": [
+        {
+          "id": "event-20",
+          "frame": 20,
+          "time": 0.6666666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.835334876915093,
+          "outgoing_diameters_per_second": -11.326898153726146
+        },
+        {
+          "id": "event-36",
+          "frame": 36,
+          "time": 1.2,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.3092411398981945,
+          "outgoing_diameters_per_second": -6.156325663597382
+        },
+        {
+          "id": "event-52",
+          "frame": 52,
+          "time": 1.7333333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.800244067375235,
+          "outgoing_diameters_per_second": -8.931744529113312
+        },
+        {
+          "id": "event-69",
+          "frame": 69,
+          "time": 2.3,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.287237559845317,
+          "outgoing_diameters_per_second": -5.7665856426803686
+        },
+        {
+          "id": "event-84",
+          "frame": 84,
+          "time": 2.8,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.725689901325598,
+          "outgoing_diameters_per_second": -8.084718304354933
+        },
+        {
+          "id": "event-99",
+          "frame": 99,
+          "time": 3.3,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.888618040047398,
+          "outgoing_diameters_per_second": -8.774128552578821
+        },
+        {
+          "id": "event-114",
+          "frame": 114,
+          "time": 3.8,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_thigh",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.482764691676,
+          "outgoing_diameters_per_second": -8.129353840189307
+        },
+        {
+          "id": "event-168",
+          "frame": 168,
+          "time": 5.6,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 11.04206499574746,
+          "outgoing_diameters_per_second": -6.182580926823665
+        },
+        {
+          "id": "event-182",
+          "frame": 182,
+          "time": 6.066666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.438703206380233,
+          "outgoing_diameters_per_second": -6.317125447591128
+        },
+        {
+          "id": "event-195",
+          "frame": 195,
+          "time": 6.5,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.752357729019634,
+          "outgoing_diameters_per_second": -5.856186897523935
+        },
+        {
+          "id": "event-209",
+          "frame": 209,
+          "time": 6.966666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.158504802681641,
+          "outgoing_diameters_per_second": -3.93648533365464
+        },
+        {
+          "id": "event-221",
+          "frame": 221,
+          "time": 7.366666666666666,
+          "status": "review",
+          "reason": "possible_floor_contact",
+          "body_part": null,
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.960209733386308,
+          "outgoing_diameters_per_second": -4.372311006411562
+        }
+      ]
+    },
+    {
+      "video_sha256": "5a83c0608486137af6044f2779a0f4f15cbe74bf23b67b1c3eb1cce9649b7372",
+      "clip": 5,
+      "settings": {
+        "device": "cpu",
+        "image_size": 320,
+        "fps": 30,
+        "feet": "off",
+        "floor_refresh_seconds": 0.5,
+        "near_leg_diameters": 3.0
+      },
+      "pose_input": 320,
+      "reference_total": 25,
+      "decoded_frames": 443,
+      "sampled_frames": 443,
+      "feet_runs": 0,
+      "stage_timing": {
+        "decode": {
+          "mean_ms": 6.7764809142281015,
+          "p50_ms": 6.678916979581118,
+          "p95_ms": 8.889908343553541
+        },
+        "ball": {
+          "mean_ms": 18.72051047091845,
+          "p50_ms": 18.42404098715633,
+          "p95_ms": 19.907378999050707
+        },
+        "pose": {
+          "mean_ms": 11.294467930217394,
+          "p50_ms": 11.12929207738489,
+          "p95_ms": 12.13468360947445
+        },
+        "feet": {
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "tracking": {
+          "mean_ms": 7.835329186516072,
+          "p50_ms": 7.9956670524552464,
+          "p95_ms": 16.96907045552507
+        },
+        "service": {
+          "mean_ms": 44.62678850188002,
+          "p50_ms": 44.12783298175782,
+          "p95_ms": 54.801395535469055
+        }
+      },
+      "processing_seconds_excluding_counter_audio": 19.77416304196231,
+      "video_only_count": 22,
+      "estimated_count": 25,
+      "seen_count": 22,
+      "heard_count": 3,
+      "events": [
+        {
+          "id": "event-45",
+          "frame": 45,
+          "time": 1.5,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.257239195977763,
+          "outgoing_diameters_per_second": -6.711265397384192
+        },
+        {
+          "id": "event-59",
+          "frame": 59,
+          "time": 1.9666666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.433576148575276,
+          "outgoing_diameters_per_second": -7.8147706471043366
+        },
+        {
+          "id": "event-74",
+          "frame": 74,
+          "time": 2.466666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.368057899033263,
+          "outgoing_diameters_per_second": -6.323658180973247
+        },
+        {
+          "id": "event-87",
+          "frame": 87,
+          "time": 2.9,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.486700987037698,
+          "outgoing_diameters_per_second": -9.538546368996602
+        },
+        {
+          "id": "event-104",
+          "frame": 104,
+          "time": 3.466666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.816176470588264,
+          "outgoing_diameters_per_second": -8.322655130835152
+        },
+        {
+          "id": "event-119",
+          "frame": 119,
+          "time": 3.966666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.157668651181836,
+          "outgoing_diameters_per_second": -6.908417800065442
+        },
+        {
+          "id": "event-134",
+          "frame": 134,
+          "time": 4.466666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.752508122870245,
+          "outgoing_diameters_per_second": -6.354746879415336
+        },
+        {
+          "id": "event-150",
+          "frame": 150,
+          "time": 5.0,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.703618061589506,
+          "outgoing_diameters_per_second": -6.6389040449317145
+        },
+        {
+          "id": "event-164",
+          "frame": 164,
+          "time": 5.466666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.07265235559263,
+          "outgoing_diameters_per_second": -6.349228656825763
+        },
+        {
+          "id": "event-179",
+          "frame": 179,
+          "time": 5.966666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.030256064315212,
+          "outgoing_diameters_per_second": -9.188786551363128
+        },
+        {
+          "id": "event-194",
+          "frame": 194,
+          "time": 6.466666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.467340076965408,
+          "outgoing_diameters_per_second": -5.034367674235564
+        },
+        {
+          "id": "event-207",
+          "frame": 207,
+          "time": 6.9,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.822347249858338,
+          "outgoing_diameters_per_second": -8.122391929984573
+        },
+        {
+          "id": "event-222",
+          "frame": 222,
+          "time": 7.4,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.6455203897262605,
+          "outgoing_diameters_per_second": -3.6693832368451873
+        },
+        {
+          "id": "event-236",
+          "frame": 236,
+          "time": 7.866666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.380666013623882,
+          "outgoing_diameters_per_second": -7.873875664882959
+        },
+        {
+          "id": "event-250",
+          "frame": 250,
+          "time": 8.333333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.047907116453866,
+          "outgoing_diameters_per_second": -8.396554051035869
+        },
+        {
+          "id": "event-267",
+          "frame": 267,
+          "time": 8.9,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.456417952456308,
+          "outgoing_diameters_per_second": -6.329761817166241
+        },
+        {
+          "id": "event-280",
+          "frame": 280,
+          "time": 9.333333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.282184320172843,
+          "outgoing_diameters_per_second": -7.188545645930129
+        },
+        {
+          "id": "event-297",
+          "frame": 297,
+          "time": 9.9,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.565946380119202,
+          "outgoing_diameters_per_second": -7.999462486648308
+        },
+        {
+          "id": "event-312",
+          "frame": 312,
+          "time": 10.4,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.547954349727443,
+          "outgoing_diameters_per_second": -6.1661215175204935
+        },
+        {
+          "id": "event-327",
+          "frame": 327,
+          "time": 10.901666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.885664614333333,
+          "outgoing_diameters_per_second": -6.556784581381329
+        },
+        {
+          "id": "event-340",
+          "frame": 340,
+          "time": 11.335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.17484146664645,
+          "outgoing_diameters_per_second": -6.481175612431648
+        },
+        {
+          "id": "heard-355",
+          "frame": 355,
+          "time": 11.848333333333333,
+          "status": "counted",
+          "reason": "heard_ball_out_of_view",
+          "body_part": null,
+          "evidence_sources": [
+            "audio"
+          ],
+          "audio_strength": 12.206299694740046
+        },
+        {
+          "id": "heard-373",
+          "frame": 373,
+          "time": 12.448333333333334,
+          "status": "counted",
+          "reason": "heard_ball_out_of_view",
+          "body_part": null,
+          "evidence_sources": [
+            "audio"
+          ],
+          "audio_strength": 20.56553700928736
+        },
+        {
+          "id": "heard-391",
+          "frame": 391,
+          "time": 13.048333333333334,
+          "status": "counted",
+          "reason": "heard_ball_out_of_view",
+          "body_part": null,
+          "evidence_sources": [
+            "audio"
+          ],
+          "audio_strength": 15.55005031953289
+        },
+        {
+          "id": "event-407",
+          "frame": 407,
+          "time": 13.568333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.349422088481884,
+          "outgoing_diameters_per_second": -2.5181467635541246
+        }
+      ]
+    },
+    {
+      "video_sha256": "2987288114f38127126fc8593b97a6fd835c8ac10f5612fc50a7afd22f8f6b2e",
+      "clip": 6,
+      "settings": {
+        "device": "cpu",
+        "image_size": 320,
+        "fps": 30,
+        "feet": "off",
+        "floor_refresh_seconds": 0.5,
+        "near_leg_diameters": 3.0
+      },
+      "pose_input": 320,
+      "reference_total": 23,
+      "decoded_frames": 418,
+      "sampled_frames": 418,
+      "feet_runs": 0,
+      "stage_timing": {
+        "decode": {
+          "mean_ms": 6.673956655286716,
+          "p50_ms": 6.580687535461038,
+          "p95_ms": 9.046623203903433
+        },
+        "ball": {
+          "mean_ms": 18.58300616425511,
+          "p50_ms": 18.431083008181304,
+          "p95_ms": 19.864941196283326
+        },
+        "pose": {
+          "mean_ms": 11.261478458858724,
+          "p50_ms": 11.163104500155896,
+          "p95_ms": 12.333842006046325
+        },
+        "feet": {
+          "mean_ms": 0.0,
+          "p50_ms": 0.0,
+          "p95_ms": 0.0
+        },
+        "tracking": {
+          "mean_ms": 7.34489183465206,
+          "p50_ms": 8.212896005716175,
+          "p95_ms": 12.39273474202491
+        },
+        "service": {
+          "mean_ms": 43.86333311305261,
+          "p50_ms": 44.24556304002181,
+          "p95_ms": 50.43879115837626
+        }
+      },
+      "processing_seconds_excluding_counter_audio": 18.339055249933153,
+      "video_only_count": 21,
+      "estimated_count": 23,
+      "seen_count": 21,
+      "heard_count": 2,
+      "events": [
+        {
+          "id": "event-45",
+          "frame": 45,
+          "time": 1.5016666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.0303681713953505,
+          "outgoing_diameters_per_second": -7.6251144139589675
+        },
+        {
+          "id": "event-60",
+          "frame": 60,
+          "time": 2.0016666666666665,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.906701514467669,
+          "outgoing_diameters_per_second": -6.653028113894563
+        },
+        {
+          "id": "event-75",
+          "frame": 75,
+          "time": 2.5016666666666665,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.386461255535625,
+          "outgoing_diameters_per_second": -6.159722296764067
+        },
+        {
+          "id": "event-90",
+          "frame": 90,
+          "time": 3.0016666666666665,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.002696332036402,
+          "outgoing_diameters_per_second": -7.079263672733604
+        },
+        {
+          "id": "event-105",
+          "frame": 105,
+          "time": 3.5016666666666665,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.08523552848381,
+          "outgoing_diameters_per_second": -8.5626628724489
+        },
+        {
+          "id": "event-121",
+          "frame": 121,
+          "time": 4.035,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.93402901365506,
+          "outgoing_diameters_per_second": -7.919636796199478
+        },
+        {
+          "id": "event-134",
+          "frame": 134,
+          "time": 4.468333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.281940132022326,
+          "outgoing_diameters_per_second": -6.832418418943291
+        },
+        {
+          "id": "event-148",
+          "frame": 148,
+          "time": 4.935,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.5160265715226116,
+          "outgoing_diameters_per_second": -4.3671943996263485
+        },
+        {
+          "id": "event-162",
+          "frame": 162,
+          "time": 5.401666666666666,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.149475910298225,
+          "outgoing_diameters_per_second": -7.018379367464096
+        },
+        {
+          "id": "event-176",
+          "frame": 176,
+          "time": 5.868333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.475606558958236,
+          "outgoing_diameters_per_second": -6.008388975697353
+        },
+        {
+          "id": "event-190",
+          "frame": 190,
+          "time": 6.335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.489365363490441,
+          "outgoing_diameters_per_second": -6.095857582793058
+        },
+        {
+          "id": "event-206",
+          "frame": 206,
+          "time": 6.868333333333333,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.763317879224024,
+          "outgoing_diameters_per_second": -7.386620114351041
+        },
+        {
+          "id": "event-220",
+          "frame": 220,
+          "time": 7.335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.270894104003936,
+          "outgoing_diameters_per_second": -6.101228027343746
+        },
+        {
+          "id": "event-234",
+          "frame": 234,
+          "time": 7.801666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 4.944462289923248,
+          "outgoing_diameters_per_second": -8.546704499617896
+        },
+        {
+          "id": "event-250",
+          "frame": 250,
+          "time": 8.335,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 8.180786104592281,
+          "outgoing_diameters_per_second": -7.920837395927691
+        },
+        {
+          "id": "event-266",
+          "frame": 266,
+          "time": 8.868333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 5.557557438699937,
+          "outgoing_diameters_per_second": -7.509077035289326
+        },
+        {
+          "id": "event-282",
+          "frame": 282,
+          "time": 9.401666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_knee",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.565573770491678,
+          "outgoing_diameters_per_second": -9.190970322636343
+        },
+        {
+          "id": "event-297",
+          "frame": 297,
+          "time": 9.901666666666667,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "right_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.677610768748018,
+          "outgoing_diameters_per_second": -4.8228712668571925
+        },
+        {
+          "id": "event-311",
+          "frame": 311,
+          "time": 10.368333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 9.173169580205789,
+          "outgoing_diameters_per_second": -7.041923023445049
+        },
+        {
+          "id": "event-325",
+          "frame": 325,
+          "time": 10.835,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 6.089434106774461,
+          "outgoing_diameters_per_second": -11.651176476359344
+        },
+        {
+          "id": "heard-343",
+          "frame": 343,
+          "time": 11.438333333333334,
+          "status": "counted",
+          "reason": "heard_ball_out_of_view",
+          "body_part": null,
+          "evidence_sources": [
+            "audio"
+          ],
+          "audio_strength": 8.81437515429332
+        },
+        {
+          "id": "heard-361",
+          "frame": 361,
+          "time": 12.028333333333334,
+          "status": "counted",
+          "reason": "heard_ball_out_of_view",
+          "body_part": null,
+          "evidence_sources": [
+            "audio"
+          ],
+          "audio_strength": 14.367443688913623
+        },
+        {
+          "id": "event-374",
+          "frame": 374,
+          "time": 12.468333333333334,
+          "status": "counted",
+          "reason": "observed_reversal_near_leg",
+          "body_part": "left_foot",
+          "evidence_sources": [
+            "appearance",
+            "detector"
+          ],
+          "incoming_diameters_per_second": 7.207025542017879,
+          "outgoing_diameters_per_second": -9.809938242102614
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "source": "Movie on 2026-10-16 at 2.02\u202fAM.mov",
+    "realtime": true,
+    "feet": "near",
+    "decoded_frames": 427,
+    "processed_frames": 253,
+    "dropped_frames": 174,
+    "elapsed_seconds": 14.448558958014473,
+    "processed_fps": 17.510396762416462,
+    "count": 0,
+    "feet_runs": 83,
+    "foot_fraction": 0.32806324110671936,
+    "round_trip": {
+      "mean_ms": 56.250198936115645,
+      "p95_ms": 109.4565414590761
+    },
+    "confirmation_delay": {
+      "mean_ms": 216.8064586600913,
+      "p95_ms": 216.8064586600913
+    },
+    "wrapper_events_identical": true,
+    "events": [
+      {
+        "id": "event-235",
+        "frame": 235,
+        "time": 13.168333333333333,
+        "status": "review",
+        "reason": "gap_near_contact",
+        "body_part": "left_foot",
+        "evidence_sources": [
+          "detector"
+        ],
+        "incoming_diameters_per_second": 2.9791660140824767,
+        "outgoing_diameters_per_second": -6.236310466275592,
+        "leg_supported": true,
+        "confirmed_at": 13.335,
+        "floor_y_at_confirmation": 400.43581159909564
+      }
+    ],
+    "clip": 0,
+    "reference_total": 26
+  }
+]

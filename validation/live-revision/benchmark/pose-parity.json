@@ -1,0 +1,75 @@
+{
+  "note": "Backend agreement only; neither backend is a ground-truth pose reference.",
+  "clips": [
+    {
+      "clip": 0,
+      "frames": 427,
+      "video_sha256": "73daba39d2ef14ea593cc59ac5bf8ce8f2a2db7547de6f91c05fc1ec39e2a7a3",
+      "landmark_presence_differences": 0,
+      "compared_landmarks": 3350,
+      "median_difference_pixels": 0.00023291530643423076,
+      "p95_difference_pixels": 0.0005440124237365429,
+      "max_difference_pixels": 0.006899675846601401
+    },
+    {
+      "clip": 1,
+      "frames": 329,
+      "video_sha256": "da7e9f3671f2e2c300ad907754506bc226c3b5a5b41f5ea5adefefe5cb5e0954",
+      "landmark_presence_differences": 0,
+      "compared_landmarks": 2310,
+      "median_difference_pixels": 0.00022006538546533137,
+      "p95_difference_pixels": 0.000542921990117845,
+      "max_difference_pixels": 0.0021349767002971733
+    },
+    {
+      "clip": 2,
+      "frames": 474,
+      "video_sha256": "299a37f78c0bfa219a8f479ccdbb7255b54f8cbe4bf055796ba109c5325812ed",
+      "landmark_presence_differences": 0,
+      "compared_landmarks": 3530,
+      "median_difference_pixels": 0.000244140625,
+      "p95_difference_pixels": 0.0005758045124546267,
+      "max_difference_pixels": 0.013135364848511025
+    },
+    {
+      "clip": 3,
+      "frames": 350,
+      "video_sha256": "8cc913b5f60b21dd3c657e7539b9388f911bec77e558a07d51d4291b4fb7819f",
+      "landmark_presence_differences": 0,
+      "compared_landmarks": 2797,
+      "median_difference_pixels": 0.00020471813758848173,
+      "p95_difference_pixels": 0.00046482990148095146,
+      "max_difference_pixels": 0.0029207729770520992
+    },
+    {
+      "clip": 4,
+      "frames": 252,
+      "video_sha256": "572d098d6839caf309a0cdd5855084b3c464338199a5d4a6af67b5577cc5c447",
+      "landmark_presence_differences": 0,
+      "compared_landmarks": 1939,
+      "median_difference_pixels": 0.00022006538546533137,
+      "p95_difference_pixels": 0.0005512204549618055,
+      "max_difference_pixels": 0.004162741963410565
+    },
+    {
+      "clip": 5,
+      "frames": 443,
+      "video_sha256": "5a83c0608486137af6044f2779a0f4f15cbe74bf23b67b1c3eb1cce9649b7372",
+      "landmark_presence_differences": 0,
+      "compared_landmarks": 3088,
+      "median_difference_pixels": 0.0002516543960948279,
+      "p95_difference_pixels": 0.0006374084037538276,
+      "max_difference_pixels": 0.004160035371143584
+    },
+    {
+      "clip": 6,
+      "frames": 418,
+      "video_sha256": "2987288114f38127126fc8593b97a6fd835c8ac10f5612fc50a7afd22f8f6b2e",
+      "landmark_presence_differences": 0,
+      "compared_landmarks": 3117,
+      "median_difference_pixels": 0.000244140625,
+      "p95_difference_pixels": 0.0005526968468101451,
+      "max_difference_pixels": 0.0058098928900938785
+    }
+  ]
+}

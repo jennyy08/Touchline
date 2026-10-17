@@ -1,0 +1,43 @@
+{
+  "status": "provisional starting point for streaming implementation; not applied to uploads",
+  "device": "cpu",
+  "ball_input": 320,
+  "pose_input": 320,
+  "fps_ceiling": 30,
+  "feet": "off",
+  "pytorch_threads": 8,
+  "mean_service_ms": 44.64016006699242,
+  "service_capacity_fps": 22.401353366548843,
+  "worst_clip_p95_service_ms": 60.74916243669577,
+  "live_latency_verified": false,
+  "sustained_30_fps_verified": false,
+  "visual_counts": [
+    24,
+    16,
+    28,
+    21,
+    11,
+    22,
+    21
+  ],
+  "with_offline_audio_counts": [
+    26,
+    16,
+    28,
+    21,
+    11,
+    25,
+    23
+  ],
+  "reference_totals": [
+    26,
+    16,
+    29,
+    21,
+    13,
+    25,
+    23
+  ],
+  "evidence": "benchmark/direct-cpu-320-pose320-off.json",
+  "next_validation": "Run streaming counter and one-frame-in-flight replay; actual frame dropping may change counts."
+}

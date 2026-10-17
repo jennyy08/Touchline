@@ -53,3 +53,4 @@ ultralytics==8.3.162
 ultralytics-thop==2.2.2
 urllib3==2.8.0
 uvicorn==0.34.2
+websockets==15.0.1

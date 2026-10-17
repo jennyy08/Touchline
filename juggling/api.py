@@ -49,13 +49,26 @@ def run_job(job_id, source):
             busy = False
 
 
-@app.post("/api/jobs", status_code=202)
-async def create_job(file: UploadFile = File(...)):
+def claim_analysis():
     global busy
     with lock:
         if busy:
-            raise HTTPException(409, "An analysis is already running. Wait for it to finish.")
+            return False
         busy = True
+        return True
+
+
+def release_analysis():
+    global busy
+    with lock:
+        busy = False
+
+
+@app.post("/api/jobs", status_code=202)
+async def create_job(file: UploadFile = File(...)):
+    global busy
+    if not claim_analysis():
+        raise HTTPException(409, "An upload or live session is already running. Wait for it to finish.")
     job_id = uuid.uuid4().hex
     folder = JOB_ROOT / job_id
     folder.mkdir()
@@ -114,6 +127,10 @@ def video(job_id: str):
 def health():
     return {"ok": True, "models_ready": all((ROOT / "models" / name).exists()
              for name in (Config().detector, Config().pose_model))}
+
+
+from .live_api import make_router
+app.include_router(make_router(claim_analysis, release_analysis, executor, ROOT / "models"))
 
 
 if (ROOT / "frontend/dist").exists():

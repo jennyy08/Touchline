@@ -14,12 +14,12 @@ MOV/MP4 → timestamped upright frames → ball detector + appearance → Kalman
 
 ## Boundaries worth keeping
 
-- **`juggling/video.py`** owns decoding, orientation, presentation timestamps, and playback encoding. A `Frame` has an index, time in seconds, and BGR image. This is the future webcam boundary, although the current offline counter also needs subsequent frames to confirm a reversal.
+- **`juggling/video.py`** owns decoding, orientation, presentation timestamps, and playback encoding. A `Frame` has an index, time in seconds, and BGR image. The webcam adapter supplies the same timestamp/image concept, and both counting paths need subsequent observations to confirm a reversal.
 - **`detection.py` and `pose.py`** wrap pretrained models. Both return coordinates in the original upright image; Ultralytics handles resizing/letterboxing internally. `pose.py` takes the largest YOLO person box and, if `foot_model` is set, adds heel/big-toe/small-toe points from **`feet.py`** (RTMPose-x Halpe-26 via onnxruntime: affine person crop → network → SimCC argmax, written out explicitly so it can be read and modified). Ball scores only filter proposals and are not estimates of touch accuracy.
 - **`appearance.py`** compares a grayscale ball template against a bounded local search at three scales. It supplies image-backed observations when detection drops out, and can repair an oversized detector box when the appearance match agrees spatially. Templates expire without a detector anchor after 0.25 seconds; a long frame gap or weak correlation prevents a match. At an edge, outward motion clears the template; mainly parallel motion can retain it. This uses timestamp-based velocity normal to each nearby boundary, so an edge touch is not automatically discarded. Missing motion history or a low-texture patch cannot establish a template. This is image evidence, not interpolation.
 - **`tracking.py`** chooses a consistent ball across detections. Its constant-velocity Kalman state is `[x, y, vx, vy]`. Center distance and box-size continuity reject implausible associations. Before appearance matching, a detector box whose mean size abruptly drops below 75% of the previous observation is removed; this lets the matcher or another ball detection compete instead of immediately switching to a shoe. Size history expires after the prediction horizon. Observed samples keep raw detector centers to avoid smoothing away sharp contacts; the Kalman estimate supports association and brief dashed predictions only.
-- **`counting.py`** is pure numerical logic over samples. It estimates the floor line from still (planted) heels and toes, falling back to still ankles plus an ankle-height offset, examines observed vertical velocity before/after a local bottom of the ball's flight, checks proximity to leg landmarks, and debounces candidates. A flight apex reverses in the opposite direction and is not a touch. Missing contact/floor evidence produces a review candidate rather than an invented probability.
-  - *Leg support* is the nearest of detected foot outline (heel–toe segments), ankle, knee, and knee–hip (thigh) segment, taken over the contact frame and its adjacent observed frames (each compared with its own ball position), because landmarks jitter or vanish on a fast kicking leg. If a foot supports the contact it wins the label, since a ball on a raised foot also overlaps the knee in a 2D front view.
+- **`counting.py`** is pure numerical logic over samples. It uses the causal counter in `streaming.py`, which estimates a rolling floor line from still (planted) heels and toes already received, falling back to still ankles plus an ankle-height offset, examines observed vertical velocity before/after a local bottom of the ball's flight, checks proximity to leg landmarks, and debounces candidates. A flight apex reverses in the opposite direction and is not a touch. Missing contact/floor evidence produces a review candidate rather than an invented probability.
+  - *Leg support* is the nearest of detected foot outline (heel–toe segments), ankle, knee, and knee–hip (thigh) segment, taken over the contact frame and neighboring observed frames within 0.075 seconds (each compared with its own ball position), because landmarks jitter or vanish on a fast kicking leg. If a foot supports the contact it wins the label, since a ball on a raised foot also overlaps the knee in a 2D front view.
   - *Fallback estimated foot*, used only for a side without heel/toe points: a horizontal segment either side of the ankle, half-length `foot_length_shin_ratio` × knee–ankle length. It only applies between knee height and just below the ankle.
   - *Wrists are ignored.* A projected arm near the ball neither creates nor blocks a touch.
   - *Top exits:* if the only outgoing observation is a box cut off by the top image edge and the ball then leaves view, outgoing motion is measured from the box's bottom edge (a clipped box's center is biased downward). The event is tagged `evidence: ["top_exit"]`. Predictions are still never evidence.
@@ -51,6 +51,60 @@ Reviews use `schema_version: 1`, `video_sha256`, and events with unique `id`, se
 4. **Evaluate on new footage.** Label it before tuning, compare timestamps, and hold out clips. The supplied clip is a development example, not a benchmark proving general accuracy.
 5. **Change the design independently.** Adjust CSS variables, section layout in `main.ts`, or review interactions without changing any Python code.
 
-No live camera adapter, custom training pipeline, multi-player identity logic, or biomechanical coaching is implemented. Head/torso touches and contacts that do not form a clear observed vertical reversal remain outside this baseline's reliable behavior.
+No live microphone analysis, session recording, custom training pipeline, multi-player identity logic, or biomechanical coaching is implemented. Head/torso touches and contacts that do not form a clear observed vertical reversal remain outside this baseline's reliable behavior.
 
 Tracking experiment: `scripts/inspect_frames.py` creates timestamp-checked evidence sheets from a video and result JSON. Current before/after results are in `validation/tracking-revision/README.md`. The three new clips have user-supplied totals, not complete reference timestamps.
+
+## Live preparation benchmarks
+
+`juggling/live_settings.py` contains two small experimental components: `FrameGate`
+selects frames using presentation time, and `FootSchedule` decides whether to run
+the detailed heel/toe model using current/past observed descent near the legs plus
+periodic floor samples. Neither reads touch labels or future frames. Missing foot
+landmarks stay missing rather than being copied from an older frame.
+
+`PoseDetector.detect_body()` returns body landmarks and the chosen person box
+without running RTMPose. Existing upload callers still use `detect()`, which
+combines both models as before. This boundary lets a later live adapter schedule
+feet independently without changing detector coordinates or counting rules.
+
+`scripts/benchmark_live.py` caches measured inference outputs, then replays the
+same tracking/counting logic for each sampling and foot schedule. Its service-time
+estimates are followed by `scripts/validate_live_profile.py`, which runs one
+selected profile directly in a fresh process. The [benchmark report](validation/live-revision/README.md)
+keeps video-only counts separate from offline audio-assisted results. These
+scripts recorded the pre-streaming benchmark. The visual counter is now causal;
+offline audio still uses future information. Browser camera latency remains unmeasured.
+
+## Live data flow
+
+`frontend/src/live.ts` requests camera video only after Start. It downsizes each
+frame to at most 640 pixels on its longest edge, encodes JPEG at quality 0.85, and
+sends an eight-byte little-endian timestamp (seconds) followed by the JPEG. Only
+one frame is in flight: the next capture follows the previous reply. Slow
+inference drops old camera frames rather than building a stale queue.
+
+`live_api.py` owns the `/api/live` WebSocket and shares the upload worker lock.
+It checks localhost Host/same browser Origin, message limits, dimensions and
+increasing timestamps. This is localhost-only without authentication. Disconnect
+or failure releases the session. `live.py` owns per-session models, tracker,
+appearance bridge, optional foot schedule and `StreamingCounter`; none of these
+are shared between players/sessions. The default foot schedule is off. `near`
+and `all` remain explicit protocol/benchmark options; the measured near-foot
+live experiment performed poorly, so it is not exposed as a recommended UI mode.
+
+`streaming.py` waits the outgoing velocity window, uses five seconds of past
+floor observations, and emits immutable contact events. `count_touches()` feeds
+this same implementation, then adds informational stop intervals for uploads.
+EOF/Stop closes the final window using actual remaining observations, not
+predicted positions. `confirmed_at` is distinct from the estimated contact time.
+Live sound-assisted counting is not implemented; offline audio rules still need
+future information and must not be presented as live evidence.
+
+The live UI has its own HTML, CSS, protocol helper and entry point. Its overlay
+uses the captured frame associated with each reply, avoiding misleading boxes
+on a newer preview frame. Turning the overlay off shows the direct preview.
+`scripts/replay_live.py` sends recorded clips through the actual WebSocket with
+one frame in flight and measures frame drops and response/confirmation timing.
+JPEGs are prepared beforehand, so it does not measure browser camera/encoding
+cost. See the [live report](validation/live-revision/LIVE.md).
