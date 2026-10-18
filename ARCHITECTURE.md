@@ -108,3 +108,37 @@ on a newer preview frame. Turning the overlay off shows the direct preview.
 one frame in flight and measures frame drops and response/confirmation timing.
 JPEGs are prepared beforehand, so it does not measure browser camera/encoding
 cost. See the [live report](validation/live-revision/LIVE.md).
+
+## Side-to-side extension
+
+`juggling/dribbling.py` is a pure timestamped-sample analyzer plus validated
+`DrillSetup`. It separates median-smoothed reversal confirmation from the raw
+observed extreme used for event time and marker reach. Distance hysteresis ignores
+small within-trip touches. Long gaps and tracker segment changes split evidence.
+Inner marker gates time equal distances (middle 70% of marker spacing); without markers, consecutive turns define
+trips. Same-direction medians provide relative pace only when at least three
+complete trips exist. The edge-return pass in `juggling/edge_turns.py` counts observed outward
+approaches followed by inward returns at the same actual image edge, including
+fragmented tracks. It requires boundary evidence, motion in both directions and
+plausible ball size; it rejects crop-only boundaries, opposite-edge jumps and
+long absences. Visible reversals suppress duplicate edge events. Inferred events
+use `evidence: "inferred_edge_return"`, `time_kind: "interval"`, and a
+`time_interval` replay window; `time` is the window start, not an exact turn time.
+This pass runs after pace analysis, so it cannot create speed measurements
+across missing observations.
+
+`juggling/dribble_scene.py` builds a 1 Hz temporal median background and rejects
+static detector boxes using their central pixels. This is needed because paddles
+can be sports-ball false positives. The fixed-camera assumption is explicit.
+`pipeline.analyze(..., drill_setup=DrillSetup(...))` crops only inference input,
+translates detections back to playback coordinates, skips pose/audio/appearance,
+and returns the common replay envelope with `drill: "side_to_side"` and a
+`dribbling` section. `estimated_count: 0` is an unused juggling compatibility
+field, not a dribbling score. The dedicated UI uses `dribbling.turns` and `trips`.
+
+`POST /api/jobs` retains its default juggling behavior; optional multipart fields
+`drill=side_to_side` and `setup` (JSON: `roi`, `markers`, `require_markers`) select
+the new path. All geometry is validated before claiming the shared worker.
+Existing status/result/video routes, upload limits, and offline model loading apply.
+The new TypeScript page uses the existing timestamp-aligned player. Its HTML/CSS
+are separate from analysis. No database or external service was introduced.

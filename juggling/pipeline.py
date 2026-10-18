@@ -11,17 +11,21 @@ from .tracking import BallTracker
 from .appearance import AppearanceBridge
 from .counting import count_touches, add_audio_evidence
 from .audio import onsets
+from .dribbling import analyze_dribbling
+from .dribble_scene import background, moving_detections
 
 
-def analyze(source: Path, output: Path, models: Path, config=None, progress=lambda **kw: None):
+def analyze(source: Path, output: Path, models: Path, config=None, progress=lambda **kw: None, drill_setup=None):
     config = config or Config()
     output.mkdir(parents=True, exist_ok=True)
     started = time.perf_counter()
     info = metadata(source)
     progress(stage="loading_models", frames=0, total=info["expected_frames"])
-    ball, pose = BallDetector(models, config), PoseDetector(models, config)
+    ball = BallDetector(models, config)
+    pose = PoseDetector(models, config) if drill_setup is None else None
     tracker = BallTracker(config)
-    appearance = AppearanceBridge(config) if config.appearance_enabled else None
+    appearance = AppearanceBridge(config) if config.appearance_enabled and drill_setup is None else None
+    reference = background(source, progress) if drill_setup is not None else None
     samples = []
     writer = None
     try:
@@ -31,13 +35,24 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
                 writer = PlaybackWriter(output / "playback.mp4", width, height)
             if frame.time > 180:
                 raise ValueError("This prototype supports clips up to 3 minutes. Trim the video and retry.")
-            detections = tracker.filter_detections(frame.time, ball.detect(frame.image))
+            if drill_setup is None:
+                detections = ball.detect(frame.image)
+            else:
+                h, w = frame.image.shape[:2]
+                x1,y1,x2,y2 = [int(v*d) for v,d in zip(drill_setup.roi, (w,h,w,h))]
+                detections = ball.detect(frame.image[y1:y2, x1:x2])
+                for d in detections:
+                    b = d['box']
+                    d['box'] = [b[0]+x1,b[1]+y1,b[2]+x1,b[3]+y1]
+            if reference is not None:
+                detections = moving_detections(frame.image, detections, reference)
+            detections = tracker.filter_detections(frame.time, detections)
             proposals = appearance.propose(frame.time, frame.image, detections) if appearance else detections
             tracked = tracker.update(frame.time, proposals)
             if appearance:
                 appearance.accept(frame.time, tracked)
             sample = {"frame": frame.index, "time": frame.time,
-                      **tracked, "pose": pose.detect(frame.image)}
+                      **tracked, "pose": pose.detect(frame.image) if pose else {}}
             samples.append(sample)
             writer.write(frame)
             progress(stage="analyzing", frames=frame.index + 1, total=info["expected_frames"])
@@ -48,14 +63,18 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
         raise ValueError("The clip contains fewer than 5 readable frames. Try a longer video.")
     progress(stage="counting", frames=len(samples), total=len(samples))
     heard, audio_warning = [], None
-    if config.audio_enabled:
+    if config.audio_enabled and drill_setup is None:
         try:
             heard = onsets(source)
             if not heard:
                 audio_warning = "No audio track found; touches are counted from video only."
         except Exception as error:  # Audio is supplementary; never fail the video analysis.
             audio_warning = f"Audio could not be read ({error}); touches are counted from video only."
-    result = add_audio_evidence(count_touches(samples, config), samples, heard, config)
+    if drill_setup is None:
+        result = add_audio_evidence(count_touches(samples, config), samples, heard, config)
+    else:
+        result = {"drill": "side_to_side", "dribbling": analyze_dribbling(samples, width, drill_setup),
+                  "estimated_count": 0, "events": [], "floor_y": None, "heard_count": 0}
     gaps = []
     for sample in samples:
         if sample["status"] != "observed":
@@ -85,7 +104,10 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
     if result["heard_count"]:
         result["warnings"].append(f"{result['heard_count']} touch(es) were heard but not seen: the ball was out of view. "
                                   "A thump in rhythm is weaker evidence than a visible contact.")
-    if not result["estimated_count"]:
+    if drill_setup is None and not result["estimated_count"]:
         result["warnings"].append("No supported touches found. This does not mean no touches occurred.")
+    if drill_setup is not None:
+        result['warnings'] = [w for w in result['warnings'] if not w.startswith('Hidden contacts')]
+        result['warnings'].append('Experimental side-to-side analysis. Detection errors may create or hide turns; inspect the overlay.')
     (output / "result.json").write_text(json.dumps(result, indent=2))
     return result

@@ -1,0 +1,335 @@
+[
+  {
+    "clip": 1,
+    "previous_turns": 2,
+    "turns": 6,
+    "visible_turns": 2,
+    "inferred_turns": [
+      {
+        "id": "edge-turn-1",
+        "time": 6.266666666666667,
+        "time_interval": {
+          "start": 6.266666666666667,
+          "end": 8.168333333333333
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 188,
+        "x": null,
+        "side": "right",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 8.168333333333333,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-2",
+        "time": 13.535,
+        "time_interval": {
+          "start": 13.535,
+          "end": 15.468333333333334
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 406,
+        "x": null,
+        "side": "right",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 15.468333333333334,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-3",
+        "time": 17.135,
+        "time_interval": {
+          "start": 17.135,
+          "end": 18.701666666666668
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 514,
+        "x": null,
+        "side": "left",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 18.701666666666668,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-4",
+        "time": 20.735,
+        "time_interval": {
+          "start": 20.735,
+          "end": 23.27
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 622,
+        "x": null,
+        "side": "right",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 23.27,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      }
+    ],
+    "timed_sections": 5
+  },
+  {
+    "clip": 2,
+    "previous_turns": 1,
+    "turns": 7,
+    "visible_turns": 1,
+    "inferred_turns": [
+      {
+        "id": "edge-turn-1",
+        "time": 2.2,
+        "time_interval": {
+          "start": 2.2,
+          "end": 4.566666666666666
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 66,
+        "x": null,
+        "side": "left",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 4.566666666666666,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-2",
+        "time": 7.335,
+        "time_interval": {
+          "start": 7.335,
+          "end": 10.068333333333333
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 220,
+        "x": null,
+        "side": "right",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 10.068333333333333,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-3",
+        "time": 16.06833333333333,
+        "time_interval": {
+          "start": 16.06833333333333,
+          "end": 19.401666666666667
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 482,
+        "x": null,
+        "side": "right",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 19.401666666666667,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-4",
+        "time": 21.27,
+        "time_interval": {
+          "start": 21.27,
+          "end": 22.47
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 638,
+        "x": null,
+        "side": "left",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 22.47,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-5",
+        "time": 24.10333333333333,
+        "time_interval": {
+          "start": 24.10333333333333,
+          "end": 26.403333333333332
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 723,
+        "x": null,
+        "side": "right",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 26.403333333333332,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-6",
+        "time": 28.136666666666667,
+        "time_interval": {
+          "start": 28.136666666666667,
+          "end": 29.203333333333333
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 844,
+        "x": null,
+        "side": "left",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 29.203333333333333,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      }
+    ],
+    "timed_sections": 3
+  },
+  {
+    "clip": 3,
+    "previous_turns": 7,
+    "turns": 15,
+    "visible_turns": 7,
+    "inferred_turns": [
+      {
+        "id": "edge-turn-1",
+        "time": 2.6016666666666666,
+        "time_interval": {
+          "start": 2.6016666666666666,
+          "end": 4.435
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 78,
+        "x": null,
+        "side": "left",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 4.435,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-2",
+        "time": 6.301666666666667,
+        "time_interval": {
+          "start": 6.301666666666667,
+          "end": 8.601666666666667
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 189,
+        "x": null,
+        "side": "right",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 8.601666666666667,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-3",
+        "time": 10.101666666666667,
+        "time_interval": {
+          "start": 10.101666666666667,
+          "end": 11.668333333333333
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 303,
+        "x": null,
+        "side": "left",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 11.668333333333333,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-4",
+        "time": 13.635,
+        "time_interval": {
+          "start": 13.635,
+          "end": 17.368333333333332
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 409,
+        "x": null,
+        "side": "right",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 17.368333333333332,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-5",
+        "time": 19.07,
+        "time_interval": {
+          "start": 19.07,
+          "end": 20.47
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 572,
+        "x": null,
+        "side": "left",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 20.47,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-6",
+        "time": 32.571666666666665,
+        "time_interval": {
+          "start": 32.571666666666665,
+          "end": 33.705
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 977,
+        "x": null,
+        "side": "left",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 33.705,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-7",
+        "time": 36.705,
+        "time_interval": {
+          "start": 36.705,
+          "end": 37.705
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 1101,
+        "x": null,
+        "side": "left",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 37.705,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      },
+      {
+        "id": "edge-turn-8",
+        "time": 41.038333333333334,
+        "time_interval": {
+          "start": 41.038333333333334,
+          "end": 43.071666666666665
+        },
+        "time_kind": "interval",
+        "evidence": "inferred_edge_return",
+        "frame": 1231,
+        "x": null,
+        "side": "left",
+        "marker_status": "not_assessed",
+        "shortfall_pixels": null,
+        "confirmed_at": 43.071666666666665,
+        "reason": "Observed outward approach at this image edge, then inward return from the same side. Exact turn time and hidden marker reach were not observed."
+      }
+    ],
+    "timed_sections": 9
+  }
+]

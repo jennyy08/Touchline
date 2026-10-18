@@ -8,11 +8,12 @@ import logging
 import tempfile
 import threading
 import uuid
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import FastAPI, File, HTTPException, UploadFile, Form
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from .pipeline import analyze
 from .config import Config
+from .dribbling import DrillSetup
 
 ROOT = Path(__file__).resolve().parents[1]
 JOB_ROOT = Path(tempfile.mkdtemp(prefix="juggle-lab-"))
@@ -32,13 +33,14 @@ def cleanup(folder=JOB_ROOT):
 atexit.register(cleanup)
 
 
-def run_job(job_id, source):
+def run_job(job_id, source, drill_setup=None):
     global busy
     def progress(**state):
         with lock:
             jobs[job_id].update(state)
     try:
-        analyze(source, JOB_ROOT / job_id, ROOT / "models", progress=progress)
+        options = {"drill_setup": drill_setup} if drill_setup is not None else {}
+        analyze(source, JOB_ROOT / job_id, ROOT / "models", progress=progress, **options)
         progress(stage="complete")
     except Exception as exc:
         logging.exception("Analysis failed")
@@ -65,8 +67,18 @@ def release_analysis():
 
 
 @app.post("/api/jobs", status_code=202)
-async def create_job(file: UploadFile = File(...)):
+async def create_job(file: UploadFile = File(...), drill: str = Form("juggling"), setup: str = Form("{}")):
     global busy
+    if drill not in ("juggling", "side_to_side"):
+        await file.close()
+        raise HTTPException(422, "Unknown drill.")
+    drill_setup = None
+    if drill == "side_to_side":
+        try:
+            drill_setup = DrillSetup.model_validate_json(setup)
+        except ValueError as exc:
+            await file.close()
+            raise HTTPException(422, f"Invalid practice setup: {exc}")
     if not claim_analysis():
         raise HTTPException(409, "An upload or live session is already running. Wait for it to finish.")
     job_id = uuid.uuid4().hex
@@ -85,7 +97,7 @@ async def create_job(file: UploadFile = File(...)):
             raise HTTPException(400, "The uploaded file is empty.")
         with lock:
             jobs[job_id] = {"id": job_id, "name": file.filename or "Video", "stage": "queued", "frames": 0, "total": 0}
-        executor.submit(run_job, job_id, source)
+        executor.submit(run_job, job_id, source, drill_setup)
     except BaseException:
         source.unlink(missing_ok=True)
         with lock:

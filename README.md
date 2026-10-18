@@ -137,3 +137,42 @@ Floor revision: [floor line from planted soles, three new clips](validation/floo
 Latest audio revision: [impact sounds as separate "heard, not seen" evidence](validation/audio-revision/README.md). Add `--no-audio` to the CLI for video-only analysis.
 
 Live implementation: [webcam setup and measured replay results](validation/live-revision/LIVE.md). The earlier [CPU/MPS benchmark](validation/live-revision/README.md) remains a historical comparison.
+
+## Side-to-side dribbling (uploaded clips)
+
+Open `/dribbling.html` on the same local server, or choose **Side to side** on
+the upload page. Existing juggling upload and live modes are separate.
+
+1. Choose a stationary-camera clip. Pause the preview and click **Practice area**,
+   then two opposite corners. Include the entire actual ball route, including
+   beyond the paddles, but exclude mirrors. Cropping too tightly hides turns.
+2. Click **Markers** and select the two paddle/cone positions. These create
+   vertical image guides. Enable **My goal is to reach both markers** only when
+   that was your intention. Going past a marker is allowed.
+3. Analyze. Select a turn, trip, or tracking gap to replay it at half speed;
+   use the frame buttons for closer inspection. Export JSON to retain evidence.
+
+Pace is horizontal ball displacement in **practice-area widths per second**,
+not running speed or km/h. With markers, timed sections measure the middle 70% of the marker spacing
+(blue lines), excluding the turns; otherwise they run between visible turns. The app flags a
+trip over 25% slower than the median of at least three sections in the same direction.
+This is a within-clip observation, not a technique grade or fatigue diagnosis.
+Pauses may be intentional. Marker feedback refers to the ball, not the feet.
+
+A ball approaching an image edge and returning inward from that same edge now
+counts as an **inferred turn**. Its replay window is shown instead of an exact
+turn timestamp. Visible and inferred turns both contribute to the turn total.
+Predicted positions alone never support events, and pace never crosses gaps.
+Returns after more than six seconds without observations are not joined.
+Raw tracking gaps are hidden under **Tracking details (optional)**.
+Visible turns near the crop boundary have unassessed marker reach. This first
+version has no live dribbling, depth measurement, or automatic drill prescription.
+Use a fixed camera: temporal background filtering can reject a ball that stays
+still for most of the clip, and moving cameras/lighting changes are unverified.
+
+No additional dependencies or models are required. This mode uses the installed
+YOLO11s sports-ball detector at 640, the existing Kalman tracker, and a temporal
+median background filter; it does not load pose, foot, or audio models. Setup
+coordinates are normalized in the upright video. A second decode pass builds the
+background before tracking, so processing takes longer than a single detector pass.
+See `validation/dribbling-revision/README.md` for actual results and limitations.
