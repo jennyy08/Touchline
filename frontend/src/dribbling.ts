@@ -120,6 +120,7 @@ $<HTMLInputElement>("file").onchange = () => {
   const f = $<HTMLInputElement>("file").files?.[0];
   if (!f) return;
   $("error").hidden = true;
+  $("story-mount").hidden = true;
   $("results").hidden = true;
   $("upload-panel").hidden = false;
   video.pause();
@@ -351,6 +352,7 @@ $("analyze").onclick = async () => {
   video.pause();
   $("error").hidden = true;
   setBusy(true);
+  $("story-mount").hidden = true;
   $("results").hidden = true;
   $("progress-label").textContent = "Uploading locally…";
   $<HTMLProgressElement>("progress").removeAttribute("value");

@@ -10,12 +10,13 @@
   </button>
 </header>
 <main>
+  <div id="story-mount"></div>
   <div id="error" role="alert" hidden></div>
   <section id="upload-panel" class="upload-panel">
     <div class="page-heading">
       <p class="eyebrow">SIDE TO SIDE</p>
-      <h1>Your practice, on replay.</h1>
-      <p>Review your turns, compare your pace, and see how far you travel.</p>
+      <h2>Let’s see your practice.</h2>
+      <p>Upload a fixed-camera clip, then mark your practice area.</p>
     </div>
     <div class="file-picker">
       <label for="file">Choose a practice video <span>↑</span></label
@@ -116,7 +117,6 @@
     <p class="muted">Processing locally. Keep this page open.</p>
   </section>
   <section id="results" hidden>
-    <div id="story-mount"></div>
     <div id="video-workspace" class="video-workspace">
       <div class="workspace-heading">
         <div>
@@ -245,15 +245,10 @@
         </aside>
       </div>
     </div>
-    <section class="progress-close">
-      <p class="chapter-kicker">THE NEXT SESSION STARTS WITH YOU</p>
-      <h2>Keep showing up.<br /><em>Keep finding your rhythm.</em></h2>
-      <p id="progress-close-copy">
-        You have a session to learn from. Give yourself another one.
-      </p>
-      <button id="practice-again" class="primary">Practice again ↗</button>
-      <p class="data-caption">No score to chase. One thing to work on.</p>
-    </section>
+    <div class="practice-close">
+      <span>Ready for another go?</span
+      ><button id="practice-again">Upload another session ↗</button>
+    </div>
   </section>
   <footer>
     <span>TOUCHLINE / PRACTICE ANALYSIS</span

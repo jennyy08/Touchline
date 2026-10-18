@@ -1,141 +1,35 @@
-<div class="session-narrative" id="session-narrative">
-  <div class="movement-rail" aria-hidden="true">
-    <svg id="signature-svg" viewBox="0 0 540 2000" preserveAspectRatio="none">
-      <path id="signature-previous" class="previous-path" />
-      <path id="signature-base" />
-      <path id="signature-progress" />
-      <g id="signature-nodes"></g>
+<section class="practice-intro" aria-labelledby="intro-title">
+  <div class="intro-copy">
+    <p class="chapter-kicker">TOUCHLINE / PRACTICE AT HOME</p>
+    <h1 id="intro-title">Your space.<br /><em>Your practice.</em></h1>
+    <p class="hero-description">
+      A ball, a little room, and something to work on. Record your side-to-side
+      drill and take a closer look at your turns and pace.
+    </p>
+    <a href="#upload-panel" class="primary story-link"
+      >Start a session <span>↗</span></a
+    >
+    <p class="intro-note">Record. Upload. Replay.</p>
+  </div>
+  <div class="intro-art">
+    <svg id="signature-svg" viewBox="0 0 540 540" aria-hidden="true">
+      <path
+        id="signature-base"
+        d="M270 15 C270 85 100 65 100 145 S440 190 440 285 S100 340 100 425 S270 470 270 525"
+      />
+      <path
+        id="signature-progress"
+        d="M270 15 C270 85 100 65 100 145 S440 190 440 285 S100 340 100 425 S270 470 270 525"
+      />
+      <g id="signature-nodes">
+        <circle cx="100" cy="145" r="7" />
+        <circle cx="440" cy="285" r="7" />
+        <circle cx="100" cy="425" r="7" />
+      </g>
       <circle id="signature-point" r="9" />
     </svg>
-  </div>
-  <section class="session-hero" aria-labelledby="session-title">
-    <div class="hero-copy">
-      <p class="chapter-kicker">YOUR SESSION / SIDE TO SIDE</p>
-      <h1 id="session-title">
-        <span id="hero-turns">Your moves.</span><br /><em>Keep building.</em>
-      </h1>
-      <p class="hero-description">
-        Every change of direction is a chance to get a little more comfortable
-        with the ball. Let’s follow yours.
-      </p>
-      <div class="hero-actions">
-        <a href="#rhythm-chapter" class="primary story-link"
-          >Explore session <span>↓</span></a
-        ><a href="#video-workspace" class="text-link story-link"
-          >Replay practice <span>↗</span></a
-        >
-      </div>
-      <div class="hero-metrics">
-        <div>
-          <strong id="hero-duration">—</strong><span>practice captured</span>
-        </div>
-        <div>
-          <strong id="hero-split">—</strong
-          ><span>visible / inferred turns</span>
-        </div>
-      </div>
-      <p class="scroll-cue">↓ &nbsp; Scroll to follow your movement</p>
-    </div>
-    <div class="signature-caption">
-      <span>YOUR MOVEMENT SIGNATURE</span>
-      <p>
-        One node per estimated turn.<br />A schematic of your session, not a
-        ground map.
-      </p>
-    </div>
-  </section>
-  <section class="insight-chapter" id="rhythm-chapter">
-    <div class="chapter-copy">
-      <p class="chapter-kicker"><span>01</span> FINDING YOUR RHYTHM</p>
-      <h2>A pace<br />of your own.</h2>
-      <p id="rhythm-copy">Your timed sections tell the story.</p>
-      <div class="rhythm-measure">
-        <strong id="rhythm-number">—</strong><span id="rhythm-caption"></span>
-      </div>
-      <div
-        id="rhythm-bars"
-        class="rhythm-bars"
-        aria-label="Relative pace of observed sections"
-      ></div>
-      <p class="data-caption">
-        Each bar is one timed section. Compared with your typical pace in the
-        same direction.
-      </p>
-    </div>
-  </section>
-  <section class="insight-chapter" id="balance-chapter">
-    <div class="chapter-copy">
-      <p class="chapter-kicker"><span>02</span> BOTH SIDES OF YOUR GAME</p>
-      <h2>Left. Right.<br />Your balance.</h2>
-      <p id="balance-copy"></p>
-      <div class="balance-visual">
-        <div>
-          <span>LEFT</span><i id="balance-left"></i
-          ><strong id="balance-left-value">—</strong>
-        </div>
-        <div>
-          <span>RIGHT</span><i id="balance-right"></i
-          ><strong id="balance-right-value">—</strong>
-        </div>
-      </div>
-      <p class="data-caption">
-        Median sideways ball speed in this camera view. This isn’t a rating of
-        either foot.
-      </p>
-    </div>
-  </section>
-  <section class="insight-chapter" id="growth-chapter">
-    <div class="chapter-copy">
-      <p class="chapter-kicker"><span>03</span> SOMETHING TO BUILD ON</p>
-      <h2 id="growth-title">Your starting line.</h2>
-      <p id="growth-copy">This session gives you a reference for next time.</p>
-      <div class="baseline-note">
-        <span>THIS SESSION</span><strong id="growth-total">—</strong>
-        <p id="comparison-copy">
-          A previous comparable session hasn’t been saved in this browser yet.
-          No progress percentage has been assumed.
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<section class="coach-summary" aria-labelledby="coach-heading">
-  <div>
-    <p class="chapter-kicker">A MOMENT TO REFLECT</p>
-    <h2 id="coach-heading">Coach’s take<span>↗</span></h2>
-    <p class="coach-disclosure">
-      Practice prompts based on the visible measurements, not a technique
-      diagnosis.
+    <p class="intro-art-caption">
+      A LITTLE ROOM TO IMPROVE<span>Illustration of a side-to-side drill</span>
     </p>
   </div>
-  <div>
-    <p id="coach-message" class="coach-message"></p>
-    <div class="coach-actions">
-      <div>
-        <h3>What went well</h3>
-        <p id="went-well"></p>
-      </div>
-      <div>
-        <h3>Try this next</h3>
-        <p>
-          Keep a comfortable pace through your first three changes of direction.
-          Then check whether it felt easier to repeat.
-        </p>
-      </div>
-    </div>
-    <div class="practice-suggestion">
-      <span>YOUR NEXT DRILL</span>
-      <p>
-        <strong>30 seconds. Two markers. One steady pace.</strong><br />Repeat
-        this side-to-side drill at a comfortable speed. Aim to reach your chosen
-        markers; speed can come later.
-      </p>
-    </div>
-  </div>
 </section>
-<div class="replay-transition">
-  <span class="transition-line" aria-hidden="true"></span>
-  <p class="chapter-kicker">FROM THE STORY TO THE FOOTAGE</p>
-  <h2>Here’s where<br /><em>it happened.</em></h2>
-  <p>The same turns. Your actual practice.</p>
-</div>

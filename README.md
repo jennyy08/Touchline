@@ -177,28 +177,22 @@ coordinates are normalized in the upright video. A second decode pass builds the
 background before tracking, so processing takes longer than a single detector pass.
 See `validation/dribbling-revision/README.md` for actual results and limitations.
 
-### Session story interface
+### Practice interface
 
-The side-to-side result now opens with an editorial session story and a schematic
-path through the estimated turns. The path represents turn side and elapsed time,
-not a physical ground route. Rhythm is the median absolute difference of measured
-same-direction pace ratios from 1, expressed as a percentage; it is not confidence
-or an accuracy score. Direction summaries require three measured sections each.
+The side-to-side page opens with a short app introduction and upload. The animated
+path is a decorative drill illustration, not analysis of an uploaded clip. Its
+caption sits outside the SVG. Scroll motion eases toward its target and stops
+rendering when settled or off screen; reduced-motion users see a static path.
 
-Replay includes keyboard-operable playback, frame stepping, speed, tracking,
-turn selection, and focus mode (Escape to close). Setup also accepts numeric
-coordinates. Scroll effects respect reduced-motion preferences.
+After selecting a clip, the page goes directly to setup, then video results.
+Turn counts, pace feedback, and event lists stay beside the replay. Playback has
+frame stepping, speed controls, tracking, and focus mode (Escape to close).
+Setup also accepts keyboard-accessible numeric coordinates.
 
-Up to 12 session summaries are saved only in this browser's local storage. A
-comparison requires a different video hash and identical setup and measurement
-basis. Different camera positions, clip lengths, and tracking coverage can still
-make sessions incomparable; changes are descriptive, not skill improvement scores.
-Without an earlier matching session, the page explicitly shows a baseline.
-
-Presentation is separate from analysis: `frontend/src/session-story.html` and
-`session-story.css` control the story layout and styling; `session-story.ts`
-connects replay and local history; `session-insights.ts` contains tested summary
-calculations. No detector or counting behavior changed in this redesign.
+Edit `frontend/src/session-story.html` and `session-story.css` for the introduction
+and visual theme; `session-story.ts` connects motion and playback. Analysis stays
+separate. The earlier narrative chapters and browser-history comparison are no
+longer shown or written; any previously saved browser summaries remain untouched.
 
 The locally bundled Space Grotesk font comes from Google Fonts' official
 `google/fonts` repository (`ofl/spacegrotesk/SpaceGrotesk[wght].ttf`). Its SIL Open

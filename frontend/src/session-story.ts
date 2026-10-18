@@ -1,28 +1,16 @@
 import template from "./session-story.html?raw";
 import type { DribbleResult, Turn } from "./dribbling-types";
-import {
-  sessionInsights,
-  signaturePath,
-  signaturePoints,
-} from "./session-insights";
 const $ = <T extends HTMLElement>(id: string) =>
   document.getElementById(id) as T;
 const set = (id: string, value: string) => {
   $(id).textContent = value;
 };
-const ns = "http://www.w3.org/2000/svg";
-type Saved = {
-  hash: string;
-  setup: string;
-  deviation: number | null;
-  turns: Turn[];
-  duration: number;
-};
-
 /** Presentation controller. Reads analysis; never changes its events or measurements. */
 export class SessionStory {
   private result: DribbleResult | null = null;
   private frame = 0;
+  private progress = 0.12;
+  private lastPaint = 0;
   private readonly reduced = matchMedia("(prefers-reduced-motion: reduce)");
   constructor(
     private video: HTMLVideoElement,
@@ -31,14 +19,12 @@ export class SessionStory {
     $("story-mount").innerHTML = template;
     const schedule = () => {
       if (!this.frame)
-        this.frame = requestAnimationFrame(() => {
-          this.frame = 0;
-          this.paintScroll();
-        });
+        this.frame = requestAnimationFrame((time) => this.paintScroll(time));
     };
     addEventListener("scroll", schedule, { passive: true });
     addEventListener("resize", schedule);
     this.reduced.addEventListener("change", schedule);
+    schedule();
     document.querySelectorAll<HTMLAnchorElement>(".story-link").forEach(
       (link) =>
         (link.onclick = (e) => {
@@ -89,7 +75,7 @@ export class SessionStory {
     // Keep keyboard navigation inside the expanded replay until it is closed.
     document
       .querySelectorAll<HTMLElement>(
-        ".app-header, #story-mount, .progress-close, main > footer",
+        ".app-header, #story-mount, .practice-close, main > footer",
       )
       .forEach((element) => {
         element.inert = enabled;
@@ -100,180 +86,9 @@ export class SessionStory {
   }
   load(result: DribbleResult) {
     this.result = result;
-    const d = result.dribbling,
-      i = sessionInsights(result);
-    set(
-      "hero-turns",
-      d.turns.length ? `${d.turns.length} turns.` : "You showed up.",
-    );
-    set("hero-duration", `${Math.round(result.video.duration)} sec`);
-    set("hero-split", `${d.turns.length - i.inferred} / ${i.inferred}`);
-    set(
-      "rhythm-copy",
-      i.deviation === null
-        ? "A few more clearly visible sections will help us compare your pace. For now, use the replay to notice how each change of direction feels."
-        : i.slow.length
-          ? "Your pace varied in a few places. Take a closer look at the slower sections and decide whether the change was intentional."
-          : "Your measured sections stayed above the pace-dip threshold. Watch them back and see which movements felt most repeatable.",
-    );
-    set(
-      "rhythm-number",
-      i.deviation === null
-        ? "Still taking shape"
-        : `${Math.round(i.deviation)}%`,
-    );
-    set(
-      "rhythm-caption",
-      i.deviation === null
-        ? "Not enough comparable sections yet"
-        : `typical difference from your median pace · ${i.comparable} measured sections`,
-    );
-    $("rhythm-bars").replaceChildren();
-    d.trips.forEach((trip, index) => {
-      const bar = document.createElement("button");
-      bar.style.height = `${Math.max(12, Math.min(100, (trip.relative_speed ?? 1) * 60))}%`;
-      bar.className = trip.slower ? "pace-dip" : "";
-      bar.setAttribute(
-        "aria-label",
-        `Replay section ${index + 1}, ${trip.start.toFixed(1)} seconds`,
-      );
-      bar.title = `Section ${index + 1} · ${trip.relative_speed === null ? "pace comparison unavailable" : Math.round(trip.relative_speed * 100) + "% of typical pace"}`;
-      bar.onclick = () => {
-        $("video-workspace").scrollIntoView({
-          behavior: this.reduced.matches ? "auto" : "smooth",
-        });
-        this.seek(trip.start);
-      };
-      $("rhythm-bars").append(bar);
-    });
-    const both = i.leftSpeed !== null && i.rightSpeed !== null;
-    set(
-      "balance-copy",
-      both
-        ? "Here’s how your typical sideways ball speed compares in each direction. Different doesn’t automatically mean worse."
-        : "We need at least three measured sections in each direction for a useful comparison. Your missing side stays unscored.",
-    );
-    const largest = Math.max(i.leftSpeed ?? 0, i.rightSpeed ?? 0, 0.001);
-    for (const side of ["left", "right"] as const) {
-      const value = side === "left" ? i.leftSpeed : i.rightSpeed;
-      set(
-        `balance-${side}-value`,
-        value === null ? "Not enough data" : `${value.toFixed(2)} widths/s`,
-      );
-      $(`balance-${side}`).style.width =
-        value === null ? "0%" : `${(value / largest) * 70}%`;
-    }
-    const points = signaturePoints(d.turns, result.video.duration),
-      path = signaturePath(points);
-    document.getElementById("signature-base")!.setAttribute("d", path);
-    document.getElementById("signature-progress")!.setAttribute("d", path);
-    const nodes = document.getElementById("signature-nodes")!;
-    nodes.replaceChildren();
-    points.forEach((point, index) => {
-      const circle = document.createElementNS(ns, "circle");
-      circle.setAttribute("cx", String(point.x));
-      circle.setAttribute("cy", String(point.y));
-      circle.setAttribute("r", "7");
-      circle.setAttribute("class", point.inferred ? "inferred" : "");
-      nodes.append(circle);
-      const label = document.createElementNS(ns, "text");
-      label.setAttribute("x", String(point.x + (point.x < 270 ? 20 : -40)));
-      label.setAttribute("y", String(point.y + 5));
-      label.textContent = String(index + 1).padStart(2, "0");
-      nodes.append(label);
-    });
-    set(
-      "growth-total",
-      `${d.turns.length} estimated turns. A reference for next time.`,
-    );
-    set(
-      "coach-message",
-      i.slow.length
-        ? `You’ve put in the practice. ${i.slow.length === 1 ? "One measured section moved" : `${i.slow.length} measured sections moved`} more slowly than your usual pace in that direction. Replay ${i.slow[0].start.toFixed(1)}–${i.slow[0].end.toFixed(1)} seconds: was it a deliberate pause, or a moment you’d like to make smoother?`
-        : "You’ve made time for practice. Pick one turn that felt comfortable, replay it, and try to carry that same feeling into your next attempt.",
-    );
-    set(
-      "went-well",
-      i.reached
-        ? `The ball visibly reached a marker on ${i.reached} of ${i.assessed} assessed turns. The remaining turns need their own review.`
-        : d.turns.length
-          ? `You completed a session with ${d.turns.length} estimated changes of direction. That gives you specific moments to learn from.`
-          : "You recorded your practice. Even without a reliable turn count, the replay is useful for noticing what felt comfortable.",
-    );
-    this.compare({
-      hash: result.video.sha256,
-      setup: JSON.stringify({ setup: d.setup, basis: d.trip_basis }),
-      deviation: i.deviation,
-      turns: d.turns,
-      duration: result.video.duration,
-    });
+    $("story-mount").hidden = true;
     $<HTMLInputElement>("replay-scrub").max = String(result.video.duration);
-    requestAnimationFrame(() => this.paintScroll());
-  }
-  private compare(current: Saved) {
-    set("growth-title", "Your starting line.");
-    set(
-      "growth-copy",
-      "A little more awareness today. Something specific to work on next time.",
-    );
-    set(
-      "comparison-copy",
-      "No earlier comparable session is saved in this browser yet. This is your baseline, not a progress score.",
-    );
-    document.getElementById("signature-previous")!.removeAttribute("d");
-    try {
-      const raw = JSON.parse(
-        localStorage.getItem("touchline:story-sessions") ?? "[]",
-      );
-      const saved: Saved[] = Array.isArray(raw)
-        ? raw.filter(
-            (v: Saved) =>
-              v &&
-              typeof v.hash === "string" &&
-              typeof v.setup === "string" &&
-              Array.isArray(v.turns) &&
-              typeof v.duration === "number" &&
-              (v.deviation === null || Number.isFinite(v.deviation)),
-          )
-        : [];
-      const previous = saved.find(
-        (s) => s.hash !== current.hash && s.setup === current.setup,
-      );
-      if (previous) {
-        set("growth-title", "Another session in your story.");
-        const change = current.turns.length - previous.turns.length;
-        let comparison = `${change === 0 ? "The same number of" : `${Math.abs(change)} ${change > 0 ? "more" : "fewer"}`} estimated turns than your last comparable session. Clip length affects this total.`;
-        if (current.deviation !== null && previous.deviation !== null) {
-          const difference = previous.deviation - current.deviation;
-          comparison += ` Typical pace variation is ${Math.abs(difference).toFixed(1)} percentage points ${difference >= 0 ? "lower" : "higher"}.`;
-        }
-        set("comparison-copy", comparison);
-        document
-          .getElementById("signature-previous")!
-          .setAttribute(
-            "d",
-            signaturePath(signaturePoints(previous.turns, previous.duration)),
-          );
-        set(
-          "growth-copy",
-          "Your earlier signature appears in muted green. Both paths are normalized to session length; they aren’t physical routes.",
-        );
-      }
-      localStorage.setItem(
-        "touchline:story-sessions",
-        JSON.stringify(
-          [current, ...saved.filter((s) => s.hash !== current.hash)].slice(
-            0,
-            12,
-          ),
-        ),
-      );
-    } catch {
-      set(
-        "comparison-copy",
-        "Session history is unavailable in this browser. Your current analysis and replay still work.",
-      );
-    }
+    $("video-workspace").style.setProperty("--arrival", "1");
   }
   selectAt(time: number) {
     if (!this.result) return;
@@ -335,39 +150,40 @@ export class SessionStory {
         : "We briefly lost sight of the ball.",
     );
   }
-  private paintScroll() {
-    if (!this.result || $("results").hidden) return;
-    const host = $("session-narrative"),
-      rect = host.getBoundingClientRect();
-    const progress = Math.max(
-      0,
-      Math.min(1, (innerHeight * 0.6 - rect.top) / rect.height),
+  /** Ease toward scroll position; stop scheduling frames once settled or off screen. */
+  private paintScroll(time: number) {
+    this.frame = 0;
+    const host = $("story-mount");
+    const rect = host.getBoundingClientRect();
+    if (host.hidden || rect.bottom < 0 || rect.top > innerHeight) {
+      this.lastPaint = 0;
+      return;
+    }
+    const target = Math.max(
+      0.12,
+      Math.min(
+        1,
+        0.12 + (Math.max(0, -rect.top + 84) / Math.max(1, rect.height)) * 0.88,
+      ),
     );
+    const elapsed = this.lastPaint ? Math.min(64, time - this.lastPaint) : 16;
+    this.lastPaint = time;
+    this.progress += (target - this.progress) * (1 - Math.exp(-elapsed / 120));
     const path = document.getElementById(
       "signature-progress",
     ) as unknown as SVGPathElement;
     const length = path.getTotalLength();
     path.style.strokeDasharray = String(length);
     path.style.strokeDashoffset = String(
-      this.reduced.matches ? 0 : length * (1 - progress),
+      this.reduced.matches ? 0 : length * (1 - this.progress),
     );
-    const point = path.getPointAtLength(length * progress);
+    const point = path.getPointAtLength(length * this.progress);
     const dot = document.getElementById("signature-point")!;
     dot.setAttribute("cx", String(point.x));
     dot.setAttribute("cy", String(point.y));
     dot.setAttribute("visibility", this.reduced.matches ? "hidden" : "visible");
-    $("video-workspace").style.setProperty(
-      "--arrival",
-      String(
-        Math.max(
-          0,
-          Math.min(
-            1,
-            (innerHeight - $("video-workspace").getBoundingClientRect().top) /
-              innerHeight,
-          ),
-        ),
-      ),
-    );
+    if (!this.reduced.matches && Math.abs(target - this.progress) > 0.0001)
+      this.frame = requestAnimationFrame((next) => this.paintScroll(next));
+    else this.lastPaint = 0;
   }
 }
