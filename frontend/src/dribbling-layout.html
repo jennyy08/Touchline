@@ -55,6 +55,56 @@
             Going past a marker is okay. Marker lines are image guides, not
             measured ground distances.
           </p>
+          <details class="keyboard-setup">
+            <summary>Set positions with keyboard</summary>
+            <p>Percent of the video. Left/top are 0; right/bottom are 100.</p>
+            <div class="geometry-inputs">
+              <label
+                >Area left<input
+                  id="area-left"
+                  type="number"
+                  min="0"
+                  max="100"
+                  value="0" /></label
+              ><label
+                >Area top<input
+                  id="area-top"
+                  type="number"
+                  min="0"
+                  max="100"
+                  value="0" /></label
+              ><label
+                >Area right<input
+                  id="area-right"
+                  type="number"
+                  min="0"
+                  max="100"
+                  value="100" /></label
+              ><label
+                >Area bottom<input
+                  id="area-bottom"
+                  type="number"
+                  min="0"
+                  max="100"
+                  value="100" /></label
+              ><label
+                >Left marker<input
+                  id="marker-left"
+                  type="number"
+                  min="0"
+                  max="100"
+                  value="20" /></label
+              ><label
+                >Right marker<input
+                  id="marker-right"
+                  type="number"
+                  min="0"
+                  max="100"
+                  value="80"
+              /></label>
+            </div>
+            <button id="apply-positions">Apply area and markers</button>
+          </details>
           <button id="analyze" class="primary">Analyze video →</button>
         </div>
       </div>
@@ -66,109 +116,144 @@
     <p class="muted">Processing locally. Keep this page open.</p>
   </section>
   <section id="results" hidden>
-    <div class="workspace-heading">
-      <div>
-        <p class="eyebrow">PRACTICE REVIEW</p>
-        <h1>Side to side</h1>
+    <div id="story-mount"></div>
+    <div id="video-workspace" class="video-workspace">
+      <div class="workspace-heading">
+        <div>
+          <p class="eyebrow">PRACTICE REVIEW</p>
+          <h2>Your session, up close.</h2>
+        </div>
+        <div class="workspace-actions">
+          <button id="focus-mode" aria-pressed="false">Focus mode</button
+          ><button id="export" class="quiet">Export analysis ↓</button>
+        </div>
       </div>
-      <button id="export" class="quiet">Export analysis ↓</button>
-    </div>
-    <div class="session-summary">
-      <div><strong id="turn-count">—</strong> estimated turns</div>
-      <span class="summary-divider"></span>
-      <p id="summary"></p>
-    </div>
-    <div class="workspace-grid">
-      <div class="replay-panel">
-        <div class="video-stage">
-          <video id="video" controls playsinline></video
-          ><canvas id="overlay"></canvas><canvas id="guides"></canvas>
-        </div>
-        <div class="player-controls">
-          <div class="frame-controls">
-            <button id="previous" aria-label="Previous frame">←</button
-            ><span>Frame</span
-            ><button id="next" aria-label="Next frame">→</button>
-          </div>
-          <label
-            >Speed
-            <select id="speed">
-              <option value="1">1×</option>
-              <option value="0.5">0.5×</option>
-              <option value="0.25">0.25×</option>
-            </select></label
-          ><label class="check"
-            ><input id="evidence" type="checkbox" checked /> Tracking</label
-          >
-        </div>
-        <div
-          id="turn-timeline"
-          class="turn-timeline"
-          aria-label="Turn timeline"
-        ></div>
-        <div class="timeline-caption">
-          <span>Turns across your video</span
-          ><span>Solid: visible · outlined: inferred</span>
-        </div>
-        <div class="replay-meta">
-          <span id="tracking-status"></span
-          ><span>Blue lines mark the timed section</span>
-        </div>
-        <details class="technical-details">
-          <summary>Tracking details</summary>
-          <p>
-            Missing observations are tracking gaps, not mistakes in your
-            practice. Green boxes are observations; amber boxes are predictions.
-          </p>
-          <div id="gaps"></div>
-          <ul id="notes"></ul>
-          <p id="runtime"></p>
-        </details>
+      <div class="session-summary">
+        <div><strong id="turn-count">—</strong> estimated turns</div>
+        <span class="summary-divider"></span>
+        <p id="summary"></p>
       </div>
-      <aside class="review-sidebar">
-        <section class="feedback-section">
-          <div class="section-heading">
-            <h2>Session notes</h2>
-            <span>ESTIMATES</span>
+      <div class="workspace-grid">
+        <div class="replay-panel">
+          <div class="video-stage">
+            <video id="video" controls playsinline></video
+            ><canvas id="overlay"></canvas><canvas id="guides"></canvas>
           </div>
-          <div id="feedback"></div>
-        </section>
-        <div class="review-tabs" role="tablist" aria-label="Review events">
-          <button
-            id="turns-tab"
-            role="tab"
-            aria-selected="true"
-            aria-controls="turns-panel"
-          >
-            Turns <span id="turns-tab-count"></span></button
-          ><button
-            id="pace-tab"
-            role="tab"
-            aria-selected="false"
-            aria-controls="pace-panel"
-            tabindex="-1"
-          >
-            Pace <span id="pace-tab-count"></span>
-          </button>
+          <div class="player-controls">
+            <input
+              id="replay-scrub"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0"
+              aria-label="Video position in seconds"
+            />
+            <button id="play-pause" aria-label="Play video">Play</button>
+            <span id="playback-time">0:00</span>
+            <div class="frame-controls">
+              <button id="previous" aria-label="Previous frame">←</button
+              ><span>Frame</span
+              ><button id="next" aria-label="Next frame">→</button>
+            </div>
+            <label
+              >Speed
+              <select id="speed">
+                <option value="1">1×</option>
+                <option value="0.5">0.5×</option>
+                <option value="0.25">0.25×</option>
+              </select></label
+            ><label class="check"
+              ><input id="evidence" type="checkbox" checked /> Tracking</label
+            >
+          </div>
+          <div
+            id="turn-timeline"
+            class="turn-timeline"
+            aria-label="Turn timeline"
+          ></div>
+          <div class="timeline-caption">
+            <span>Your movement ribbon</span
+            ><span>Above: left · below: right · outlined: inferred window</span>
+          </div>
+          <div class="replay-meta">
+            <span id="friendly-status">Ready to replay</span>
+            <span>Blue lines mark the timed section</span>
+          </div>
+          <details class="technical-details">
+            <summary>Tracking details</summary>
+            <p id="tracking-status"></p>
+            <p>
+              Missing observations are tracking gaps, not mistakes in your
+              practice. Green boxes are observations; amber boxes are
+              predictions.
+            </p>
+            <div id="gaps"></div>
+            <ul id="notes"></ul>
+            <p id="runtime"></p>
+          </details>
         </div>
-        <section id="turns-panel" role="tabpanel" aria-labelledby="turns-tab">
-          <p class="list-hint">
-            Select a turn to replay it. Inferred turns count; their time is
-            shown as a window.
-          </p>
-          <div id="turns" class="event-list"></div>
-        </section>
-        <section
-          id="pace-panel"
-          role="tabpanel"
-          aria-labelledby="pace-tab"
-          hidden
-        >
-          <p id="trip-basis" class="list-hint"></p>
-          <div id="trips" class="event-list"></div>
-        </section>
-      </aside>
+        <aside class="review-sidebar">
+          <section class="feedback-section">
+            <div class="section-heading">
+              <h2>A closer look</h2>
+              <span>ESTIMATES</span>
+            </div>
+            <div id="feedback"></div>
+            <section id="turn-detail" class="turn-detail" aria-live="polite">
+              <span>SELECTED TURN</span>
+              <h3 id="turn-detail-title">Choose a moment</h3>
+              <p id="turn-detail-copy">
+                Select a turn on the ribbon or in the list to see it in context.
+              </p>
+            </section>
+          </section>
+          <div class="review-tabs" role="tablist" aria-label="Review events">
+            <button
+              id="turns-tab"
+              role="tab"
+              aria-selected="true"
+              aria-controls="turns-panel"
+            >
+              Turns <span id="turns-tab-count"></span></button
+            ><button
+              id="pace-tab"
+              role="tab"
+              aria-selected="false"
+              aria-controls="pace-panel"
+              tabindex="-1"
+            >
+              Pace <span id="pace-tab-count"></span>
+            </button>
+          </div>
+          <section id="turns-panel" role="tabpanel" aria-labelledby="turns-tab">
+            <p class="list-hint">
+              Select a turn to replay it. Inferred turns count; their time is
+              shown as a window.
+            </p>
+            <div id="turns" class="event-list"></div>
+          </section>
+          <section
+            id="pace-panel"
+            role="tabpanel"
+            aria-labelledby="pace-tab"
+            hidden
+          >
+            <p id="trip-basis" class="list-hint"></p>
+            <div id="trips" class="event-list"></div>
+          </section>
+        </aside>
+      </div>
     </div>
+    <section class="progress-close">
+      <p class="chapter-kicker">THE NEXT SESSION STARTS WITH YOU</p>
+      <h2>Keep showing up.<br /><em>Keep finding your rhythm.</em></h2>
+      <p id="progress-close-copy">
+        You have a session to learn from. Give yourself another one.
+      </p>
+      <button id="practice-again" class="primary">Practice again ↗</button>
+      <p class="data-caption">No score to chase. One thing to work on.</p>
+    </section>
   </section>
   <footer>
     <span>TOUCHLINE / PRACTICE ANALYSIS</span

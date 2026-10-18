@@ -1,47 +1,9 @@
 import layout from "./dribbling-layout.html?raw";
 import "./dribbling.css";
 import { AnnotatedPlayer } from "./player";
-import type { Result } from "./types";
-interface Setup {
-  roi: number[];
-  markers: number[] | null;
-  require_markers: boolean;
-}
-interface Turn {
-  id: string;
-  time: number;
-  side: string;
-  marker_status: string;
-  evidence?: "visible_reversal" | "inferred_edge_return";
-  time_interval?: { start: number; end: number };
-}
-interface Trip {
-  id: string;
-  start: number;
-  end: number;
-  direction: string;
-  duration: number;
-  speed: number;
-  relative_speed: number | null;
-  slower: boolean;
-}
-interface DribbleResult extends Result {
-  drill: "side_to_side";
-  dribbling: {
-    setup: Setup;
-    turns: Turn[];
-    trips: Trip[];
-    trip_basis: string;
-    pace_gates: number[] | null;
-    review_windows?: {
-      start: number;
-      end: number;
-      side: string;
-      reason: string;
-    }[];
-    notes: string[];
-  };
-}
+import type { Setup, DribbleResult } from "./dribbling-types";
+import { SessionStory } from "./session-story";
+import "./session-story.css";
 const $ = <T extends HTMLElement>(id: string) =>
   document.getElementById(id) as T;
 document.querySelector("#app")!.innerHTML = layout;
@@ -49,6 +11,9 @@ const preview = $<HTMLVideoElement>("preview"),
   video = $<HTMLVideoElement>("video");
 const canvas = $<HTMLCanvasElement>("setup-canvas");
 const player = new AnnotatedPlayer(video, $("overlay"), $("tracking-status"));
+const story = new SessionStory(video, (time) => {
+  player.seek(time);
+});
 let setup: Setup = { roi: [0, 0, 1, 1], markers: null, require_markers: false };
 let selection: "area" | "markers" | null = null,
   clicks: number[][] = [];
@@ -205,6 +170,7 @@ function row(host: string, content: string, time: number, cls = "") {
   b.append(title, detail);
   b.className = cls;
   b.onclick = () => {
+    story.selectAt(time);
     document
       .querySelectorAll(".event-list button.selected")
       .forEach((el) => el.classList.remove("selected"));
@@ -223,6 +189,7 @@ function show(data: DribbleResult, id: string) {
     );
   result = data;
   const d = data.dribbling;
+  story.load(data);
   player.load(data, `/api/jobs/${id}/video`);
   $("results").hidden = false;
   $("upload-panel").hidden = true;
@@ -254,7 +221,8 @@ function show(data: DribbleResult, id: string) {
     const inferred = t.evidence === "inferred_edge_return";
     const interval = t.time_interval;
     const marker = document.createElement("button");
-    marker.className = inferred ? "inferred" : "";
+    marker.className = `${inferred ? "inferred" : "visible"} ${t.side}`;
+    marker.dataset.turnId = t.id;
     marker.style.left = `${Math.min(99, Math.max(1, ((interval ? (interval.start + interval.end) / 2 : t.time) / data.video.duration) * 100))}%`;
     if (interval)
       marker.style.width = `${((interval.end - interval.start) / data.video.duration) * 100}%`;
@@ -304,17 +272,19 @@ function show(data: DribbleResult, id: string) {
     short = d.turns.filter((t) => t.marker_status === "short");
   const feedback = [
     slow.length
-      ? `${slow.length} section(s) were over 25% slower than your median in that direction. Replay them to check for pauses or intentional changes.`
-      : "No substantially slower sections flagged among comparable sections.",
+      ? `${slow.length === 1 ? "One section was" : `${slow.length} sections were`} slower than your usual pace. Replay ${slow[0].start.toFixed(1)}–${slow[0].end.toFixed(1)}s and check whether the change was intentional.`
+      : "No clear pace dips in the sections we could compare.",
     d.setup.require_markers
       ? d.turns.some((t) => t.marker_status !== "not_assessed")
-        ? `${short.length} of ${d.turns.filter((t) => t.marker_status !== "not_assessed").length} assessed turn(s) were clearly short of your markers. Review them against your intended route.`
-        : "No visible turns could be assessed for marker reach. This is not a pass or a failure."
+        ? short.length
+          ? `The ball turned before the marker ${short.length} time(s). Take a look if reaching it was your goal.`
+          : `None of the assessed turns was clearly short. Close calls and off-camera turns still need your own judgment.`
+        : "The view wasn’t clear enough to judge marker reach. You can still review the turns."
       : "Marker reach was not your selected goal, so it was not assessed.",
   ];
   if (!d.trips.some((t) => t.relative_speed !== null))
     feedback[0] =
-      "Not enough complete sections to compare pace: at least 3 in the same direction are needed.";
+      "A few more clear sections will help us compare your pace. Keep your full route in view next time.";
   if (!d.turns.length)
     feedback.push(
       "No supported turns found. This does not mean you made no turns; inspect tracking and the selected area.",
@@ -354,6 +324,7 @@ function setBusy(value: boolean) {
   for (const id of [
     "file",
     "new-upload",
+    "apply-positions",
     "area",
     "markers",
     "reset",
@@ -401,8 +372,10 @@ $("previous").onclick = () => player.step(-1);
 $("next").onclick = () => player.step(1);
 $<HTMLSelectElement>("speed").onchange = () =>
   (video.playbackRate = Number($<HTMLSelectElement>("speed").value));
-$<HTMLInputElement>("evidence").onchange = () =>
-  (player.enabled = $<HTMLInputElement>("evidence").checked);
+$<HTMLInputElement>("evidence").onchange = () => {
+  player.enabled = $<HTMLInputElement>("evidence").checked;
+  $("guides").hidden = !player.enabled;
+};
 $("export").onclick = () => {
   if (!result) return;
   const url = URL.createObjectURL(
@@ -451,3 +424,37 @@ for (const name of ["turns", "pace"] as const) {
     }
   };
 }
+
+$("apply-positions").onclick = () => {
+  const ids = [
+    "area-left",
+    "area-top",
+    "area-right",
+    "area-bottom",
+    "marker-left",
+    "marker-right",
+  ];
+  const raw = ids.map((id) => $<HTMLInputElement>(id).value);
+  const values = raw.map((v) => Number(v) / 100);
+  const [left, top, right, bottom, ml, mr] = values;
+  if (
+    raw.some((v) => v.trim() === "") ||
+    values.some((v) => !Number.isFinite(v) || v < 0 || v > 1) ||
+    right - left < 0.1 ||
+    bottom - top < 0.1 ||
+    ml < left ||
+    mr > right ||
+    mr - ml < 0.1
+  ) {
+    showError(
+      "Use 0–100%, with an area and marker spacing of at least 10%. Markers must be inside the area.",
+    );
+    return;
+  }
+  setup.roi = [left, top, right, bottom];
+  setup.markers = [ml, mr];
+  stopSelection();
+  drawGuides(canvas, setup);
+  $("error").hidden = true;
+  $("setup-status").textContent = "Area and marker positions applied.";
+};
