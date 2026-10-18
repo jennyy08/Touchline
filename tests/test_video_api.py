@@ -62,3 +62,13 @@ def test_busy_and_upload_size_limit(monkeypatch):
         monkeypatch.setattr(api, 'MAX_BYTES', 3)
         assert client.post('/api/jobs', files={'file': ('x.mp4', b'four')}).status_code == 413
         assert not api.busy
+
+
+def test_drill_setup_validation_does_not_claim_worker(monkeypatch):
+    monkeypatch.setattr(api, 'busy', False)
+    with TestClient(api.app) as client:
+        for data in ({'drill':'unknown'}, {'drill':'side_to_side','setup':'bad'},
+                     {'drill':'side_to_side','setup':'{"require_markers":true}'}):
+            response=client.post('/api/jobs',files={'file':('test.mov',b'test')},data=data)
+            assert response.status_code==422
+            assert not api.busy

@@ -1,0 +1,71 @@
+[
+  {
+    "clip": 1,
+    "cropped_baseline": {
+      "tracking": {
+        "observed": 615,
+        "predicted": 88,
+        "lost": 217
+      },
+      "turns": 0,
+      "sections": 5
+    },
+    "full_width": {
+      "tracking": {
+        "observed": 766,
+        "predicted": 77,
+        "lost": 77
+      },
+      "turns": 2,
+      "sections": 5,
+      "review_windows": 1,
+      "runtime_seconds": 51.637061874964274
+    }
+  },
+  {
+    "clip": 2,
+    "cropped_baseline": {
+      "tracking": {
+        "lost": 371,
+        "observed": 533,
+        "predicted": 98
+      },
+      "turns": 0,
+      "sections": 4
+    },
+    "full_width": {
+      "tracking": {
+        "lost": 261,
+        "observed": 618,
+        "predicted": 123
+      },
+      "turns": 1,
+      "sections": 3,
+      "review_windows": 0,
+      "runtime_seconds": 54.32642441592179
+    }
+  },
+  {
+    "clip": 3,
+    "cropped_baseline": {
+      "tracking": {
+        "lost": 399,
+        "observed": 836,
+        "predicted": 107
+      },
+      "turns": 7,
+      "sections": 9
+    },
+    "full_width": {
+      "tracking": {
+        "lost": 237,
+        "observed": 1006,
+        "predicted": 99
+      },
+      "turns": 7,
+      "sections": 9,
+      "review_windows": 4,
+      "runtime_seconds": 76.61576779105235
+    }
+  }
+]
