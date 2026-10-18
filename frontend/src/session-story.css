@@ -673,3 +673,98 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+/* A single editorial spread, not another analysis section. */
+.practice-purpose {
+  min-height: calc(100svh - 40px);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: clamp(32px, 6vw, 100px);
+  margin: 32px -48px 48px;
+  padding: 80px 48px;
+  background: var(--cream);
+  color: #263a2b;
+}
+.practice-purpose .chapter-kicker {
+  color: #52634b;
+}
+.purpose-heading h2 {
+  font-size: clamp(64px, 7.3vw, 108px);
+  line-height: 0.98;
+  letter-spacing: -5px;
+  margin: 50px 0 40px;
+}
+.purpose-aside {
+  color: #5d6a54;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.purpose-lead {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin-bottom: 28px;
+}
+.purpose-copy > p:not(.purpose-lead) {
+  max-width: 420px;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 22px;
+  color: #485c45;
+}
+.practice-purpose .text-link {
+  color: #263a2b;
+  border-color: #7f8e70;
+  margin-top: 8px;
+}
+.purpose-footnote {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid #c4cbb5;
+  max-width: 420px;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #566a4e;
+  position: relative;
+  padding-left: 40px;
+}
+.purpose-footnote span {
+  position: absolute;
+  left: 0;
+  font-size: 30px;
+  top: 12px;
+}
+@media (max-width: 1100px) {
+  .practice-purpose {
+    margin-inline: -28px;
+    padding-inline: 28px;
+  }
+}
+@media (max-width: 760px) {
+  .practice-purpose {
+    grid-template-columns: 1fr;
+    min-height: 100svh;
+    gap: 40px;
+    margin: 24px -20px 32px;
+    padding: 56px 24px;
+  }
+  .purpose-heading h2 {
+    font-size: clamp(60px, 15vw, 88px);
+    letter-spacing: -3.5px;
+    margin: 28px 0 24px;
+  }
+  .purpose-aside br {
+    display: none;
+  }
+  .purpose-lead {
+    font-size: 28px;
+  }
+  .purpose-copy > p:not(.purpose-lead) {
+    font-size: 14px;
+  }
+  .purpose-footnote {
+    margin-top: 30px;
+  }
+}

@@ -154,21 +154,32 @@ export class SessionStory {
   private paintScroll(time: number) {
     this.frame = 0;
     const host = $("story-mount");
-    const rect = host.getBoundingClientRect();
+    const rect = document
+      .querySelector<HTMLElement>(".practice-intro")!
+      .getBoundingClientRect();
     if (host.hidden || rect.bottom < 0 || rect.top > innerHeight) {
       this.lastPaint = 0;
       return;
     }
+    // Finish while the intro is still visible, regardless of later section heights.
+    // Clamp the travel to the scroll distance the document can actually provide.
+    const introTop = rect.top + scrollY;
+    const available = Math.max(
+      1,
+      document.documentElement.scrollHeight - innerHeight,
+    );
+    const finishAt = Math.min(
+      available,
+      introTop + Math.min(rect.height * 0.55, innerHeight * 0.45),
+    );
     const target = Math.max(
       0.12,
-      Math.min(
-        1,
-        0.12 + (Math.max(0, -rect.top + 84) / Math.max(1, rect.height)) * 0.88,
-      ),
+      Math.min(1, 0.12 + (scrollY / Math.max(1, finishAt)) * 0.88),
     );
     const elapsed = this.lastPaint ? Math.min(64, time - this.lastPaint) : 16;
     this.lastPaint = time;
     this.progress += (target - this.progress) * (1 - Math.exp(-elapsed / 120));
+    if (Math.abs(target - this.progress) < 0.0001) this.progress = target;
     const path = document.getElementById(
       "signature-progress",
     ) as unknown as SVGPathElement;
