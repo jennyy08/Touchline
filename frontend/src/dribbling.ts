@@ -1,5 +1,4 @@
 import layout from "./dribbling-layout.html?raw";
-import "./style.css";
 import "./dribbling.css";
 import { AnnotatedPlayer } from "./player";
 import type { Result } from "./types";
@@ -157,6 +156,7 @@ $<HTMLInputElement>("file").onchange = () => {
   if (!f) return;
   $("error").hidden = true;
   $("results").hidden = true;
+  $("upload-panel").hidden = false;
   video.pause();
   if (f.size > 250 * 1024 * 1024) {
     showError("Video exceeds 250 MB. Trim or compress it first.");
@@ -195,9 +195,20 @@ async function request(url: string, options?: RequestInit) {
 }
 function row(host: string, content: string, time: number, cls = "") {
   const b = document.createElement("button");
-  b.textContent = content;
+  const [timing, ...description] = content.split(" · ");
+  const title = document.createElement("span");
+  title.className = "event-time";
+  title.textContent = timing;
+  const detail = document.createElement("span");
+  detail.className = "event-description";
+  detail.textContent = description.join(" · ");
+  b.append(title, detail);
   b.className = cls;
   b.onclick = () => {
+    document
+      .querySelectorAll(".event-list button.selected")
+      .forEach((el) => el.classList.remove("selected"));
+    b.classList.add("selected");
     player.seek(Math.max(0, time - 0.6));
     video.playbackRate = 0.5;
     $<HTMLSelectElement>("speed").value = "0.5";
@@ -214,6 +225,9 @@ function show(data: DribbleResult, id: string) {
   const d = data.dribbling;
   player.load(data, `/api/jobs/${id}/video`);
   $("results").hidden = false;
+  $("upload-panel").hidden = true;
+  $("turns-tab-count").textContent = String(d.turns.length);
+  $("pace-tab-count").textContent = String(d.trips.length);
   const guides = $<HTMLCanvasElement>("guides");
   guides.width = data.video.width;
   guides.height = data.video.height;
@@ -235,9 +249,32 @@ function show(data: DribbleResult, id: string) {
     `${d.turns.length - inferred} visible + ${inferred} inferred · ${d.trips.length} timed sections`;
   for (const id of ["turns", "trips", "gaps", "feedback", "notes"])
     $(id).replaceChildren();
+  $("turn-timeline").replaceChildren();
   for (const t of d.turns) {
     const inferred = t.evidence === "inferred_edge_return";
     const interval = t.time_interval;
+    const marker = document.createElement("button");
+    marker.className = inferred ? "inferred" : "";
+    marker.style.left = `${Math.min(99, Math.max(1, ((interval ? (interval.start + interval.end) / 2 : t.time) / data.video.duration) * 100))}%`;
+    if (interval)
+      marker.style.width = `${((interval.end - interval.start) / data.video.duration) * 100}%`;
+    marker.setAttribute(
+      "aria-label",
+      `${t.side} turn at ${t.time.toFixed(2)} seconds${inferred ? ", inferred" : ""}`,
+    );
+    marker.title = marker.getAttribute("aria-label")!;
+    marker.onclick = () => {
+      activateTab("turns");
+      const index = d.turns.indexOf(t);
+      const item = $("turns").children[index] as HTMLButtonElement;
+      item.click();
+      item.scrollIntoView({ block: "nearest" });
+      $("turn-timeline")
+        .querySelectorAll("button")
+        .forEach((el) => el.setAttribute("aria-pressed", "false"));
+      marker.setAttribute("aria-pressed", "true");
+    };
+    $("turn-timeline").append(marker);
     const timing = interval
       ? `${interval.start.toFixed(2)}–${interval.end.toFixed(2)}s`
       : `${t.time.toFixed(2)}s`;
@@ -316,6 +353,7 @@ function setBusy(value: boolean) {
   busy = value;
   for (const id of [
     "file",
+    "new-upload",
     "area",
     "markers",
     "reset",
@@ -382,4 +420,34 @@ if (previous) {
   follow(previous)
     .catch(showError)
     .finally(() => setBusy(false));
+}
+
+$("new-upload").onclick = () => {
+  if (!busy) $<HTMLInputElement>("file").click();
+};
+function activateTab(tab: "turns" | "pace") {
+  for (const name of ["turns", "pace"]) {
+    const selected = tab === name;
+    $(name + "-panel").hidden = !selected;
+    $(name + "-tab").setAttribute("aria-selected", String(selected));
+    $(name + "-tab").tabIndex = selected ? 0 : -1;
+  }
+}
+for (const name of ["turns", "pace"] as const) {
+  $(name + "-tab").onclick = () => activateTab(name);
+  $(name + "-tab").onkeydown = (e) => {
+    if (["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)) {
+      e.preventDefault();
+      const next =
+        e.key === "Home"
+          ? "turns"
+          : e.key === "End"
+            ? "pace"
+            : name === "turns"
+              ? "pace"
+              : "turns";
+      activateTab(next);
+      $(next + "-tab").focus();
+    }
+  };
 }

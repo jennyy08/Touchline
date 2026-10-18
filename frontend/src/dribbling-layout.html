@@ -1,138 +1,177 @@
-<header>
-  <a class="brand" href="/">⌁ TOUCHLINE</a>
-  <nav>
-    <a href="/">Juggling upload</a> · <a href="/live.html">Live juggling</a>
+<header class="app-header">
+  <a class="brand" href="/">TOUCHLINE<span class="brand-dot">/</span></a>
+  <nav aria-label="Practice mode">
+    <a href="/">Juggling</a
+    ><a href="/dribbling.html" aria-current="page">Side to side</a
+    ><a href="/live.html">Live practice</a>
   </nav>
-  <span class="local">LOCAL PRACTICE</span>
+  <button id="new-upload">
+    Upload video <span aria-hidden="true">↑</span>
+  </button>
 </header>
 <main>
-  <section class="intro">
-    <div>
-      <p class="eyebrow">OBSERVE / REVIEW / REPEAT</p>
-      <h1>Find your<br /><em>rhythm.</em></h1>
-      <p class="lede">
-        Side-to-side dribbling. Explore your turns, compare your pace,<br />and
-        check how far you travel.
-      </p>
-    </div>
-  </section>
-  <section class="panel">
-    <span class="step">01 / YOUR CLIP</span>
-    <h2>Set up your practice.</h2>
-    <p>Stationary camera, one ball. MOV or MP4 · up to 3 minutes / 250 MB.</p>
-    <input id="file" type="file" accept="video/*,.mov,.mp4" />
-    <p id="filename" class="muted">Your footage stays on this computer.</p>
-    <div id="setup" hidden>
-      <p>
-        Pause where the practice area is clear. Choose “Practice area”, then
-        click two opposite corners to exclude mirrors and irrelevant space.
-        Include the ball’s full route, even beyond the markers.
-      </p>
-      <div class="video-stage">
-        <video id="preview" controls playsinline></video
-        ><canvas id="setup-canvas"></canvas>
-      </div>
-      <div class="player-controls">
-        <button id="area">Practice area: click 2 corners</button
-        ><button id="markers">Markers: click left, then right</button
-        ><button id="reset">Reset setup</button>
-      </div>
-      <p id="setup-status" role="status">
-        Full frame selected. Exclude any mirror before analysis.
-      </p>
-      <label
-        ><input id="require-markers" type="checkbox" /> My goal is to reach both
-        markers with the ball</label
-      >
-      <p class="muted">
-        Marker lines are visual guides, not calibrated ground distances. Going
-        past them is okay. Use a camera facing the route.
-      </p>
-      <button id="analyze" class="primary">Analyze side to side ↗</button>
-    </div>
-  </section>
   <div id="error" role="alert" hidden></div>
-  <section id="progress-panel" class="panel" hidden>
+  <section id="upload-panel" class="upload-panel">
+    <div class="page-heading">
+      <p class="eyebrow">SIDE TO SIDE</p>
+      <h1>Your practice, on replay.</h1>
+      <p>Review your turns, compare your pace, and see how far you travel.</p>
+    </div>
+    <div class="file-picker">
+      <label for="file">Choose a practice video <span>↑</span></label
+      ><input id="file" type="file" accept="video/*,.mov,.mp4" />
+      <p id="filename">
+        MOV or MP4 · up to 3 minutes / 250 MB · processed on your computer
+      </p>
+    </div>
+    <div id="setup" hidden>
+      <div class="setup-heading">
+        <h2>Set the practice area</h2>
+        <p>
+          Keep the full ball route in view, including beyond your markers. Use a
+          fixed-camera recording.
+        </p>
+      </div>
+      <div class="setup-grid">
+        <div class="video-stage">
+          <video id="preview" controls playsinline></video
+          ><canvas id="setup-canvas"></canvas>
+        </div>
+        <div class="setup-tools">
+          <h3>Frame your drill</h3>
+          <p>
+            Pause on a clear frame. Select two corners to crop out irrelevant
+            space, or leave the full frame selected.
+          </p>
+          <button id="area">Select practice area</button
+          ><button id="markers">Place two markers</button
+          ><button id="reset" class="quiet">Reset selection</button>
+          <p id="setup-status" role="status">Full frame selected.</p>
+          <label class="check"
+            ><input id="require-markers" type="checkbox" /> My goal is to reach
+            both markers</label
+          >
+          <p class="muted">
+            Going past a marker is okay. Marker lines are image guides, not
+            measured ground distances.
+          </p>
+          <button id="analyze" class="primary">Analyze video →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="progress-panel" class="progress-panel" hidden>
     <p id="progress-label" role="status">Starting…</p>
     <progress id="progress" max="100"></progress>
+    <p class="muted">Processing locally. Keep this page open.</p>
   </section>
   <section id="results" hidden>
-    <div class="section-title">
+    <div class="workspace-heading">
       <div>
-        <span class="step">02 / YOUR ATTEMPT</span>
-        <h2>Movement worth a closer look.</h2>
+        <p class="eyebrow">PRACTICE REVIEW</p>
+        <h1>Side to side</h1>
       </div>
-      <button id="export">Export analysis JSON</button>
+      <button id="export" class="quiet">Export analysis ↓</button>
     </div>
-    <div class="analysis-grid">
+    <div class="session-summary">
+      <div><strong id="turn-count">—</strong> estimated turns</div>
+      <span class="summary-divider"></span>
+      <p id="summary"></p>
+    </div>
+    <div class="workspace-grid">
       <div class="replay-panel">
         <div class="video-stage">
           <video id="video" controls playsinline></video
           ><canvas id="overlay"></canvas><canvas id="guides"></canvas>
         </div>
         <div class="player-controls">
-          <button id="previous">← Frame</button
-          ><button id="next">Frame →</button
-          ><label
-            >Playback
+          <div class="frame-controls">
+            <button id="previous" aria-label="Previous frame">←</button
+            ><span>Frame</span
+            ><button id="next" aria-label="Next frame">→</button>
+          </div>
+          <label
+            >Speed
             <select id="speed">
               <option value="1">1×</option>
               <option value="0.5">0.5×</option>
               <option value="0.25">0.25×</option>
             </select></label
-          ><label
+          ><label class="check"
             ><input id="evidence" type="checkbox" checked /> Tracking</label
           >
         </div>
-        <div id="tracking-status" class="tracking-status"></div>
-        <p class="muted">
-          Green: detected ball · amber: prediction, not turn evidence. Broken
-          trails indicate missing observations.
-        </p>
+        <div
+          id="turn-timeline"
+          class="turn-timeline"
+          aria-label="Turn timeline"
+        ></div>
+        <div class="timeline-caption">
+          <span>Turns across your video</span
+          ><span>Solid: visible · outlined: inferred</span>
+        </div>
+        <div class="replay-meta">
+          <span id="tracking-status"></span
+          ><span>Blue lines mark the timed section</span>
+        </div>
+        <details class="technical-details">
+          <summary>Tracking details</summary>
+          <p>
+            Missing observations are tracking gaps, not mistakes in your
+            practice. Green boxes are observations; amber boxes are predictions.
+          </p>
+          <div id="gaps"></div>
+          <ul id="notes"></ul>
+          <p id="runtime"></p>
+        </details>
       </div>
-      <aside>
-        <div class="count-card">
-          <span class="step">ESTIMATED TURNS</span>
-          <div id="turn-count" class="count">—</div>
-          <p id="summary"></p>
-        </div>
-        <div class="note-card">
-          <h3>What stood out</h3>
+      <aside class="review-sidebar">
+        <section class="feedback-section">
+          <div class="section-heading">
+            <h2>Session notes</h2>
+            <span>ESTIMATES</span>
+          </div>
           <div id="feedback"></div>
+        </section>
+        <div class="review-tabs" role="tablist" aria-label="Review events">
+          <button
+            id="turns-tab"
+            role="tab"
+            aria-selected="true"
+            aria-controls="turns-panel"
+          >
+            Turns <span id="turns-tab-count"></span></button
+          ><button
+            id="pace-tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="pace-panel"
+            tabindex="-1"
+          >
+            Pace <span id="pace-tab-count"></span>
+          </button>
         </div>
+        <section id="turns-panel" role="tabpanel" aria-labelledby="turns-tab">
+          <p class="list-hint">
+            Select a turn to replay it. Inferred turns count; their time is
+            shown as a window.
+          </p>
+          <div id="turns" class="event-list"></div>
+        </section>
+        <section
+          id="pace-panel"
+          role="tabpanel"
+          aria-labelledby="pace-tab"
+          hidden
+        >
+          <p id="trip-basis" class="list-hint"></p>
+          <div id="trips" class="event-list"></div>
+        </section>
       </aside>
     </div>
-    <div class="review-grid">
-      <section class="panel">
-        <h3>Turns & marker reach</h3>
-        <p class="muted">
-          Select a turn for a slow replay. Both visible turns and inferred edge
-          returns count. An inferred turn shows a replay window, not an exact
-          turn time. Marker reach is assessed only from visible reversals.
-        </p>
-        <div id="turns" class="event-list"></div>
-      </section>
-      <section class="panel">
-        <h3>Sections & relative pace</h3>
-        <p id="trip-basis"></p>
-        <p class="muted">
-          Compare sideways ball speed against this clip’s median in the same
-          direction. A pause or deliberate change of pace can explain a slower
-          trip.
-        </p>
-        <div id="trips" class="event-list"></div>
-      </section>
-    </div>
-    <details class="panel">
-      <summary>Tracking details (optional)</summary>
-      <p>
-        Raw tracking gaps are available here for debugging. They are not
-        mistakes in your practice. Edge returns can still support inferred
-        turns.
-      </p>
-      <div id="gaps"></div>
-      <ul id="notes"></ul>
-      <p id="runtime" class="muted"></p>
-    </details>
   </section>
+  <footer>
+    <span>TOUCHLINE / PRACTICE ANALYSIS</span
+    ><span>Local processing. Your footage stays here.</span>
+  </footer>
 </main>
