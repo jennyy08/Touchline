@@ -1,0 +1,83 @@
+[
+  {
+    "clip": "taps1.mov",
+    "estimated_taps": 23,
+    "review_candidates": 4,
+    "decoded_frames": 423,
+    "container_frames": 423,
+    "tracking": {
+      "observed": 423
+    },
+    "runtime_seconds": 71.96812004200183,
+    "foot_samples": {
+      "config": {
+        "horizontal_radius": 0.65,
+        "top_min": -0.95,
+        "top_max": -0.25,
+        "release_margin": 0.08,
+        "max_gap_seconds": 0.12,
+        "min_contact_seconds": 0.05,
+        "max_contact_seconds": 1.0,
+        "debounce_seconds": 0.22
+      },
+      "usable_foot_samples": 800,
+      "possible_foot_samples": 846
+    },
+    "video_sha256": "4414e0404808be3f2f1c1d0a25cf3d726e4265b6e50f23833baa8ae5b6b650e6"
+  },
+  {
+    "clip": "taps2.mov",
+    "estimated_taps": 13,
+    "review_candidates": 6,
+    "decoded_frames": 414,
+    "container_frames": 425,
+    "tracking": {
+      "observed": 408,
+      "predicted": 6
+    },
+    "runtime_seconds": 71.20967987494078,
+    "foot_samples": {
+      "config": {
+        "horizontal_radius": 0.65,
+        "top_min": -0.95,
+        "top_max": -0.25,
+        "release_margin": 0.08,
+        "max_gap_seconds": 0.12,
+        "min_contact_seconds": 0.05,
+        "max_contact_seconds": 1.0,
+        "debounce_seconds": 0.22
+      },
+      "usable_foot_samples": 770,
+      "possible_foot_samples": 828
+    },
+    "video_sha256": "50d22eae2cddc4f4c154767681cb9d116bc17c8dd8f5801f7b7bc08f827e8741"
+  },
+  {
+    "clip": "taps3.mov",
+    "estimated_taps": 16,
+    "review_candidates": 0,
+    "decoded_frames": 399,
+    "container_frames": 407,
+    "tracking": {
+      "observed": 344,
+      "predicted": 16,
+      "lost": 39
+    },
+    "runtime_seconds": 74.12043333298061,
+    "foot_samples": {
+      "config": {
+        "horizontal_radius": 0.65,
+        "top_min": -0.95,
+        "top_max": -0.25,
+        "release_margin": 0.08,
+        "max_gap_seconds": 0.12,
+        "min_contact_seconds": 0.05,
+        "max_contact_seconds": 1.0,
+        "debounce_seconds": 0.22
+      },
+      "usable_foot_samples": 639,
+      "possible_foot_samples": 798
+    },
+    "video_sha256": "6a298b8ac04d1c097007c6117e8d4ae452676a5cdc6df565e996b413869b6f9a"
+  }
+]

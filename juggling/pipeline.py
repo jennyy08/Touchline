@@ -12,10 +12,11 @@ from .appearance import AppearanceBridge
 from .counting import count_touches, add_audio_evidence
 from .audio import onsets
 from .dribbling import analyze_dribbling
+from .toe_taps import count_toe_taps
 from .dribble_scene import background, moving_detections
 
 
-def analyze(source: Path, output: Path, models: Path, config=None, progress=lambda **kw: None, drill_setup=None):
+def analyze(source: Path, output: Path, models: Path, config=None, progress=lambda **kw: None, drill_setup=None, drill="juggling"):
     config = config or Config()
     output.mkdir(parents=True, exist_ok=True)
     started = time.perf_counter()
@@ -24,7 +25,7 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
     ball = BallDetector(models, config)
     pose = PoseDetector(models, config) if drill_setup is None else None
     tracker = BallTracker(config)
-    appearance = AppearanceBridge(config) if config.appearance_enabled and drill_setup is None else None
+    appearance = AppearanceBridge(config) if config.appearance_enabled and drill_setup is None and drill != "toe_taps" else None
     reference = background(source, progress) if drill_setup is not None else None
     samples = []
     writer = None
@@ -63,14 +64,16 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
         raise ValueError("The clip contains fewer than 5 readable frames. Try a longer video.")
     progress(stage="counting", frames=len(samples), total=len(samples))
     heard, audio_warning = [], None
-    if config.audio_enabled and drill_setup is None:
+    if config.audio_enabled and drill_setup is None and drill != "toe_taps":
         try:
             heard = onsets(source)
             if not heard:
                 audio_warning = "No audio track found; touches are counted from video only."
         except Exception as error:  # Audio is supplementary; never fail the video analysis.
             audio_warning = f"Audio could not be read ({error}); touches are counted from video only."
-    if drill_setup is None:
+    if drill == "toe_taps":
+        result = count_toe_taps(samples)
+    elif drill_setup is None:
         result = add_audio_evidence(count_touches(samples, config), samples, heard, config)
     else:
         result = {"drill": "side_to_side", "dribbling": analyze_dribbling(samples, width, drill_setup),
@@ -109,5 +112,9 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
     if drill_setup is not None:
         result['warnings'] = [w for w in result['warnings'] if not w.startswith('Hidden contacts')]
         result['warnings'].append('Experimental side-to-side analysis. Detection errors may create or hide turns; inspect the overlay.')
+    if drill == "toe_taps":
+        result['warnings'] = ["Experimental toe-tap estimates, not verified physical contacts.",
+            "Counts require an observed ball and an approach confirmed by multiple toe observations. Occlusion, cropped feet and depth can cause misses or extra events.",
+            "Initial on-ball poses and unconfirmed approaches are excluded. A confirmed final contact counts even if the foot stays on the ball. Brief toe-only gaps preserve state; missing ball evidence resets it. Review the footage and correct events separately."]
     (output / "result.json").write_text(json.dumps(result, indent=2))
     return result

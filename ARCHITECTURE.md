@@ -142,3 +142,20 @@ the new path. All geometry is validated before claiming the shared worker.
 Existing status/result/video routes, upload limits, and offline model loading apply.
 The new TypeScript page uses the existing timestamp-aligned player. Its HTML/CSS
 are separate from analysis. No database or external service was introduced.
+
+### Toe taps
+
+The shared `pipeline.analyze(..., drill="toe_taps")` decodes frames, observes the
+ball and estimates foot landmarks using the existing models. Appearance bridging
+and audio inference are disabled for this drill. `toe_taps.count_toe_taps` is a
+pure per-foot entry/release state machine, independent of FastAPI and the UI.
+Its configurable top-of-ball zone uses ball-relative coordinates, hysteresis,
+minimum observed duration and multiple in-zone frames. A gap resets the state.
+Near-simultaneous candidates are exposed for review, not counted twice.
+This measures 2D proximity cycles, not proven sole/ball contact or foot skill.
+The UI reuses `AnnotatedPlayer`, `seedReview`, and hash-validated `parseReview`.
+
+Revision 2 adds sustained-entry confirmation alongside the quick departure path,
+retains state across short toe-only dropouts, and merges nearby candidates while
+preserving contributing timestamps. It does not fill events using cadence or an
+expected count. `algorithm_version=2` distinguishes new toe-tap results.

@@ -198,3 +198,42 @@ The locally bundled Space Grotesk font comes from Google Fonts' official
 `google/fonts` repository (`ofl/spacegrotesk/SpaceGrotesk[wght].ttf`). Its SIL Open
 Font License is included at `frontend/public/fonts/OFL.txt`. No remote font request
 is needed during use.
+
+## Toe taps (experimental)
+
+Open `/toe-taps.html` after starting the server. Upload a clip with the ball and
+both feet visible. Review the estimated taps with native video controls, slow
+motion, frame stepping, and ball/foot overlays. The correction list starts as an
+**unverified copy** of the automatic events; add or remove taps and export JSON to
+save it. To retime an event, remove it and add it at the correct frame. Imports
+are validated against the exact video hash. Corrections do not alter automatic
+results and are not persisted unless exported.
+
+This uses the existing YOLO11s ball detector, YOLO11n pose and RTMPose Halpe-26
+foot landmarks, with the existing dependencies and model downloads. No new
+models, APIs, accounts, or training. The counting module is
+`juggling/toe_taps.py`: a foot must enter the observed ball-top zone and then
+leave it, with at least two in-zone frames. Missing evidence resets the cycle;
+predicted ball positions never support a tap. Closely overlapping foot cycles
+are review candidates. The thresholds are ball-relative and time-based.
+A shoe passing in front of the ball can still look like a contact in 2D.
+
+Offline command-line processing:
+
+```sh
+PYTHONPATH=. .venv/bin/python scripts/analyze_toe_taps.py /path/to/taps.mov .runtime/my-taps
+```
+
+`drill=toe_taps` on the existing upload endpoint selects this counter; juggling
+and side-to-side retain their own counters. `frontend/src/toe-taps.ts` is the
+upload/review controller, `toe-taps.css` contains page-specific styles, and the
+existing player handles timestamp-aligned overlays. See
+`validation/toe-taps/README.md` for results and limits. Live toe taps are not implemented.
+
+Toe-tap revision 2 confirms observed approaches either from sustained in-zone
+observations or a quick observed entry/release. A final confirmed hold counts
+once; an initial on-ball pose does not. Short toe-only gaps retain state without
+adding evidence. Nearby duplicate foot IDs merge into one event; unclear foot
+identity is labeled explicitly. See `validation/toe-taps/revision-2/README.md`
+for the event-level comparison and remaining misses. The earlier baseline report
+and results are retained for comparison.

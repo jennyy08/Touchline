@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "video_sha256": "4414e0404808be3f2f1c1d0a25cf3d726e4265b6e50f23833baa8ae5b6b650e6",
+  "events": [
+    {
+      "id": "m0",
+      "time": 0.9,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m1",
+      "time": 1.2,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m2",
+      "time": 1.5,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m3",
+      "time": 1.9,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m4",
+      "time": 2.2,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m5",
+      "time": 2.6,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m6",
+      "time": 2.95,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m7",
+      "time": 3.3,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m8",
+      "time": 3.65,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m9",
+      "time": 4.0,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m10",
+      "time": 4.4,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m11",
+      "time": 4.75,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m12",
+      "time": 5.1,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    }
+  ],
+  "uncertain_intervals": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "note": "Not labeled"
+    },
+    {
+      "start": 5.2,
+      "end": 14.068333333333333,
+      "note": "Not labeled"
+    }
+  ]
+}

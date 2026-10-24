@@ -72,3 +72,19 @@ def test_drill_setup_validation_does_not_claim_worker(monkeypatch):
             response=client.post('/api/jobs',files={'file':('test.mov',b'test')},data=data)
             assert response.status_code==422
             assert not api.busy
+
+
+def test_toe_tap_upload_routes_to_distinct_counter(monkeypatch, tmp_path):
+    monkeypatch.setattr(api, 'JOB_ROOT', tmp_path)
+    monkeypatch.setattr(api, 'busy', False)
+    called = []
+    def capture(*args, **kwargs):
+        called.append(kwargs.get('drill'))
+    monkeypatch.setattr(api, 'analyze', capture)
+    with TestClient(api.app) as client:
+        response = client.post('/api/jobs', files={'file': ('taps.mov', b'test')}, data={'drill':'toe_taps'})
+        assert response.status_code == 202
+        for _ in range(100):
+            if client.get('/api/jobs/'+response.json()['id']).json()['stage']=='complete': break
+            time.sleep(.01)
+        assert called == ['toe_taps']
