@@ -7,6 +7,7 @@ export default defineConfig({
         main: "index.html",
         live: "live.html",
         dribbling: "dribbling.html",
+        toeTaps: "toe-taps.html",
       },
     },
   },

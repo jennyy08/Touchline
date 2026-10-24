@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "video_sha256": "4414e0404808be3f2f1c1d0a25cf3d726e4265b6e50f23833baa8ae5b6b650e6",
+  "user_total": 33,
+  "events": [
+    {
+      "id": "visual-1",
+      "time": 0.4,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-2",
+      "time": 0.9,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-3",
+      "time": 1.2,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-4",
+      "time": 1.55,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-5",
+      "time": 1.9,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-6",
+      "time": 2.2,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-7",
+      "time": 2.6,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-8",
+      "time": 2.95,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-9",
+      "time": 3.3,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-10",
+      "time": 3.65,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-11",
+      "time": 4.0,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-12",
+      "time": 4.4,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-13",
+      "time": 4.75,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-14",
+      "time": 5.1,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-15",
+      "time": 5.45,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-16",
+      "time": 5.85,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-17",
+      "time": 6.2,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-18",
+      "time": 6.55,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-19",
+      "time": 6.95,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-20",
+      "time": 7.3,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-21",
+      "time": 7.7,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-22",
+      "time": 8.05,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-23",
+      "time": 8.4,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-24",
+      "time": 8.8,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-25",
+      "time": 9.2,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-26",
+      "time": 9.55,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-27",
+      "time": 9.95,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-28",
+      "time": 10.3,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-29",
+      "time": 10.65,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-30",
+      "time": 11.0,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-31",
+      "time": 11.4,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-32",
+      "time": 11.8,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    },
+    {
+      "id": "visual-33",
+      "time": 12.15,
+      "label": "touch",
+      "note": "Approximate visible contact from 0.1s frame sequence; not frame-accurate"
+    }
+  ],
+  "uncertain_intervals": [
+    {
+      "start": 12.4,
+      "end": 14.068333333333333,
+      "note": "Final hold; not re-reviewed frame by frame"
+    }
+  ]
+}

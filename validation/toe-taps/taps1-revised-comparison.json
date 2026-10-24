@@ -1,0 +1,321 @@
+{
+  "tolerance_seconds": 0.15,
+  "estimated_count": 23,
+  "reference_visible_count": 13,
+  "matched": 10,
+  "false_positives": [
+    {
+      "id": "tap-11",
+      "time": 4.566666666666666,
+      "frame": 137,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "right_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 4.666666666666667
+    }
+  ],
+  "unverifiable_predictions": [
+    {
+      "id": "tap-1",
+      "time": 0.36666666666666664,
+      "frame": 11,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "right_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 0.7666666666666667
+    },
+    {
+      "id": "tap-13",
+      "time": 5.4,
+      "frame": 162,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "right_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 5.833333333333333
+    },
+    {
+      "id": "tap-14",
+      "time": 5.9,
+      "frame": 177,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "right_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 5.966666666666667
+    },
+    {
+      "id": "tap-15",
+      "time": 6.5,
+      "frame": 195,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "left_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 6.633333333333334
+    },
+    {
+      "id": "tap-18",
+      "time": 7.233333333333333,
+      "frame": 217,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "left_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 7.601666666666667
+    },
+    {
+      "id": "tap-19",
+      "time": 8.001666666666667,
+      "frame": 240,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "left_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 8.335
+    },
+    {
+      "id": "tap-20",
+      "time": 8.401666666666667,
+      "frame": 252,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "right_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 8.468333333333334
+    },
+    {
+      "id": "tap-21",
+      "time": 8.735,
+      "frame": 262,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "left_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 9.101666666666667
+    },
+    {
+      "id": "tap-22",
+      "time": 9.168333333333333,
+      "frame": 275,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "right_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 9.301666666666666
+    },
+    {
+      "id": "tap-23",
+      "time": 9.468333333333334,
+      "frame": 284,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "left_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 9.835
+    },
+    {
+      "id": "tap-24",
+      "time": 9.901666666666667,
+      "frame": 297,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "right_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 10.301666666666666
+    },
+    {
+      "id": "tap-25",
+      "time": 10.235,
+      "frame": 307,
+      "status": "counted",
+      "reason": "toe_entered_ball_top_then_released",
+      "body_part": "left_foot",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "end_time": 10.535
+    }
+  ],
+  "misses": [
+    {
+      "id": "m1",
+      "time": 1.2,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m10",
+      "time": 4.4,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    },
+    {
+      "id": "m11",
+      "time": 4.75,
+      "label": "touch",
+      "note": "Approximate contact from 0.1-second frame sequence; timing not frame-accurate"
+    }
+  ],
+  "matches": [
+    {
+      "predicted_time": 0.9666666666666667,
+      "reference_time": 0.9,
+      "predicted_frame": 29,
+      "reference_frame": null,
+      "error_seconds": 0.06666666666666665
+    },
+    {
+      "predicted_time": 1.5,
+      "reference_time": 1.5,
+      "predicted_frame": 45,
+      "reference_frame": null,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 1.8333333333333333,
+      "reference_time": 1.9,
+      "predicted_frame": 55,
+      "reference_frame": null,
+      "error_seconds": -0.06666666666666665
+    },
+    {
+      "predicted_time": 2.1666666666666665,
+      "reference_time": 2.2,
+      "predicted_frame": 65,
+      "reference_frame": null,
+      "error_seconds": -0.03333333333333366
+    },
+    {
+      "predicted_time": 2.566666666666667,
+      "reference_time": 2.6,
+      "predicted_frame": 77,
+      "reference_frame": null,
+      "error_seconds": -0.033333333333333215
+    },
+    {
+      "predicted_time": 2.933333333333333,
+      "reference_time": 2.95,
+      "predicted_frame": 88,
+      "reference_frame": null,
+      "error_seconds": -0.01666666666666705
+    },
+    {
+      "predicted_time": 3.2333333333333334,
+      "reference_time": 3.3,
+      "predicted_frame": 97,
+      "reference_frame": null,
+      "error_seconds": -0.06666666666666643
+    },
+    {
+      "predicted_time": 3.6,
+      "reference_time": 3.65,
+      "predicted_frame": 108,
+      "reference_frame": null,
+      "error_seconds": -0.04999999999999982
+    },
+    {
+      "predicted_time": 4.0,
+      "reference_time": 4.0,
+      "predicted_frame": 120,
+      "reference_frame": null,
+      "error_seconds": 0.0
+    },
+    {
+      "predicted_time": 5.066666666666666,
+      "reference_time": 5.1,
+      "predicted_frame": 152,
+      "reference_frame": null,
+      "error_seconds": -0.033333333333333215
+    }
+  ],
+  "mean_absolute_timing_error": 0.03666666666666667,
+  "tracking_summary": {
+    "observed": 423
+  },
+  "runtime_seconds": 71.96812004200183,
+  "config": {
+    "detector": "yolo11s.pt",
+    "pose_model": "yolo11n-pose.pt",
+    "foot_model": "rtmpose-x-halpe26.onnx",
+    "image_size": 640,
+    "pose_size": 640,
+    "detection_threshold": 0.05,
+    "landmark_threshold": 0.35,
+    "prediction_seconds": 0.15,
+    "minimum_size_ratio": 0.75,
+    "edge_outward_fraction": 0.2,
+    "edge_margin_diameters": 0.05,
+    "edge_outward_diameters_per_second": 0.5,
+    "association_diameters": 3.0,
+    "contact_diameters": 1.15,
+    "foot_length_shin_ratio": 0.6,
+    "stop_seconds": 1.0,
+    "stop_radius_diameters": 0.5,
+    "stop_gap_seconds": 0.2,
+    "audio_enabled": false,
+    "audio_min_strength": 8.0,
+    "audio_match_seconds": 0.12,
+    "rhythm_min_beats": 0.6,
+    "rhythm_max_beats": 1.6,
+    "audio_return_seconds": 1.0,
+    "debounce_seconds": 0.22,
+    "velocity_window_seconds": 0.14,
+    "min_velocity_diameters": 0.7,
+    "appearance_enabled": false,
+    "appearance_horizon_seconds": 0.25,
+    "appearance_similarity": 0.6,
+    "device": "cpu"
+  },
+  "uncertain_intervals": [
+    {
+      "start": 0,
+      "end": 0.8,
+      "note": "Not labeled"
+    },
+    {
+      "start": 5.2,
+      "end": 14.068333333333333,
+      "note": "Not labeled"
+    }
+  ]
+}

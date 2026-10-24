@@ -33,13 +33,15 @@ def cleanup(folder=JOB_ROOT):
 atexit.register(cleanup)
 
 
-def run_job(job_id, source, drill_setup=None):
+def run_job(job_id, source, drill_setup=None, drill="juggling"):
     global busy
     def progress(**state):
         with lock:
             jobs[job_id].update(state)
     try:
         options = {"drill_setup": drill_setup} if drill_setup is not None else {}
+        if drill == "toe_taps":
+            options["drill"] = drill
         analyze(source, JOB_ROOT / job_id, ROOT / "models", progress=progress, **options)
         progress(stage="complete")
     except Exception as exc:
@@ -69,7 +71,7 @@ def release_analysis():
 @app.post("/api/jobs", status_code=202)
 async def create_job(file: UploadFile = File(...), drill: str = Form("juggling"), setup: str = Form("{}")):
     global busy
-    if drill not in ("juggling", "side_to_side"):
+    if drill not in ("juggling", "side_to_side", "toe_taps"):
         await file.close()
         raise HTTPException(422, "Unknown drill.")
     drill_setup = None
@@ -97,7 +99,7 @@ async def create_job(file: UploadFile = File(...), drill: str = Form("juggling")
             raise HTTPException(400, "The uploaded file is empty.")
         with lock:
             jobs[job_id] = {"id": job_id, "name": file.filename or "Video", "stage": "queued", "frames": 0, "total": 0}
-        executor.submit(run_job, job_id, source, drill_setup)
+        executor.submit(run_job, job_id, source, drill_setup, drill)
     except BaseException:
         source.unlink(missing_ok=True)
         with lock:
