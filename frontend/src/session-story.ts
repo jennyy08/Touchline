@@ -154,23 +154,20 @@ export class SessionStory {
   private paintScroll(time: number) {
     this.frame = 0;
     const host = $("story-mount");
-    const rect = document
-      .querySelector<HTMLElement>(".practice-intro")!
-      .getBoundingClientRect();
+    const rect = host.getBoundingClientRect();
     if (host.hidden || rect.bottom < 0 || rect.top > innerHeight) {
       this.lastPaint = 0;
       return;
     }
-    // Finish while the intro is still visible, regardless of later section heights.
-    // Clamp the travel to the scroll distance the document can actually provide.
-    const introTop = rect.top + scrollY;
+    // Map the visible scroll position to the shared two-section route.
+    const routeTop = rect.top + scrollY;
     const available = Math.max(
       1,
       document.documentElement.scrollHeight - innerHeight,
     );
     const finishAt = Math.min(
       available,
-      introTop + Math.min(rect.height * 0.55, innerHeight * 0.45),
+      routeTop + rect.height - innerHeight * 0.65,
     );
     const target = Math.max(
       0.12,
