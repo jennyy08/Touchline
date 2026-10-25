@@ -1,3 +1,4 @@
+import { VideoRecovery } from "./video-recovery";
 import type { Point, Result, Sample } from "./types";
 export function sampleIndex(result: Result, time: number): number {
   let lo = 0,
@@ -21,12 +22,20 @@ export class AnnotatedPlayer {
   result: Result | null = null;
   enabled = true;
   private presentedTime = 0;
+  private recovery: VideoRecovery;
   private hasFrameCallbacks = false;
   constructor(
     public video: HTMLVideoElement,
     private canvas: HTMLCanvasElement,
     private status: HTMLElement,
   ) {
+    this.recovery = new VideoRecovery(video);
+    document.addEventListener("visibilitychange", () =>
+      this.recovery.visibility(document.hidden));
+    window.addEventListener("pageshow", (event) => {
+      if (event.persisted) this.recovery.refresh();
+    });
+    video.addEventListener("seeked", () => { this.presentedTime = video.currentTime; });
     // Use the timestamp of the displayed frame, not the advancing audio clock.
     this.hasFrameCallbacks =
       typeof video.requestVideoFrameCallback === "function";
@@ -44,11 +53,15 @@ export class AnnotatedPlayer {
     requestAnimationFrame(loop);
   }
   load(result: Result, url: string) {
+    this.recovery.cancel();
     this.result = result;
     this.presentedTime = 0;
     this.canvas.width = result.video.width;
     this.canvas.height = result.video.height;
     this.video.src = url;
+  }
+  refreshVideo() {
+    this.recovery.refresh();
   }
   step(delta: number) {
     if (!this.result) return;
@@ -133,6 +146,25 @@ export class AnnotatedPlayer {
         if (foot.length === 3) ctx.closePath();
         ctx.stroke();
       }
+    }
+    // Alternate observations remain inspectable without replacing the raw pose.
+    const supporting = r.events.find((e) =>
+      e.observation_view && e.observation_view !== "pose" && Math.abs(e.time - s.time) < .2);
+    if (supporting && supporting.observation_view !== "pose") {
+      const view = supporting.observation_view;
+      const points = view ? s[view] : undefined;
+      ctx.strokeStyle = view === "motion_pose" ? "#49ded4" : "#ffbd66";
+      ctx.lineWidth = 4 * scale;
+      ctx.setLineDash([5 * scale, 3 * scale]);
+      for (const side of ["left", "right"]) {
+        const foot = ["heel", "big_toe", "small_toe"]
+          .map((name) => points?.[`${side}_${name}`]).filter((p): p is Point => Boolean(p));
+        if (foot.length < 2) continue;
+        ctx.beginPath(); ctx.moveTo(...foot[0]);
+        for (const p of foot.slice(1)) ctx.lineTo(...p);
+        ctx.stroke();
+      }
+      ctx.setLineDash([]);
     }
     const event = r.events.find((e) => Math.abs(e.time - s.time) < 0.09);
     if (event) {

@@ -9,6 +9,8 @@ export interface Sample {
   diameter: number | null;
   segment: number;
   pose: Record<string, Point>;
+  motion_pose?: Record<string, Point>;
+  detail_pose?: Record<string, Point>;
 }
 export interface Touch {
   id: string;
@@ -18,6 +20,7 @@ export interface Touch {
   reason: string;
   body_part: string | null;
   evidence_sources?: string[];
+  observation_view?: "pose" | "motion_pose" | "detail_pose";
 }
 export interface Result {
   schema_version: 1;

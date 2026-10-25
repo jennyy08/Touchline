@@ -62,3 +62,21 @@ def test_detected_foot_replaces_ankle_estimate():
         s["pose"] = {"right_ankle": [150., 180.], "left_ankle": [50., 115.], "left_knee": [50., 55.],
                      "left_heel": [50., 118.], "left_big_toe": [20., 118.]}
     assert count_touches(samples, Config())["estimated_count"] == 0
+
+
+def test_toe_tap_detail_view_does_not_overwrite_original_landmarks():
+    from juggling.pose import PoseDetector
+    from types import SimpleNamespace
+    detector=PoseDetector.__new__(PoseDetector)
+    detector.config=SimpleNamespace(landmark_threshold=.35)
+    detector.detect_body=lambda image: ({'left_ankle':[10,20]},[0,0,100,200])
+    calls=[]
+    class Feet:
+        def detect(self,image,box,threshold,include_ankles=False):
+            calls.append((list(box),include_ankles))
+            return {'left_ankle':[30,40],'left_big_toe':[50,60]} if include_ankles else {'left_big_toe':[15,25]}
+    detector.feet=Feet()
+    raw,detail=detector.detect_toe_taps(None)
+    assert raw['left_ankle']==[10,20] and raw['left_big_toe']==[15,25]
+    assert detail['left_ankle']==[30,40] and detail['left_big_toe']==[50,60]
+    assert calls==[([0,0,100,200],False),([0,80,100,200],True)]

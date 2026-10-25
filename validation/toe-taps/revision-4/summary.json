@@ -1,0 +1,121 @@
+[
+  {
+    "clip": "taps1",
+    "before": 33,
+    "after": 33,
+    "review_candidates": 0,
+    "runtime_seconds": 116.52798537514172,
+    "tracking_summary": {
+      "observed": 423
+    },
+    "before_0.10": {
+      "matched": 31,
+      "misses": [
+        2.2,
+        6.2
+      ],
+      "extra": [
+        2.3333333333333335,
+        6.066666666666666
+      ],
+      "mean_absolute_timing_error": 0.04854838709677429
+    },
+    "before_0.15": {
+      "matched": 33,
+      "misses": [],
+      "extra": [],
+      "mean_absolute_timing_error": 0.05368686868686879
+    },
+    "after_0.10": {
+      "matched": 31,
+      "misses": [
+        2.2,
+        6.2
+      ],
+      "extra": [
+        2.3333333333333335,
+        6.066666666666666
+      ],
+      "mean_absolute_timing_error": 0.04854838709677429
+    },
+    "after_0.15": {
+      "matched": 33,
+      "misses": [],
+      "extra": [],
+      "mean_absolute_timing_error": 0.05368686868686879
+    }
+  },
+  {
+    "clip": "taps2",
+    "before": 27,
+    "after": 29,
+    "review_candidates": 1,
+    "runtime_seconds": 121.55149662517942,
+    "tracking_summary": {
+      "observed": 408,
+      "predicted": 6
+    },
+    "before_0.10": {
+      "matched": 25,
+      "misses": [
+        1.75,
+        2.55,
+        2.95,
+        6.1,
+        10.8,
+        11.45
+      ],
+      "extra": [
+        2.7,
+        11.301666666666666
+      ],
+      "mean_absolute_timing_error": 0.04093333333333313
+    },
+    "before_0.15": {
+      "matched": 27,
+      "misses": [
+        1.75,
+        2.95,
+        6.1,
+        10.8
+      ],
+      "extra": [],
+      "mean_absolute_timing_error": 0.04895061728395044
+    },
+    "after_0.10": {
+      "matched": 27,
+      "misses": [
+        1.75,
+        2.55,
+        2.95,
+        11.45
+      ],
+      "extra": [
+        2.7,
+        11.301666666666666
+      ],
+      "mean_absolute_timing_error": 0.04030864197530849
+    },
+    "after_0.15": {
+      "matched": 29,
+      "misses": [
+        1.75,
+        2.95
+      ],
+      "extra": [],
+      "mean_absolute_timing_error": 0.047816091954022866
+    }
+  },
+  {
+    "clip": "taps3",
+    "before": 19,
+    "after": 21,
+    "review_candidates": 1,
+    "runtime_seconds": 115.88517920905724,
+    "tracking_summary": {
+      "observed": 344,
+      "predicted": 16,
+      "lost": 39
+    }
+  }
+]

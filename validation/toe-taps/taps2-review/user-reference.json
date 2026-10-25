@@ -1,0 +1,27 @@
+{
+  "clip": "taps2.mov",
+  "user_reported_count": 31,
+  "automatic_count": 27,
+  "algorithm_version": 3,
+  "event_labels_verified": false,
+  "opening_contact_included": false,
+  "diagnostic_intervals": [
+    [
+      1.55,
+      1.95
+    ],
+    [
+      2.85,
+      3.2
+    ],
+    [
+      5.95,
+      6.3
+    ],
+    [
+      10.6,
+      10.95
+    ]
+  ],
+  "final_control_contact_included": true
+}

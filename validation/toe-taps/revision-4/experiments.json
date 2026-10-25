@@ -1,0 +1,119 @@
+[
+  {
+    "experiment": "taps1-flow",
+    "count": 31,
+    "matched": 31,
+    "misses": [
+      3.3,
+      11.0
+    ],
+    "extras": []
+  },
+  {
+    "experiment": "taps1-lower",
+    "count": 19,
+    "matched": 19,
+    "misses": [
+      0.9,
+      1.2,
+      1.55,
+      2.2,
+      2.95,
+      4.0,
+      5.85,
+      6.2,
+      8.4,
+      9.2,
+      11.0,
+      11.4,
+      11.8,
+      12.15
+    ],
+    "extras": []
+  },
+  {
+    "experiment": "taps1-same_model",
+    "count": 31,
+    "matched": 31,
+    "misses": [
+      11.0,
+      12.15
+    ],
+    "extras": []
+  },
+  {
+    "experiment": "taps1-tight",
+    "count": 26,
+    "matched": 26,
+    "misses": [
+      0.9,
+      2.2,
+      2.95,
+      4.0,
+      8.4,
+      11.0,
+      12.15
+    ],
+    "extras": []
+  },
+  {
+    "experiment": "taps2-flow",
+    "count": 27,
+    "matched": 26,
+    "misses": [
+      2.1,
+      2.95,
+      7.95,
+      9.1,
+      10.8
+    ],
+    "extras": [
+      7.766666666666667
+    ]
+  },
+  {
+    "experiment": "taps2-lower",
+    "count": 23,
+    "matched": 22,
+    "misses": [
+      1.75,
+      2.55,
+      2.95,
+      7.95,
+      8.35,
+      9.1,
+      9.45,
+      10.1,
+      11.1
+    ],
+    "extras": [
+      2.7333333333333334
+    ]
+  },
+  {
+    "experiment": "taps2-same_model",
+    "count": 27,
+    "matched": 27,
+    "misses": [
+      1.75,
+      2.95,
+      6.1,
+      10.8
+    ],
+    "extras": []
+  },
+  {
+    "experiment": "taps2-tight",
+    "count": 25,
+    "matched": 25,
+    "misses": [
+      1.75,
+      2.95,
+      3.35,
+      8.7,
+      10.8,
+      11.1
+    ],
+    "extras": []
+  }
+]

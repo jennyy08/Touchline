@@ -42,7 +42,7 @@ class FootDetector:
         self.session = ort.InferenceSession(str(path), providers=["CPUExecutionProvider"])
         self.input_size = input_size  # (width, height) for the RTMPose-x 384x288 model
 
-    def detect(self, image, box, threshold):
+    def detect(self, image, box, threshold, include_ankles=False):
         """Foot points in original image coordinates; low-scoring points are omitted."""
         w, h = self.input_size
         matrix, center, scale = crop_transform(box, self.input_size)
@@ -53,5 +53,6 @@ class FootDetector:
         xs, ys = simcc_x[0].argmax(1) / 2.0, simcc_y[0].argmax(1) / 2.0
         scores = (simcc_x[0].max(1) + simcc_y[0].max(1)) / 2
         points = np.stack([xs, ys], 1) / [w, h] * scale + center - scale / 2
+        names = {**FOOT_POINTS, **({15: "left_ankle", 16: "right_ankle"} if include_ankles else {})}
         return {name: [float(points[i][0]), float(points[i][1])]
-                for i, name in FOOT_POINTS.items() if scores[i] >= threshold}
+                for i, name in names.items() if scores[i] >= threshold}

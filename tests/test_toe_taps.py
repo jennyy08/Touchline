@@ -57,3 +57,63 @@ def test_short_toe_dropout_preserves_arming_but_is_not_contact_evidence():
 def test_fast_two_frame_contact_can_be_confirmed_by_departure():
     seq=[sample(0,30),sample(.03,-50),sample(.06,-50),sample(.1,30)]
     assert count_toe_taps(seq)['estimated_count']==1
+
+def test_lateral_departure_rearms_even_inside_vertical_release_margin():
+    seq=cycle()[:3]+[sample(.2,-50,x=71),sample(.26,-50,x=71),sample(.34,-50),sample(.4,-50)]
+    assert count_toe_taps(seq)['estimated_count']==2
+
+
+def test_longer_observed_contact_wins_over_nearby_short_candidate():
+    seq=[sample(0,30),sample(.03,-50),sample(.09,-50),sample(.12,30),
+         sample(.18,-50),sample(.21,-50),sample(.24,-50),sample(.27,-50),sample(.3,-50)]
+    r=count_toe_taps(seq)
+    assert r['estimated_count']==1
+    assert r['events'][0]['time']==.18
+
+
+def test_toe_floor_jump_with_stable_ankle_does_not_invent_release():
+    seq=[sample(0,30),sample(.04,-50),sample(.07,10),
+         dict(sample(.1,-50),pose={}),sample(.14,-50),sample(.18,30)]
+    for s in seq:
+        if s['pose']: s['pose']['left_ankle']=[0,-70 if s['time']<.18 else 0]
+    r=count_toe_taps(seq)
+    assert r['estimated_count']==1
+    assert r['events'][0]['time']==.04
+
+
+def test_ankle_alone_never_confirms_contact():
+    seq=[sample(0,30),sample(.04,-50)]
+    seq += [dict(sample(t,-50),pose={'left_ankle':[0,-70]}) for t in [.07,.1,.14,.18]]
+    assert count_toe_taps(seq)['estimated_count']==0
+
+def test_alternate_views_do_not_duplicate_the_same_contact():
+    from juggling.toe_taps import analyze_toe_taps
+    seq=[dict(s,motion_pose=s['pose'],detail_pose=s['pose']) for s in cycle()]
+    r=analyze_toe_taps(seq)
+    assert r['estimated_count']==1
+
+
+def test_separated_alternate_contact_has_explicit_provenance():
+    from juggling.toe_taps import analyze_toe_taps
+    seq=cycle()+[dict(s,pose={},motion_pose=s['pose']) for s in cycle(.5)]
+    r=analyze_toe_taps(seq)
+    assert r['estimated_count']==2
+    assert r['events'][1]['observation_view']=='motion_pose'
+    assert r['events'][1]['body_part'] is None
+
+
+def test_predicted_ball_is_not_contact_evidence_in_any_view():
+    from juggling.toe_taps import analyze_toe_taps
+    seq=[dict(s,status='predicted',motion_pose=s['pose'],detail_pose=s['pose']) for s in cycle()]
+    assert analyze_toe_taps(seq)['estimated_count']==0
+
+
+def test_close_reacquired_candidate_is_review_only():
+    from juggling.toe_taps import analyze_toe_taps
+    seq=[sample(0,30,status='predicted'),sample(.03,30),sample(.06,30),
+         sample(.12,30),sample(.18,30),sample(.21,30),sample(.24,-50),sample(.30,-50)]
+    for s in seq:
+        s['motion_pose']={'left_big_toe':[0,-50 if .06<=s['time']<=.18 else 30]}
+    r=analyze_toe_taps(seq)
+    assert r['estimated_count']==1
+    assert sum(e['status']=='review' for e in r['events'])==1

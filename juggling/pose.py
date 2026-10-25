@@ -31,3 +31,19 @@ class PoseDetector:
         if self.feet and box is not None:
             landmarks.update(self.feet.detect(image, box, self.config.landmark_threshold))
         return landmarks
+
+    def detect_toe_taps(self, image):
+        """Normal pose plus a separate, closer lower-body view for review evidence."""
+        landmarks, box = self.detect_body(image)
+        detail = {}
+        if self.feet and box is not None:
+            landmarks.update(self.feet.detect(image, box, self.config.landmark_threshold))
+            lower_box = list(box)
+            lower_box[1] += (box[3]-box[1]) * .4
+            detail = dict(landmarks)
+            for side in ('left', 'right'):
+                for part in ('ankle', 'big_toe', 'small_toe', 'heel'):
+                    detail.pop(side+'_'+part, None)
+            detail.update(self.feet.detect(image, lower_box, self.config.landmark_threshold,
+                                           include_ankles=True))
+        return landmarks, detail

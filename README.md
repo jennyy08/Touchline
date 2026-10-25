@@ -237,3 +237,20 @@ adding evidence. Nearby duplicate foot IDs merge into one event; unclear foot
 identity is labeled explicitly. See `validation/toe-taps/revision-2/README.md`
 for the event-level comparison and remaining misses. The earlier baseline report
 and results are retained for comparison.
+
+Toe-tap revision 3 addresses the reported misses near 1.2, 4.75 and 11 seconds:
+33 estimated events match the 33 approximate development-reference events at
+±0.15s. This is not held-out accuracy. See
+[the event-level report](validation/toe-taps/revision-3/README.md), including
+unverified changes on the other clips. Video playback now reloads after a
+background/foreground transition, and toe-tap replay includes **Refresh video**
+to recover a black picture without losing the selected timestamp.
+
+Toe-tap revision 4 adds short, checked image-motion observations and a second
+lower-body pose crop. Raw pose observations remain available; supplemental
+contacts show dashed teal (motion) or amber (crop) shoe outlines near their
+timestamp. This runs the existing local models—no new weights or dependencies.
+It is slower because it runs the foot model twice per frame. See
+[revision 4 validation](validation/toe-taps/revision-4/README.md) for before/after
+comparisons and remaining misses. Older saved jobs keep their original results;
+re-upload to analyze with the new implementation.

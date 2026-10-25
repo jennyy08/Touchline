@@ -13,8 +13,8 @@ $("app").innerHTML =
 <form id="upload" class="file-picker"><label for="file">Practice video</label><input id="file" type="file" accept="video/*,.mov,.mp4" required/><button class="primary">Analyze toe taps ↗</button></form>
 <p id="error" role="alert" hidden></p><div id="progress" role="status" hidden><p id="stage"></p><progress id="bar"></progress></div>
 <section id="result" class="video-workspace" hidden><div class="workspace-heading"><h2>Your taps, on replay.</h2><button id="export">Export analysis</button></div><p id="total" class="session-summary"></p>
-<div class="workspace-grid"><div><div class="video-stage"><video id="video" controls playsinline></video><canvas id="overlay"></canvas></div><div class="player-controls"><button id="previous" aria-label="Previous frame">← Frame</button><button id="next" aria-label="Next frame">Frame →</button><label>Speed <select id="speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label><label><input id="tracking" type="checkbox" checked/>Tracking</label></div><p id="status"></p><details><summary>How to read this estimate</summary><ul id="warnings"></ul></details></div>
-<aside><h3>Estimated events</h3><p>Each event needs an observed approach to the ball-top zone. Select a moment to check it.</p><div id="events" class="event-list"></div>
+<div class="workspace-grid"><div><div class="video-stage"><video id="video" controls playsinline></video><canvas id="overlay"></canvas></div><div class="player-controls"><button id="previous" aria-label="Previous frame">← Frame</button><button id="next" aria-label="Next frame">Frame →</button><button id="refresh-video">Refresh video</button><label>Speed <select id="speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label><label><input id="tracking" type="checkbox" checked/>Tracking</label></div><p id="status"></p><details><summary>How to read this estimate</summary><ul id="warnings"></ul></details></div>
+<aside><h3>Estimated events</h3><p>Each event needs an observed approach to the ball-top zone. Select a moment to check it. Dashed teal shoes show image-motion evidence; amber shoes show the closer pose view.</p><div id="events" class="event-list"></div>
 <details><summary>Your corrections</summary><p>Separate from the automatic result. Starts as a copy, not a verified count. Export to keep your edits.</p><p id="review-count"></p><button id="add">Add tap at current frame</button><button id="save">Export corrections</button><label>Import corrections<input id="import" type="file" accept="application/json"/></label><div id="review" class="event-list"></div></details></aside></div></section><section id="export-fallback" hidden><label for="export-json">Export JSON — copy this if your browser does not save the download</label><textarea id="export-json" readonly rows="6"></textarea></section><footer>Local processing · No accuracy score</footer></main>`;
 const video = $<HTMLVideoElement>("video");
 const player = new AnnotatedPlayer(
@@ -84,12 +84,13 @@ function show(data: Result & { drill?: string }, id: string) {
   review = seedReview(data);
   player.load(data, `/api/jobs/${id}/video`);
   $("result").hidden = false;
+  const reviewCount = data.events.filter((e) => e.status === "review").length;
   $("total").textContent =
-    `${data.estimated_count} estimated taps · ${data.events.filter((e) => e.status === "review").length} review candidates`;
+    `${data.estimated_count} estimated taps · ${reviewCount} review candidate${reviewCount === 1 ? "" : "s"}`;
   $("events").replaceChildren();
   for (const e of data.events) {
     const button = document.createElement("button");
-    button.textContent = `${e.time.toFixed(2)}s · ${e.body_part?.replaceAll("_", " ") ?? "foot identity unclear"} · ${e.status === "counted" ? "estimated tap" : "review"}`;
+    button.textContent = `${e.time.toFixed(2)}s · ${e.body_part?.replaceAll("_", " ") ?? "foot identity unclear"} · ${e.status === "counted" ? "estimated tap" : "review timing after tracking gap"}`;
     button.onclick = () => player.seek(Math.max(0, e.time - 0.3));
     $("events").append(button);
   }
@@ -159,6 +160,7 @@ $("upload").onsubmit = async (e) => {
     setBusy(false);
   }
 };
+$("refresh-video").onclick = () => player.refreshVideo();
 $("previous").onclick = () => player.step(-1);
 $("next").onclick = () => player.step(1);
 $<HTMLSelectElement>("speed").onchange = (e) =>

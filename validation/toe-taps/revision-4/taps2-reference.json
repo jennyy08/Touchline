@@ -1,0 +1,195 @@
+{
+  "video_sha256": "50d22eae2cddc4f4c154767681cb9d116bc17c8dd8f5801f7b7bc08f827e8741",
+  "user_reported_total": 31,
+  "notes": "Approximate contact times reviewed in 0.1-second frame sequences, informed by user total. Not blind or frame-accurate. Opening held pose excluded; final control included. Shoe overlap at 1.75 and 2.95 makes exact timing uncertain.",
+  "events": [
+    {
+      "time": 0.55,
+      "label": "touch",
+      "id": "visual-1",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 0.95,
+      "label": "touch",
+      "id": "visual-2",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 1.35,
+      "label": "touch",
+      "id": "visual-3",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 1.75,
+      "label": "touch",
+      "id": "visual-4",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 2.1,
+      "label": "touch",
+      "id": "visual-5",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 2.55,
+      "label": "touch",
+      "id": "visual-6",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 2.95,
+      "label": "touch",
+      "id": "visual-7",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 3.35,
+      "label": "touch",
+      "id": "visual-8",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 3.75,
+      "label": "touch",
+      "id": "visual-9",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 4.15,
+      "label": "touch",
+      "id": "visual-10",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 4.55,
+      "label": "touch",
+      "id": "visual-11",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 5.0,
+      "label": "touch",
+      "id": "visual-12",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 5.35,
+      "label": "touch",
+      "id": "visual-13",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 5.75,
+      "label": "touch",
+      "id": "visual-14",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 6.1,
+      "label": "touch",
+      "id": "visual-15",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 6.5,
+      "label": "touch",
+      "id": "visual-16",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 6.85,
+      "label": "touch",
+      "id": "visual-17",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 7.2,
+      "label": "touch",
+      "id": "visual-18",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 7.6,
+      "label": "touch",
+      "id": "visual-19",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 7.95,
+      "label": "touch",
+      "id": "visual-20",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 8.35,
+      "label": "touch",
+      "id": "visual-21",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 8.7,
+      "label": "touch",
+      "id": "visual-22",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 9.1,
+      "label": "touch",
+      "id": "visual-23",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 9.45,
+      "label": "touch",
+      "id": "visual-24",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 9.8,
+      "label": "touch",
+      "id": "visual-25",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 10.1,
+      "label": "touch",
+      "id": "visual-26",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 10.45,
+      "label": "touch",
+      "id": "visual-27",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 10.8,
+      "label": "touch",
+      "id": "visual-28",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 11.1,
+      "label": "touch",
+      "id": "visual-29",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 11.45,
+      "label": "touch",
+      "id": "visual-30",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    },
+    {
+      "time": 12.3,
+      "label": "touch",
+      "id": "visual-31",
+      "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+    }
+  ],
+  "uncertain_intervals": [],
+  "schema_version": 1
+}

@@ -12,7 +12,8 @@ from .appearance import AppearanceBridge
 from .counting import count_touches, add_audio_evidence
 from .audio import onsets
 from .dribbling import analyze_dribbling
-from .toe_taps import count_toe_taps
+from .toe_taps import analyze_toe_taps
+from .shoe_motion import ShoeMotion
 from .dribble_scene import background, moving_detections
 
 
@@ -27,6 +28,7 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
     tracker = BallTracker(config)
     appearance = AppearanceBridge(config) if config.appearance_enabled and drill_setup is None and drill != "toe_taps" else None
     reference = background(source, progress) if drill_setup is not None else None
+    shoe_motion = ShoeMotion() if drill == "toe_taps" else None
     samples = []
     writer = None
     try:
@@ -52,8 +54,15 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
             tracked = tracker.update(frame.time, proposals)
             if appearance:
                 appearance.accept(frame.time, tracked)
+            if shoe_motion:
+                landmarks, detail = pose.detect_toe_taps(frame.image)
+            else:
+                landmarks, detail = pose.detect(frame.image) if pose else {}, {}
             sample = {"frame": frame.index, "time": frame.time,
-                      **tracked, "pose": pose.detect(frame.image) if pose else {}}
+                      **tracked, "pose": landmarks}
+            if shoe_motion:
+                sample['detail_pose'] = detail
+                sample['motion_pose'], sample['shoe_motion'] = shoe_motion.observe(frame.image, sample)
             samples.append(sample)
             writer.write(frame)
             progress(stage="analyzing", frames=frame.index + 1, total=info["expected_frames"])
@@ -72,7 +81,7 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
         except Exception as error:  # Audio is supplementary; never fail the video analysis.
             audio_warning = f"Audio could not be read ({error}); touches are counted from video only."
     if drill == "toe_taps":
-        result = count_toe_taps(samples)
+        result = analyze_toe_taps(samples)
     elif drill_setup is None:
         result = add_audio_evidence(count_touches(samples, config), samples, heard, config)
     else:
@@ -115,6 +124,7 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
     if drill == "toe_taps":
         result['warnings'] = ["Experimental toe-tap estimates, not verified physical contacts.",
             "Counts require an observed ball and an approach confirmed by multiple toe observations. Occlusion, cropped feet and depth can cause misses or extra events.",
+            "Colored alternate shoe outlines appear near events supported by image motion or a lower-body crop. These are additional observations, not confidence scores.",
             "Initial on-ball poses and unconfirmed approaches are excluded. A confirmed final contact counts even if the foot stays on the ball. Brief toe-only gaps preserve state; missing ball evidence resets it. Review the footage and correct events separately."]
     (output / "result.json").write_text(json.dumps(result, indent=2))
     return result

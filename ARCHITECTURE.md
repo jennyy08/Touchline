@@ -159,3 +159,29 @@ Revision 2 adds sustained-entry confirmation alongside the quick departure path,
 retains state across short toe-only dropouts, and merges nearby candidates while
 preserving contributing timestamps. It does not fill events using cadence or an
 expected count. `algorithm_version=2` distinguishes new toe-tap results.
+
+### Toe-tap supplementary observations
+
+`shoe_motion.py` maintains two short shoe tracks using OpenCV Lucas–Kanade
+image motion. Forward/backward checks and feature-translation agreement reject
+weak tracks. It can reassign switched toe groups and bridge a detector mismatch
+for at most 0.15 seconds after a detector anchor. No feature evidence means no
+bridge. The ball texture is excluded from feature seeding. This is still a 2D
+heuristic: nearby leg/background texture may contaminate a shoe track.
+
+`PoseDetector.detect_toe_taps` also runs the existing foot model on the lower
+60% of the person box (with the model's usual padding). Its ankles and toes
+come from the same model. This separate crop is an alternate observation, not
+an overwrite of the original pose or an independent accuracy vote.
+
+The pure `count_toe_taps` function remains the single-view state machine.
+`analyze_toe_taps` applies it to raw, motion-associated, and detail-crop poses,
+keeps primary events, and adds only separated alternate candidates. A close
+candidate after ball loss stays review-only; no predicted ball counts as
+contact evidence. Event `observation_view` identifies its supporting overlay.
+The supplemental views are correlated and may introduce false positives on
+new clips. The user count is never an input to the algorithm.
+
+Inspect `ShoeMotionConfig` for motion gates, `ToeTapConfig` for contact gates,
+and the revision-4 report for rejected alternatives and development-set limits.
+Juggling, live juggling, and side-to-side do not use this additional pipeline.
