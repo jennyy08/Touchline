@@ -254,3 +254,16 @@ It is slower because it runs the foot model twice per frame. See
 [revision 4 validation](validation/toe-taps/revision-4/README.md) for before/after
 comparisons and remaining misses. Older saved jobs keep their original results;
 re-upload to analyze with the new implementation.
+
+Toe-tap revision 5 recovers the remaining two development-clip contacts through
+short, spatially checked off-ball context and isolated toe-jump rejection.
+`taps2` now estimates 31 and `taps1` remains 33, with event-level comparisons
+and limitations documented in [revision 5 validation](validation/toe-taps/revision-5/README.md).
+The raw observations remain inspectable; hover over a tap timestamp to see its
+observed contact interval and departure, when available.
+
+Toe-tap revision 6 merges brief interruptions in a confirmed same-foot contact
+and prevents alternate views from counting that held contact again. Development
+replays retain 33 for taps1 and 31 for taps2. Taps3 still has missed contacts and
+inference variability; see [revision 6 validation](validation/toe-taps/revision-6/README.md).
+Restart the backend and analyze a new upload to use these changes.

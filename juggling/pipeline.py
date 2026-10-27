@@ -125,6 +125,6 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
         result['warnings'] = ["Experimental toe-tap estimates, not verified physical contacts.",
             "Counts require an observed ball and an approach confirmed by multiple toe observations. Occlusion, cropped feet and depth can cause misses or extra events.",
             "Colored alternate shoe outlines appear near events supported by image motion or a lower-body crop. These are additional observations, not confidence scores.",
-            "Initial on-ball poses and unconfirmed approaches are excluded. A confirmed final contact counts even if the foot stays on the ball. Brief toe-only gaps preserve state; missing ball evidence resets it. Review the footage and correct events separately."]
+            "Initial on-ball poses and unconfirmed approaches are excluded. A confirmed final contact counts even if the foot stays on the ball. Brief toe-only gaps preserve state. Short, spatially consistent ball gaps preserve only an earlier off-ball state; contact confirmation requires fresh observed frames after return. Review the footage and correct events separately."]
     (output / "result.json").write_text(json.dumps(result, indent=2))
     return result

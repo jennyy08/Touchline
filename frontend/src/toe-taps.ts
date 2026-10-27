@@ -91,6 +91,10 @@ function show(data: Result & { drill?: string }, id: string) {
   for (const e of data.events) {
     const button = document.createElement("button");
     button.textContent = `${e.time.toFixed(2)}s · ${e.body_part?.replaceAll("_", " ") ?? "foot identity unclear"} · ${e.status === "counted" ? "estimated tap" : "review timing after tracking gap"}`;
+    if (e.contact_end != null) {
+      button.title = `Observed contact evidence: ${e.time.toFixed(2)}–${e.contact_end.toFixed(2)}s` +
+        (e.departure_time != null ? `; departure observed at ${e.departure_time.toFixed(2)}s` : "; departure not observed");
+    }
     button.onclick = () => player.seek(Math.max(0, e.time - 0.3));
     $("events").append(button);
   }

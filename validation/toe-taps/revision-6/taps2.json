@@ -1,0 +1,1864 @@
+{
+  "before": 31,
+  "after": 31,
+  "events": [
+    {
+      "id": "tap-1",
+      "time": 0.5333333333333333,
+      "frame": 16,
+      "confirmed_time": 0.6,
+      "body_part": null,
+      "confirmation": "sustained",
+      "support_frames": 5,
+      "contact_end": 0.6666666666666666,
+      "departure_time": 0.7,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": true,
+      "merged_candidate_times": [
+        0.5333333333333333,
+        0.7
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-2",
+      "time": 0.9333333333333333,
+      "frame": 28,
+      "confirmed_time": 1.0,
+      "body_part": null,
+      "confirmation": "sustained",
+      "support_frames": 10,
+      "contact_end": 1.2333333333333334,
+      "departure_time": 1.2666666666666666,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": true,
+      "merged_candidate_times": [
+        0.8,
+        0.9333333333333333
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-3",
+      "time": 1.3333333333333333,
+      "frame": 40,
+      "confirmed_time": 1.4,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 9,
+      "contact_end": 1.6,
+      "departure_time": null,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        1.3333333333333333
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-4",
+      "time": 1.8,
+      "frame": 54,
+      "confirmed_time": 1.8666666666666667,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 4,
+      "contact_end": 1.9,
+      "departure_time": 1.9333333333333333,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        1.8
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-5",
+      "time": 2.066666666666667,
+      "frame": 62,
+      "confirmed_time": 2.1333333333333333,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 8,
+      "contact_end": 2.3,
+      "departure_time": 2.3333333333333335,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        2.066666666666667
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-6",
+      "time": 2.7,
+      "frame": 81,
+      "confirmed_time": 2.7666666666666666,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 5,
+      "contact_end": 2.8333333333333335,
+      "departure_time": null,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        2.533333333333333,
+        2.7
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-7",
+      "time": 2.966666666666667,
+      "frame": 89,
+      "confirmed_time": 3.1333333333333333,
+      "body_part": "left_foot",
+      "confirmation": "departure",
+      "support_frames": 2,
+      "contact_end": 3.033333333333333,
+      "departure_time": 3.1333333333333333,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        2.966666666666667
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-8",
+      "time": 3.2666666666666666,
+      "frame": 98,
+      "confirmed_time": 3.3333333333333335,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 11,
+      "contact_end": 3.6,
+      "departure_time": 3.6333333333333333,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        3.2666666666666666
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-9",
+      "time": 3.7333333333333334,
+      "frame": 112,
+      "confirmed_time": 3.8,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 9,
+      "contact_end": 4.0,
+      "departure_time": 4.033333333333333,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        3.7333333333333334
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-10",
+      "time": 4.133333333333334,
+      "frame": 124,
+      "confirmed_time": 4.2,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 9,
+      "contact_end": 4.4,
+      "departure_time": 4.433333333333334,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        4.133333333333334
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-11",
+      "time": 4.533333333333333,
+      "frame": 136,
+      "confirmed_time": 4.6,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 11,
+      "contact_end": 4.866666666666666,
+      "departure_time": 4.933333333333334,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        4.533333333333333
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-12",
+      "time": 5.0,
+      "frame": 150,
+      "confirmed_time": 5.066666666666666,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 4,
+      "contact_end": 5.1,
+      "departure_time": 5.2,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        5.0
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-13",
+      "time": 5.266666666666667,
+      "frame": 158,
+      "confirmed_time": 5.333333333333333,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 12,
+      "contact_end": 5.633333333333334,
+      "departure_time": 5.666666666666667,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        5.266666666666667
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-14",
+      "time": 5.8,
+      "frame": 174,
+      "confirmed_time": 5.866666666666666,
+      "body_part": null,
+      "confirmation": "sustained",
+      "support_frames": 16,
+      "contact_end": 6.333333333333333,
+      "departure_time": 6.366666666666666,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": true,
+      "merged_candidate_times": [
+        5.733333333333333,
+        5.8
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-15",
+      "time": 6.1,
+      "frame": 183,
+      "confirmed_time": 6.266666666666667,
+      "body_part": null,
+      "confirmation": "departure",
+      "support_frames": 2,
+      "contact_end": 6.133333333333334,
+      "departure_time": 6.266666666666667,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks",
+        "measured_image_motion"
+      ],
+      "foot_identity_ambiguous": true,
+      "merged_candidate_times": [
+        6.1,
+        6.3
+      ],
+      "observation_view": "motion_pose"
+    },
+    {
+      "id": "tap-16",
+      "time": 6.4,
+      "frame": 192,
+      "confirmed_time": 6.466666666666667,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 11,
+      "contact_end": 6.733333333333333,
+      "departure_time": 6.766666666666667,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        6.4
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-17",
+      "time": 6.833333333333333,
+      "frame": 205,
+      "confirmed_time": 6.9,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 6,
+      "contact_end": 7.0,
+      "departure_time": 7.066666666666666,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        6.833333333333333
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-18",
+      "time": 7.133333333333334,
+      "frame": 214,
+      "confirmed_time": 7.2,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 13,
+      "contact_end": 7.533333333333333,
+      "departure_time": 7.566666666666666,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        7.133333333333334
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-19",
+      "time": 7.533333333333333,
+      "frame": 226,
+      "confirmed_time": 7.6,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 9,
+      "contact_end": 7.866666666666666,
+      "departure_time": 7.9,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        7.533333333333333
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-20",
+      "time": 7.933333333333334,
+      "frame": 238,
+      "confirmed_time": 8.0,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 12,
+      "contact_end": 8.3,
+      "departure_time": 8.333333333333334,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        7.766666666666667,
+        7.933333333333334
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-21",
+      "time": 8.366666666666667,
+      "frame": 251,
+      "confirmed_time": 8.435,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 3,
+      "contact_end": 8.435,
+      "departure_time": 8.501666666666667,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        8.366666666666667,
+        8.535
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-22",
+      "time": 8.668333333333333,
+      "frame": 260,
+      "confirmed_time": 8.735,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 13,
+      "contact_end": 9.068333333333333,
+      "departure_time": 9.101666666666667,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        8.668333333333333
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-23",
+      "time": 9.068333333333333,
+      "frame": 272,
+      "confirmed_time": 9.201666666666666,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 4,
+      "contact_end": 9.201666666666666,
+      "departure_time": null,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        9.068333333333333
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-24",
+      "time": 9.401666666666667,
+      "frame": 282,
+      "confirmed_time": 9.468333333333334,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 10,
+      "contact_end": 9.701666666666666,
+      "departure_time": 9.801666666666666,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        9.401666666666667
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-25",
+      "time": 9.701666666666666,
+      "frame": 291,
+      "confirmed_time": 9.768333333333333,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 3,
+      "contact_end": 9.768333333333333,
+      "departure_time": 9.801666666666666,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        9.701666666666666
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-26",
+      "time": 10.035,
+      "frame": 301,
+      "confirmed_time": 10.101666666666667,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 33,
+      "contact_end": 11.168333333333333,
+      "departure_time": 11.268333333333333,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        10.035
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-27",
+      "time": 10.368333333333334,
+      "frame": 311,
+      "confirmed_time": 10.501666666666667,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 6,
+      "contact_end": 10.601666666666667,
+      "departure_time": 10.635,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        10.368333333333334
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-28",
+      "time": 10.735,
+      "frame": 322,
+      "confirmed_time": 10.801666666666666,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 10,
+      "contact_end": 11.035,
+      "departure_time": null,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks",
+        "lower_body_crop"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        10.735
+      ],
+      "observation_view": "detail_pose"
+    },
+    {
+      "id": "tap-29",
+      "time": 11.068333333333333,
+      "frame": 332,
+      "confirmed_time": 11.135,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 3,
+      "contact_end": 11.135,
+      "departure_time": null,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        11.068333333333333
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-30",
+      "time": 11.301666666666666,
+      "frame": 339,
+      "confirmed_time": 11.468333333333334,
+      "body_part": "right_foot",
+      "confirmation": "sustained",
+      "support_frames": 13,
+      "contact_end": 11.768333333333333,
+      "departure_time": 11.801666666666666,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        11.301666666666666
+      ],
+      "observation_view": "pose"
+    },
+    {
+      "id": "tap-31",
+      "time": 12.301666666666666,
+      "frame": 369,
+      "confirmed_time": 12.368333333333334,
+      "body_part": "left_foot",
+      "confirmation": "sustained",
+      "support_frames": 28,
+      "contact_end": 13.201666666666666,
+      "departure_time": 13.268333333333333,
+      "status": "counted",
+      "reason": "observed_ball_top_approach",
+      "evidence_sources": [
+        "ball_detection",
+        "toe_landmarks"
+      ],
+      "foot_identity_ambiguous": false,
+      "merged_candidate_times": [
+        12.301666666666666
+      ],
+      "observation_view": "pose"
+    }
+  ],
+  "method": "Recount unchanged saved observations, not fresh inference",
+  "0.1": {
+    "before": {
+      "tolerance_seconds": 0.1,
+      "estimated_count": 31,
+      "reference_visible_count": 31,
+      "matched": 29,
+      "false_positives": [
+        {
+          "id": "tap-6",
+          "time": 2.7,
+          "frame": 81,
+          "confirmed_time": 2.7666666666666666,
+          "body_part": "right_foot",
+          "confirmation": "sustained",
+          "support_frames": 5,
+          "contact_end": 2.8333333333333335,
+          "departure_time": null,
+          "status": "counted",
+          "reason": "observed_ball_top_approach",
+          "evidence_sources": [
+            "ball_detection",
+            "toe_landmarks"
+          ],
+          "foot_identity_ambiguous": false,
+          "merged_candidate_times": [
+            2.533333333333333,
+            2.7
+          ],
+          "observation_view": "pose"
+        },
+        {
+          "id": "tap-30",
+          "time": 11.301666666666666,
+          "frame": 339,
+          "confirmed_time": 11.468333333333334,
+          "body_part": "right_foot",
+          "confirmation": "sustained",
+          "support_frames": 13,
+          "contact_end": 11.768333333333333,
+          "departure_time": 11.801666666666666,
+          "status": "counted",
+          "reason": "observed_ball_top_approach",
+          "evidence_sources": [
+            "ball_detection",
+            "toe_landmarks"
+          ],
+          "foot_identity_ambiguous": false,
+          "merged_candidate_times": [
+            11.301666666666666
+          ],
+          "observation_view": "pose"
+        }
+      ],
+      "unverifiable_predictions": [],
+      "misses": [
+        {
+          "time": 2.55,
+          "label": "touch",
+          "id": "visual-6",
+          "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+        },
+        {
+          "time": 11.45,
+          "label": "touch",
+          "id": "visual-30",
+          "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+        }
+      ],
+      "matches": [
+        {
+          "predicted_time": 0.5333333333333333,
+          "reference_time": 0.55,
+          "predicted_frame": 16,
+          "reference_frame": null,
+          "error_seconds": -0.01666666666666672
+        },
+        {
+          "predicted_time": 0.9333333333333333,
+          "reference_time": 0.95,
+          "predicted_frame": 28,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 1.3333333333333333,
+          "reference_time": 1.35,
+          "predicted_frame": 40,
+          "reference_frame": null,
+          "error_seconds": -0.01666666666666683
+        },
+        {
+          "predicted_time": 1.8,
+          "reference_time": 1.75,
+          "predicted_frame": 54,
+          "reference_frame": null,
+          "error_seconds": 0.050000000000000044
+        },
+        {
+          "predicted_time": 2.066666666666667,
+          "reference_time": 2.1,
+          "predicted_frame": 62,
+          "reference_frame": null,
+          "error_seconds": -0.033333333333333215
+        },
+        {
+          "predicted_time": 2.966666666666667,
+          "reference_time": 2.95,
+          "predicted_frame": 89,
+          "reference_frame": null,
+          "error_seconds": 0.016666666666666607
+        },
+        {
+          "predicted_time": 3.2666666666666666,
+          "reference_time": 3.35,
+          "predicted_frame": 98,
+          "reference_frame": null,
+          "error_seconds": -0.08333333333333348
+        },
+        {
+          "predicted_time": 3.7333333333333334,
+          "reference_time": 3.75,
+          "predicted_frame": 112,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 4.133333333333334,
+          "reference_time": 4.15,
+          "predicted_frame": 124,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 4.533333333333333,
+          "reference_time": 4.55,
+          "predicted_frame": 136,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 5.0,
+          "reference_time": 5.0,
+          "predicted_frame": 150,
+          "reference_frame": null,
+          "error_seconds": 0.0
+        },
+        {
+          "predicted_time": 5.266666666666667,
+          "reference_time": 5.35,
+          "predicted_frame": 158,
+          "reference_frame": null,
+          "error_seconds": -0.08333333333333304
+        },
+        {
+          "predicted_time": 5.8,
+          "reference_time": 5.75,
+          "predicted_frame": 174,
+          "reference_frame": null,
+          "error_seconds": 0.04999999999999982
+        },
+        {
+          "predicted_time": 6.1,
+          "reference_time": 6.1,
+          "predicted_frame": 183,
+          "reference_frame": null,
+          "error_seconds": 0.0
+        },
+        {
+          "predicted_time": 6.4,
+          "reference_time": 6.5,
+          "predicted_frame": 192,
+          "reference_frame": null,
+          "error_seconds": -0.09999999999999964
+        },
+        {
+          "predicted_time": 6.833333333333333,
+          "reference_time": 6.85,
+          "predicted_frame": 205,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 7.133333333333334,
+          "reference_time": 7.2,
+          "predicted_frame": 214,
+          "reference_frame": null,
+          "error_seconds": -0.06666666666666643
+        },
+        {
+          "predicted_time": 7.533333333333333,
+          "reference_time": 7.6,
+          "predicted_frame": 226,
+          "reference_frame": null,
+          "error_seconds": -0.06666666666666643
+        },
+        {
+          "predicted_time": 7.933333333333334,
+          "reference_time": 7.95,
+          "predicted_frame": 238,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 8.366666666666667,
+          "reference_time": 8.35,
+          "predicted_frame": 251,
+          "reference_frame": null,
+          "error_seconds": 0.016666666666667496
+        },
+        {
+          "predicted_time": 8.668333333333333,
+          "reference_time": 8.7,
+          "predicted_frame": 260,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 9.068333333333333,
+          "reference_time": 9.1,
+          "predicted_frame": 272,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 9.401666666666667,
+          "reference_time": 9.45,
+          "predicted_frame": 282,
+          "reference_frame": null,
+          "error_seconds": -0.04833333333333201
+        },
+        {
+          "predicted_time": 9.701666666666666,
+          "reference_time": 9.8,
+          "predicted_frame": 291,
+          "reference_frame": null,
+          "error_seconds": -0.0983333333333345
+        },
+        {
+          "predicted_time": 10.035,
+          "reference_time": 10.1,
+          "predicted_frame": 301,
+          "reference_frame": null,
+          "error_seconds": -0.0649999999999995
+        },
+        {
+          "predicted_time": 10.368333333333334,
+          "reference_time": 10.45,
+          "predicted_frame": 311,
+          "reference_frame": null,
+          "error_seconds": -0.08166666666666522
+        },
+        {
+          "predicted_time": 10.735,
+          "reference_time": 10.8,
+          "predicted_frame": 322,
+          "reference_frame": null,
+          "error_seconds": -0.06500000000000128
+        },
+        {
+          "predicted_time": 11.068333333333333,
+          "reference_time": 11.1,
+          "predicted_frame": 332,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 12.301666666666666,
+          "reference_time": 12.3,
+          "predicted_frame": 369,
+          "reference_frame": null,
+          "error_seconds": 0.0016666666666651508
+        }
+      ],
+      "mean_absolute_timing_error": 0.03982758620689641,
+      "tracking_summary": {
+        "observed": 408,
+        "predicted": 6
+      },
+      "runtime_seconds": 107.8461435418576,
+      "config": {
+        "detector": "yolo11s.pt",
+        "pose_model": "yolo11n-pose.pt",
+        "foot_model": "rtmpose-x-halpe26.onnx",
+        "image_size": 640,
+        "pose_size": 640,
+        "detection_threshold": 0.05,
+        "landmark_threshold": 0.35,
+        "prediction_seconds": 0.15,
+        "minimum_size_ratio": 0.75,
+        "edge_outward_fraction": 0.2,
+        "edge_margin_diameters": 0.05,
+        "edge_outward_diameters_per_second": 0.5,
+        "association_diameters": 3.0,
+        "contact_diameters": 1.15,
+        "foot_length_shin_ratio": 0.6,
+        "stop_seconds": 1.0,
+        "stop_radius_diameters": 0.5,
+        "stop_gap_seconds": 0.2,
+        "audio_enabled": true,
+        "audio_min_strength": 8.0,
+        "audio_match_seconds": 0.12,
+        "rhythm_min_beats": 0.6,
+        "rhythm_max_beats": 1.6,
+        "audio_return_seconds": 1.0,
+        "debounce_seconds": 0.22,
+        "velocity_window_seconds": 0.14,
+        "min_velocity_diameters": 0.7,
+        "appearance_enabled": true,
+        "appearance_horizon_seconds": 0.25,
+        "appearance_similarity": 0.6,
+        "device": "cpu"
+      },
+      "uncertain_intervals": []
+    },
+    "after": {
+      "tolerance_seconds": 0.1,
+      "estimated_count": 31,
+      "reference_visible_count": 31,
+      "matched": 29,
+      "false_positives": [
+        {
+          "id": "tap-6",
+          "time": 2.7,
+          "frame": 81,
+          "confirmed_time": 2.7666666666666666,
+          "body_part": "right_foot",
+          "confirmation": "sustained",
+          "support_frames": 5,
+          "contact_end": 2.8333333333333335,
+          "departure_time": null,
+          "status": "counted",
+          "reason": "observed_ball_top_approach",
+          "evidence_sources": [
+            "ball_detection",
+            "toe_landmarks"
+          ],
+          "foot_identity_ambiguous": false,
+          "merged_candidate_times": [
+            2.533333333333333,
+            2.7
+          ],
+          "observation_view": "pose"
+        },
+        {
+          "id": "tap-30",
+          "time": 11.301666666666666,
+          "frame": 339,
+          "confirmed_time": 11.468333333333334,
+          "body_part": "right_foot",
+          "confirmation": "sustained",
+          "support_frames": 13,
+          "contact_end": 11.768333333333333,
+          "departure_time": 11.801666666666666,
+          "status": "counted",
+          "reason": "observed_ball_top_approach",
+          "evidence_sources": [
+            "ball_detection",
+            "toe_landmarks"
+          ],
+          "foot_identity_ambiguous": false,
+          "merged_candidate_times": [
+            11.301666666666666
+          ],
+          "observation_view": "pose"
+        }
+      ],
+      "unverifiable_predictions": [],
+      "misses": [
+        {
+          "time": 2.55,
+          "label": "touch",
+          "id": "visual-6",
+          "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+        },
+        {
+          "time": 11.45,
+          "label": "touch",
+          "id": "visual-30",
+          "note": "Approximate visible contact from 0.1s frame sequences; confirm timing in replay."
+        }
+      ],
+      "matches": [
+        {
+          "predicted_time": 0.5333333333333333,
+          "reference_time": 0.55,
+          "predicted_frame": 16,
+          "reference_frame": null,
+          "error_seconds": -0.01666666666666672
+        },
+        {
+          "predicted_time": 0.9333333333333333,
+          "reference_time": 0.95,
+          "predicted_frame": 28,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 1.3333333333333333,
+          "reference_time": 1.35,
+          "predicted_frame": 40,
+          "reference_frame": null,
+          "error_seconds": -0.01666666666666683
+        },
+        {
+          "predicted_time": 1.8,
+          "reference_time": 1.75,
+          "predicted_frame": 54,
+          "reference_frame": null,
+          "error_seconds": 0.050000000000000044
+        },
+        {
+          "predicted_time": 2.066666666666667,
+          "reference_time": 2.1,
+          "predicted_frame": 62,
+          "reference_frame": null,
+          "error_seconds": -0.033333333333333215
+        },
+        {
+          "predicted_time": 2.966666666666667,
+          "reference_time": 2.95,
+          "predicted_frame": 89,
+          "reference_frame": null,
+          "error_seconds": 0.016666666666666607
+        },
+        {
+          "predicted_time": 3.2666666666666666,
+          "reference_time": 3.35,
+          "predicted_frame": 98,
+          "reference_frame": null,
+          "error_seconds": -0.08333333333333348
+        },
+        {
+          "predicted_time": 3.7333333333333334,
+          "reference_time": 3.75,
+          "predicted_frame": 112,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 4.133333333333334,
+          "reference_time": 4.15,
+          "predicted_frame": 124,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 4.533333333333333,
+          "reference_time": 4.55,
+          "predicted_frame": 136,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 5.0,
+          "reference_time": 5.0,
+          "predicted_frame": 150,
+          "reference_frame": null,
+          "error_seconds": 0.0
+        },
+        {
+          "predicted_time": 5.266666666666667,
+          "reference_time": 5.35,
+          "predicted_frame": 158,
+          "reference_frame": null,
+          "error_seconds": -0.08333333333333304
+        },
+        {
+          "predicted_time": 5.8,
+          "reference_time": 5.75,
+          "predicted_frame": 174,
+          "reference_frame": null,
+          "error_seconds": 0.04999999999999982
+        },
+        {
+          "predicted_time": 6.1,
+          "reference_time": 6.1,
+          "predicted_frame": 183,
+          "reference_frame": null,
+          "error_seconds": 0.0
+        },
+        {
+          "predicted_time": 6.4,
+          "reference_time": 6.5,
+          "predicted_frame": 192,
+          "reference_frame": null,
+          "error_seconds": -0.09999999999999964
+        },
+        {
+          "predicted_time": 6.833333333333333,
+          "reference_time": 6.85,
+          "predicted_frame": 205,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 7.133333333333334,
+          "reference_time": 7.2,
+          "predicted_frame": 214,
+          "reference_frame": null,
+          "error_seconds": -0.06666666666666643
+        },
+        {
+          "predicted_time": 7.533333333333333,
+          "reference_time": 7.6,
+          "predicted_frame": 226,
+          "reference_frame": null,
+          "error_seconds": -0.06666666666666643
+        },
+        {
+          "predicted_time": 7.933333333333334,
+          "reference_time": 7.95,
+          "predicted_frame": 238,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 8.366666666666667,
+          "reference_time": 8.35,
+          "predicted_frame": 251,
+          "reference_frame": null,
+          "error_seconds": 0.016666666666667496
+        },
+        {
+          "predicted_time": 8.668333333333333,
+          "reference_time": 8.7,
+          "predicted_frame": 260,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 9.068333333333333,
+          "reference_time": 9.1,
+          "predicted_frame": 272,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 9.401666666666667,
+          "reference_time": 9.45,
+          "predicted_frame": 282,
+          "reference_frame": null,
+          "error_seconds": -0.04833333333333201
+        },
+        {
+          "predicted_time": 9.701666666666666,
+          "reference_time": 9.8,
+          "predicted_frame": 291,
+          "reference_frame": null,
+          "error_seconds": -0.0983333333333345
+        },
+        {
+          "predicted_time": 10.035,
+          "reference_time": 10.1,
+          "predicted_frame": 301,
+          "reference_frame": null,
+          "error_seconds": -0.0649999999999995
+        },
+        {
+          "predicted_time": 10.368333333333334,
+          "reference_time": 10.45,
+          "predicted_frame": 311,
+          "reference_frame": null,
+          "error_seconds": -0.08166666666666522
+        },
+        {
+          "predicted_time": 10.735,
+          "reference_time": 10.8,
+          "predicted_frame": 322,
+          "reference_frame": null,
+          "error_seconds": -0.06500000000000128
+        },
+        {
+          "predicted_time": 11.068333333333333,
+          "reference_time": 11.1,
+          "predicted_frame": 332,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 12.301666666666666,
+          "reference_time": 12.3,
+          "predicted_frame": 369,
+          "reference_frame": null,
+          "error_seconds": 0.0016666666666651508
+        }
+      ],
+      "mean_absolute_timing_error": 0.03982758620689641,
+      "tracking_summary": {
+        "observed": 408,
+        "predicted": 6
+      },
+      "runtime_seconds": 107.8461435418576,
+      "config": {
+        "detector": "yolo11s.pt",
+        "pose_model": "yolo11n-pose.pt",
+        "foot_model": "rtmpose-x-halpe26.onnx",
+        "image_size": 640,
+        "pose_size": 640,
+        "detection_threshold": 0.05,
+        "landmark_threshold": 0.35,
+        "prediction_seconds": 0.15,
+        "minimum_size_ratio": 0.75,
+        "edge_outward_fraction": 0.2,
+        "edge_margin_diameters": 0.05,
+        "edge_outward_diameters_per_second": 0.5,
+        "association_diameters": 3.0,
+        "contact_diameters": 1.15,
+        "foot_length_shin_ratio": 0.6,
+        "stop_seconds": 1.0,
+        "stop_radius_diameters": 0.5,
+        "stop_gap_seconds": 0.2,
+        "audio_enabled": true,
+        "audio_min_strength": 8.0,
+        "audio_match_seconds": 0.12,
+        "rhythm_min_beats": 0.6,
+        "rhythm_max_beats": 1.6,
+        "audio_return_seconds": 1.0,
+        "debounce_seconds": 0.22,
+        "velocity_window_seconds": 0.14,
+        "min_velocity_diameters": 0.7,
+        "appearance_enabled": true,
+        "appearance_horizon_seconds": 0.25,
+        "appearance_similarity": 0.6,
+        "device": "cpu"
+      },
+      "uncertain_intervals": []
+    }
+  },
+  "0.15": {
+    "before": {
+      "tolerance_seconds": 0.15,
+      "estimated_count": 31,
+      "reference_visible_count": 31,
+      "matched": 31,
+      "false_positives": [],
+      "unverifiable_predictions": [],
+      "misses": [],
+      "matches": [
+        {
+          "predicted_time": 0.5333333333333333,
+          "reference_time": 0.55,
+          "predicted_frame": 16,
+          "reference_frame": null,
+          "error_seconds": -0.01666666666666672
+        },
+        {
+          "predicted_time": 0.9333333333333333,
+          "reference_time": 0.95,
+          "predicted_frame": 28,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 1.3333333333333333,
+          "reference_time": 1.35,
+          "predicted_frame": 40,
+          "reference_frame": null,
+          "error_seconds": -0.01666666666666683
+        },
+        {
+          "predicted_time": 1.8,
+          "reference_time": 1.75,
+          "predicted_frame": 54,
+          "reference_frame": null,
+          "error_seconds": 0.050000000000000044
+        },
+        {
+          "predicted_time": 2.066666666666667,
+          "reference_time": 2.1,
+          "predicted_frame": 62,
+          "reference_frame": null,
+          "error_seconds": -0.033333333333333215
+        },
+        {
+          "predicted_time": 2.7,
+          "reference_time": 2.55,
+          "predicted_frame": 81,
+          "reference_frame": null,
+          "error_seconds": 0.15000000000000036
+        },
+        {
+          "predicted_time": 2.966666666666667,
+          "reference_time": 2.95,
+          "predicted_frame": 89,
+          "reference_frame": null,
+          "error_seconds": 0.016666666666666607
+        },
+        {
+          "predicted_time": 3.2666666666666666,
+          "reference_time": 3.35,
+          "predicted_frame": 98,
+          "reference_frame": null,
+          "error_seconds": -0.08333333333333348
+        },
+        {
+          "predicted_time": 3.7333333333333334,
+          "reference_time": 3.75,
+          "predicted_frame": 112,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 4.133333333333334,
+          "reference_time": 4.15,
+          "predicted_frame": 124,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 4.533333333333333,
+          "reference_time": 4.55,
+          "predicted_frame": 136,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 5.0,
+          "reference_time": 5.0,
+          "predicted_frame": 150,
+          "reference_frame": null,
+          "error_seconds": 0.0
+        },
+        {
+          "predicted_time": 5.266666666666667,
+          "reference_time": 5.35,
+          "predicted_frame": 158,
+          "reference_frame": null,
+          "error_seconds": -0.08333333333333304
+        },
+        {
+          "predicted_time": 5.8,
+          "reference_time": 5.75,
+          "predicted_frame": 174,
+          "reference_frame": null,
+          "error_seconds": 0.04999999999999982
+        },
+        {
+          "predicted_time": 6.1,
+          "reference_time": 6.1,
+          "predicted_frame": 183,
+          "reference_frame": null,
+          "error_seconds": 0.0
+        },
+        {
+          "predicted_time": 6.4,
+          "reference_time": 6.5,
+          "predicted_frame": 192,
+          "reference_frame": null,
+          "error_seconds": -0.09999999999999964
+        },
+        {
+          "predicted_time": 6.833333333333333,
+          "reference_time": 6.85,
+          "predicted_frame": 205,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 7.133333333333334,
+          "reference_time": 7.2,
+          "predicted_frame": 214,
+          "reference_frame": null,
+          "error_seconds": -0.06666666666666643
+        },
+        {
+          "predicted_time": 7.533333333333333,
+          "reference_time": 7.6,
+          "predicted_frame": 226,
+          "reference_frame": null,
+          "error_seconds": -0.06666666666666643
+        },
+        {
+          "predicted_time": 7.933333333333334,
+          "reference_time": 7.95,
+          "predicted_frame": 238,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 8.366666666666667,
+          "reference_time": 8.35,
+          "predicted_frame": 251,
+          "reference_frame": null,
+          "error_seconds": 0.016666666666667496
+        },
+        {
+          "predicted_time": 8.668333333333333,
+          "reference_time": 8.7,
+          "predicted_frame": 260,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 9.068333333333333,
+          "reference_time": 9.1,
+          "predicted_frame": 272,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 9.401666666666667,
+          "reference_time": 9.45,
+          "predicted_frame": 282,
+          "reference_frame": null,
+          "error_seconds": -0.04833333333333201
+        },
+        {
+          "predicted_time": 9.701666666666666,
+          "reference_time": 9.8,
+          "predicted_frame": 291,
+          "reference_frame": null,
+          "error_seconds": -0.0983333333333345
+        },
+        {
+          "predicted_time": 10.035,
+          "reference_time": 10.1,
+          "predicted_frame": 301,
+          "reference_frame": null,
+          "error_seconds": -0.0649999999999995
+        },
+        {
+          "predicted_time": 10.368333333333334,
+          "reference_time": 10.45,
+          "predicted_frame": 311,
+          "reference_frame": null,
+          "error_seconds": -0.08166666666666522
+        },
+        {
+          "predicted_time": 10.735,
+          "reference_time": 10.8,
+          "predicted_frame": 322,
+          "reference_frame": null,
+          "error_seconds": -0.06500000000000128
+        },
+        {
+          "predicted_time": 11.068333333333333,
+          "reference_time": 11.1,
+          "predicted_frame": 332,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 11.301666666666666,
+          "reference_time": 11.45,
+          "predicted_frame": 339,
+          "reference_frame": null,
+          "error_seconds": -0.14833333333333343
+        },
+        {
+          "predicted_time": 12.301666666666666,
+          "reference_time": 12.3,
+          "predicted_frame": 369,
+          "reference_frame": null,
+          "error_seconds": 0.0016666666666651508
+        }
+      ],
+      "mean_absolute_timing_error": 0.0468817204301074,
+      "tracking_summary": {
+        "observed": 408,
+        "predicted": 6
+      },
+      "runtime_seconds": 107.8461435418576,
+      "config": {
+        "detector": "yolo11s.pt",
+        "pose_model": "yolo11n-pose.pt",
+        "foot_model": "rtmpose-x-halpe26.onnx",
+        "image_size": 640,
+        "pose_size": 640,
+        "detection_threshold": 0.05,
+        "landmark_threshold": 0.35,
+        "prediction_seconds": 0.15,
+        "minimum_size_ratio": 0.75,
+        "edge_outward_fraction": 0.2,
+        "edge_margin_diameters": 0.05,
+        "edge_outward_diameters_per_second": 0.5,
+        "association_diameters": 3.0,
+        "contact_diameters": 1.15,
+        "foot_length_shin_ratio": 0.6,
+        "stop_seconds": 1.0,
+        "stop_radius_diameters": 0.5,
+        "stop_gap_seconds": 0.2,
+        "audio_enabled": true,
+        "audio_min_strength": 8.0,
+        "audio_match_seconds": 0.12,
+        "rhythm_min_beats": 0.6,
+        "rhythm_max_beats": 1.6,
+        "audio_return_seconds": 1.0,
+        "debounce_seconds": 0.22,
+        "velocity_window_seconds": 0.14,
+        "min_velocity_diameters": 0.7,
+        "appearance_enabled": true,
+        "appearance_horizon_seconds": 0.25,
+        "appearance_similarity": 0.6,
+        "device": "cpu"
+      },
+      "uncertain_intervals": []
+    },
+    "after": {
+      "tolerance_seconds": 0.15,
+      "estimated_count": 31,
+      "reference_visible_count": 31,
+      "matched": 31,
+      "false_positives": [],
+      "unverifiable_predictions": [],
+      "misses": [],
+      "matches": [
+        {
+          "predicted_time": 0.5333333333333333,
+          "reference_time": 0.55,
+          "predicted_frame": 16,
+          "reference_frame": null,
+          "error_seconds": -0.01666666666666672
+        },
+        {
+          "predicted_time": 0.9333333333333333,
+          "reference_time": 0.95,
+          "predicted_frame": 28,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 1.3333333333333333,
+          "reference_time": 1.35,
+          "predicted_frame": 40,
+          "reference_frame": null,
+          "error_seconds": -0.01666666666666683
+        },
+        {
+          "predicted_time": 1.8,
+          "reference_time": 1.75,
+          "predicted_frame": 54,
+          "reference_frame": null,
+          "error_seconds": 0.050000000000000044
+        },
+        {
+          "predicted_time": 2.066666666666667,
+          "reference_time": 2.1,
+          "predicted_frame": 62,
+          "reference_frame": null,
+          "error_seconds": -0.033333333333333215
+        },
+        {
+          "predicted_time": 2.7,
+          "reference_time": 2.55,
+          "predicted_frame": 81,
+          "reference_frame": null,
+          "error_seconds": 0.15000000000000036
+        },
+        {
+          "predicted_time": 2.966666666666667,
+          "reference_time": 2.95,
+          "predicted_frame": 89,
+          "reference_frame": null,
+          "error_seconds": 0.016666666666666607
+        },
+        {
+          "predicted_time": 3.2666666666666666,
+          "reference_time": 3.35,
+          "predicted_frame": 98,
+          "reference_frame": null,
+          "error_seconds": -0.08333333333333348
+        },
+        {
+          "predicted_time": 3.7333333333333334,
+          "reference_time": 3.75,
+          "predicted_frame": 112,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 4.133333333333334,
+          "reference_time": 4.15,
+          "predicted_frame": 124,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 4.533333333333333,
+          "reference_time": 4.55,
+          "predicted_frame": 136,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 5.0,
+          "reference_time": 5.0,
+          "predicted_frame": 150,
+          "reference_frame": null,
+          "error_seconds": 0.0
+        },
+        {
+          "predicted_time": 5.266666666666667,
+          "reference_time": 5.35,
+          "predicted_frame": 158,
+          "reference_frame": null,
+          "error_seconds": -0.08333333333333304
+        },
+        {
+          "predicted_time": 5.8,
+          "reference_time": 5.75,
+          "predicted_frame": 174,
+          "reference_frame": null,
+          "error_seconds": 0.04999999999999982
+        },
+        {
+          "predicted_time": 6.1,
+          "reference_time": 6.1,
+          "predicted_frame": 183,
+          "reference_frame": null,
+          "error_seconds": 0.0
+        },
+        {
+          "predicted_time": 6.4,
+          "reference_time": 6.5,
+          "predicted_frame": 192,
+          "reference_frame": null,
+          "error_seconds": -0.09999999999999964
+        },
+        {
+          "predicted_time": 6.833333333333333,
+          "reference_time": 6.85,
+          "predicted_frame": 205,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 7.133333333333334,
+          "reference_time": 7.2,
+          "predicted_frame": 214,
+          "reference_frame": null,
+          "error_seconds": -0.06666666666666643
+        },
+        {
+          "predicted_time": 7.533333333333333,
+          "reference_time": 7.6,
+          "predicted_frame": 226,
+          "reference_frame": null,
+          "error_seconds": -0.06666666666666643
+        },
+        {
+          "predicted_time": 7.933333333333334,
+          "reference_time": 7.95,
+          "predicted_frame": 238,
+          "reference_frame": null,
+          "error_seconds": -0.016666666666666607
+        },
+        {
+          "predicted_time": 8.366666666666667,
+          "reference_time": 8.35,
+          "predicted_frame": 251,
+          "reference_frame": null,
+          "error_seconds": 0.016666666666667496
+        },
+        {
+          "predicted_time": 8.668333333333333,
+          "reference_time": 8.7,
+          "predicted_frame": 260,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 9.068333333333333,
+          "reference_time": 9.1,
+          "predicted_frame": 272,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 9.401666666666667,
+          "reference_time": 9.45,
+          "predicted_frame": 282,
+          "reference_frame": null,
+          "error_seconds": -0.04833333333333201
+        },
+        {
+          "predicted_time": 9.701666666666666,
+          "reference_time": 9.8,
+          "predicted_frame": 291,
+          "reference_frame": null,
+          "error_seconds": -0.0983333333333345
+        },
+        {
+          "predicted_time": 10.035,
+          "reference_time": 10.1,
+          "predicted_frame": 301,
+          "reference_frame": null,
+          "error_seconds": -0.0649999999999995
+        },
+        {
+          "predicted_time": 10.368333333333334,
+          "reference_time": 10.45,
+          "predicted_frame": 311,
+          "reference_frame": null,
+          "error_seconds": -0.08166666666666522
+        },
+        {
+          "predicted_time": 10.735,
+          "reference_time": 10.8,
+          "predicted_frame": 322,
+          "reference_frame": null,
+          "error_seconds": -0.06500000000000128
+        },
+        {
+          "predicted_time": 11.068333333333333,
+          "reference_time": 11.1,
+          "predicted_frame": 332,
+          "reference_frame": null,
+          "error_seconds": -0.03166666666666629
+        },
+        {
+          "predicted_time": 11.301666666666666,
+          "reference_time": 11.45,
+          "predicted_frame": 339,
+          "reference_frame": null,
+          "error_seconds": -0.14833333333333343
+        },
+        {
+          "predicted_time": 12.301666666666666,
+          "reference_time": 12.3,
+          "predicted_frame": 369,
+          "reference_frame": null,
+          "error_seconds": 0.0016666666666651508
+        }
+      ],
+      "mean_absolute_timing_error": 0.0468817204301074,
+      "tracking_summary": {
+        "observed": 408,
+        "predicted": 6
+      },
+      "runtime_seconds": 107.8461435418576,
+      "config": {
+        "detector": "yolo11s.pt",
+        "pose_model": "yolo11n-pose.pt",
+        "foot_model": "rtmpose-x-halpe26.onnx",
+        "image_size": 640,
+        "pose_size": 640,
+        "detection_threshold": 0.05,
+        "landmark_threshold": 0.35,
+        "prediction_seconds": 0.15,
+        "minimum_size_ratio": 0.75,
+        "edge_outward_fraction": 0.2,
+        "edge_margin_diameters": 0.05,
+        "edge_outward_diameters_per_second": 0.5,
+        "association_diameters": 3.0,
+        "contact_diameters": 1.15,
+        "foot_length_shin_ratio": 0.6,
+        "stop_seconds": 1.0,
+        "stop_radius_diameters": 0.5,
+        "stop_gap_seconds": 0.2,
+        "audio_enabled": true,
+        "audio_min_strength": 8.0,
+        "audio_match_seconds": 0.12,
+        "rhythm_min_beats": 0.6,
+        "rhythm_max_beats": 1.6,
+        "audio_return_seconds": 1.0,
+        "debounce_seconds": 0.22,
+        "velocity_window_seconds": 0.14,
+        "min_velocity_diameters": 0.7,
+        "appearance_enabled": true,
+        "appearance_horizon_seconds": 0.25,
+        "appearance_similarity": 0.6,
+        "device": "cpu"
+      },
+      "uncertain_intervals": []
+    }
+  }
+}

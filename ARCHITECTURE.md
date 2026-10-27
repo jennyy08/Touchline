@@ -185,3 +185,19 @@ new clips. The user count is never an input to the algorithm.
 Inspect `ShoeMotionConfig` for motion gates, `ToeTapConfig` for contact gates,
 and the revision-4 report for rejected alternatives and development-set limits.
 Juggling, live juggling, and side-to-side do not use this additional pipeline.
+
+Revision 5 adds `toe_observations.py`, a pure one-frame lookahead filter that
+removes isolated toe jumps without mutating or interpolating raw observations.
+`count_toe_taps` applies it independently to each observation view. Ball loss
+clears partial contacts but can retain a previously observed off-ball state
+for up to 0.20s, subject to local position/size checks on reacquisition. All
+contact confirmation after that gap comes from fresh observed frames.
+`contact_end` and `departure_time` expose evidence duration; null departure
+means no departure was observed. Reverse optical-flow experiments were rejected
+and do not add a second decoding pass or latency to the production pipeline.
+
+Revision 6 merges same-foot candidate intervals separated by at most 0.08s,
+with consecutive entry times below the existing debounce and observed ball
+samples throughout the interruption. It retains interrupted entry timestamps
+and prevents alternate views from re-adding events inside that merged interval.
+This can merge genuinely rapid repeated contacts; see the revision-6 report.

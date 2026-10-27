@@ -117,3 +117,79 @@ def test_close_reacquired_candidate_is_review_only():
     r=analyze_toe_taps(seq)
     assert r['estimated_count']==1
     assert sum(e['status']=='review' for e in r['events'])==1
+
+
+def test_short_ball_occlusion_preserves_only_observed_off_ball_context():
+    seq=[sample(0,30),sample(.03,-50,status='predicted'),sample(.06,-50,status='predicted'),
+         sample(.1,-50),sample(.16,-50),sample(.19,30)]
+    r=count_toe_taps(seq)
+    assert r['estimated_count']==1
+    e=r['events'][0]
+    assert e['time']==.1 and e['confirmed_time']==.16
+    assert e['contact_end']==.16 and e['departure_time']==.19
+
+
+def test_gap_does_not_supply_an_entry_or_partial_contact_evidence():
+    # A held pose must not become a fresh tap after the ball reappears.
+    held=[sample(0,-50),sample(.03,-50,status='predicted'),sample(.1,-50),sample(.16,-50)]
+    assert count_toe_taps(held)['estimated_count']==0
+    # One observation on either side of the gap cannot be combined to confirm.
+    partial=[sample(0,30),sample(.03,-50),sample(.06,-50,status='predicted'),sample(.1,-50),sample(.16,30)]
+    assert count_toe_taps(partial)['estimated_count']==0
+
+
+def test_reacquisition_must_be_short_local_and_similarly_sized():
+    for mode in ('long','moved','resized'):
+        seq=[sample(0,30),sample(.03,-50,status='predicted'),sample(.1,-50),sample(.16,-50)]
+        if mode=='long':seq[2]['time']=.3;seq[3]['time']=.36
+        for s in seq[2:]:
+            if mode=='moved':s['center']=[300,0];s['pose']['left_big_toe']=[300,-50]
+            if mode=='resized':s['diameter']=200;s['pose']['left_big_toe']=[0,-100]
+        assert count_toe_taps(seq)['estimated_count']==0
+
+
+def test_already_confirmed_hold_does_not_count_again_after_gap():
+    seq=cycle()[:3]+[sample(.18,-50,status='predicted'),sample(.21,-50),sample(.27,-50)]
+    assert count_toe_taps(seq)['estimated_count']==1
+
+
+def test_one_frame_id_jump_does_not_split_two_observed_contact_frames():
+    seq=[sample(0,30),sample(.03,-50),sample(.06,110,x=180),sample(.09,-50),sample(.12,30)]
+    r=count_toe_taps(seq)
+    assert r['estimated_count']==1
+    assert r['events'][0]['time']==.03
+    assert r['toe_taps']['rejected_toe_observations'][0]['time']==.06
+
+
+def test_brief_release_during_hold_merges_contact_evidence():
+    seq = [sample(0,30),sample(.03,-50),sample(.06,-50),sample(.09,-50),
+           sample(.12,-50),sample(.15,30),sample(.18,-50),sample(.21,-50),
+           sample(.24,-50),sample(.27,-50)]
+    r = count_toe_taps(seq)
+    assert r['estimated_count'] == 1
+    assert r['events'][0]['contact_end'] == .27
+    assert r['events'][0]['interrupted_entry_times'] == [.18]
+
+
+def test_clear_departure_keeps_separate_same_foot_contacts():
+    seq = [sample(0,30),sample(.03,-50),sample(.06,-50),sample(.09,-50),
+           sample(.12,30),sample(.15,30),sample(.18,30),sample(.21,30),
+           sample(.24,30),sample(.27,-50),sample(.30,-50),sample(.33,-50)]
+    assert count_toe_taps(seq)['estimated_count'] == 2
+
+
+def test_alternate_view_cannot_readd_interrupted_hold():
+    from juggling.toe_taps import analyze_toe_taps
+    seq = [sample(i*.03, 30 if i == 0 or i in (5,10) else -50) for i in range(15)]
+    for i,s in enumerate(seq):
+        s['motion_pose'] = {'left_big_toe': [0,30 if i < 11 else -50]}
+    r = analyze_toe_taps(seq)
+    assert r['estimated_count'] == 1
+
+
+def test_interrupted_contact_merge_does_not_bridge_unobserved_ball():
+    seq = [sample(0,30),sample(.03,-50),sample(.06,-50),sample(.09,-50),
+           sample(.12,-50),sample(.14,-50,status='predicted'),
+           sample(.15,30),sample(.18,-50),sample(.21,-50),sample(.24,-50)]
+    r = count_toe_taps(seq)
+    assert all(not e.get('interrupted_entry_times') for e in r['events'])
