@@ -1,0 +1,20 @@
+{
+  "frames": 399,
+  "changed_frames": {
+    "status": [],
+    "box": [],
+    "center": [],
+    "diameter": [],
+    "segment": [],
+    "pose": [],
+    "detail_pose": [],
+    "motion_pose": []
+  },
+  "observations_identical": true,
+  "events_identical": true,
+  "before_count": 21,
+  "after_count": 21,
+  "config_identical": true,
+  "provenance_available": false,
+  "provenance_identical": null
+}

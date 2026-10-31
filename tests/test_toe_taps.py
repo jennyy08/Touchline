@@ -193,3 +193,25 @@ def test_interrupted_contact_merge_does_not_bridge_unobserved_ball():
            sample(.15,30),sample(.18,-50),sample(.21,-50),sample(.24,-50)]
     r = count_toe_taps(seq)
     assert all(not e.get('interrupted_entry_times') for e in r['events'])
+
+
+def test_sustained_opposite_feet_with_departure_survive_debounce():
+    seq=[]
+    for i in range(13):
+        t=i*.03
+        s=sample(t, -50 if 1<=i<=4 else 30)
+        s['pose']['right_big_toe']=[0,-50 if 7<=i<=10 else 30]
+        seq.append(s)
+    r=count_toe_taps(seq)
+    assert r['estimated_count']==2
+    assert [e['body_part'] for e in r['events']]==['left_foot','right_foot']
+
+
+def test_opposite_id_switch_without_departure_still_merges():
+    seq=[]
+    for i in range(12):
+        t=i*.03
+        s=sample(t,-50 if i>=1 else 30)
+        s['pose']['right_big_toe']=[0,-50 if i>=6 else 30]
+        seq.append(s)
+    assert count_toe_taps(seq)['estimated_count']==1

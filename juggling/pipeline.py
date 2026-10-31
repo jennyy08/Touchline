@@ -4,6 +4,7 @@ import json
 import time
 from collections import Counter
 from .config import Config
+from .provenance import inference_provenance
 from .video import decode, metadata, PlaybackWriter
 from .detection import BallDetector
 from .pose import PoseDetector
@@ -99,7 +100,8 @@ def analyze(source: Path, output: Path, models: Path, config=None, progress=lamb
     with source.open("rb") as f:
         for chunk in iter(lambda: f.read(1024 * 1024), b""):
             digest.update(chunk)
-    result.update(schema_version=1, video={"sha256": digest.hexdigest(), "width": width,
+    result.update(inference_provenance=inference_provenance(models, config, drill_setup is None),
+                  schema_version=1, video={"sha256": digest.hexdigest(), "width": width,
                   "height": height, "frames": len(samples), "duration": samples[-1]["time"],
                   "nominal_fps": info["nominal_fps"], "container_expected_frames": info["expected_frames"]}, config=config.to_dict(), samples=samples,
                   tracking_gaps=gaps, tracking_summary=dict(Counter(s["status"] for s in samples)),

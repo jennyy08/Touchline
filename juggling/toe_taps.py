@@ -170,7 +170,17 @@ def count_toe_taps(samples, config=None):
     # one candidate, not two discarded contacts. Preserve every contributing time.
     groups = []
     for event in sorted(candidates, key=lambda e: e['time']):
-        if groups and event['time'] - groups[-1][0]['time'] < c.debounce_seconds:
+        # Debouncing should merge ID flicker, not two sustained contacts
+        # with an observed departure between opposite feet.
+        previous = groups[-1][-1] if groups else None
+        separate_departure = (previous is not None and
+                              previous['body_part'] != event['body_part'] and
+                              previous.get('departure_time') is not None and
+                              previous['confirmation'] == event['confirmation'] == 'sustained' and
+                              previous['contact_end'] < previous['departure_time'] < event['time'] and
+                              all(s['status'] == 'observed' for s in samples
+                                  if previous['contact_end'] <= s['time'] <= event['time']))
+        if groups and event['time'] - groups[-1][0]['time'] < c.debounce_seconds and not separate_departure:
             groups[-1].append(event)
         else:
             groups.append([event])
@@ -187,7 +197,7 @@ def count_toe_taps(samples, config=None):
             events[-1]['body_part'] = None
     return dict(drill='toe_taps', estimated_count=len(events), events=events,
                 floor_y=None, heard_count=0,
-                toe_taps=dict(algorithm_version=6, config=asdict(c),
+                toe_taps=dict(algorithm_version=7, config=asdict(c),
                               rejected_toe_observations=rejected,
                               usable_foot_samples=usable,
                               possible_foot_samples=2*len(samples)))
@@ -234,6 +244,6 @@ def analyze_toe_taps(samples, config=None):
     for i,event in enumerate(result['events']):
         event['id'] = f'tap-{i+1}'
     result['estimated_count'] = sum(e['status'] == 'counted' for e in result['events'])
-    result['toe_taps'].update(algorithm_version=6,
+    result['toe_taps'].update(algorithm_version=7,
                              observation_views=['pose', 'motion_pose', 'detail_pose'])
     return result
