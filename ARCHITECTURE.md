@@ -201,3 +201,20 @@ with consecutive entry times below the existing debounce and observed ball
 samples throughout the interruption. It retains interrupted entry timestamps
 and prevents alternate views from re-adding events inside that merged interval.
 This can merge genuinely rapid repeated contacts; see the revision-6 report.
+
+Revision 7 limits debounce merging when two sustained opposite-foot contacts
+have a visible departure between them. `provenance.py` records model hashes
+and runtime versions and compares inference observations separately from event
+counting, making rerun differences inspectable without claiming accuracy.
+
+## Practice library
+
+`frontend/src/drill-catalog.ts` owns drill content and analysis/preview links.
+`library.ts` renders the home grid; `drill.ts` renders one shared drill template
+with instructions and a local, unsaved timer. `library-shared.ts` manages muted
+previews (explicit touch/keyboard controls, reduced-motion support and pause
+when offscreen). `library.css` owns the presentation independently of analysis.
+Preview MP4s/posters live in `frontend/public/previews`; they do not depend on
+jobs or models. Existing analysis screens are retained: juggling moved to
+`juggling.html`, while old `/?job=...` URLs still load the juggling application.
+The timer does not record footage or claim to measure performance.

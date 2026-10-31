@@ -7,7 +7,7 @@ import type { Result, Review } from "./types";
 const $ = <T extends HTMLElement>(id: string) =>
   document.getElementById(id) as T;
 $("app").innerHTML =
-  `<header class="app-header"><a class="brand" href="/">TOUCHLINE<span class="brand-dot">/</span></a><nav aria-label="Practice mode"><a href="/">Juggling</a><a href="/dribbling.html">Side to side</a><a href="/toe-taps.html" aria-current="page">Toe taps</a><a href="/live.html">Live</a></nav></header>
+  `<header class="app-header"><a class="brand" href="/">TOUCHLINE<span class="brand-dot">/</span></a><nav aria-label="Practice mode"><a href="/juggling.html">Juggling</a><a href="/dribbling.html">Side to side</a><a href="/toe-taps.html" aria-current="page">Toe taps</a><a href="/live.html">Live</a></nav></header>
 <main><div class="page-heading"><p class="chapter-kicker">TOE TAPS / EXPERIMENTAL</p><h1>Find your rhythm.</h1><p>Alternate feet on top of the ball. Upload a clip to inspect estimated taps.</p></div>
 <p>Keep the ball and both feet visible, with a fixed camera. Shoe overlap can hide contacts.</p>
 <form id="upload" class="file-picker"><label for="file">Practice video</label><input id="file" type="file" accept="video/*,.mov,.mp4" required/><button class="primary">Analyze toe taps ↗</button></form>

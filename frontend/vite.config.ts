@@ -5,6 +5,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
+        juggling: "juggling.html",
+        drill: "drill.html",
         live: "live.html",
         dribbling: "dribbling.html",
         toeTaps: "toe-taps.html",

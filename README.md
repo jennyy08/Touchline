@@ -267,3 +267,28 @@ and prevents alternate views from counting that held contact again. Development
 replays retain 33 for taps1 and 31 for taps2. Taps3 still has missed contacts and
 inference variability; see [revision 6 validation](validation/toe-taps/revision-6/README.md).
 Restart the backend and analyze a new upload to use these changes.
+
+Toe-tap revision 7 separates nearby sustained alternating contacts when a
+visible departure supports the distinction. It recovers the reviewed taps3
+contact around 6.97s while retaining the taps1/taps2 event matches. See
+[revision 7 validation](validation/toe-taps/revision-7/README.md) for limitations.
+New results include model/runtime fingerprints. Compare two runs of the same
+original upload with:
+
+```bash
+PYTHONPATH=. .venv/bin/python scripts/compare_inference.py first/result.json second/result.json
+```
+
+## Practice library
+
+The home page now opens a three-drill library with short local video previews.
+Select a drill for setup instructions, camera guidance, an optional 30/60/90s
+practice timer, and a link to its existing upload analysis. The timer does not
+record video or save progress. Live webcam analysis remains juggling-only.
+
+Edit `frontend/src/drill-catalog.ts` to add or change drill content and links;
+edit `frontend/src/library.css` for the presentation. Replace provisional media
+in `frontend/public/previews/` when new demonstrations are available. Previews
+respect reduced-motion preferences and offer explicit play/pause controls.
+Juggling uploads now live at `/juggling.html`; old `/?job=...` links still load
+the juggling analysis view. No new computer-vision models are required.
