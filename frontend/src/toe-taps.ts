@@ -3,6 +3,8 @@ import "./session-story.css";
 import "./toe-taps.css";
 import { AnnotatedPlayer } from "./player";
 import { seedReview, parseReview } from "./review";
+import { loadToeReview, saveToeReview } from "./toe-review-storage";
+import { labels } from "./types";
 import type { Result, Review } from "./types";
 const $ = <T extends HTMLElement>(id: string) =>
   document.getElementById(id) as T;
@@ -15,7 +17,7 @@ $("app").innerHTML =
 <section id="result" class="video-workspace" hidden><div class="workspace-heading"><h2>Your taps, on replay.</h2><button id="export">Export analysis</button></div><p id="total" class="session-summary"></p>
 <div class="workspace-grid"><div><div class="video-stage"><video id="video" controls playsinline></video><canvas id="overlay"></canvas></div><div class="player-controls"><button id="previous" aria-label="Previous frame">← Frame</button><button id="next" aria-label="Next frame">Frame →</button><button id="refresh-video">Refresh video</button><label>Speed <select id="speed"><option value="1">1×</option><option value="0.5">0.5×</option><option value="0.25">0.25×</option></select></label><label><input id="tracking" type="checkbox" checked/>Tracking</label></div><p id="status"></p><details><summary>How to read this estimate</summary><ul id="warnings"></ul></details></div>
 <aside><h3>Estimated events</h3><p>Each event needs an observed approach to the ball-top zone. Select a moment to check it. Dashed teal shoes show image-motion evidence; amber shoes show the closer pose view.</p><div id="events" class="event-list"></div>
-<details><summary>Your corrections</summary><p>Separate from the automatic result. Starts as a copy, not a verified count. Export to keep your edits.</p><p id="review-count"></p><button id="add">Add tap at current frame</button><button id="save">Export corrections</button><label>Import corrections<input id="import" type="file" accept="application/json"/></label><div id="review" class="event-list"></div></details></aside></div></section><section id="export-fallback" hidden><label for="export-json">Export JSON — copy this if your browser does not save the download</label><textarea id="export-json" readonly rows="6"></textarea></section><footer>Local processing · No accuracy score</footer></main>`;
+<details><summary>Your corrections</summary><p>Separate from the automatic result. Starts as an unverified copy. Edits save in this browser; export a backup.</p><p id="review-count"></p><p id="review-save-status" role="status"></p><button id="add">Add tap at current frame</button><button id="save">Export corrections</button><label>Import corrections<input id="import" type="file" accept="application/json"/></label><div id="review" class="event-list"></div></details></aside></div></section><section id="export-fallback" hidden><label for="export-json">Export JSON — copy this if your browser does not save the download</label><textarea id="export-json" readonly rows="6"></textarea></section><footer>Local processing · No accuracy score</footer></main>`;
 const video = $<HTMLVideoElement>("video");
 const player = new AnnotatedPlayer(
   video,
@@ -51,6 +53,16 @@ function download(value: unknown, name: string) {
   $<HTMLTextAreaElement>("export-json").value = JSON.stringify(value, null, 2);
   setTimeout(() => URL.revokeObjectURL(url), 10000);
 }
+function persistReview() {
+  if (!review) return;
+  try {
+    saveToeReview(review);
+    $("review-save-status").textContent = "Corrections saved in this browser.";
+  } catch {
+    $("review-save-status").textContent =
+      "Browser storage is unavailable. Export corrections to keep them.";
+  }
+}
 function renderReview() {
   if (!review) return;
   $("review-count").textContent =
@@ -61,6 +73,29 @@ function renderReview() {
     const seek = document.createElement("button");
     seek.textContent = `${e.time.toFixed(2)}s · ${e.label}`;
     seek.onclick = () => player.seek(e.time);
+    const retime = document.createElement("button");
+    retime.textContent = "Use current frame";
+    retime.setAttribute("aria-label", `Move correction at ${e.time.toFixed(2)} seconds to current frame`);
+    retime.onclick = () => {
+      if (!result || !Number.isFinite(video.currentTime)) return;
+      e.time = Math.max(0, Math.min(video.currentTime, result.video.duration));
+      renderReview();
+      persistReview();
+    };
+    const label = document.createElement("select");
+    label.setAttribute("aria-label", `Label correction at ${e.time.toFixed(2)} seconds`);
+    for (const value of labels) {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = value;
+      label.append(option);
+    }
+    label.value = e.label;
+    label.onchange = () => {
+      e.label = label.value as typeof e.label;
+      renderReview();
+      persistReview();
+    };
     const remove = document.createElement("button");
     remove.textContent = "Remove";
     remove.setAttribute(
@@ -70,8 +105,9 @@ function renderReview() {
     remove.onclick = () => {
       review!.events = review!.events.filter((x) => x.id !== e.id);
       renderReview();
+      persistReview();
     };
-    row.append(seek, remove);
+    row.append(seek, retime, label, remove);
     $("review").append(row);
   }
 }
@@ -82,6 +118,19 @@ function show(data: Result & { drill?: string }, id: string) {
     );
   result = data;
   review = seedReview(data);
+  try {
+    const saved = loadToeReview(data);
+    if (saved) {
+      review = saved;
+      $("review-save-status").textContent =
+        "Restored your corrections for this video. They are still unverified until you review them.";
+    } else {
+      $("review-save-status").textContent = "No saved corrections for this video yet.";
+    }
+  } catch {
+    $("review-save-status").textContent =
+      "Saved corrections could not be loaded. Export new edits to keep them.";
+  }
   player.load(data, `/api/jobs/${id}/video`);
   $("result").hidden = false;
   const reviewCount = data.events.filter((e) => e.status === "review").length;
@@ -184,6 +233,7 @@ $("add").onclick = () => {
     note: "Manually added toe tap",
   });
   renderReview();
+  persistReview();
 };
 $<HTMLInputElement>("import").onchange = async (e) => {
   const f = (e.target as HTMLInputElement).files?.[0];
@@ -191,9 +241,11 @@ $<HTMLInputElement>("import").onchange = async (e) => {
   try {
     review = parseReview(await f.text(), result);
     renderReview();
+    persistReview();
   } catch (e) {
     error(e);
   }
+  (e.target as HTMLInputElement).value = "";
 };
 const job = new URLSearchParams(location.search).get("job");
 if (job) {

@@ -203,10 +203,12 @@ is needed during use.
 Open `/toe-taps.html` after starting the server. Upload a clip with the ball and
 both feet visible. Review the estimated taps with native video controls, slow
 motion, frame stepping, and ball/foot overlays. The correction list starts as an
-**unverified copy** of the automatic events; add or remove taps and export JSON to
-save it. To retime an event, remove it and add it at the correct frame. Imports
-are validated against the exact video hash. Corrections do not alter automatic
-results and are not persisted unless exported.
+**unverified copy** of the automatic events. Add or remove taps, change a label,
+or move an event to the current video frame. Edits save in this browser under
+the original video's hash, so re-uploading the same file restores them. Export
+JSON for a backup or to share the review; imports are checked against that exact
+video hash. Browser data can be cleared, and corrections never alter automatic
+results.
 
 This uses the existing YOLO11s ball detector, YOLO11n pose and RTMPose Halpe-26
 foot landmarks, with the existing dependencies and model downloads. No new

@@ -37,8 +37,22 @@ details p {
   color: var(--muted);
 }
 #review > div {
-  display: flex;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 6px;
+  border-bottom: 1px solid var(--line);
+  padding: 8px 0;
+}
+#review > div > button:first-child {
+  grid-column: 1 / -1;
+}
+#review > div select {
+  min-width: 0;
+  background: var(--ink);
+  color: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px;
 }
 aside details {
   margin-top: 24px;
