@@ -1,6 +1,6 @@
-# Touchline — local juggling lab
+# Touchline — local soccer practice lab
 
-A small, study-friendly soccer juggling prototype with uploaded clips and experimental live webcam counting. Upload a clip, watch the tracked ball, inspect estimated contact timestamps, and make a separate manual review. All video analysis runs on your computer. No accounts, paid APIs, database, or language-model video service.
+A study-friendly soccer practice prototype with a three-drill library, guided sessions, and experimental video analysis. Upload a clip to inspect estimated juggling touches, toe taps, or side-to-side turns against the video; live webcam counting is available for juggling. Guided-session history stays in your browser and is separate from video analysis. All analysis runs on your computer. No accounts, paid APIs, database, or language-model video service.
 
 **This is an inspection tool, not a validated coaching product.** See [the validation report](validation/RESULTS.md) for measured results and failures on the supplied clip.
 
@@ -41,8 +41,7 @@ Ultralytics code and these weights use AGPL-3.0; see [official model documentati
 ## Live webcam (experimental)
 
 Open **http://127.0.0.1:8000/live.html**, or choose **Live practice** from the
-upload page. For the currently running development server, use
-**http://127.0.0.1:8001/live.html** (port 8000 was already in use).
+upload page. If you start the server on another port, use that port in the URL.
 
 1. Click **Start camera** and allow camera access for this localhost page.
 2. Keep the ball and both feet in view. The counter needs observed motion and a
@@ -292,3 +291,19 @@ in `frontend/public/previews/` when new demonstrations are available. Previews
 respect reduced-motion preferences and offer explicit play/pause controls.
 Juggling uploads now live at `/juggling.html`; old `/?job=...` links still load
 the juggling analysis view. No new computer-vision models are required.
+
+## Guided practice and local history
+
+Open `/session.html` from the home navigation to choose a 5, 10, or 15-minute
+practice plan and a drill to focus on. Each plan combines existing drills with
+30-second rests. The on-screen timer can be paused or ended early; each step's
+timer begins only when the player presses Start. Sessions ended after at least
+10 seconds of practice are saved in this browser's local storage and listed on
+the same page. The history records practiced time and drill names, not video,
+estimated contacts, or a skill score. This is a fixed plan, not an adaptive
+recommendation. History can be cleared from the page; there is no account or
+cross-device sync, and clearing browser data can remove it.
+
+Edit `frontend/src/practice-session.ts` for plan durations and history rules,
+`frontend/src/session.ts` for the guided flow, and `frontend/src/session.css`
+for its presentation. The drill catalog remains the source of drill content.

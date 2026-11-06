@@ -7,6 +7,7 @@ export default defineConfig({
         main: "index.html",
         juggling: "juggling.html",
         drill: "drill.html",
+        session: "session.html",
         live: "live.html",
         dribbling: "dribbling.html",
         toeTaps: "toe-taps.html",

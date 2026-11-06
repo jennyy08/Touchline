@@ -1,0 +1,215 @@
+.session-page {
+  padding: 38px 5vw 80px;
+}
+.session-heading {
+  padding: 80px 0 50px;
+  max-width: 800px;
+}
+.session-heading h1 {
+  font-size: clamp(62px, 7vw, 106px);
+}
+.session-setup,
+.active-session,
+.session-finished {
+  background: #22372b;
+  padding: clamp(30px, 5vw, 70px);
+  margin-bottom: 60px;
+}
+.session-setup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+.session-setup h2,
+.active-session h2,
+.session-finished h2 {
+  font-size: clamp(42px, 5vw, 72px);
+}
+.session-setup p,
+.active-session p,
+.session-finished p {
+  color: #c8cebc;
+  max-width: 520px;
+}
+.session-options {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.session-options label {
+  font-size: 13px;
+  color: var(--cream);
+  margin: 0 0 9px;
+}
+.session-options select {
+  width: min(100%, 340px);
+  background: #181d19;
+  color: var(--cream);
+  border: 1px solid #69745f;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+.session-plan {
+  width: 100%;
+  margin: 8px 0 18px;
+  border-top: 1px solid #69745f;
+}
+.session-plan p {
+  border-bottom: 1px solid #50604f;
+  padding: 12px 0;
+  margin: 0;
+  font-size: 14px;
+}
+.session-plan p.small-note {
+  border: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.session-progress {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+  margin-bottom: 60px;
+}
+.active-session #stage-description {
+  font-size: 18px;
+}
+.active-session ol {
+  padding-left: 20px;
+  max-width: 700px;
+  color: #c8cebc;
+}
+.active-session li {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  padding-left: 8px;
+}
+.active-session li::marker {
+  color: var(--grass);
+}
+#stage-clock {
+  display: block;
+  font-size: clamp(80px, 10vw, 150px);
+  letter-spacing: -0.08em;
+  font-variant-numeric: tabular-nums;
+  margin: 20px 0;
+}
+.session-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.session-actions .quiet-button,
+.history-heading .quiet-button {
+  padding: 14px 18px;
+}
+#stage-status {
+  min-height: 26px;
+  margin: 18px 0;
+}
+#stage-drill-link {
+  display: inline-block;
+  margin-top: 12px;
+}
+.session-finished p {
+  font-size: 18px;
+}
+.session-history {
+  border-top: 1px solid var(--line);
+  padding: 50px 0;
+}
+.history-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.history-heading h2 {
+  font-size: clamp(36px, 4vw, 60px);
+}
+.history-summary {
+  font-size: 20px;
+  margin: 15px 0 25px;
+}
+.history-list {
+  max-width: 800px;
+}
+.history-list article {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  padding: 14px 0;
+  font-size: 13px;
+}
+.history-list span {
+  color: var(--muted);
+  text-align: right;
+}
+.session-invite {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 70px 5vw;
+  border-top: 1px solid var(--line);
+}
+.session-invite h2 {
+  font-size: clamp(36px, 4vw, 58px);
+  margin-bottom: 15px;
+}
+.session-invite p {
+  max-width: 480px;
+  color: #c8cebc;
+  margin-bottom: 0;
+}
+.session-invite .overline {
+  color: var(--cream);
+}
+.session-invite .action {
+  white-space: nowrap;
+}
+.session-setup[hidden],
+.active-session[hidden],
+.session-finished[hidden] {
+  display: none !important;
+}
+@media (max-width: 760px) {
+  .session-page {
+    padding: 25px 6vw 65px;
+  }
+  .session-heading {
+    padding: 55px 0 35px;
+  }
+  .session-setup {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .session-progress {
+    margin-bottom: 40px;
+  }
+  .history-list article {
+    display: block;
+  }
+  .history-list span {
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+  }
+  .session-invite {
+    display: block;
+    padding: 60px 6vw;
+  }
+  .session-invite .action {
+    margin-top: 25px;
+  }
+  .session-actions .action,
+  .session-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}

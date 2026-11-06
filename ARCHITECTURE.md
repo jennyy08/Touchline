@@ -218,3 +218,8 @@ Preview MP4s/posters live in `frontend/public/previews`; they do not depend on
 jobs or models. Existing analysis screens are retained: juggling moved to
 `juggling.html`, while old `/?job=...` URLs still load the juggling application.
 The timer does not record footage or claim to measure performance.
+
+`practice-session.ts` is the pure session planner and validated local-storage
+history layer. `session.ts` owns timer transitions and the guided-session UI;
+practice time accumulates only while the timer runs, and tab hiding pauses it.
+Completed history is separate from analysis results and is local to the browser.

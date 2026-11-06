@@ -1,4 +1,4 @@
-export const header = `<header class="library-nav"><a class="wordmark" href="/">TOUCHLINE<span>/</span></a><nav aria-label="Main navigation"><a href="/#drills">The drills</a><a href="/live.html">Live juggling ↗</a></nav></header>`;
+export const header = `<header class="library-nav"><a class="wordmark" href="/">TOUCHLINE<span>/</span></a><nav aria-label="Main navigation"><a href="/#drills">The drills</a><a href="/session.html">Guided session</a><a href="/live.html">Live juggling ↗</a></nav></header>`;
 export const footer = `<footer class="library-footer"><a class="wordmark" href="/">TOUCHLINE<span>/</span></a><p>Your space. Your practice.</p><span>Local video analysis · Experimental estimates</span></footer>`;
 
 /** Pointer previews are optional; keyboard and touch users get an explicit button. */
